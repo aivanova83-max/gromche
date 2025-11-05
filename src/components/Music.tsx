@@ -1,5 +1,5 @@
 export const Music = () => {
-  const genres = ["pop", "pop", "jazz", "folk", "acoustic"];
+  const genres = ["rock", "pop", "jazz", "folk", "acoustic"];
 
   return (
     <section id="music" className="py-20 px-6 bg-card">
