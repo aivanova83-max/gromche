@@ -26,7 +26,7 @@ export const Hero = () => {
           </p>
           
           <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto text-foreground/80 leading-relaxed">
-            Женский хор, где поют не ради сцены — ради жизни. Атмосфера радости, поддержки и свободы.
+            Женский хор, где поют не ради сцены — ради жизни. <br />Атмосфера радости, поддержки и свободы.
           </p>
           
           <Button 
