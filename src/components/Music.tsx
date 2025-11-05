@@ -9,7 +9,7 @@ export const Music = () => {
         </h2>
         
         <p className="text-xl md:text-2xl mb-8 text-foreground/80 leading-relaxed">
-          Тёплые, живые аранжировки и тексты, в которых каждая узнает себя.
+          Поем только то, что любим! Репертуар определяется общим голосованием
         </p>
         
         <div className="flex flex-wrap justify-center gap-4 mb-12">
