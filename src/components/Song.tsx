@@ -1,11 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Music } from "lucide-react";
 import { useState, useRef } from "react";
-
 export const Song = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
-
   const togglePlay = () => {
     if (audioRef.current) {
       if (isPlaying) {
@@ -16,13 +14,9 @@ export const Song = () => {
       setIsPlaying(!isPlaying);
     }
   };
-
-  return (
-    <section id="song" className="py-20 px-6 bg-card">
+  return <section id="song" className="py-20 px-6 bg-card">
       <div className="container max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
-          Наша песня «Громче»
-        </h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">Песня «Громче»</h2>
         
         <p className="text-xl md:text-2xl mb-12 text-foreground/80 leading-relaxed">
           Наш гимн — про радость, свободу и силу женского голоса.
@@ -31,22 +25,12 @@ export const Song = () => {
         <div className="bg-gradient-warm rounded-3xl p-12 shadow-soft">
           <Music className="w-20 h-20 text-primary mx-auto mb-6 animate-float" />
           
-          <audio 
-            ref={audioRef} 
-            src="/gromche-song.mpeg"
-            onEnded={() => setIsPlaying(false)}
-          />
+          <audio ref={audioRef} src="/gromche-song.mpeg" onEnded={() => setIsPlaying(false)} />
           
-          <Button 
-            variant="hero" 
-            size="lg" 
-            className="text-lg px-12 py-6 rounded-full"
-            onClick={togglePlay}
-          >
+          <Button variant="hero" size="lg" className="text-lg px-12 py-6 rounded-full" onClick={togglePlay}>
             {isPlaying ? "⏸ Пауза" : "▶ Послушать песню"}
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
