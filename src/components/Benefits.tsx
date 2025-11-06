@@ -15,7 +15,7 @@ export const Benefits = () => {
     {
       icon: Music,
       title: "Современные и ретро песни",
-      description: "Узнаешь себя в каждой строчке"
+      description: "Все, что близко по духу и настроению"
     },
     {
       icon: Sparkles,
