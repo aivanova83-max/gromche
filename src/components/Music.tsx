@@ -6,8 +6,10 @@ export const Music = () => {
           Наша музыка
         </h2>
         
-        <p className="text-xl md:text-2xl mb-8 text-foreground/80 leading-relaxed">Поем только то, что любим! 
-Репертуар определяется общим голосованием</p>
+        <p className="text-xl md:text-2xl mb-8 text-foreground/80 leading-relaxed">
+          Поем только то, что любим!<br />
+          Репертуар определяется общим голосованием
+        </p>
         
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {genres.map((genre, index) => <span key={index} className="px-6 py-3 bg-secondary rounded-full text-lg font-medium text-secondary-foreground shadow-soft animate-fade-in" style={{
