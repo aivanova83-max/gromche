@@ -34,10 +34,10 @@ export const Pricing = () => {
         <div className="bg-primary/10 rounded-3xl p-8 mb-8 border-2 border-primary/20">
           <div className="space-y-4 text-center">
             <p className="text-lg text-foreground">
-              <span className="font-semibold">Пробное занятие</span> - 20 ноября
+              <span className="font-semibold">Пробное занятие</span> - 20 ноября 2025г.
             </p>
             <p className="text-lg text-foreground">
-              <span className="font-semibold">Курс длится</span> с 27 ноября по 25 декабря
+              <span className="font-semibold">Курс длится</span> с 27 ноября по 25 декабря 2025г.
             </p>
             <div className="pt-2">
               <p className="text-lg text-foreground mb-2">
