@@ -31,6 +31,36 @@ export const Pricing = () => {
           </div>
         </div>
         
+        <div className="bg-primary/10 rounded-3xl p-8 mb-8 border-2 border-primary/20">
+          <div className="space-y-4 text-center">
+            <p className="text-lg text-foreground">
+              <span className="font-semibold">Пробное занятие</span> - 20 ноября
+            </p>
+            <p className="text-lg text-foreground">
+              <span className="font-semibold">Курс длится</span> с 27 ноября по 25 декабря
+            </p>
+            <div className="pt-2">
+              <p className="text-lg text-foreground mb-2">
+                Первый поток "Громче" проходит в г. Люберцы,
+              </p>
+              <p className="text-lg text-foreground mb-3">
+                ул. 8 Марта, 12, корп. 1
+              </p>
+              <a 
+                href="https://yandex.ru/maps/-/CLC746JD" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary/80 underline font-medium transition-smooth"
+              >
+                Построить маршрут →
+              </a>
+            </div>
+            <p className="text-xl font-semibold text-primary pt-2">
+              Количество мест ограничено! Успейте записаться!
+            </p>
+          </div>
+        </div>
+        
         <div className="text-center">
           <Button variant="hero" size="lg" className="text-lg px-12 py-6 rounded-full" onClick={scrollToJoin}>
             Записаться на занятие
