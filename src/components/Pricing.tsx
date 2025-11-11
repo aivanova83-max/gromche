@@ -31,33 +31,36 @@ export const Pricing = () => {
           </div>
         </div>
         
-        <div className="bg-primary/10 rounded-3xl p-8 mb-8 border-2 border-primary/20">
-          <div className="space-y-4 text-center">
-            <p className="text-lg text-foreground">
-              <span className="font-semibold">Пробное занятие</span> - 20 ноября 2025г.
+        <div className="bg-gradient-hero rounded-3xl p-8 mb-8 shadow-soft border border-primary/30 relative overflow-hidden">
+          <div className="absolute inset-0 bg-card/95 backdrop-blur-sm"></div>
+          <div className="relative z-10 space-y-4 text-center">
+            <p className="text-xl text-foreground">
+              <span className="font-bold text-primary">Пробное занятие</span> - 20 ноября 2025г.
             </p>
-            <p className="text-lg text-foreground">
-              <span className="font-semibold">Курс длится</span> с 27 ноября по 25 декабря 2025г.
+            <p className="text-xl text-foreground">
+              <span className="font-bold text-primary">Курс длится</span> с 27 ноября по 25 декабря 2025г.
             </p>
-            <div className="pt-2">
-              <p className="text-lg text-foreground mb-2">
+            <div className="pt-4 pb-2">
+              <p className="text-lg text-foreground mb-2 font-medium">
                 Первый поток "Громче" проходит в г. Люберцы,
               </p>
-              <p className="text-lg text-foreground mb-3">
+              <p className="text-lg text-foreground mb-4">
                 ул. 8 Марта, 12, корп. 1
               </p>
               <a 
                 href="https://yandex.ru/maps/-/CLC746JD" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-primary hover:text-primary/80 underline font-medium transition-smooth"
+                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 underline font-semibold text-lg transition-smooth"
               >
                 Построить маршрут →
               </a>
             </div>
-            <p className="text-xl font-semibold text-primary pt-2">
-              Количество мест ограничено! Успейте записаться!
-            </p>
+            <div className="pt-4">
+              <p className="text-2xl font-bold text-primary animate-pulse">
+                Количество мест ограничено! Успейте записаться!
+              </p>
+            </div>
           </div>
         </div>
         
