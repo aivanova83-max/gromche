@@ -14,7 +14,7 @@ export const Hero = () => {
           <img 
             src={logo} 
             alt="Логотип хора Громче" 
-            className="mx-auto mb-12 max-w-md w-full animate-float"
+            className="mx-auto mb-8 max-w-2xl w-full px-4 animate-float"
           />
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground">
