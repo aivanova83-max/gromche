@@ -14,7 +14,7 @@ export const Song = () => {
       setIsPlaying(!isPlaying);
     }
   };
-  return <section id="song" className="py-20 px-6 bg-background">
+  return <section id="song" className="py-20 px-6 bg-card">
       <div className="container max-w-4xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">Песня «Громче»</h2>
         

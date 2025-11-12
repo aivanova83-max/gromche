@@ -8,7 +8,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20 bg-background">
+    <section className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-warm">
       <div className="container max-w-6xl mx-auto text-center">
         <div className="animate-fade-in">
           <img 

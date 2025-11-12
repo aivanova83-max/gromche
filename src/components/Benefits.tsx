@@ -25,7 +25,7 @@ export const Benefits = () => {
   ];
 
   return (
-    <section id="benefits" className="py-20 px-6 bg-background">
+    <section id="benefits" className="py-20 px-6 bg-gradient-warm">
       <div className="container max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-foreground">
           Почему вам понравится

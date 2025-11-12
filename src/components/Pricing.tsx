@@ -6,7 +6,7 @@ export const Pricing = () => {
       behavior: "smooth"
     });
   };
-  return <section id="pricing" className="py-20 px-6 bg-background">
+  return <section id="pricing" className="py-20 px-6 bg-gradient-warm">
       <div className="container max-w-5xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-foreground">
           Как это работает
