@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer className="py-12 px-6 bg-card border-t border-border">
+    <footer className="py-12 px-6 bg-background border-t border-border">
       <div className="container max-w-6xl mx-auto text-center">
         <p className="text-xl font-semibold text-foreground mb-2">
           Хор «Громче»

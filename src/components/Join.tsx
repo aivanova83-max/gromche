@@ -33,7 +33,7 @@ export const Join = () => {
   };
 
   return (
-    <section id="join" className="py-20 px-6 bg-gradient-warm">
+    <section id="join" className="py-20 px-6 bg-background">
       <div className="container max-w-4xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-foreground">
           Присоединяйтесь к нам
