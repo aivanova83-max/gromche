@@ -33,9 +33,11 @@ export const Hero = () => {
             variant="hero" 
             size="lg" 
             className="text-lg px-12 py-6 rounded-full"
-            onClick={() => scrollToSection("join")}
+            asChild
           >
-            Прийти на первое занятие
+            <a href="https://forms.gle/cEHkSbchu9h65pUi7" target="_blank" rel="noopener noreferrer">
+              Прийти на первое занятие
+            </a>
           </Button>
         </div>
       </div>

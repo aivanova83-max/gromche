@@ -17,7 +17,7 @@ export const Join = () => {
             className="text-lg py-6 rounded-full w-full max-w-md"
             asChild
           >
-            <a href="https://forms.gle/3gzD5a7m6aCAFoZ67" target="_blank" rel="noopener noreferrer">
+            <a href="https://forms.gle/cEHkSbchu9h65pUi7" target="_blank" rel="noopener noreferrer">
               Записаться на пробное занятие
             </a>
           </Button>
