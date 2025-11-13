@@ -10,7 +10,7 @@ export const Join = () => {
         </h2>
         
         <p className="text-xl mb-12 text-foreground/80">
-          Готовы попробовать? Заполните форму регистрации!
+          Запишитесь на пробное занятие!
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
@@ -20,7 +20,7 @@ export const Join = () => {
             className="text-lg py-6 rounded-full w-full"
             asChild
           >
-            <a href="https://forms.gle/sKpCcvyQURAFSgEp9" target="_blank" rel="noopener noreferrer">
+            <a href="https://forms.gle/3gzD5a7m6aCAFoZ67" target="_blank" rel="noopener noreferrer">
               Записаться на пробное занятие
             </a>
           </Button>
