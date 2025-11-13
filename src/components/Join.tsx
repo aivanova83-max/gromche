@@ -9,15 +9,12 @@ export const Join = () => {
           Присоединяйтесь к нам
         </h2>
         
-        <p className="text-xl mb-12 text-foreground/80">
-          Запишитесь на пробное занятие!
-        </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div className="flex flex-col items-center gap-8">
           <Button 
             variant="hero" 
             size="lg" 
-            className="text-lg py-6 rounded-full w-full"
+            className="text-lg py-6 rounded-full w-full max-w-md"
             asChild
           >
             <a href="https://forms.gle/3gzD5a7m6aCAFoZ67" target="_blank" rel="noopener noreferrer">
@@ -25,29 +22,29 @@ export const Join = () => {
             </a>
           </Button>
           
-          <Button 
-            variant="secondary" 
-            size="lg" 
-            className="text-lg py-6 rounded-full w-full"
-            asChild
-          >
-            <a href="/offer.pdf" download>
-              📄 Скачать договор-оферту
-            </a>
-          </Button>
-        </div>
-        
-        <div className="mt-12">
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="text-lg py-6 rounded-full"
-            asChild
-          >
-            <a href="https://t.me/gromche_choir" target="_blank" rel="noopener noreferrer">
-              📱 Telegram-канал хора
-            </a>
-          </Button>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl">
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              className="text-lg py-6 rounded-full w-full"
+              asChild
+            >
+              <a href="/offer.pdf" download>
+                📄 Скачать договор-оферту
+              </a>
+            </Button>
+            
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="text-lg py-6 rounded-full w-full"
+              asChild
+            >
+              <a href="https://t.me/gromche_choir" target="_blank" rel="noopener noreferrer">
+                📱 Telegram-канал хора
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
