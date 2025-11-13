@@ -16,6 +16,8 @@ export const Pricing = () => {
           <div className="bg-card rounded-3xl p-10 shadow-soft hover:shadow-xl transition-smooth">
             <div className="text-5xl font-bold text-primary mb-4">6500 ₽</div>
             <h3 className="text-2xl font-semibold mb-4 text-foreground">Курс из 5 занятий</h3>
+            <p className="text-lg text-foreground/70 mb-4">с профессиональным педагогом по пению</p>
+            <p className="text-lg text-foreground/80 font-medium">по четвергам, 19:30–21:00</p>
             
             <div className="bg-accent/20 rounded-2xl p-4 mb-6">
               <p className="text-lg font-medium text-accent-foreground">🎁 Пробное занятие - бесплатно!</p>
