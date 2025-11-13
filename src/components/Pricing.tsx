@@ -36,13 +36,13 @@ export const Pricing = () => {
           <div className="absolute inset-0 bg-card/95 backdrop-blur-sm"></div>
           <div className="relative z-10 space-y-4 text-center">
             <p className="text-xl text-foreground">
-              <span className="font-bold text-primary">Пробное занятие</span> - 20 ноября 2025г.
+              <span className="font-bold text-primary">Пробное занятие</span> - <span className="font-bold text-primary bg-primary/10 px-3 py-1 rounded-lg">20 ноября 2025г.</span>
             </p>
             <p className="text-xl text-foreground">
               <span className="font-bold text-primary">Курс длится</span> с 27 ноября по 25 декабря 2025г.
             </p>
             <p className="text-xl text-foreground">
-              <span className="font-bold text-primary">Занятия:</span> по четвергам, 19:30–21:00
+              <span className="font-bold text-primary">Занятия</span> по четвергам, 19:30–21:00
             </p>
             <div className="pt-4 pb-2">
               <p className="text-lg text-foreground mb-2 font-medium">
@@ -69,8 +69,10 @@ export const Pricing = () => {
         </div>
         
         <div className="text-center">
-          <Button variant="hero" size="lg" className="text-lg px-12 py-6 rounded-full" onClick={scrollToJoin}>
-            Записаться на занятие
+          <Button variant="hero" size="lg" className="text-lg px-12 py-6 rounded-full" asChild>
+            <a href="https://forms.gle/V3Sv25Gk2MLigaE58" target="_blank" rel="noopener noreferrer">
+              Записаться на занятие
+            </a>
           </Button>
         </div>
       </div>
