@@ -8,31 +8,31 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-warm">
+    <section className="min-h-screen flex items-center justify-center px-4 py-12 max-[480px]:py-8 bg-gradient-warm">
       <div className="container max-w-6xl mx-auto text-center">
         <div className="animate-fade-in">
           <img 
             src={logo} 
             alt="Логотип хора Громче" 
-            className="mx-auto mb-4 max-w-2xl w-full px-4 animate-float"
+            className="mx-auto mb-3 max-w-2xl w-full px-2 max-[480px]:mb-2 animate-float"
           />
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground">
+          <h1 className="text-5xl md:text-7xl max-[480px]:text-3xl font-bold mb-4 max-[480px]:mb-3 text-foreground">
             Хор «Громче»
           </h1>
           
-          <p className="text-3xl md:text-4xl font-semibold mb-8 text-primary">
+          <p className="text-3xl md:text-4xl max-[480px]:text-xl font-semibold mb-6 max-[480px]:mb-4 text-primary">
             Ты можешь громче!
           </p>
           
-          <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto text-foreground/80 leading-relaxed">
-            Женский хор, где поют не ради сцены — ради жизни. <br />Атмосфера радости, поддержки и свободы.
+          <p className="text-xl md:text-2xl max-[480px]:text-base mb-8 max-[480px]:mb-6 max-w-3xl mx-auto text-foreground/80 leading-relaxed max-[480px]:leading-normal">
+            Женский хор, где поют не ради сцены — ради жизни. <br className="max-[480px]:hidden" />Атмосфера радости, поддержки и свободы.
           </p>
           
           <Button 
             variant="hero" 
             size="lg" 
-            className="text-lg px-12 py-6 rounded-full"
+            className="text-base max-[480px]:text-sm px-8 max-[480px]:px-6 py-5 max-[480px]:py-4 rounded-full w-full max-w-md max-[480px]:max-w-full"
             asChild
           >
             <a href="https://forms.gle/cEHkSbchu9h65pUi7" target="_blank" rel="noopener noreferrer">

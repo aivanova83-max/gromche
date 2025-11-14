@@ -25,24 +25,24 @@ export const Benefits = () => {
   ];
 
   return (
-    <section id="benefits" className="py-20 px-6 bg-gradient-warm">
+    <section id="benefits" className="py-12 max-[480px]:py-8 px-4 bg-gradient-warm">
       <div className="container max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-foreground">
+        <h2 className="text-4xl md:text-5xl max-[480px]:text-2xl font-bold mb-8 max-[480px]:mb-6 text-center text-foreground">
           Почему вам понравится
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-[480px]:gap-4">
           {benefits.map((benefit, index) => (
             <div 
               key={index}
-              className="bg-card rounded-3xl p-8 shadow-soft hover:shadow-xl transition-smooth animate-fade-in"
+              className="bg-card rounded-3xl max-[480px]:rounded-2xl p-6 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <benefit.icon className="w-12 h-12 text-primary mb-4" />
-              <h3 className="text-2xl font-semibold mb-3 text-foreground">
+              <benefit.icon className="w-10 h-10 max-[480px]:w-8 max-[480px]:h-8 text-primary mb-3 max-[480px]:mb-2" />
+              <h3 className="text-xl max-[480px]:text-lg font-semibold mb-2 text-foreground">
                 {benefit.title}
               </h3>
-              <p className="text-lg text-foreground/70">
+              <p className="text-base max-[480px]:text-sm text-foreground/70">
                 {benefit.description}
               </p>
             </div>
