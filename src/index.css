@@ -44,6 +44,12 @@ All colors MUST be HSL.
     --gradient-hero: linear-gradient(135deg, hsl(15 70% 73%), hsl(30 65% 80%));
     --shadow-soft: 0 10px 40px -10px hsl(15 70% 73% / 0.3);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    --warm-cream: 35 50% 92%;
+    --warm-peach: 15 70% 73%;
+    --warm-text: 20 25% 35%;
+    --warm-bg: 30 60% 95%;
+    --shadow-warm: 0 8px 24px -8px hsl(15 50% 70% / 0.25);
 
     --sidebar-background: 0 0% 98%;
 
