@@ -8,7 +8,7 @@ import { Join } from "@/components/Join";
 import { Footer } from "@/components/Footer";
 const Index = () => {
   return <div className="min-h-screen">
-      <Hero className="px-[30px] py-[30px]" />
+      <Hero className="px-[5px] py-[5px]" />
       <About />
       <Benefits />
       <Music />
