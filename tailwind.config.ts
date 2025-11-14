@@ -58,6 +58,10 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         olive: "hsl(var(--olive))",
+        'warm-cream': "hsl(var(--warm-cream))",
+        'warm-peach': "hsl(var(--warm-peach))",
+        'warm-text': "hsl(var(--warm-text))",
+        'warm-bg': "hsl(var(--warm-bg))",
       },
       backgroundImage: {
         'gradient-warm': 'var(--gradient-warm)',
@@ -65,6 +69,7 @@ export default {
       },
       boxShadow: {
         'soft': 'var(--shadow-soft)',
+        'warm': 'var(--shadow-warm)',
       },
       transitionTimingFunction: {
         'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
