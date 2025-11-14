@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
 
 export const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -11,12 +10,6 @@ export const Hero = () => {
     <section className="min-h-screen flex items-center justify-center px-4 py-12 max-[480px]:py-8 bg-gradient-warm">
       <div className="container max-w-6xl mx-auto text-center">
         <div className="animate-fade-in">
-          <img 
-            src={logo} 
-            alt="Логотип хора Громче" 
-            className="mx-auto mb-3 max-w-2xl w-full px-2 max-[480px]:mb-2 animate-float"
-          />
-          
           <h1 className="text-5xl md:text-7xl max-[480px]:text-3xl font-bold mb-4 max-[480px]:mb-3 text-foreground">
             Хор «Громче»
           </h1>
