@@ -8,7 +8,7 @@ export const Hero = () => {
   };
   return <section className="min-h-screen flex items-center justify-center px-4 py-12 max-[480px]:py-8 bg-gradient-warm">
       <div className="container max-w-6xl mx-auto text-center">
-        <div className="animate-fade-in mx-[8px] my-[8px] px-0 py-0">
+        <div className="animate-fade-in px-0 py-0 mx-0 my-0">
           <h1 className="text-5xl md:text-7xl max-[480px]:text-3xl font-bold mb-4 max-[480px]:mb-3 text-foreground">
             Хор «Громче»
           </h1>
