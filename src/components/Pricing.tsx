@@ -32,53 +32,47 @@ export const Pricing = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-[480px]:gap-4 mb-6 max-[480px]:mb-5">
-          <div className="bg-card rounded-3xl max-[480px]:rounded-2xl p-8 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth">
-            <div className="space-y-3 max-[480px]:space-y-2.5">
-              <div>
-                <p className="font-bold text-primary text-base max-[480px]:text-sm mb-2">Бесплатное пробное занятие      </p>
-                <p className="font-bold text-primary bg-primary/15 px-3 py-1.5 rounded-xl inline-block text-base max-[480px]:text-sm">
-                  20 ноября 2025г.
-                </p>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-[480px]:gap-3 mb-5 max-[480px]:mb-4">
+          <div className="bg-card rounded-2xl max-[480px]:rounded-xl p-5 max-[480px]:p-4 shadow-soft hover:shadow-xl transition-smooth h-full">
+            <div className="space-y-1.5 max-[480px]:space-y-1">
+              <p className="font-semibold text-foreground text-base max-[480px]:text-sm mb-1">Пробное занятие</p>
+              <p className="font-semibold text-primary bg-primary/5 px-3 py-1 rounded-lg inline-block text-base max-[480px]:text-sm">
+                20 ноября 2025г.
+              </p>
               
-              <div>
-                <p className="text-foreground/70 text-base max-[480px]:text-sm leading-relaxed">
-                  Курс длится с 27 ноября по 25 декабря 2025г.
-                </p>
-              </div>
+              <p className="text-foreground/70 text-sm max-[480px]:text-xs leading-snug pt-1">
+                Курс длится с 27 ноября по 25 декабря 2025г.
+              </p>
               
-              <div>
-                <p className="text-foreground/70 text-base max-[480px]:text-sm leading-relaxed">
-                  <span className="font-semibold text-foreground">Занятия</span> по четвергам, 19:30–21:00
-                </p>
-              </div>
+              <p className="text-foreground/70 text-sm max-[480px]:text-xs leading-snug">
+                Занятия по четвергам, 19:30–21:00
+              </p>
             </div>
           </div>
           
-          <div className="bg-card rounded-3xl max-[480px]:rounded-2xl p-8 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth">
-            <div className="space-y-2.5 max-[480px]:space-y-2">
-              <p className="text-foreground/70 text-base max-[480px]:text-sm leading-relaxed">
-                Первый поток "Громче" проходит в г. Люберцы,
+          <div className="bg-card rounded-2xl max-[480px]:rounded-xl p-5 max-[480px]:p-4 shadow-soft hover:shadow-xl transition-smooth h-full">
+            <div className="space-y-1.5 max-[480px]:space-y-1">
+              <p className="font-semibold text-foreground text-base max-[480px]:text-sm mb-1">Место проведения</p>
+              
+              <p className="text-foreground/70 text-sm max-[480px]:text-xs leading-snug">
+                Первый поток "Громче" проходит в г. Люберцы, ул. 8 Марта, 12, корп. 1
               </p>
-              <p className="text-foreground/70 text-base max-[480px]:text-sm leading-relaxed">
-                ул. 8 Марта, 12, корп. 1
-              </p>
-              <a href="https://yandex.ru/maps/-/CLC746JD" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-primary hover:text-primary/80 underline decoration-1 underline-offset-4 font-medium text-base max-[480px]:text-sm transition-smooth">
+              
+              <a href="https://yandex.ru/maps/-/CLC746JD" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary hover:text-primary/80 underline decoration-1 underline-offset-2 font-medium text-sm max-[480px]:text-xs transition-smooth pt-0.5">
                 Построить маршрут →
               </a>
             </div>
           </div>
         </div>
         
-        <div className="text-center mb-6 max-[480px]:mb-5">
-          <p className="text-lg max-[480px]:text-base font-semibold text-primary">
+        <div className="text-center mb-3 max-[480px]:mb-2.5">
+          <p className="text-base max-[480px]:text-sm font-medium text-primary/80">
             Количество мест ограничено! Успейте записаться!
           </p>
         </div>
         
         <div className="text-center">
-          <Button variant="hero" size="lg" className="text-base max-[480px]:text-sm px-10 max-[480px]:px-8 py-6 max-[480px]:py-5 rounded-full w-full max-w-lg max-[480px]:max-w-full font-semibold" asChild>
+          <Button variant="hero" size="lg" className="text-base max-[480px]:text-sm px-10 max-[480px]:px-8 py-4 max-[480px]:py-3.5 rounded-full w-full max-w-lg max-[480px]:max-w-full font-semibold" asChild>
             <a href="https://forms.gle/V3Sv25Gk2MLigaE58" target="_blank" rel="noopener noreferrer">
               Записаться на занятие
             </a>
