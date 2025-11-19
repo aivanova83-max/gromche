@@ -34,7 +34,7 @@ export const Pricing = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-[480px]:gap-3 mb-5 max-[480px]:mb-4">
           <div className="bg-card rounded-2xl max-[480px]:rounded-xl p-5 max-[480px]:p-4 shadow-soft hover:shadow-xl transition-smooth h-full">
-            <div className="space-y-1.5 max-[480px]:space-y-1">
+            <div className="space-y-1.5 max-[480px]:space-y-1 mx-[10px]">
               <p className="font-semibold text-foreground mb-1 text-lg">Пробное занятие</p>
               <p className="font-semibold text-primary bg-primary/5 px-3 py-1 rounded-lg inline-block text-lg">
                 20 ноября 2025г.
@@ -51,7 +51,7 @@ export const Pricing = () => {
           </div>
           
           <div className="bg-card rounded-2xl max-[480px]:rounded-xl p-5 max-[480px]:p-4 shadow-soft hover:shadow-xl transition-smooth h-full">
-            <div className="space-y-1.5 max-[480px]:space-y-1">
+            <div className="space-y-1.5 max-[480px]:space-y-1 mx-[10px]">
               <p className="font-semibold text-foreground mb-1 text-lg">Место проведения</p>
               
               <p className="text-foreground/70 leading-snug text-base">
