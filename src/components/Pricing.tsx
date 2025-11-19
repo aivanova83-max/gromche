@@ -12,7 +12,7 @@ export const Pricing = () => {
           Как это работает
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-[480px]:gap-4 mb-6 max-[480px]:mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-[480px]:gap-4 mb-5 max-[480px]:mb-4">
           <div className="bg-card rounded-3xl max-[480px]:rounded-2xl p-8 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth">
             <div className="text-4xl max-[480px]:text-3xl font-bold text-primary mb-3 max-[480px]:mb-2">6500 ₽</div>
             <h3 className="text-xl max-[480px]:text-lg font-semibold mb-3 max-[480px]:mb-2 text-foreground">Курс из 5 занятий</h3>
@@ -30,10 +30,8 @@ export const Pricing = () => {
               Будем веселиться и петь все, что выучили - и не только!
             </p>
           </div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-[480px]:gap-3 mb-5 max-[480px]:mb-4">
-          <div className="bg-card rounded-2xl max-[480px]:rounded-xl p-5 max-[480px]:p-4 shadow-soft hover:shadow-xl transition-smooth h-full">
+          
+          <div className="bg-card rounded-2xl max-[480px]:rounded-xl p-5 max-[480px]:p-4 shadow-soft hover:shadow-xl transition-smooth">
             <div className="space-y-1.5 max-[480px]:space-y-1 mx-[15px]">
               <p className="font-semibold text-foreground mb-1 text-xl max-[480px]:text-lg">📅 Бесплатное пробное занятие</p>
               <p className="font-semibold text-accent-foreground bg-accent/20 px-3 py-1 rounded-lg inline-block text-lg max-[480px]:text-base">
@@ -50,7 +48,7 @@ export const Pricing = () => {
             </div>
           </div>
           
-          <div className="bg-card rounded-2xl max-[480px]:rounded-xl p-5 max-[480px]:p-4 shadow-soft hover:shadow-xl transition-smooth h-full">
+          <div className="bg-card rounded-2xl max-[480px]:rounded-xl p-5 max-[480px]:p-4 shadow-soft hover:shadow-xl transition-smooth">
             <div className="space-y-1.5 max-[480px]:space-y-1 mx-[15px]">
               <p className="font-semibold text-foreground mb-1 text-xl max-[480px]:text-lg">📍 Место проведения</p>
               
