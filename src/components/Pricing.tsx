@@ -52,9 +52,9 @@ export const Pricing = () => {
           
           <div className="bg-card rounded-2xl max-[480px]:rounded-xl p-5 max-[480px]:p-4 shadow-soft hover:shadow-xl transition-smooth h-full">
             <div className="space-y-1.5 max-[480px]:space-y-1 mx-[12px]">
-              <p className="font-semibold text-foreground mb-1 text-base">📍 Место проведения</p>
+              <p className="font-semibold text-foreground mb-1 text-xl">📍 Место проведения</p>
               
-              <p className="text-foreground/70 leading-snug text-base">
+              <p className="text-foreground/70 leading-snug pt-1 text-base">
                 Первый поток "Громче" проходит 
 в г. Люберцы, ул. 8 Марта, 12, корп. 1
               </p>
