@@ -35,16 +35,16 @@ export const Pricing = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-[480px]:gap-3 mb-5 max-[480px]:mb-4">
           <div className="bg-card rounded-2xl max-[480px]:rounded-xl p-5 max-[480px]:p-4 shadow-soft hover:shadow-xl transition-smooth h-full">
             <div className="space-y-1.5 max-[480px]:space-y-1 mx-[15px]">
-              <p className="font-semibold text-foreground mb-1 text-xl">📅 Бесплатное пробное занятие</p>
-              <p className="font-semibold text-accent-foreground bg-accent/20 px-3 py-1 rounded-lg inline-block text-lg">
+              <p className="font-semibold text-foreground mb-1 text-xl max-[480px]:text-lg">📅 Бесплатное пробное занятие</p>
+              <p className="font-semibold text-accent-foreground bg-accent/20 px-3 py-1 rounded-lg inline-block text-lg max-[480px]:text-base">
                 20 ноября 2025г.
               </p>
               
-              <p className="text-foreground/70 leading-snug pt-1 text-base">
+              <p className="text-foreground/70 leading-snug pt-1 text-base max-[480px]:text-sm">
                 Курс длится с 27 ноября по 25 декабря 2025г.
               </p>
               
-              <p className="text-foreground/70 leading-snug text-base">
+              <p className="text-foreground/70 leading-snug text-base max-[480px]:text-sm">
                 Занятия по четвергам, 19:30–21:00
               </p>
             </div>
@@ -52,9 +52,9 @@ export const Pricing = () => {
           
           <div className="bg-card rounded-2xl max-[480px]:rounded-xl p-5 max-[480px]:p-4 shadow-soft hover:shadow-xl transition-smooth h-full">
             <div className="space-y-1.5 max-[480px]:space-y-1 mx-[15px]">
-              <p className="font-semibold text-foreground mb-1 text-xl">📍 Место проведения</p>
+              <p className="font-semibold text-foreground mb-1 text-xl max-[480px]:text-lg">📍 Место проведения</p>
               
-              <p className="text-foreground/70 leading-snug pt-1 text-base">
+              <p className="text-foreground/70 leading-snug pt-1 text-base max-[480px]:text-sm">
                 Первый поток "Громче" проходит 
 в г. Люберцы, ул. 8 Марта, 12, корп. 1
               </p>
