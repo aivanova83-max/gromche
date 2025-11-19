@@ -13,7 +13,7 @@ export const Pricing = () => {
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-[480px]:gap-4 mb-5 max-[480px]:mb-4">
-          <div className="bg-card rounded-3xl max-[480px]:rounded-2xl p-8 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth h-full">
+          <div className="bg-card rounded-3xl max-[480px]:rounded-2xl p-8 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth h-full min-h-[230px]">
             <div className="text-4xl max-[480px]:text-3xl font-bold text-primary mb-3 max-[480px]:mb-2">6500 ₽</div>
             <h3 className="text-xl max-[480px]:text-lg font-semibold mb-3 max-[480px]:mb-2 text-foreground">Курс из 5 занятий</h3>
             <p className="text-base max-[480px]:text-sm text-foreground/70 mb-3 max-[480px]:mb-2">с профессиональным педагогом по пению</p>
@@ -23,7 +23,7 @@ export const Pricing = () => {
             </div>
           </div>
           
-          <div className="bg-card rounded-3xl max-[480px]:rounded-2xl p-8 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth h-full">
+          <div className="bg-card rounded-3xl max-[480px]:rounded-2xl p-8 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth h-full min-h-[230px]">
             <div className="text-3xl max-[480px]:text-2xl mb-3 max-[480px]:mb-2">🎉</div>
             <h3 className="text-xl max-[480px]:text-lg font-semibold mb-3 max-[480px]:mb-2 text-foreground">Последнее занятие курса - девичник в секретном месте!</h3>
             <p className="text-base max-[480px]:text-sm text-foreground/70">
@@ -31,7 +31,7 @@ export const Pricing = () => {
             </p>
           </div>
           
-          <div className="bg-card rounded-2xl max-[480px]:rounded-xl p-5 max-[480px]:p-4 shadow-soft hover:shadow-xl transition-smooth h-full">
+          <div className="bg-card rounded-2xl max-[480px]:rounded-xl p-5 max-[480px]:p-4 shadow-soft hover:shadow-xl transition-smooth h-full min-h-[230px]">
             <div className="space-y-1.5 max-[480px]:space-y-1 mx-[15px]">
               <p className="font-semibold text-foreground mb-1 text-xl max-[480px]:text-lg">📅 Бесплатное пробное занятие</p>
               <p className="font-semibold text-accent-foreground bg-accent/20 px-3 py-1 rounded-lg inline-block text-lg max-[480px]:text-base">
@@ -48,7 +48,7 @@ export const Pricing = () => {
             </div>
           </div>
           
-          <div className="bg-card rounded-2xl max-[480px]:rounded-xl p-5 max-[480px]:p-4 shadow-soft hover:shadow-xl transition-smooth h-full">
+          <div className="bg-card rounded-2xl max-[480px]:rounded-xl p-5 max-[480px]:p-4 shadow-soft hover:shadow-xl transition-smooth h-full min-h-[230px]">
             <div className="space-y-1.5 max-[480px]:space-y-1 mx-[15px]">
               <p className="font-semibold text-foreground mb-1 text-xl max-[480px]:text-lg">📍 Место проведения</p>
               
