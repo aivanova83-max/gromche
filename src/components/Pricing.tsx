@@ -67,7 +67,7 @@ export const Pricing = () => {
         </div>
         
         <div className="text-center mb-3 max-[480px]:mb-2.5">
-          <p className="text-base max-[480px]:text-sm font-medium text-primary/80">
+          <p className="text-lg max-[480px]:text-base font-semibold text-primary">
             Количество мест ограничено! Успейте записаться!
           </p>
         </div>
