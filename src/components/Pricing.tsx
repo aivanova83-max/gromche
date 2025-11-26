@@ -16,7 +16,7 @@ export const Pricing = () => {
           <div className="bg-card rounded-3xl max-[480px]:rounded-2xl p-8 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth h-full min-h-[230px]">
             <div className="text-4xl max-[480px]:text-3xl font-bold text-primary mb-3 max-[480px]:mb-2">6500 ₽</div>
             <h3 className="text-xl max-[480px]:text-lg font-semibold mb-3 max-[480px]:mb-2 text-foreground">Курс из 5 занятий</h3>
-            <p className="text-base max-[480px]:text-sm text-foreground/70 mb-3 max-[480px]:mb-2">с профессиональным педагогом по пению</p>
+            <p className="text-base max-[480px]:text-sm text-foreground/70 mb-3 max-[480px]:mb-2">с профессиональным педагогом по вокалу</p>
             
             <div className="bg-accent/20 rounded-2xl max-[480px]:rounded-xl p-3 max-[480px]:p-2.5">
               <p className="text-base max-[480px]:text-sm font-medium text-accent-foreground">🎁 Пробное занятие - бесплатно!</p>
@@ -47,9 +47,7 @@ export const Pricing = () => {
               </p>
               
               <div className="bg-primary/10 rounded-xl max-[480px]:rounded-lg p-3 max-[480px]:p-2.5 mt-3 max-[480px]:mt-2">
-                <p className="text-base max-[480px]:text-sm font-semibold text-primary leading-snug">
-                  Курс набран. Следующий курс - в январе!
-                </p>
+                <p className="text-base max-[480px]:text-sm font-semibold text-primary leading-snug">Курс набран. Следующий курс - в январе!</p>
               </div>
             </div>
           </div>
