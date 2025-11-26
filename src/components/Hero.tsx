@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import logoGromche from "@/assets/logo-gromche.png";
+
 export const Hero = ({ className }: { className?: string }) => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -9,7 +11,13 @@ export const Hero = ({ className }: { className?: string }) => {
   return <section className="flex items-center justify-center px-4 py-16 max-[480px]:py-10 bg-gradient-warm">
       <div className="container max-w-6xl mx-auto text-center">
         <div className="animate-fade-in px-0 py-0 mx-0 my-0">
-          <h1 className="text-5xl md:text-7xl max-[480px]:text-3xl font-bold mb-4 max-[480px]:mb-3 text-foreground">
+          <img 
+            src={logoGromche} 
+            alt="Хор Громче" 
+            className="mx-auto mb-8 max-[480px]:mb-6 w-full max-w-2xl max-[480px]:max-w-sm h-auto"
+          />
+          
+          <h1 className="text-5xl md:text-7xl max-[480px]:text-3xl font-bold mb-4 max-[480px]:mb-3 text-foreground sr-only">
             Хор «Громче»
           </h1>
           
