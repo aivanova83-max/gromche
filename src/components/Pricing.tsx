@@ -45,6 +45,12 @@ export const Pricing = () => {
               <p className="text-foreground/70 leading-snug text-base max-[480px]:text-sm">
                 Занятия по четвергам, 19:30–21:00
               </p>
+              
+              <div className="bg-primary/10 rounded-xl max-[480px]:rounded-lg p-3 max-[480px]:p-2.5 mt-3 max-[480px]:mt-2">
+                <p className="text-base max-[480px]:text-sm font-semibold text-primary leading-snug">
+                  Курс набран. Следующий курс - в январе!
+                </p>
+              </div>
             </div>
           </div>
           
