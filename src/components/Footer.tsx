@@ -5,9 +5,15 @@ export const Footer = () => {
         <p className="text-lg max-[480px]:text-base font-semibold text-foreground mb-1.5 max-[480px]:mb-1">
           Хор «Громче»
         </p>
-        <p className="text-base max-[480px]:text-sm text-olive">
+        <p className="text-base max-[480px]:text-sm text-olive mb-2 max-[480px]:mb-1.5">
           Женщины, которые звучат
         </p>
+        <a 
+          href="mailto:gromche-choir@yandex.ru" 
+          className="text-sm max-[480px]:text-xs text-muted-foreground hover:text-primary transition-colors"
+        >
+          gromche-choir@yandex.ru
+        </a>
       </div>
     </footer>
   );
