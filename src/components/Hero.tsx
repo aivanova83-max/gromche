@@ -14,7 +14,7 @@ export const Hero = ({ className }: { className?: string }) => {
           <img 
             src={logoGromche} 
             alt="Хор Громче" 
-            className="mx-auto mb-8 max-[480px]:mb-6 w-full max-w-2xl max-[480px]:max-w-sm h-auto"
+            className="mx-auto mb-8 max-[480px]:mb-6 w-full max-w-xl max-[480px]:max-w-xs h-auto"
           />
           
           <h1 className="text-5xl md:text-7xl max-[480px]:text-3xl font-bold mb-4 max-[480px]:mb-3 text-foreground sr-only">
