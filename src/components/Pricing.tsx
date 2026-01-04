@@ -72,9 +72,9 @@ export const Pricing = () => {
               <h3 className="text-xl max-[480px]:text-lg font-semibold text-foreground">Расписание</h3>
             </div>
             
-            <p className="text-foreground font-medium text-lg max-[480px]:text-base mb-2">
-              Среда, 19:30 — 21:00
-            </p>
+            <p className="text-foreground font-medium text-lg max-[480px]:text-base mb-2">Среда, 19:30 — 21:00
+
+          </p>
             
             <p className="text-foreground/60 text-sm max-[480px]:text-xs">
               Занятия проходят каждую неделю
