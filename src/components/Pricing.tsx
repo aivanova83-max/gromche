@@ -88,9 +88,8 @@ export const Pricing = () => {
               <h3 className="text-xl max-[480px]:text-lg font-semibold text-foreground">Место проведения</h3>
             </div>
             
-            <p className="text-foreground font-medium text-base max-[480px]:text-sm mb-2">
-              г. Люберцы, ул. 8 Марта, 12, корп. 3
-            </p>
+            <p className="text-foreground font-medium text-base max-[480px]:text-sm mb-2">г. Люберцы, ул. 8 Марта, 12, корп. 3
+(клуб ПроДетство)</p>
             
             <a href="https://yandex.ru/maps/-/CLXQ5Klo" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary hover:text-primary/80 text-sm max-[480px]:text-xs font-medium transition-smooth">
               Построить маршрут →
