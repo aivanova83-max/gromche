@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
-
 export const Pricing = () => {
-  return (
-    <section id="pricing" className="py-16 max-[480px]:py-10 px-4 bg-gradient-warm">
+  return <section id="pricing" className="py-16 max-[480px]:py-10 px-4 bg-gradient-warm">
       <div className="container max-w-5xl mx-auto">
         <h2 className="text-4xl md:text-5xl max-[480px]:text-2xl font-bold mb-10 max-[480px]:mb-8 text-center text-foreground">
           Как это работает
@@ -64,9 +62,7 @@ export const Pricing = () => {
               Можно пригласить друзей и родственников — они будут гордиться вами!
             </p>
             
-            <p className="text-primary text-sm max-[480px]:text-xs font-medium">
-              ✨ Участие в концерте входит в стоимость абонемента
-            </p>
+            
           </div>
           
           {/* Расписание */}
@@ -96,12 +92,7 @@ export const Pricing = () => {
               г. Люберцы, ул. 8 Марта, 12, корп. 3
             </p>
             
-            <a 
-              href="https://yandex.ru/maps/-/CLXQ5Klo" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="inline-flex items-center gap-1 text-primary hover:text-primary/80 text-sm max-[480px]:text-xs font-medium transition-smooth"
-            >
+            <a href="https://yandex.ru/maps/-/CLXQ5Klo" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary hover:text-primary/80 text-sm max-[480px]:text-xs font-medium transition-smooth">
               Построить маршрут →
             </a>
           </div>
@@ -114,18 +105,12 @@ export const Pricing = () => {
         </div>
         
         <div className="text-center">
-          <Button 
-            variant="hero" 
-            size="lg" 
-            className="text-base max-[480px]:text-sm px-10 max-[480px]:px-8 py-4 max-[480px]:py-3.5 rounded-full w-full max-w-lg max-[480px]:max-w-full font-semibold" 
-            asChild
-          >
+          <Button variant="hero" size="lg" className="text-base max-[480px]:text-sm px-10 max-[480px]:px-8 py-4 max-[480px]:py-3.5 rounded-full w-full max-w-lg max-[480px]:max-w-full font-semibold" asChild>
             <a href="https://forms.gle/V3Sv25Gk2MLigaE58" target="_blank" rel="noopener noreferrer">
               Записаться на занятие
             </a>
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
