@@ -60,8 +60,12 @@ export const Pricing = () => {
               Каждые <span className="font-medium">~2 месяца</span> — концерт на профессиональной концертной площадке!
             </p>
             
-            <p className="text-foreground/60 text-sm max-[480px]:text-xs leading-relaxed">
+            <p className="text-foreground/60 text-sm max-[480px]:text-xs leading-relaxed mb-3">
               Можно пригласить друзей и родственников — они будут гордиться вами!
+            </p>
+            
+            <p className="text-primary text-sm max-[480px]:text-xs font-medium">
+              ✨ Участие в концерте входит в стоимость абонемента
             </p>
           </div>
           
