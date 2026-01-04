@@ -13,55 +13,71 @@ export const Pricing = () => {
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-[480px]:gap-4 mb-5 max-[480px]:mb-4">
-          <div className="bg-card rounded-3xl max-[480px]:rounded-2xl p-8 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth h-full min-h-[230px]">
-            <div className="text-4xl max-[480px]:text-3xl font-bold text-primary mb-3 max-[480px]:mb-2">6500 ₽</div>
-            <h3 className="text-xl max-[480px]:text-lg font-semibold mb-3 max-[480px]:mb-2 text-foreground">Курс из 5 занятий</h3>
-            <p className="text-base max-[480px]:text-sm text-foreground/70 mb-3 max-[480px]:mb-2">с профессиональным педагогом по вокалу</p>
+          {/* Абонементы */}
+          <div className="bg-card rounded-3xl max-[480px]:rounded-2xl p-8 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth h-full">
+            <h3 className="text-xl max-[480px]:text-lg font-semibold mb-4 max-[480px]:mb-3 text-foreground">Абонементы</h3>
+            <div className="space-y-3 max-[480px]:space-y-2">
+              <div className="flex justify-between items-center">
+                <span className="text-foreground/80 text-base max-[480px]:text-sm">4 занятия</span>
+                <span className="font-bold text-primary text-lg max-[480px]:text-base">6 000 ₽</span>
+              </div>
+              <p className="text-foreground/60 text-sm max-[480px]:text-xs">Действует 43 дня с момента активации</p>
+              
+              <div className="flex justify-between items-center pt-2">
+                <span className="text-foreground/80 text-base max-[480px]:text-sm">6 занятий</span>
+                <span className="font-bold text-primary text-lg max-[480px]:text-base">8 400 ₽</span>
+              </div>
+              <p className="text-foreground/60 text-sm max-[480px]:text-xs">Действует 57 дней с момента активации</p>
+              
+              <div className="flex justify-between items-center pt-2">
+                <span className="text-foreground/80 text-base max-[480px]:text-sm">8 занятий</span>
+                <span className="font-bold text-primary text-lg max-[480px]:text-base">10 400 ₽</span>
+              </div>
+              <p className="text-foreground/60 text-sm max-[480px]:text-xs">Действует 78 дней с момента активации</p>
+            </div>
             
-            <div className="bg-accent/20 rounded-2xl max-[480px]:rounded-xl p-3 max-[480px]:p-2.5">
-              <p className="text-base max-[480px]:text-sm font-medium text-accent-foreground">🎁 Пробное занятие - бесплатно!</p>
+            <div className="bg-accent/20 rounded-2xl max-[480px]:rounded-xl p-3 max-[480px]:p-2.5 mt-4 max-[480px]:mt-3">
+              <p className="text-base max-[480px]:text-sm font-medium text-accent-foreground">🎁 Пробное занятие — бесплатно!</p>
             </div>
           </div>
           
-          <div className="bg-card rounded-3xl max-[480px]:rounded-2xl p-8 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth h-full min-h-[230px]">
+          {/* Концерты */}
+          <div className="bg-card rounded-3xl max-[480px]:rounded-2xl p-8 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth h-full">
             <div className="text-3xl max-[480px]:text-2xl mb-3 max-[480px]:mb-2">🎉</div>
-            <h3 className="text-xl max-[480px]:text-lg font-semibold mb-3 max-[480px]:mb-2 text-foreground">Последнее занятие курса - девичник в секретном месте!</h3>
+            <h3 className="text-xl max-[480px]:text-lg font-semibold mb-3 max-[480px]:mb-2 text-foreground">Концерты</h3>
             <p className="text-base max-[480px]:text-sm text-foreground/70">
-              Будем веселиться и петь все, что выучили - и не только!
+              Каждые ~2 месяца — концерт на профессиональной концертной площадке!
+            </p>
+            <p className="text-base max-[480px]:text-sm text-foreground/70 mt-2">
+              Можно пригласить друзей и родственников!
             </p>
           </div>
           
-          <div className="bg-card rounded-2xl max-[480px]:rounded-xl p-5 max-[480px]:p-4 shadow-soft hover:shadow-xl transition-smooth h-full min-h-[230px]">
+          {/* Расписание */}
+          <div className="bg-card rounded-2xl max-[480px]:rounded-xl p-5 max-[480px]:p-4 shadow-soft hover:shadow-xl transition-smooth h-full">
             <div className="space-y-1.5 max-[480px]:space-y-1 mx-[15px]">
-              <p className="font-semibold text-foreground mb-1 text-xl max-[480px]:text-lg">📅 Бесплатное пробное занятие</p>
-              <p className="font-semibold text-accent-foreground bg-accent/20 px-3 py-1 rounded-lg inline-block text-lg max-[480px]:text-base">
-                20 ноября 2025г.
-              </p>
+              <p className="font-semibold text-foreground mb-1 text-xl max-[480px]:text-lg">📅 Расписание</p>
               
               <p className="text-foreground/70 leading-snug pt-1 text-base max-[480px]:text-sm">
-                Курс длится с 27 ноября по 25 декабря 2025г.
+                Занятия проходят каждую среду
               </p>
               
-              <p className="text-foreground/70 leading-snug text-base max-[480px]:text-sm">
-                Занятия по четвергам, 19:30–21:00
+              <p className="font-semibold text-accent-foreground bg-accent/20 px-3 py-1 rounded-lg inline-block text-lg max-[480px]:text-base">
+                с 19:30 до 21:00
               </p>
-              
-              <div className="bg-primary/10 rounded-xl max-[480px]:rounded-lg p-3 max-[480px]:p-2.5 mt-3 max-[480px]:mt-2">
-                <p className="text-base max-[480px]:text-sm font-semibold text-primary leading-snug">Курс набран. Следующий курс - в январе!</p>
-              </div>
             </div>
           </div>
           
-          <div className="bg-card rounded-2xl max-[480px]:rounded-xl p-5 max-[480px]:p-4 shadow-soft hover:shadow-xl transition-smooth h-full min-h-[230px]">
+          {/* Место проведения */}
+          <div className="bg-card rounded-2xl max-[480px]:rounded-xl p-5 max-[480px]:p-4 shadow-soft hover:shadow-xl transition-smooth h-full">
             <div className="space-y-1.5 max-[480px]:space-y-1 mx-[15px]">
               <p className="font-semibold text-foreground mb-1 text-xl max-[480px]:text-lg">📍 Место проведения</p>
               
               <p className="text-foreground/70 leading-snug pt-1 text-base max-[480px]:text-sm">
-                Первый поток "Громче" проходит 
-в г. Люберцы, ул. 8 Марта, 12, корп. 1
+                г. Люберцы, ул. 8 Марта, 12, корп. 3
               </p>
               
-              <a href="https://yandex.ru/maps/-/CLC746JD" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary hover:text-primary/80 underline decoration-1 underline-offset-2 font-medium text-sm max-[480px]:text-xs transition-smooth pt-0.5">
+              <a href="https://yandex.ru/maps/-/CLXQ5Klo" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-primary hover:text-primary/80 underline decoration-1 underline-offset-2 font-medium text-sm max-[480px]:text-xs transition-smooth pt-0.5">
                 Построить маршрут →
               </a>
             </div>
