@@ -137,7 +137,7 @@ export const Pricing = () => {
                     <p className="text-foreground font-medium text-lg max-[480px]:text-base mb-1">
                       {branch.schedule.day}, {branch.schedule.time}
                     </p>
-                    <p className="text-foreground/60 text-sm max-[480px]:text-xs mb-2">
+                    <p className="text-foreground text-sm max-[480px]:text-xs mb-2">
                       (длительность — 1ч 30мин)
                     </p>
 
