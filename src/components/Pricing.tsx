@@ -88,7 +88,7 @@ export const Pricing = () => {
                         <div key={item.sessions} className="flex justify-between items-baseline">
                           <div>
                             <span className="text-foreground text-base max-[480px]:text-sm">
-                              {item.sessions} занятия
+                              {item.sessions} занятий
                             </span>
                             <p className="text-foreground/50 text-xs mt-0.5">{item.days} дня</p>
                           </div>
