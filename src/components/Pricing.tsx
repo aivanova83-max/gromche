@@ -24,7 +24,7 @@ const branchData = {
     schedule: {
       day: "Четверг",
       time: "19:00 — 20:30",
-      note: "Старт занятий на ВДНХ — 12 февраля!",
+      note: null,
     },
     prices: [
       { sessions: 4, price: "6 800", days: 43 },
