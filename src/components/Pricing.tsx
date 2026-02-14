@@ -6,7 +6,7 @@ const branchData = {
     name: "Люберцы",
     schedule: {
       day: "Среда",
-      time: "19:00 — 20:30",
+      time: "19:30 — 21:00",
       note: null,
     },
     prices: [
@@ -23,7 +23,7 @@ const branchData = {
     name: "ВДНХ",
     schedule: {
       day: "Четверг",
-      time: "19:30 — 21:00",
+      time: "19:00 — 20:30",
       note: "Старт занятий на ВДНХ — 12 февраля!",
     },
     prices: [
