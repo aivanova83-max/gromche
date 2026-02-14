@@ -6,7 +6,7 @@ const branchData = {
     name: "Люберцы",
     schedule: {
       day: "Среда",
-      time: "19:30 — 21:00",
+      time: "19:00 — 20:30",
       note: null,
     },
     prices: [
