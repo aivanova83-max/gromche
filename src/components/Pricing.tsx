@@ -48,7 +48,7 @@ export const Pricing = () => {
           Как это работает
         </h2>
 
-        <Tabs defaultValue="lyubertsy" className="w-full">
+        <Tabs defaultValue="vdnkh" className="w-full">
           {/* Branch Switcher */}
           <TabsList className="grid w-full grid-cols-2 mb-8 max-[480px]:mb-6 h-14 max-[480px]:h-12 bg-card/80 backdrop-blur-sm rounded-full p-1.5 shadow-soft">
             <TabsTrigger
