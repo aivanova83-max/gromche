@@ -44,9 +44,12 @@ export const Pricing = () => {
   return (
     <section id="pricing" className="py-16 max-[480px]:py-10 px-4 bg-gradient-warm">
       <div className="container max-w-5xl mx-auto">
-        <h2 className="text-4xl md:text-5xl max-[480px]:text-2xl font-bold mb-8 max-[480px]:mb-6 text-center text-foreground">
+        <h2 className="text-4xl md:text-5xl max-[480px]:text-2xl font-bold mb-2 max-[480px]:mb-1.5 text-center text-foreground">
           Как это работает
         </h2>
+        <p className="text-center text-foreground/60 text-lg max-[480px]:text-base mb-8 max-[480px]:mb-6">
+          Выберите филиал
+        </p>
 
         <Tabs defaultValue="vdnkh" className="w-full">
           {/* Branch Switcher */}
