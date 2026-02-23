@@ -14,6 +14,14 @@ export const Footer = () => {
         >
           gromche-choir@yandex.ru
         </a>
+        <div className="mt-3">
+          <a
+            href="/legal"
+            className="text-xs text-muted-foreground hover:text-primary transition-colors"
+          >
+            Политика конфиденциальности
+          </a>
+        </div>
       </div>
     </footer>
   );
