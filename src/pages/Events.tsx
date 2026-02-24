@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { EventCountdown } from "@/components/EventCountdown";
-import { MoyKlassWidget } from "@/components/MoyKlassWidget";
+import { MoyKlassForceWidget } from "@/components/MoyKlassForceWidget";
 import { PaymentWidget } from "@/components/PaymentWidget";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
@@ -142,7 +142,7 @@ const Events = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Занять место
           </h2>
-          <MoyKlassWidget />
+          <MoyKlassForceWidget />
         </div>
       </section>
 
