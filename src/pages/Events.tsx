@@ -138,13 +138,11 @@ const Events = () => {
 
       {/* ── Секция регистрации ── */}
       <section id="register" className="py-16 max-[480px]:py-10 px-4">
-        <div className="container max-w-4xl mx-auto space-y-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
+        <div className="container max-w-4xl mx-auto space-y-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Занять место
           </h2>
-          <div className="max-w-2xl mx-auto">
-            <MoyKlassWidget />
-          </div>
+          <MoyKlassWidget />
         </div>
       </section>
 
