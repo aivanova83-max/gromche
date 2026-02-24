@@ -15,7 +15,8 @@ export const MoyKlassWidget = () => {
     const script = document.createElement("script");
     script.src =
       "https://app.moyklass.com/api/site/widget/?id=01hZGtASapf5mlYpucT2gi8kkUURZAUFn2or";
-    script.async = true;
+    script.type = "text/javascript";
+    script.charset = "UTF-8";
     script.onload = () => {
       setTimeout(() => setLoading(false), 3000);
     };
