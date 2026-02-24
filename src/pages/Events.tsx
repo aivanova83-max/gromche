@@ -57,10 +57,6 @@ const Events = () => {
             </ul>
           </div>
 
-          {/* Виджет МойКласс */}
-          <div className="max-w-2xl mx-auto">
-            <MoyKlassWidget />
-          </div>
         </div>
       </section>
 
