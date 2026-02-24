@@ -10,12 +10,12 @@ export const Header = () => {
         <nav className="flex items-center gap-4">
           <a
             href="/events"
-            className="inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground text-sm font-semibold px-5 py-2 shadow-soft hover:bg-primary/85 transition-colors"
-          >
-            Мероприятия Громче
+            className="inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground text-sm font-semibold px-5 py-2 shadow-soft hover:bg-primary/85 transition-colors">Мероприятия "Громче"
+
+
           </a>
         </nav>
       </div>
-    </header>
-  );
+    </header>);
+
 };
