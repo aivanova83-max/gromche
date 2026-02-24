@@ -7,33 +7,35 @@ export const MoyKlassWidget = () => {
   const scriptLoadedRef = useRef(false);
 
   useEffect(() => {
-    if (scriptLoadedRef.current) return;
-    if (!containerRef.current) return;
-
+    if (scriptLoadedRef.current || !containerRef.current) return;
     scriptLoadedRef.current = true;
 
+    // Create the widget target div exactly as MoyKlass expects
+    const widgetDiv = document.createElement("div");
+    widgetDiv.id = "SiteWidgetMoyklass131435";
+    containerRef.current.appendChild(widgetDiv);
+
+    // Insert script right after the div, matching MoyKlass HTML snippet
     const script = document.createElement("script");
     script.src =
       "https://app.moyklass.com/api/site/widget/?id=01hZGtASapf5mlYpucT2gi8kkUURZAUFn2or";
     script.type = "text/javascript";
-    script.charset = "UTF-8";
+    script.setAttribute("charset", "UTF-8");
     script.onload = () => {
       setTimeout(() => setLoading(false), 3000);
     };
     script.onerror = () => setLoading(false);
-
-    // The MoyKlass script looks for the container by ID in document,
-    // so we append the script to body while the container div exists in DOM
-    document.body.appendChild(script);
+    containerRef.current.appendChild(script);
 
     return () => {
       script.remove();
+      widgetDiv.remove();
       scriptLoadedRef.current = false;
     };
   }, []);
 
   return (
-    <div className="relative" style={{ minHeight: 500 }}>
+    <div ref={containerRef} className="relative" style={{ minHeight: 500 }}>
       {loading && (
         <div className="absolute inset-0 flex flex-col gap-4 p-4 z-10">
           <Skeleton className="h-10 w-3/4" />
@@ -42,7 +44,6 @@ export const MoyKlassWidget = () => {
           <Skeleton className="h-12 w-40" />
         </div>
       )}
-      <div ref={containerRef} id="SiteWidgetMoyklass131435" />
     </div>
   );
 };
