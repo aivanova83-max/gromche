@@ -8,7 +8,9 @@ import { PaymentWidget } from "@/components/PaymentWidget";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { DoorOpen, AudioWaveform, Heart, Play, X } from "lucide-react";
-import heroMobileImg from "@/assets/hero-event-mobile.jpg";
+import { EventProgram } from "@/components/EventProgram";
+import { EventVenue } from "@/components/EventVenue";
+import { EventFAQ } from "@/components/EventFAQ";
 
 /* ─── placeholder photos (заменить реальными) ─── */
 const archivePhotos = Array.from({ length: 8 }, (_, i) => ({
@@ -141,6 +143,11 @@ const Events = () => {
       </section>
 
       {/* ════════════════════════════════════════
+          PROGRAM
+         ════════════════════════════════════════ */}
+      <EventProgram />
+
+      {/* ════════════════════════════════════════
           ARCHIVE — video + masonry gallery
          ════════════════════════════════════════ */}
       <section className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
@@ -250,6 +257,16 @@ const Events = () => {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* ════════════════════════════════════════
+          VENUE
+         ════════════════════════════════════════ */}
+      <EventVenue />
+
+      {/* ════════════════════════════════════════
+          FAQ
+         ════════════════════════════════════════ */}
+      <EventFAQ />
 
       {/* ════════════════════════════════════════
           REGISTRATION — MoyKlass widget
