@@ -80,7 +80,7 @@ const Events = () => {
             Маме снова 17
             <br />
             <span className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
-              Вечеринка-ностальгия в Громче
+              Хоровая вечеринка-ностальгия
             </span>
           </h1>
 
