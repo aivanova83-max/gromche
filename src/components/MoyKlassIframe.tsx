@@ -18,7 +18,7 @@ export const MoyKlassIframe = () => {
   return (
     <iframe
       srcDoc={WIDGET_SRCDOC}
-      style={{ width: "100%", height: isMobile ? 600 : 800, border: "none" }}
+      style={{ width: "100%", height: isMobile ? 380 : 420, border: "none" }}
       title="МойКласс запись"
     />
   );
