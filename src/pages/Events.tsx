@@ -93,9 +93,7 @@ const Events = () => {
             13 марта 2026 · Москва
           </p>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">Хоровая вечеринка 
-
-Маме снова 17
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">Хоровая вечеринка
             <br />
             <span className="text-primary">«Маме снова 17»</span>
           </h1>
