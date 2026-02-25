@@ -16,39 +16,39 @@ import { EventFAQ } from "@/components/EventFAQ";
 const archivePhotos = Array.from({ length: 8 }, (_, i) => ({
   id: i,
   src: "/placeholder.svg",
-  alt: `Фото с вечеринки ${i + 1}`,
+  alt: `Фото с вечеринки ${i + 1}`
 }));
 
 /* ─── Bento cards data ─── */
 const bentoCards = [
-  {
-    icon: DoorOpen,
-    title: "Никаких кастингов",
-    text: "Приходите как есть — здесь важен не вокал, а желание петь и чувствовать.",
-  },
-  {
-    icon: AudioWaveform,
-    title: "Живой звук и энергия",
-    text: "Электричество, которое возникает, когда десятки голосов сливаются в одну волну.",
-  },
-  {
-    icon: Heart,
-    title: "Сообщество своих",
-    text: "Место, где можно быть искренней, уязвимой и настоящей — среди тех, кто понимает.",
-  },
-];
+{
+  icon: DoorOpen,
+  title: "Никаких кастингов",
+  text: "Приходите как есть — здесь важен не вокал, а желание петь и чувствовать."
+},
+{
+  icon: AudioWaveform,
+  title: "Живой звук и энергия",
+  text: "Электричество, которое возникает, когда десятки голосов сливаются в одну волну."
+},
+{
+  icon: Heart,
+  title: "Сообщество своих",
+  text: "Место, где можно быть искренней, уязвимой и настоящей — среди тех, кто понимает."
+}];
+
 
 /* ─── Masonry heights ─── */
 const masonryHeights = [
-  "aspect-[3/4]",
-  "aspect-square",
-  "aspect-[4/5]",
-  "aspect-square",
-  "aspect-[3/4]",
-  "aspect-square",
-  "aspect-[4/5]",
-  "aspect-[3/4]",
-];
+"aspect-[3/4]",
+"aspect-square",
+"aspect-[4/5]",
+"aspect-square",
+"aspect-[3/4]",
+"aspect-square",
+"aspect-[4/5]",
+"aspect-[3/4]"];
+
 
 const Events = () => {
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
@@ -62,8 +62,8 @@ const Events = () => {
       <Header />
 
       {/* ════════════════════════════════════════
-          HERO — video background
-         ════════════════════════════════════════ */}
+             HERO — video background
+            ════════════════════════════════════════ */}
       <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
         <video
           autoPlay
@@ -71,8 +71,8 @@ const Events = () => {
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          src="/hero-event.mp4"
-        />
+          src="/hero-event.mp4" />
+
 
         {/* Overlay: gradient + blur */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-[hsl(240_40%_15%/0.40)] to-black/60 md:from-black/70 md:via-[hsl(240_40%_15%/0.60)] md:to-black/80 backdrop-blur-sm" />
@@ -99,16 +99,16 @@ const Events = () => {
             variant="hero"
             size="lg"
             className="text-base px-10 py-6 rounded-full text-lg"
-            asChild
-          >
+            asChild>
+
             <a href="#register">Купить билет</a>
           </Button>
         </div>
       </section>
 
       {/* ════════════════════════════════════════
-          WHY — Bento cards
-         ════════════════════════════════════════ */}
+             WHY — Bento cards
+            ════════════════════════════════════════ */}
       <section className="py-20 max-[480px]:py-12 px-4">
         <div className="container max-w-5xl mx-auto space-y-12">
           <ScrollReveal>
@@ -116,15 +116,15 @@ const Events = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Почему стоит прийти
               </h2>
-              <p className="text-foreground/70 max-w-xl mx-auto">
-                Это не концерт и не урок. Это — опыт, который меняет ощущения
+              <p className="text-foreground/70 max-w-xl mx-auto">Это не концерт и не караоке. Хоровая вечеринка - это формат, где главные герои не на сцене, а в зале.
+
               </p>
             </div>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-5">
-            {bentoCards.map((card, i) => (
-              <ScrollReveal key={card.title} delay={i * 0.12}>
+            {bentoCards.map((card, i) =>
+            <ScrollReveal key={card.title} delay={i * 0.12}>
                 <div className="bg-card rounded-2xl p-7 shadow-warm border border-border/60 hover:shadow-soft transition-all duration-300 h-full flex flex-col gap-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                     <card.icon className="w-6 h-6 text-primary" />
@@ -137,19 +137,19 @@ const Events = () => {
                   </p>
                 </div>
               </ScrollReveal>
-            ))}
+            )}
           </div>
         </div>
       </section>
 
       {/* ════════════════════════════════════════
-          PROGRAM
-         ════════════════════════════════════════ */}
+             PROGRAM
+            ════════════════════════════════════════ */}
       <EventProgram />
 
       {/* ════════════════════════════════════════
-          ARCHIVE — video + masonry gallery
-         ════════════════════════════════════════ */}
+             ARCHIVE — video + masonry gallery
+            ════════════════════════════════════════ */}
       <section className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
         <div className="container max-w-6xl mx-auto space-y-12">
           <ScrollReveal>
@@ -182,41 +182,41 @@ const Events = () => {
 
           {/* Masonry gallery */}
           <div className="columns-2 md:columns-3 gap-3 md:gap-4 space-y-3 md:space-y-4">
-            {archivePhotos.map((photo, i) => (
-              <ScrollReveal key={photo.id} delay={i * 0.06}>
+            {archivePhotos.map((photo, i) =>
+            <ScrollReveal key={photo.id} delay={i * 0.06}>
                 <div
-                  className={`${masonryHeights[i % masonryHeights.length]} rounded-xl overflow-hidden bg-card border border-border shadow-warm cursor-pointer hover:shadow-soft transition-shadow duration-300 break-inside-avoid flex items-center justify-center`}
-                  onClick={() => setLightboxIdx(i)}
-                >
+                className={`${masonryHeights[i % masonryHeights.length]} rounded-xl overflow-hidden bg-card border border-border shadow-warm cursor-pointer hover:shadow-soft transition-shadow duration-300 break-inside-avoid flex items-center justify-center`}
+                onClick={() => setLightboxIdx(i)}>
+
                   <span className="text-muted-foreground text-sm">
                     📷 Фото {i + 1}
                   </span>
                 </div>
               </ScrollReveal>
-            ))}
+            )}
           </div>
 
           {/* Lightbox */}
           <Dialog
             open={lightboxIdx !== null}
-            onOpenChange={() => setLightboxIdx(null)}
-          >
+            onOpenChange={() => setLightboxIdx(null)}>
+
             <DialogContent className="max-w-[90vw] max-h-[90vh] p-2 bg-black/95 border-none">
-              {lightboxIdx !== null && (
-                <div className="flex items-center justify-center min-h-[50vh]">
+              {lightboxIdx !== null &&
+              <div className="flex items-center justify-center min-h-[50vh]">
                   <span className="text-white/60 text-lg">
                     📷 Фото {lightboxIdx + 1} — полный размер
                   </span>
                 </div>
-              )}
+              }
             </DialogContent>
           </Dialog>
         </div>
       </section>
 
       {/* ════════════════════════════════════════
-          PAYMENT
-         ════════════════════════════════════════ */}
+             PAYMENT
+            ════════════════════════════════════════ */}
       <section className="py-20 max-[480px]:py-12 px-4">
         <div className="container max-w-4xl mx-auto space-y-8">
           <ScrollReveal>
@@ -247,8 +247,8 @@ const Events = () => {
                 за 3 дня до мероприятия. Для возврата напишите на{" "}
                 <a
                   href="mailto:gromche-choir@yandex.ru"
-                  className="text-primary hover:underline"
-                >
+                  className="text-primary hover:underline">
+
                   gromche-choir@yandex.ru
                 </a>
                 .
@@ -259,22 +259,22 @@ const Events = () => {
       </section>
 
       {/* ════════════════════════════════════════
-          VENUE
-         ════════════════════════════════════════ */}
+             VENUE
+            ════════════════════════════════════════ */}
       <EventVenue />
 
       {/* ════════════════════════════════════════
-          FAQ
-         ════════════════════════════════════════ */}
+             FAQ
+            ════════════════════════════════════════ */}
       <EventFAQ />
 
       {/* ════════════════════════════════════════
-          REGISTRATION — MoyKlass widget
-         ════════════════════════════════════════ */}
+             REGISTRATION — MoyKlass widget
+            ════════════════════════════════════════ */}
       <section
         id="register"
-        className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm"
-      >
+        className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
+
         <div className="container max-w-4xl mx-auto space-y-8 text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -291,8 +291,8 @@ const Events = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default Events;
