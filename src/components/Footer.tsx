@@ -16,6 +16,12 @@ export const Footer = () => {
         </a>
         <div className="mt-3 flex flex-wrap justify-center gap-4">
           <a
+            href="/events"
+            className="text-xs text-muted-foreground hover:text-primary transition-colors"
+          >
+            Мероприятия
+          </a>
+          <a
             href="/legal"
             className="text-xs text-muted-foreground hover:text-primary transition-colors"
           >
