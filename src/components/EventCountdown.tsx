@@ -9,7 +9,8 @@ interface TimeLeft {
 
 const TARGET_DATE = new Date("2026-03-13T19:00:00+05:00");
 
-export const EventCountdown = () => {
+export const EventCountdown = ({ variant }: { variant?: "hero" | "default" }) => {
+  const isHero = variant === "hero";
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calcTimeLeft());
 
   function calcTimeLeft(): TimeLeft {
@@ -39,12 +40,20 @@ export const EventCountdown = () => {
       {blocks.map((b) => (
         <div
           key={b.label}
-          className="flex flex-col items-center bg-card rounded-lg px-4 py-3 md:px-6 md:py-4 shadow-warm min-w-[64px]"
+          className={`flex flex-col items-center rounded-lg px-4 py-3 md:px-6 md:py-4 min-w-[64px] ${
+            isHero
+              ? "bg-white/10 backdrop-blur-sm border border-white/20"
+              : "bg-card shadow-warm"
+          }`}
         >
-          <span className="text-2xl md:text-4xl font-bold text-primary tabular-nums">
+          <span className={`text-2xl md:text-4xl font-bold tabular-nums ${
+            isHero ? "text-white" : "text-primary"
+          }`}>
             {String(b.value).padStart(2, "0")}
           </span>
-          <span className="text-xs md:text-sm text-muted-foreground mt-1">
+          <span className={`text-xs md:text-sm mt-1 ${
+            isHero ? "text-white/60" : "text-muted-foreground"
+          }`}>
             {b.label}
           </span>
         </div>
