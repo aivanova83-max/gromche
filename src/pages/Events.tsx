@@ -174,14 +174,8 @@ const Events = () => {
         </div>
       </section>
 
-      {/* ════════ PROGRAM ════════ */}
-      <EventProgram />
-
-      {/* ════════ VENUE (moved up) ════════ */}
-      <EventVenue />
-
       {/* ════════ ARCHIVE — video + masonry gallery ════════ */}
-      <section className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
+      <section className="py-20 max-[480px]:py-12 px-4">
         <div className="container max-w-6xl mx-auto space-y-12">
           <ScrollReveal>
             <div className="text-center space-y-3">
@@ -242,6 +236,10 @@ const Events = () => {
         </div>
       </section>
 
+      {/* ════════ VENUE + PROGRAM ════════ */}
+      <EventVenue />
+      <EventProgram />
+
       {/* ════════ FAQ ════════ */}
       <EventFAQ />
 
@@ -263,7 +261,6 @@ const Events = () => {
             </div>
           </ScrollReveal>
 
-          {/* Gift block */}
           <ScrollReveal>
             <GiftBlock />
           </ScrollReveal>
