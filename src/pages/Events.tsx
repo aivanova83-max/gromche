@@ -63,21 +63,13 @@ const Events = () => {
           HERO — video background
          ════════════════════════════════════════ */}
       <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
-        {/* Video (hidden on mobile, static image shown instead) */}
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover hidden md:block"
+          className="absolute inset-0 w-full h-full object-cover"
           src="/hero-event.mp4"
-        />
-        {/* Mobile fallback image */}
-        <img
-          src={heroMobileImg}
-          alt=""
-          aria-hidden
-          className="absolute inset-0 w-full h-full object-cover md:hidden"
         />
 
         {/* Overlay: gradient + blur */}
