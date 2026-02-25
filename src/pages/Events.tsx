@@ -131,7 +131,7 @@ const Events = () => {
                 Что такое хоровая вечеринка?
               </h2>
               <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-[480px]:text-base">
-                Это не концерт. Это время, когда можно во весь голос спеть те
+                Это не концерт. Это время, когда можно спеть во весь голос те
                 самые песни, под которые наши мамы влюблялись и мечтали.
               </p>
               <p className="text-foreground/70 leading-relaxed max-[480px]:text-sm">
