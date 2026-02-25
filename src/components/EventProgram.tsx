@@ -24,12 +24,6 @@ export const EventProgram = () => (
 
       <ScrollReveal>
         <div className="bg-card rounded-2xl p-7 md:p-10 border border-border/60 shadow-warm">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-              <Clock className="w-5 h-5 text-primary" />
-            </div>
-            <h3 className="text-xl font-semibold text-foreground">Расписание</h3>
-          </div>
           <div className="space-y-5">
             {schedule.map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.07}>
