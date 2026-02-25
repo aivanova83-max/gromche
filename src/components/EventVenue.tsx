@@ -41,38 +41,26 @@ export const EventVenue = () => (
             </div>
           </div>
 
-          {/* How to get there videos */}
-          <div className="grid sm:grid-cols-2 gap-4 pt-2">
-            <div className="space-y-2">
-              <div className="flex items-center gap-2 text-sm font-medium text-foreground">
-                <Car className="w-4 h-4 text-primary" />
-                Как проехать
-              </div>
-              <div className="aspect-video rounded-xl overflow-hidden bg-muted border border-border">
-                <video
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="w-full h-full object-cover"
-                  src="https://prostranstvo.photo/wp-content/uploads/2021/07/ByCarStr8.mp4"
-                />
-              </div>
-            </div>
-            <div className="space-y-2">
-              <div className="flex items-center gap-2 text-sm font-medium text-foreground">
-                <Footprints className="w-4 h-4 text-primary" />
-                Как пройти
-              </div>
-              <div className="aspect-video rounded-xl overflow-hidden bg-muted border border-border">
-                <video
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="w-full h-full object-cover"
-                  src="https://prostranstvo.photo/wp-content/uploads/2021/07/WalkStr8.mp4"
-                />
-              </div>
-            </div>
+          {/* How to get there links */}
+          <div className="flex flex-wrap gap-4 pt-2">
+            <a
+              href="https://prostranstvo.photo/wp-content/uploads/2021/07/ByCarStr8.mp4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+            >
+              <Car className="w-4 h-4" />
+              Как проехать
+            </a>
+            <a
+              href="https://prostranstvo.photo/wp-content/uploads/2021/07/WalkStr8.mp4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+            >
+              <Footprints className="w-4 h-4" />
+              Как пройти
+            </a>
           </div>
         </div>
       </ScrollReveal>
