@@ -62,8 +62,8 @@ const Events = () => {
       <Header />
 
       {/* ════════════════════════════════════════
-                       HERO — video background
-                      ════════════════════════════════════════ */}
+                           HERO — video background
+                          ════════════════════════════════════════ */}
       <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
         <video
           autoPlay
@@ -84,9 +84,9 @@ const Events = () => {
           </p>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">Хоровая вечеринка 
-Маме снова 17
 
-Маме снова 17<br />
+Маме снова 17
+            <br />
             <span className="text-primary">«Маме снова 17»</span>
           </h1>
 
@@ -107,8 +107,8 @@ const Events = () => {
       </section>
 
       {/* ════════════════════════════════════════
-                       WHY — Bento cards
-                      ════════════════════════════════════════ */}
+                           WHY — Bento cards
+                          ════════════════════════════════════════ */}
       <section className="py-20 max-[480px]:py-12 px-4">
         <div className="container max-w-5xl mx-auto space-y-12">
           <ScrollReveal>
@@ -116,8 +116,8 @@ const Events = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">Что такое хоровая вечеринка?
 
               </h2>
-              <p className="text-foreground/70 max-w-xl mx-auto">Это не концерт и не караоке. 
-Хоровая вечеринка - это формат, где главные герои не на сцене, а в зале.
+              <p className="text-foreground/70 max-w-xl mx-auto">Это не концерт и не караоке.  Хоровая вечеринка - это формат, 
+где главные герои не на сцене, а в зале.
               </p>
             </div>
           </ScrollReveal>
@@ -143,13 +143,13 @@ const Events = () => {
       </section>
 
       {/* ════════════════════════════════════════
-                       PROGRAM
-                      ════════════════════════════════════════ */}
+                           PROGRAM
+                          ════════════════════════════════════════ */}
       <EventProgram />
 
       {/* ════════════════════════════════════════
-                       ARCHIVE — video + masonry gallery
-                      ════════════════════════════════════════ */}
+                           ARCHIVE — video + masonry gallery
+                          ════════════════════════════════════════ */}
       <section className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
         <div className="container max-w-6xl mx-auto space-y-12">
           <ScrollReveal>
@@ -215,8 +215,8 @@ const Events = () => {
       </section>
 
       {/* ════════════════════════════════════════
-                       PAYMENT
-                      ════════════════════════════════════════ */}
+                           PAYMENT
+                          ════════════════════════════════════════ */}
       <section className="py-20 max-[480px]:py-12 px-4">
         <div className="container max-w-4xl mx-auto space-y-8">
           <ScrollReveal>
@@ -259,18 +259,18 @@ const Events = () => {
       </section>
 
       {/* ════════════════════════════════════════
-                       VENUE
-                      ════════════════════════════════════════ */}
+                           VENUE
+                          ════════════════════════════════════════ */}
       <EventVenue />
 
       {/* ════════════════════════════════════════
-                       FAQ
-                      ════════════════════════════════════════ */}
+                           FAQ
+                          ════════════════════════════════════════ */}
       <EventFAQ />
 
       {/* ════════════════════════════════════════
-                       REGISTRATION — MoyKlass widget
-                      ════════════════════════════════════════ */}
+                           REGISTRATION — MoyKlass widget
+                          ════════════════════════════════════════ */}
       <section
         id="register"
         className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
