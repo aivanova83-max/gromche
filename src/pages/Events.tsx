@@ -86,7 +86,7 @@ const Events = () => {
         {/* Content */}
         <div className="relative z-10 text-center px-4 py-24 max-w-3xl mx-auto space-y-8">
           <p className="text-sm md:text-base uppercase tracking-[0.25em] text-white/70 font-medium">
-            13 марта 2026 · Екатеринбург
+            13 марта 2026 · Москва
           </p>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
@@ -99,7 +99,7 @@ const Events = () => {
             Поем вместе, чувствуем магию, создаем истории
           </p>
 
-          <EventCountdown variant="hero" />
+          
 
           <Button
             variant="hero"
