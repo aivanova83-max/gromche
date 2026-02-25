@@ -73,7 +73,7 @@ const Events = () => {
         />
 
         {/* Overlay: gradient + blur */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-[hsl(240_40%_15%/0.60)] to-black/80 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-[hsl(240_40%_15%/0.40)] to-black/60 md:from-black/70 md:via-[hsl(240_40%_15%/0.60)] md:to-black/80 backdrop-blur-sm" />
 
         {/* Content */}
         <div className="relative z-10 text-center px-4 py-24 max-w-3xl mx-auto space-y-8">
