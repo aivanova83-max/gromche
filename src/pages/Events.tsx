@@ -2,63 +2,51 @@ import { useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { EventCountdown } from "@/components/EventCountdown";
 import { MoyKlassIframe } from "@/components/MoyKlassIframe";
-import { PaymentWidget } from "@/components/PaymentWidget";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { Music, Users, Layers, Sparkles, Mic, Play, X } from "lucide-react";
+import { Piano, Guitar, Music, Heart, Sparkles, Play } from "lucide-react";
 import { EventProgram } from "@/components/EventProgram";
 import { EventVenue } from "@/components/EventVenue";
 import { EventFAQ } from "@/components/EventFAQ";
+import { GiftBlock } from "@/components/GiftBlock";
 
-/* ─── placeholder photos (заменить реальными) ─── */
+/* ─── placeholder photos ─── */
 const archivePhotos = Array.from({ length: 8 }, (_, i) => ({
   id: i,
   src: "/placeholder.svg",
-  alt: `Фото с вечеринки ${i + 1}`
+  alt: `Фото с вечеринки ${i + 1}`,
 }));
 
-/* ─── Bento cards data ─── */
-const bentoCards = [
-{
-  icon: Music,
-  title: "Живая музыка",
-  text: "Пианино, гитара и даже баян!"
-},
-{
-  icon: Users,
-  title: "Поют — все",
-  text: "Все вместе мы и есть хор! Голос каждого усиливает общее звучание — и сам наполняется силой."
-},
-{
-  icon: Layers,
-  title: "Многоголосье",
-  text: "Даже такой «неподготовленный» хор может петь на несколько голосов. И это всегда «ого как мы умеем?!»"
-},
-{
-  icon: Sparkles,
-  title: "Импровизация",
-  text: "У нас всегда есть заранее подготовленный плейлист, но много песен рождается прямо на месте — по запросу зала."
-},
-{
-  icon: Mic,
-  title: "Уметь петь — необязательно!",
-  text: "На хоровой вечеринке не нужно уметь петь. Можно петь громко, можно тихо, а можно просто наслаждаться общим звучанием."
-}];
-
-
-/* ─── Masonry heights ─── */
 const masonryHeights = [
-"aspect-[3/4]",
-"aspect-square",
-"aspect-[4/5]",
-"aspect-square",
-"aspect-[3/4]",
-"aspect-square",
-"aspect-[4/5]",
-"aspect-[3/4]"];
+  "aspect-[3/4]",
+  "aspect-square",
+  "aspect-[4/5]",
+  "aspect-square",
+  "aspect-[3/4]",
+  "aspect-square",
+  "aspect-[4/5]",
+  "aspect-[3/4]",
+];
 
+/* ─── "Что нас ждёт" cards ─── */
+const featureCards = [
+  {
+    icon: Piano,
+    title: "Три инструмента",
+    text: "Живое звучание пианино, гитары и баяна",
+  },
+  {
+    icon: Music,
+    title: "Любимые песни",
+    text: "От советской классики до хитов перемен",
+  },
+  {
+    icon: Heart,
+    title: "Атмосфера",
+    text: "Только свои, искренность и никакой фальши",
+  },
+];
 
 const Events = () => {
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
@@ -71,9 +59,7 @@ const Events = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* ════════════════════════════════════════
-                           HERO — video background
-                          ════════════════════════════════════════ */}
+      {/* ════════ HERO ════════ */}
       <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
         <video
           autoPlay
@@ -81,58 +67,94 @@ const Events = () => {
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          src="/hero-event.mp4" />
-
-
-        {/* Overlay: gradient + blur */}
+          src="/hero-event.mp4"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-[hsl(240_40%_15%/0.40)] to-black/60 md:from-black/70 md:via-[hsl(240_40%_15%/0.60)] md:to-black/80 backdrop-blur-sm" />
 
-        {/* Content */}
         <div className="relative z-10 text-center px-4 py-24 max-w-3xl mx-auto space-y-8">
           <p className="text-sm md:text-base uppercase tracking-[0.25em] text-white/70 font-medium">
             13 марта 2026 · Москва
           </p>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">Хоровая вечеринка
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight">
+            Маме снова 17
             <br />
-            <span className="text-primary">Маме снова 17</span>
+            <span className="text-primary text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold">
+              Вечеринка-ностальгия в Громче
+            </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-white/80 max-w-xl mx-auto leading-relaxed">
-            Поем вместе, чувствуем магию, создаем истории
+          <p className="text-base md:text-lg text-white/80 max-w-xl mx-auto leading-relaxed max-[480px]:text-sm">
+            Поём хиты юности наших мам под живой аккомпанемент пианино, гитары и
+            баяна. Вечер, где стираются границы между поколениями.
           </p>
 
-          
-
-          <Button variant="hero"
-          size="lg"
-          className="text-base px-10 py-6 rounded-full text-lg"
-          asChild>
-
+          <Button
+            variant="hero"
+            size="lg"
+            className="text-base px-10 py-6 rounded-full text-lg"
+            asChild
+          >
             <a href="#register">Купить билет</a>
           </Button>
         </div>
       </section>
 
-      {/* ════════════════════════════════════════
-                           WHY — Bento cards
-                          ════════════════════════════════════════ */}
-      <section className="py-20 max-[480px]:py-12 px-4">
-        <div className="container max-w-5xl mx-auto space-y-12">
-          <ScrollReveal>
-            <div className="text-center space-y-3">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">Что такое хоровая вечеринка?
+      {/* ════════ MARQUEE ════════ */}
+      <div className="bg-primary/10 border-y border-primary/20 py-3 overflow-hidden">
+        <div className="marquee-track whitespace-nowrap text-primary font-medium text-lg md:text-xl italic">
+          <span className="inline-block px-8">
+            «Пусть сегодня ей снова будет семнадцать...»
+          </span>
+          <span className="inline-block px-8">✦</span>
+          <span className="inline-block px-8">
+            «Пусть сегодня ей снова будет семнадцать...»
+          </span>
+          <span className="inline-block px-8">✦</span>
+          <span className="inline-block px-8">
+            «Пусть сегодня ей снова будет семнадцать...»
+          </span>
+          <span className="inline-block px-8">✦</span>
+          <span className="inline-block px-8">
+            «Пусть сегодня ей снова будет семнадцать...»
+          </span>
+          <span className="inline-block px-8">✦</span>
+        </div>
+      </div>
 
+      {/* ════════ CONCEPT ════════ */}
+      <section className="py-20 max-[480px]:py-12 px-4">
+        <div className="container max-w-3xl mx-auto">
+          <ScrollReveal>
+            <div className="text-center space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                Что такое хоровая вечеринка?
               </h2>
-              <p className="text-foreground/70 max-w-xl mx-auto">Это не концерт и не караоке.  Хоровая вечеринка - это формат, 
-где главные герои не на сцене, а в зале.
+              <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-[480px]:text-base">
+                Это не просто концерт. Это время, когда можно петь во весь голос
+                те самые песни, под которые мамы влюблялись и мечтали.
+              </p>
+              <p className="text-foreground/70 leading-relaxed max-[480px]:text-sm">
+                Приходи со своей мамой, приходи одна или подари билет родителям —
+                это лучший способ сказать «я тебя люблю» без слов.
               </p>
             </div>
           </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ════════ ЧТО НАС ЖДЁТ ════════ */}
+      <section className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
+        <div className="container max-w-5xl mx-auto space-y-12">
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
+              Что нас ждёт
+            </h2>
+          </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-5">
-            {bentoCards.map((card, i) =>
-            <ScrollReveal key={card.title} delay={i * 0.12}>
+            {featureCards.map((card, i) => (
+              <ScrollReveal key={card.title} delay={i * 0.12}>
                 <div className="bg-card rounded-2xl p-7 shadow-warm border border-border/60 hover:shadow-soft transition-all duration-300 h-full flex flex-col gap-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                     <card.icon className="w-6 h-6 text-primary" />
@@ -145,19 +167,18 @@ const Events = () => {
                   </p>
                 </div>
               </ScrollReveal>
-            )}
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ════════════════════════════════════════
-                           PROGRAM
-                          ════════════════════════════════════════ */}
+      {/* ════════ PROGRAM ════════ */}
       <EventProgram />
 
-      {/* ════════════════════════════════════════
-                           ARCHIVE — video + masonry gallery
-                          ════════════════════════════════════════ */}
+      {/* ════════ VENUE (moved up) ════════ */}
+      <EventVenue />
+
+      {/* ════════ ARCHIVE — video + masonry gallery ════════ */}
       <section className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
         <div className="container max-w-6xl mx-auto space-y-12">
           <ScrollReveal>
@@ -172,7 +193,6 @@ const Events = () => {
             </div>
           </ScrollReveal>
 
-          {/* Video placeholder */}
           <ScrollReveal>
             <div className="max-w-3xl mx-auto">
               <div className="relative aspect-video rounded-2xl overflow-hidden bg-card border border-border shadow-warm group cursor-pointer">
@@ -188,101 +208,46 @@ const Events = () => {
             </div>
           </ScrollReveal>
 
-          {/* Masonry gallery */}
           <div className="columns-2 md:columns-3 gap-3 md:gap-4 space-y-3 md:space-y-4">
-            {archivePhotos.map((photo, i) =>
-            <ScrollReveal key={photo.id} delay={i * 0.06}>
+            {archivePhotos.map((photo, i) => (
+              <ScrollReveal key={photo.id} delay={i * 0.06}>
                 <div
-                className={`${masonryHeights[i % masonryHeights.length]} rounded-xl overflow-hidden bg-card border border-border shadow-warm cursor-pointer hover:shadow-soft transition-shadow duration-300 break-inside-avoid flex items-center justify-center`}
-                onClick={() => setLightboxIdx(i)}>
-
+                  className={`${masonryHeights[i % masonryHeights.length]} rounded-xl overflow-hidden bg-card border border-border shadow-warm cursor-pointer hover:shadow-soft transition-shadow duration-300 break-inside-avoid flex items-center justify-center`}
+                  onClick={() => setLightboxIdx(i)}
+                >
                   <span className="text-muted-foreground text-sm">
                     📷 Фото {i + 1}
                   </span>
                 </div>
               </ScrollReveal>
-            )}
+            ))}
           </div>
 
-          {/* Lightbox */}
           <Dialog
             open={lightboxIdx !== null}
-            onOpenChange={() => setLightboxIdx(null)}>
-
+            onOpenChange={() => setLightboxIdx(null)}
+          >
             <DialogContent className="max-w-[90vw] max-h-[90vh] p-2 bg-black/95 border-none">
-              {lightboxIdx !== null &&
-              <div className="flex items-center justify-center min-h-[50vh]">
+              {lightboxIdx !== null && (
+                <div className="flex items-center justify-center min-h-[50vh]">
                   <span className="text-white/60 text-lg">
                     📷 Фото {lightboxIdx + 1} — полный размер
                   </span>
                 </div>
-              }
+              )}
             </DialogContent>
           </Dialog>
         </div>
       </section>
 
-      {/* ════════════════════════════════════════
-                           PAYMENT
-                          ════════════════════════════════════════ */}
-      <section className="py-20 max-[480px]:py-12 px-4">
-        <div className="container max-w-4xl mx-auto space-y-8">
-          <ScrollReveal>
-            <div className="text-center space-y-3">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Оплата участия
-              </h2>
-              <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-                Оплатите участие онлайн — это быстро и безопасно
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal>
-            <div className="max-w-2xl mx-auto">
-              <PaymentWidget />
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal>
-            <div className="max-w-2xl mx-auto bg-card rounded-xl p-6 border border-border text-sm text-muted-foreground space-y-2">
-              <p>
-                🔒 Все платежи защищены шифрованием. Мы не храним данные вашей
-                банковской карты.
-              </p>
-              <p>
-                Возврат средств осуществляется при отмене участия не позднее чем
-                за 3 дня до мероприятия. Для возврата напишите на{" "}
-                <a
-                  href="mailto:gromche-choir@yandex.ru"
-                  className="text-primary hover:underline">
-
-                  gromche-choir@yandex.ru
-                </a>
-                .
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ════════════════════════════════════════
-                           VENUE
-                          ════════════════════════════════════════ */}
-      <EventVenue />
-
-      {/* ════════════════════════════════════════
-                           FAQ
-                          ════════════════════════════════════════ */}
+      {/* ════════ FAQ ════════ */}
       <EventFAQ />
 
-      {/* ════════════════════════════════════════
-                           REGISTRATION — MoyKlass widget
-                          ════════════════════════════════════════ */}
+      {/* ════════ REGISTRATION + GIFT ════════ */}
       <section
         id="register"
-        className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
-
+        className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm"
+      >
         <div className="container max-w-4xl mx-auto space-y-8 text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -295,12 +260,17 @@ const Events = () => {
               <MoyKlassIframe />
             </div>
           </ScrollReveal>
+
+          {/* Gift block */}
+          <ScrollReveal>
+            <GiftBlock />
+          </ScrollReveal>
         </div>
       </section>
 
       <Footer />
-    </div>);
-
+    </div>
+  );
 };
 
 export default Events;
