@@ -11,12 +11,26 @@ import { EventVenue } from "@/components/EventVenue";
 import { EventFAQ } from "@/components/EventFAQ";
 import { GiftBlock } from "@/components/GiftBlock";
 
-/* ─── placeholder photos ─── */
-const archivePhotos = Array.from({ length: 8 }, (_, i) => ({
-  id: i,
-  src: "/placeholder.svg",
-  alt: `Фото с вечеринки ${i + 1}`,
-}));
+import photo1 from "@/assets/gallery/photo-1.jpg";
+import photo2 from "@/assets/gallery/photo-2.jpg";
+import photo3 from "@/assets/gallery/photo-3.jpg";
+import photo4 from "@/assets/gallery/photo-4.jpg";
+import photo5 from "@/assets/gallery/photo-5.jpg";
+import photo6 from "@/assets/gallery/photo-6.jpg";
+import photo7 from "@/assets/gallery/photo-7.jpg";
+import photo8 from "@/assets/gallery/photo-8.jpg";
+
+/* ─── gallery photos ─── */
+const archivePhotos = [
+  { id: 0, src: photo1, alt: "Участницы танцуют с поднятыми руками" },
+  { id: 1, src: photo2, alt: "Девушки поют хором" },
+  { id: 2, src: photo3, alt: "Участницы смеются и аплодируют" },
+  { id: 3, src: photo4, alt: "Ведущая за пианино" },
+  { id: 4, src: photo5, alt: "Участницы поют с поднятыми руками" },
+  { id: 5, src: photo6, alt: "Подруги обнимаются и поют" },
+  { id: 6, src: photo7, alt: "Девушка поёт в микрофон" },
+  { id: 7, src: photo8, alt: "Зал поёт вместе" },
+];
 
 const masonryHeights = [
   "aspect-[3/4]",
@@ -208,12 +222,10 @@ const Events = () => {
             {archivePhotos.map((photo, i) => (
               <ScrollReveal key={photo.id} delay={i * 0.06}>
                 <div
-                  className={`${masonryHeights[i % masonryHeights.length]} rounded-xl overflow-hidden bg-card border border-border shadow-warm cursor-pointer hover:shadow-soft transition-shadow duration-300 break-inside-avoid flex items-center justify-center`}
+                  className={`${masonryHeights[i % masonryHeights.length]} rounded-xl overflow-hidden bg-card border border-border shadow-warm cursor-pointer hover:shadow-soft transition-shadow duration-300 break-inside-avoid`}
                   onClick={() => setLightboxIdx(i)}
                 >
-                  <span className="text-muted-foreground text-sm">
-                    📷 Фото {i + 1}
-                  </span>
+                  <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover" loading="lazy" />
                 </div>
               </ScrollReveal>
             ))}
@@ -226,9 +238,7 @@ const Events = () => {
             <DialogContent className="max-w-[90vw] max-h-[90vh] p-2 bg-black/95 border-none">
               {lightboxIdx !== null && (
                 <div className="flex items-center justify-center min-h-[50vh]">
-                  <span className="text-white/60 text-lg">
-                    📷 Фото {lightboxIdx + 1} — полный размер
-                  </span>
+                  <img src={archivePhotos[lightboxIdx].src} alt={archivePhotos[lightboxIdx].alt} className="max-w-full max-h-[85vh] object-contain rounded" />
                 </div>
               )}
             </DialogContent>
