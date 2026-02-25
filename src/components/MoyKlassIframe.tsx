@@ -1,3 +1,5 @@
+import { useIsMobile } from "@/hooks/use-mobile";
+
 const WIDGET_SRCDOC = `<!DOCTYPE html>
 <html>
   <head>
@@ -11,10 +13,12 @@ const WIDGET_SRCDOC = `<!DOCTYPE html>
 </html>`;
 
 export const MoyKlassIframe = () => {
+  const isMobile = useIsMobile();
+
   return (
     <iframe
       srcDoc={WIDGET_SRCDOC}
-      style={{ width: "100%", height: 800, border: "none" }}
+      style={{ width: "100%", height: isMobile ? 600 : 800, border: "none" }}
       title="МойКласс запись"
     />
   );
