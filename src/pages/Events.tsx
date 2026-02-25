@@ -7,7 +7,7 @@ import { MoyKlassIframe } from "@/components/MoyKlassIframe";
 import { PaymentWidget } from "@/components/PaymentWidget";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { DoorOpen, AudioWaveform, Heart, Play, X } from "lucide-react";
+import { Music, Users, Layers, Sparkles, Mic, Play, X } from "lucide-react";
 import { EventProgram } from "@/components/EventProgram";
 import { EventVenue } from "@/components/EventVenue";
 import { EventFAQ } from "@/components/EventFAQ";
@@ -22,19 +22,29 @@ const archivePhotos = Array.from({ length: 8 }, (_, i) => ({
 /* ─── Bento cards data ─── */
 const bentoCards = [
 {
-  icon: DoorOpen,
-  title: "Никаких кастингов",
-  text: "Приходите как есть — здесь важен не вокал, а желание петь и чувствовать."
+  icon: Music,
+  title: "Живая музыка",
+  text: "Пианино, гитара и даже баян!"
 },
 {
-  icon: AudioWaveform,
-  title: "Живой звук и энергия",
-  text: "Электричество, которое возникает, когда десятки голосов сливаются в одну волну."
+  icon: Users,
+  title: "Поют — все",
+  text: "Все вместе мы и есть хор! Голос каждого усиливает общее звучание — и сам наполняется силой."
 },
 {
-  icon: Heart,
-  title: "Сообщество своих",
-  text: "Место, где можно быть искренней, уязвимой и настоящей — среди тех, кто понимает."
+  icon: Layers,
+  title: "Многоголосье",
+  text: "Даже такой «неподготовленный» хор может петь на несколько голосов. И это всегда «ого как мы умеем?!»"
+},
+{
+  icon: Sparkles,
+  title: "Импровизация",
+  text: "У нас всегда есть заранее подготовленный плейлист, но много песен рождается прямо на месте — по запросу зала."
+},
+{
+  icon: Mic,
+  title: "Уметь петь — необязательно!",
+  text: "На хоровой вечеринке не нужно уметь петь. Можно петь громко, можно тихо, а можно просто наслаждаться общим звучанием."
 }];
 
 
