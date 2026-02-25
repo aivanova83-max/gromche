@@ -95,7 +95,7 @@ const Events = () => {
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">Хоровая вечеринка
             <br />
-            <span className="text-primary">«Маме снова 17»</span>
+            <span className="text-primary">Маме снова 17</span>
           </h1>
 
           <p className="text-lg md:text-xl text-white/80 max-w-xl mx-auto leading-relaxed">
