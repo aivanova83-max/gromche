@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import {
   Accordion,
@@ -6,7 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const faqItems = [
+const faqItems: { q: string; a: ReactNode }[] = [
   {
     q: "Нужно ли уметь петь?",
     a: "Нет. Вообще нет. Это формат, где можно просто прийти и петь так, как получается. Здесь никто не оценивает, не сравнивает и не слушает «правильно ли». Мы поём вместе, поэтому каждый голос сливается с общим звучанием.",
@@ -17,7 +18,7 @@ const faqItems = [
   },
   {
     q: "Я буду знать репертуар заранее?",
-    a: "Да. Мы выложим плейлист в наш телеграм-канал и дополнительно отправим его всем, кто купил билет.",
+    a: <>Да. Мы выложим плейлист в наш <a href="https://t.me/gromche_choir" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors">телеграм-канал</a> и дополнительно отправим его всем, кто купил билет.</>,
   },
   {
     q: "Я не успею выучить столько слов!",
