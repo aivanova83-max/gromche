@@ -13,7 +13,9 @@ export const GiftBlock = () => (
       сертификат.
     </p>
     <a
-      href="mailto:gromche-choir@yandex.ru?subject=Подарочный билет"
+      href="https://t.me/helloooann"
+      target="_blank"
+      rel="noopener noreferrer"
       className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
     >
       Написать нам →
