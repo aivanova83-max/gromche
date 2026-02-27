@@ -29,8 +29,8 @@ export const Join = () => {
               className="text-base max-[480px]:text-sm py-5 max-[480px]:py-4 rounded-full w-full"
               asChild
             >
-              <a href="/offer.pdf" download>
-                📄 Скачать договор-оферту
+              <a href="/legal#offer">
+                📄 Читать договор-оферту
               </a>
             </Button>
             
