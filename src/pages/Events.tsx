@@ -10,6 +10,7 @@ import { EventProgram } from "@/components/EventProgram";
 import { EventVenue } from "@/components/EventVenue";
 import { EventFAQ } from "@/components/EventFAQ";
 import { GiftBlock } from "@/components/GiftBlock";
+import { EventTestimonials } from "@/components/EventTestimonials";
 
 import photo1 from "@/assets/gallery/photo-1.jpg";
 import photo2 from "@/assets/gallery/photo-2.jpg";
@@ -263,6 +264,9 @@ const Events = () => {
           </Dialog>
         </div>
       </section>
+
+      {/* ════════ TESTIMONIALS ════════ */}
+      <EventTestimonials />
 
       {/* ════════ VENUE + PROGRAM ════════ */}
       <EventVenue />
