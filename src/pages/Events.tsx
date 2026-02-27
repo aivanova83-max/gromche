@@ -215,7 +215,7 @@ const Events = () => {
       </section>
 
       {/* ════════ ARCHIVE — video + masonry gallery ════════ */}
-      <section className="py-20 max-[480px]:py-12 px-4">
+      <section className="py-12 max-[480px]:py-8 px-4">
         <div className="container max-w-6xl mx-auto space-y-12">
           <ScrollReveal>
             <div className="text-center space-y-3">
