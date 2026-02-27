@@ -1,8 +1,8 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { MapPin, Car, Footprints } from "lucide-react";
 
-export const EventVenue = () => (
-  <section className="py-20 max-[480px]:py-12 px-4">
+export const EventVenue = () =>
+<section className="py-20 max-[480px]:py-12 px-4">
     <div className="container max-w-5xl mx-auto space-y-10">
       <ScrollReveal>
         <div className="text-center space-y-3">
@@ -23,9 +23,9 @@ export const EventVenue = () => (
             </div>
             <div className="space-y-1">
               <p className="font-semibold text-foreground">Адрес</p>
-              <p className="text-foreground/80 leading-relaxed">
-                Москва, ул. Полковая, 3 строение без номера, 4 этаж
-              </p>
+              <p className="text-foreground/80 leading-relaxed">Москва, ул. Полковая, дом 3, строение без номера, 4 этаж
+
+            </p>
             </div>
           </div>
 
@@ -44,20 +44,20 @@ export const EventVenue = () => (
           {/* How to get there links */}
           <div className="flex flex-wrap gap-4 pt-2">
             <a
-              href="https://prostranstvo.photo/wp-content/uploads/2021/07/ByCarStr8.mp4"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
-            >
+            href="https://prostranstvo.photo/wp-content/uploads/2021/07/ByCarStr8.mp4"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
+
               <Car className="w-4 h-4" />
               Как проехать
             </a>
             <a
-              href="https://prostranstvo.photo/wp-content/uploads/2021/07/WalkStr8.mp4"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
-            >
+            href="https://prostranstvo.photo/wp-content/uploads/2021/07/WalkStr8.mp4"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
+
               <Footprints className="w-4 h-4" />
               Как пройти
             </a>
@@ -65,5 +65,4 @@ export const EventVenue = () => (
         </div>
       </ScrollReveal>
     </div>
-  </section>
-);
+  </section>;

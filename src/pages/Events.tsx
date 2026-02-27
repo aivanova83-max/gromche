@@ -200,7 +200,7 @@ const Events = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Как это было
               </h2>
-              <p className="text-foreground/70">Февральская вечеринка «Громче» — атмосфера, которую хочется повторить
+              <p className="text-foreground/70">Февральская вечеринка "Все песни только о любви" — атмосфера, которую хочется повторить
 
 
               </p>
