@@ -121,7 +121,8 @@ const Events = () => {
       </section>
 
       {/* ════════ MARQUEE ════════ */}
-      <div className="border-y border-white/10 py-3 overflow-hidden bg-black">
+      <div className="relative py-3 overflow-hidden bg-black">
+        <div className="absolute inset-x-0 -top-8 h-8 bg-gradient-to-b from-transparent to-black pointer-events-none" />
         <div className="marquee-track whitespace-nowrap font-medium text-lg md:text-xl italic" style={{ color: 'hsl(20, 80%, 70%)' }}>
           <span className="inline-block px-8">«Дети, вашей маме снова семнадцать, вы просто поверьте, а поймете потом»</span>
           <span className="inline-block px-8">✦</span>
