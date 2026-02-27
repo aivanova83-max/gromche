@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -69,6 +70,7 @@ const featureCards = [
 
 const Events = () => {
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -249,7 +251,7 @@ const Events = () => {
           </ScrollReveal>
 
           <div className="grid grid-cols-2 md:grid-cols-3 auto-rows-[180px] md:auto-rows-[200px] gap-3 md:gap-4">
-            {archivePhotos.map((photo, i) =>
+            {(isMobile ? archivePhotos.slice(0, 8) : archivePhotos).map((photo, i) =>
             <ScrollReveal key={photo.id} delay={i * 0.06}>
                 <div
                 className={`${gridSpans[i]} h-full rounded-xl overflow-hidden bg-card border border-border shadow-warm cursor-pointer hover:shadow-soft transition-shadow duration-300`}
