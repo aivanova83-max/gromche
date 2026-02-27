@@ -177,14 +177,14 @@ const Events = () => {
                 Что сделает этот вечер таким особенным?
               </h2>
               <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-[480px]:text-base">Это время, когда можно спеть те самые песни, под которые наши мамы влюблялись и мечтали. И ощутить новый уровень близости с ними
-
-
-
               </p>
-              <p className="text-foreground/70 leading-relaxed max-[480px]:text-sm">Приходи со своей мамой, приходи один/а или подари билет родителям — это лучший способ сказать «я тебя люблю» без слов.
 
-
-              </p>
+              <blockquote className="relative my-8 px-8 py-6">
+                <span className="absolute left-0 top-0 bottom-0 w-1 rounded-full bg-primary/40" />
+                <p className="text-xl md:text-2xl italic text-primary font-medium leading-relaxed max-[480px]:text-lg">
+                  «Приходи со своей мамой, приходи один/а или подари билет родителям — это лучший способ сказать "я тебя люблю" без слов»
+                </p>
+              </blockquote>
             </div>
           </ScrollReveal>
         </div>
