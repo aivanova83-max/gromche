@@ -23,48 +23,48 @@ import photo9 from "@/assets/gallery/photo-9.jpg";
 
 /* ─── gallery photos ─── */
 const archivePhotos = [
-  { id: 0, src: photo1, alt: "Участницы танцуют с поднятыми руками" },
-  { id: 1, src: photo2, alt: "Девушки поют хором" },
-  { id: 2, src: photo3, alt: "Участницы смеются и аплодируют" },
-  { id: 3, src: photo4, alt: "Ведущая за пианино" },
-  { id: 4, src: photo5, alt: "Участницы поют с поднятыми руками" },
-  { id: 5, src: photo6, alt: "Подруги обнимаются и поют" },
-  { id: 6, src: photo7, alt: "Девушка поёт в микрофон" },
-  { id: 7, src: photo8, alt: "Зал поёт вместе" },
-  { id: 8, src: photo9, alt: "Подруги улыбаются на вечеринке" },
-];
+{ id: 0, src: photo1, alt: "Участницы танцуют с поднятыми руками" },
+{ id: 1, src: photo2, alt: "Девушки поют хором" },
+{ id: 2, src: photo3, alt: "Участницы смеются и аплодируют" },
+{ id: 3, src: photo4, alt: "Ведущая за пианино" },
+{ id: 4, src: photo5, alt: "Участницы поют с поднятыми руками" },
+{ id: 5, src: photo6, alt: "Подруги обнимаются и поют" },
+{ id: 6, src: photo7, alt: "Девушка поёт в микрофон" },
+{ id: 7, src: photo8, alt: "Зал поёт вместе" },
+{ id: 8, src: photo9, alt: "Подруги улыбаются на вечеринке" }];
+
 
 /* Grid cell spans for a balanced 3-col masonry look */
 const gridSpans = [
-  "md:row-span-2",  // tall
-  "md:row-span-1",  // short
-  "md:row-span-1",  // short
-  "md:row-span-1",  // short
-  "md:row-span-2",  // tall
-  "md:row-span-1",  // short
-  "md:row-span-1",  // short
-  "md:row-span-1",  // short
-  "md:row-span-1",  // short
+"md:row-span-2", // tall
+"md:row-span-1", // short
+"md:row-span-1", // short
+"md:row-span-1", // short
+"md:row-span-2", // tall
+"md:row-span-1", // short
+"md:row-span-1", // short
+"md:row-span-1", // short
+"md:row-span-1" // short
 ];
 
 /* ─── "Что нас ждёт" cards ─── */
 const featureCards = [
-  {
-    icon: Piano,
-    title: "Живая музыка",
-    text: "Пианино, гитара и драйвовый баян",
-  },
-  {
-    icon: Music,
-    title: "Любимые песни",
-    text: "Главные хиты советской эстрады и кинофильмов",
-  },
-  {
-    icon: Heart,
-    title: "Пение хором",
-    text: "Удовольствие и радость от совместного звучания",
-  },
-];
+{
+  icon: Piano,
+  title: "Три инструмента",
+  text: "Живое звучание пианино, гитары и баяна"
+},
+{
+  icon: Music,
+  title: "Любимые песни",
+  text: "Главные хиты советской эстрады и кинофильмов"
+},
+{
+  icon: Heart,
+  title: "Пение хором",
+  text: "Удовольствие и радость от совместного звучания"
+}];
+
 
 const Events = () => {
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
@@ -85,8 +85,8 @@ const Events = () => {
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          src="/hero-event.mp4"
-        />
+          src="/hero-event.mp4" />
+
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-[hsl(240_40%_15%/0.40)] to-black/60 md:from-black/70 md:via-[hsl(240_40%_15%/0.60)] md:to-black/80 backdrop-blur-sm" />
 
         <div className="relative z-10 text-center px-4 py-24 max-w-3xl mx-auto space-y-8">
@@ -113,8 +113,8 @@ const Events = () => {
             variant="hero"
             size="lg"
             className="text-base px-10 py-6 rounded-full text-lg"
-            asChild
-          >
+            asChild>
+
             <a href="#register">Купить билет</a>
           </Button>
         </div>
@@ -173,8 +173,8 @@ const Events = () => {
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-5">
-            {featureCards.map((card, i) => (
-              <ScrollReveal key={card.title} delay={i * 0.12}>
+            {featureCards.map((card, i) =>
+            <ScrollReveal key={card.title} delay={i * 0.12}>
                 <div className="bg-card rounded-2xl p-7 shadow-warm border border-border/60 hover:shadow-soft transition-all duration-300 h-full flex flex-col gap-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                     <card.icon className="w-6 h-6 text-primary" />
@@ -187,7 +187,7 @@ const Events = () => {
                   </p>
                 </div>
               </ScrollReveal>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -200,9 +200,9 @@ const Events = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Как это было
               </h2>
-              <p className="text-foreground/70">
-                Декабрьская вечеринка «Громче» — атмосфера, которую хочется
-                повторить
+              <p className="text-foreground/70">Февральская вечеринка «Громче» — атмосфера, которую хочется повторить
+
+
               </p>
             </div>
           </ScrollReveal>
@@ -214,34 +214,34 @@ const Events = () => {
                 src="https://vk.com/video_ext.php?oid=-236309424&id=456239017"
                 title="Как это было — видео с вечеринки"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                allowFullScreen
-              />
+                allowFullScreen />
+
             </div>
           </ScrollReveal>
 
           <div className="grid grid-cols-2 md:grid-cols-3 auto-rows-[180px] md:auto-rows-[200px] gap-3 md:gap-4">
-            {archivePhotos.map((photo, i) => (
-              <ScrollReveal key={photo.id} delay={i * 0.06}>
+            {archivePhotos.map((photo, i) =>
+            <ScrollReveal key={photo.id} delay={i * 0.06}>
                 <div
-                  className={`${gridSpans[i]} h-full rounded-xl overflow-hidden bg-card border border-border shadow-warm cursor-pointer hover:shadow-soft transition-shadow duration-300`}
-                  onClick={() => setLightboxIdx(i)}
-                >
+                className={`${gridSpans[i]} h-full rounded-xl overflow-hidden bg-card border border-border shadow-warm cursor-pointer hover:shadow-soft transition-shadow duration-300`}
+                onClick={() => setLightboxIdx(i)}>
+
                   <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover" loading="lazy" />
                 </div>
               </ScrollReveal>
-            ))}
+            )}
           </div>
 
           <Dialog
             open={lightboxIdx !== null}
-            onOpenChange={() => setLightboxIdx(null)}
-          >
+            onOpenChange={() => setLightboxIdx(null)}>
+
             <DialogContent className="max-w-[90vw] max-h-[90vh] p-2 bg-black/95 border-none">
-              {lightboxIdx !== null && (
-                <div className="flex items-center justify-center min-h-[50vh]">
+              {lightboxIdx !== null &&
+              <div className="flex items-center justify-center min-h-[50vh]">
                   <img src={archivePhotos[lightboxIdx].src} alt={archivePhotos[lightboxIdx].alt} className="max-w-full max-h-[85vh] object-contain rounded" />
                 </div>
-              )}
+              }
             </DialogContent>
           </Dialog>
         </div>
@@ -257,8 +257,8 @@ const Events = () => {
       {/* ════════ REGISTRATION + GIFT ════════ */}
       <section
         id="register"
-        className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm"
-      >
+        className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
+
         <div className="container max-w-4xl mx-auto space-y-8 text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -279,8 +279,8 @@ const Events = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default Events;
