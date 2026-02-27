@@ -121,23 +121,15 @@ const Events = () => {
       </section>
 
       {/* ════════ MARQUEE ════════ */}
-      <div className="bg-primary/10 border-y border-primary/20 py-3 overflow-hidden">
-        <div className="marquee-track whitespace-nowrap font-medium text-lg md:text-xl italic" style={{ color: 'hsl(346, 85%, 55%)' }}>
-          <span className="inline-block px-8">«Дети, вашей маме снова семнадцать, вы простоВерни  поверьте, а поймёте потом»
-
-          </span>
+      <div className="border-y border-white/10 py-3 overflow-hidden" style={{ background: 'hsl(240, 20%, 12%)' }}>
+        <div className="marquee-track whitespace-nowrap font-medium text-lg md:text-xl italic" style={{ color: 'hsl(20, 80%, 70%)' }}>
+          <span className="inline-block px-8">«Дети, вашей маме снова семнадцать, вы просто поверьте, а поймете потом»</span>
           <span className="inline-block px-8">✦</span>
-          <span className="inline-block px-8">
-            «Дети, вашей маме снова семнадцать, вы просто поверьте, а поймёте потом»
-          </span>
+          <span className="inline-block px-8">«Дети, вашей маме снова семнадцать, вы просто поверьте, а поймете потом»</span>
           <span className="inline-block px-8">✦</span>
-          <span className="inline-block px-8">
-            «Дети, вашей маме снова семнадцать, вы просто поверьте, а поймёте потом»
-          </span>
+          <span className="inline-block px-8">«Дети, вашей маме снова семнадцать, вы просто поверьте, а поймете потом»</span>
           <span className="inline-block px-8">✦</span>
-          <span className="inline-block px-8">
-            «Дети, вашей маме снова семнадцать, вы просто поверьте, а поймёте потом»
-          </span>
+          <span className="inline-block px-8">«Дети, вашей маме снова семнадцать, вы просто поверьте, а поймете потом»</span>
           <span className="inline-block px-8">✦</span>
         </div>
       </div>
