@@ -159,8 +159,17 @@ const Events = () => {
         </div>
       </section>
 
+      {/* ════════ DECORATIVE DIVIDER ════════ */}
+      <div className="flex items-center justify-center py-6 bg-gradient-warm">
+        <div className="flex items-center gap-4">
+          <span className="block w-12 h-px bg-primary/30" />
+          <span className="text-primary/50 text-lg">✦</span>
+          <span className="block w-12 h-px bg-primary/30" />
+        </div>
+      </div>
+
       {/* ════════ ОСОБЕННОСТЬ ВЕЧЕРА ════════ */}
-      <section className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
+      <section className="py-14 max-[480px]:py-10 px-4 bg-gradient-warm">
         <div className="container max-w-3xl mx-auto">
           <ScrollReveal>
             <div className="text-center space-y-6">
