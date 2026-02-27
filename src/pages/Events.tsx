@@ -19,6 +19,7 @@ import photo5 from "@/assets/gallery/photo-5.jpg";
 import photo6 from "@/assets/gallery/photo-6.jpg";
 import photo7 from "@/assets/gallery/photo-7.jpg";
 import photo8 from "@/assets/gallery/photo-8.jpg";
+import photo9 from "@/assets/gallery/photo-9.jpg";
 
 /* ─── gallery photos ─── */
 const archivePhotos = [
@@ -30,6 +31,7 @@ const archivePhotos = [
   { id: 5, src: photo6, alt: "Подруги обнимаются и поют" },
   { id: 6, src: photo7, alt: "Девушка поёт в микрофон" },
   { id: 7, src: photo8, alt: "Зал поёт вместе" },
+  { id: 8, src: photo9, alt: "Подруги улыбаются на вечеринке" },
 ];
 
 /* Grid cell spans for a balanced 3-col masonry look */
@@ -39,6 +41,7 @@ const gridSpans = [
   "md:row-span-1",  // short
   "md:row-span-1",  // short
   "md:row-span-2",  // tall
+  "md:row-span-1",  // short
   "md:row-span-1",  // short
   "md:row-span-1",  // short
   "md:row-span-1",  // short
