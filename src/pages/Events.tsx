@@ -214,6 +214,13 @@ const Events = () => {
         </div>
       </section>
 
+      {/* ════════ CTA ════════ */}
+      <div className="text-center py-10 max-[480px]:py-6">
+        <Button variant="hero" size="lg" className="text-base px-10 py-6 rounded-full text-lg" asChild>
+          <a href="#register">Купить билеты</a>
+        </Button>
+      </div>
+
       {/* ════════ ARCHIVE — video + masonry gallery ════════ */}
       <section className="py-12 max-[480px]:py-8 px-4">
         <div className="container max-w-6xl mx-auto space-y-12">
@@ -271,6 +278,13 @@ const Events = () => {
 
       {/* ════════ TESTIMONIALS ════════ */}
       <EventTestimonials />
+
+      {/* ════════ CTA ════════ */}
+      <div className="text-center py-10 max-[480px]:py-6">
+        <Button variant="hero" size="lg" className="text-base px-10 py-6 rounded-full text-lg" asChild>
+          <a href="#register">Хочу на вечеринку!</a>
+        </Button>
+      </div>
 
       {/* ════════ VENUE + PROGRAM ════════ */}
       <EventVenue />
