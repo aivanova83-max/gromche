@@ -171,9 +171,9 @@ const Events = () => {
 
 
               </p>
-              <p className="text-foreground/70 leading-relaxed max-[480px]:text-sm">
-                Приходи со своей мамой, приходи одна или подари билет родителям —
-                это лучший способ сказать «я тебя люблю» без слов.
+              <p className="text-foreground/70 leading-relaxed max-[480px]:text-sm">Приходи со своей мамой, приходи один/а или подари билет родителям — это лучший способ сказать «я тебя люблю» без слов.
+
+
               </p>
             </div>
           </ScrollReveal>
