@@ -60,9 +60,9 @@ const featureCards = [
   text: "Главные хиты советской эстрады и кинофильмов"
 },
 {
-  icon: Sparkles,
-  title: "Закуски и игристое",
-  text: "Вкусные детали для атмосферы праздника"
+  icon: Heart,
+  title: "Пение хором",
+  text: "Удовольствие и радость от совместного звучания"
 }];
 
 
@@ -166,10 +166,10 @@ const Events = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Что сделает этот вечер таким особенным?
               </h2>
-              <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-[480px]:text-base">
-                Это время, когда можно спеть те самые песни, под которые наши
-                мамы влюблялись и мечтали. И ощутить новый уровень близости с
-                самым дорогим человеком на свете.
+              <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-[480px]:text-base">Это время, когда можно спеть те самые песни, под которые наши мамы влюблялись и мечтали. И ощутить новый уровень близости с ними
+
+
+
               </p>
               <p className="text-foreground/70 leading-relaxed max-[480px]:text-sm">
                 Приходи со своей мамой, приходи одна или подари билет родителям —
