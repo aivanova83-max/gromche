@@ -52,7 +52,7 @@ const featureCards = [
   {
     icon: Piano,
     title: "Живая музыка",
-    text: "Живое звучание пианино, гитары и баяна",
+    text: "Пианино, гитара и драйвовый баян",
   },
   {
     icon: Music,
