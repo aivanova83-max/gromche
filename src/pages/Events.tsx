@@ -51,7 +51,7 @@ const gridSpans = [
 const featureCards = [
   {
     icon: Piano,
-    title: "Три инструмента",
+    title: "Живая музыка",
     text: "Живое звучание пианино, гитары и баяна",
   },
   {
