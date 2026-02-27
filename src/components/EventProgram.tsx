@@ -23,15 +23,15 @@ export const EventProgram = () => (
       </ScrollReveal>
 
       <ScrollReveal>
-        <div className="bg-card rounded-2xl p-7 md:p-10 border border-border/60 shadow-warm">
-          <div className="space-y-5">
+        <div className="bg-card rounded-2xl p-5 md:p-10 border border-border/60 shadow-warm">
+          <div className="space-y-4 md:space-y-5">
             {schedule.map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.07}>
-                <div className="flex items-baseline gap-4">
-                  <span className="text-primary font-semibold whitespace-nowrap min-w-[4.5rem]">
+                <div className="flex items-baseline gap-3 md:gap-4">
+                  <span className="text-primary font-semibold whitespace-nowrap min-w-[3.5rem] md:min-w-[4.5rem] text-sm md:text-base">
                     {item.time}
                   </span>
-                  <span className="text-foreground/80 leading-relaxed">{item.label}</span>
+                  <span className="text-foreground/80 leading-relaxed text-sm md:text-base">{item.label}</span>
                 </div>
               </ScrollReveal>
             ))}
