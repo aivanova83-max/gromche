@@ -42,7 +42,7 @@ export const EventVenue = () =>
           </div>
 
           {/* How to get there links */}
-          <div className="flex flex-wrap gap-4 pt-2">
+          <div className="flex flex-wrap gap-4 pt-2 justify-center">
             <a
             href="https://prostranstvo.photo/wp-content/uploads/2021/07/ByCarStr8.mp4"
             target="_blank"
