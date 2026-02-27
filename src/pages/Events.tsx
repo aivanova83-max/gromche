@@ -181,7 +181,7 @@ const Events = () => {
       </section>
 
       {/* ════════ ЧТО НАС ЖДЁТ ════════ */}
-      <section className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
+      <section className="py-20 max-[480px]:py-12 px-4">
         <div className="container max-w-5xl mx-auto space-y-12">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
@@ -192,7 +192,7 @@ const Events = () => {
           <div className="grid md:grid-cols-3 gap-5">
             {featureCards.map((card, i) =>
             <ScrollReveal key={card.title} delay={i * 0.12}>
-                <div className="bg-card rounded-2xl p-7 shadow-warm border border-border/60 hover:shadow-soft transition-all duration-300 h-full flex flex-col gap-4">
+                <div className="bg-primary/10 rounded-2xl p-7 shadow-warm border border-primary/20 hover:shadow-soft hover:bg-primary/15 transition-all duration-300 h-full flex flex-col gap-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                     <card.icon className="w-6 h-6 text-primary" />
                   </div>
