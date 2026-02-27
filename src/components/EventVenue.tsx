@@ -24,7 +24,7 @@ export const EventVenue = () =>
             <div className="space-y-1">
               <p className="font-semibold text-foreground">Адрес</p>
               <p className="text-foreground/80 leading-relaxed">
-                Москва, ул. Полковая, дом 3, строение без номера, 4 этаж, зал «Салон»
+                Москва, ул. Полковая, дом 3, строение без номера, 4 этаж,<br />зал «Салон»
               </p>
             </div>
           </div>
