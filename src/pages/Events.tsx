@@ -158,6 +158,28 @@ const Events = () => {
         </div>
       </section>
 
+      {/* ════════ ОСОБЕННОСТЬ ВЕЧЕРА ════════ */}
+      <section className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
+        <div className="container max-w-3xl mx-auto">
+          <ScrollReveal>
+            <div className="text-center space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                Что сделает этот вечер таким особенным?
+              </h2>
+              <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-[480px]:text-base">
+                Это время, когда можно спеть те самые песни, под которые наши
+                мамы влюблялись и мечтали. Не откладывайте близость на потом —
+                «потом» может не наступить.
+              </p>
+              <p className="text-foreground/70 leading-relaxed max-[480px]:text-sm">
+                Приходи со своей мамой, приходи одна или подари билет родителям —
+                это лучший способ сказать «я тебя люблю» без слов.
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* ════════ ЧТО НАС ЖДЁТ ════════ */}
       <section className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
         <div className="container max-w-5xl mx-auto space-y-12">
