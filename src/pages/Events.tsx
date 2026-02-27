@@ -122,7 +122,7 @@ const Events = () => {
 
       {/* ════════ MARQUEE ════════ */}
       <div className="bg-primary/10 border-y border-primary/20 py-3 overflow-hidden">
-        <div className="marquee-track whitespace-nowrap font-medium text-lg md:text-xl italic" style={{ color: 'hsl(346, 85%, 55%)' }}>
+        <div className="marquee-track whitespace-nowrap text-foreground font-medium text-lg md:text-xl italic">
           <span className="inline-block px-8">
             «Дети, вашей маме снова семнадцать, вы просто поверьте, а поймёте потом»
           </span>
