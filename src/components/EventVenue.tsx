@@ -9,9 +9,9 @@ export const EventVenue = () =>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Место проведения
           </h2>
-          <p className="text-foreground/70 max-w-xl mx-auto">
-            Уютный зал «Салон» на Полковой
-          </p>
+          <p className="text-foreground/70 max-w-xl mx-auto">Лофт Prostranstvo, зал «Салон» на Полковой
+
+        </p>
         </div>
       </ScrollReveal>
 
@@ -23,9 +23,9 @@ export const EventVenue = () =>
             </div>
             <div className="space-y-1">
               <p className="font-semibold text-foreground">Адрес</p>
-              <p className="text-foreground/80 leading-relaxed">Москва, ул. Полковая, дом 3, строение без номера, 4 этаж
-
-            </p>
+              <p className="text-foreground/80 leading-relaxed">
+                Москва, ул. Полковая, 3 строение без номера, 4 этаж
+              </p>
             </div>
           </div>
 
