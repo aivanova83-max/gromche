@@ -16,26 +16,26 @@ export const EventVenue = () =>
       </ScrollReveal>
 
       <ScrollReveal>
-        <div className="max-w-2xl mx-auto bg-card rounded-2xl p-7 md:p-8 border border-border/60 shadow-warm space-y-5">
-          <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-              <MapPin className="w-5 h-5 text-primary" />
+        <div className="max-w-2xl mx-auto bg-card rounded-2xl p-5 md:p-8 border border-border/60 shadow-warm space-y-4 md:space-y-5">
+          <div className="flex items-start gap-3 md:gap-4">
+            <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+              <MapPin className="w-4 h-4 md:w-5 md:h-5 text-primary" />
             </div>
             <div className="space-y-1">
-              <p className="font-semibold text-foreground">Адрес</p>
-              <p className="text-foreground/80 leading-relaxed">
+              <p className="font-semibold text-foreground text-sm md:text-base">Адрес</p>
+              <p className="text-foreground/80 leading-relaxed text-sm md:text-base">
                 Москва, ул. Полковая, дом 3, строение без номера, 4 этаж,<br />зал «Салон»
               </p>
             </div>
           </div>
 
-          <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-              <Car className="w-5 h-5 text-primary" />
+          <div className="flex items-start gap-3 md:gap-4">
+            <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+              <Car className="w-4 h-4 md:w-5 md:h-5 text-primary" />
             </div>
             <div className="space-y-1">
-              <p className="font-semibold text-foreground">Парковка</p>
-              <p className="text-foreground/80">
+              <p className="font-semibold text-foreground text-sm md:text-base">Парковка</p>
+              <p className="text-foreground/80 text-sm md:text-base">
                 На территории — большая парковка (100 руб/час)
               </p>
             </div>
