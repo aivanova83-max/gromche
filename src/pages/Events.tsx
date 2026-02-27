@@ -32,15 +32,16 @@ const archivePhotos = [
   { id: 7, src: photo8, alt: "Зал поёт вместе" },
 ];
 
-const masonryHeights = [
-  "aspect-[3/4]",
-  "aspect-square",
-  "aspect-[4/5]",
-  "aspect-square",
-  "aspect-[3/4]",
-  "aspect-square",
-  "aspect-[4/5]",
-  "aspect-[3/4]",
+/* Grid cell spans for a balanced 3-col masonry look */
+const gridSpans = [
+  "md:row-span-2",  // tall
+  "md:row-span-1",  // short
+  "md:row-span-1",  // short
+  "md:row-span-1",  // short
+  "md:row-span-2",  // tall
+  "md:row-span-1",  // short
+  "md:row-span-1",  // short
+  "md:row-span-1",  // short
 ];
 
 /* ─── "Что нас ждёт" cards ─── */
@@ -218,11 +219,11 @@ const Events = () => {
             </div>
           </ScrollReveal>
 
-          <div className="columns-2 md:columns-3 gap-3 md:gap-4 space-y-3 md:space-y-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 auto-rows-[180px] md:auto-rows-[200px] gap-3 md:gap-4">
             {archivePhotos.map((photo, i) => (
               <ScrollReveal key={photo.id} delay={i * 0.06}>
                 <div
-                  className={`${masonryHeights[i % masonryHeights.length]} rounded-xl overflow-hidden bg-card border border-border shadow-warm cursor-pointer hover:shadow-soft transition-shadow duration-300 break-inside-avoid`}
+                  className={`${gridSpans[i]} h-full rounded-xl overflow-hidden bg-card border border-border shadow-warm cursor-pointer hover:shadow-soft transition-shadow duration-300`}
                   onClick={() => setLightboxIdx(i)}
                 >
                   <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover" loading="lazy" />
