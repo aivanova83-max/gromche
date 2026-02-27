@@ -122,7 +122,7 @@ const Events = () => {
 
       {/* ════════ MARQUEE ════════ */}
       <div className="relative py-3 overflow-hidden bg-black">
-        <div className="absolute inset-x-0 -top-8 h-8 bg-gradient-to-b from-transparent to-black pointer-events-none" />
+        <div className="absolute inset-x-0 -top-20 h-20 bg-gradient-to-b from-transparent via-black/40 to-black pointer-events-none backdrop-blur-[2px]" />
         <div className="marquee-track whitespace-nowrap font-medium text-lg md:text-xl italic" style={{ color: 'hsl(20, 80%, 70%)' }}>
           <span className="inline-block px-8">«Дети, вашей маме снова семнадцать, вы просто поверьте, а поймете потом»</span>
           <span className="inline-block px-8">✦</span>
