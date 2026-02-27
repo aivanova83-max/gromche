@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { MoyKlassIframe } from "@/components/MoyKlassIframe";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { Piano, Guitar, Music, Heart, Sparkles, Play } from "lucide-react";
+import { Piano, Guitar, Music, Heart, Sparkles } from "lucide-react";
 import { EventProgram } from "@/components/EventProgram";
 import { EventVenue } from "@/components/EventVenue";
 import { EventFAQ } from "@/components/EventFAQ";
@@ -209,16 +209,13 @@ const Events = () => {
 
           <ScrollReveal>
             <div className="max-w-3xl mx-auto">
-              <div className="relative aspect-video rounded-2xl overflow-hidden bg-card border border-border shadow-warm group cursor-pointer">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Play className="w-7 h-7 text-primary-foreground ml-1" />
-                  </div>
-                </div>
-                <span className="absolute bottom-4 left-4 text-sm text-muted-foreground">
-                  🎬 Видео появится здесь
-                </span>
-              </div>
+              <iframe
+                className="w-full aspect-video rounded-2xl border border-border shadow-warm"
+                src="https://www.youtube.com/embed/NPxXbFeFj0Q"
+                title="Как это было — видео с вечеринки"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
           </ScrollReveal>
 
