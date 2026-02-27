@@ -2,7 +2,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { Clock } from "lucide-react";
 
 const schedule = [
-  { time: "19:00", label: "Сбор гостей, welcome-drink (игристое!) и настройка на волну" },
+  { time: "19:00", label: "Сбор гостей, настройка на волну" },
   { time: "19:30", label: "Самая милая распевка, которую вы когда-либо слышали" },
   { time: "20:00", label: "Первый сет" },
   { time: "21:00", label: "Перерыв: общаемся, делимся историями и пьём игристое" },
