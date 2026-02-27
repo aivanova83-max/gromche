@@ -211,9 +211,9 @@ const Events = () => {
             <div className="max-w-3xl mx-auto">
               <iframe
                 className="w-full aspect-video rounded-2xl border border-border shadow-warm"
-                src="https://www.youtube.com/embed/NPxXbFeFj0Q"
+                src="https://vk.com/video_ext.php?oid=-236309424&id=456239017"
                 title="Как это было — видео с вечеринки"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                 allowFullScreen
               />
             </div>
