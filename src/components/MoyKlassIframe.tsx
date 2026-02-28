@@ -7,8 +7,17 @@ const WIDGET_SRCDOC = `<!DOCTYPE html>
     <style>body { margin: 0; padding: 0; background: transparent; }</style>
   </head>
   <body>
-    <div id="SiteWidgetMoyklass131435"></div>
-    <script src="https://app.moyklass.com/api/site/widget/?id=01hZGtASapf5mlYpucT2gi8kkUURZAUFn2or" type="text/javascript" charset="UTF-8"><\/script>
+    <div id="nh-widget-iframe"></div>
+    <script src="https://events.nethouse.ru/assets/js/nh-wiget-iframe.js"><\/script>
+    <script>
+      window.nhWigetInit({
+        container: '#nh-widget-iframe',
+        src: 'https://events.nethouse.ru/buy_tickets/157277/iframe/',
+        height: 650,
+        width: '100%',
+        border: 'none'
+      });
+    <\/script>
   </body>
 </html>`;
 
@@ -18,8 +27,8 @@ export const MoyKlassIframe = () => {
   return (
     <iframe
       srcDoc={WIDGET_SRCDOC}
-      style={{ width: "100%", height: isMobile ? 380 : 420, border: "none" }}
-      title="МойКласс запись"
+      style={{ width: "100%", height: isMobile ? 650 : 700, border: "none" }}
+      title="Покупка билетов"
     />
   );
 };
