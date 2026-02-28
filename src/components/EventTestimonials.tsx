@@ -14,7 +14,7 @@ const testimonials = [
 
 export const EventTestimonials = () => {
   const isMobile = useIsMobile();
-  const visibleTestimonials = isMobile ? testimonials.slice(0, 5) : testimonials;
+  const visibleTestimonials = isMobile ? [testimonials[0], testimonials[2], testimonials[4], testimonials[5], testimonials[6]] : testimonials;
 
   return (
   <section className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
