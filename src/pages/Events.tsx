@@ -308,7 +308,7 @@ const Events = () => {
           </ScrollReveal>
 
           <ScrollReveal>
-            <div className="bg-card rounded-2xl p-2 sm:p-6 md:p-8 border border-border shadow-warm">
+            <div className="bg-card rounded-2xl p-0 sm:p-6 md:p-8 border border-border shadow-warm overflow-x-auto">
               <MoyKlassIframe />
             </div>
           </ScrollReveal>
