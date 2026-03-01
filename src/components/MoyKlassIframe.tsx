@@ -9,6 +9,9 @@ const WIDGET_SRCDOC = `<!DOCTYPE html>
       html, body { margin: 0; padding: 0; background: transparent; overflow-x: hidden; width: 100%; }
       #nh-widget-iframe { width: 100%; max-width: 100%; overflow-x: hidden; }
       #nh-widget-iframe iframe { max-width: 100% !important; }
+      @media (max-width: 480px) {
+        body { transform: scale(0.85); transform-origin: top left; width: 117.6%; }
+      }
     </style>
   </head>
   <body>
