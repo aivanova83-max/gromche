@@ -4,7 +4,12 @@ const WIDGET_SRCDOC = `<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
-    <style>body { margin: 0; padding: 0; background: transparent; }</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <style>
+      html, body { margin: 0; padding: 0; background: transparent; overflow-x: hidden; width: 100%; }
+      #nh-widget-iframe { width: 100%; max-width: 100%; overflow-x: hidden; }
+      #nh-widget-iframe iframe { max-width: 100% !important; }
+    </style>
   </head>
   <body>
     <div id="nh-widget-iframe"></div>
