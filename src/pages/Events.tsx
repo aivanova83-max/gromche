@@ -3,7 +3,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { MoyKlassIframe } from "@/components/MoyKlassIframe";
+
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Piano, Guitar, Music, Heart, Sparkles } from "lucide-react";
@@ -118,7 +118,7 @@ const Events = () => {
             className="text-base px-10 py-6 rounded-full text-lg"
             asChild>
 
-            <a href="#register">Купить билет</a>
+            <a href="https://events.nethouse.ru/buy_tickets/157277" target="_blank" rel="noopener noreferrer">Занять место на вечеринке</a>
           </Button>
         </div>
       </section>
@@ -219,7 +219,7 @@ const Events = () => {
       {/* ════════ CTA ════════ */}
       <div className="text-center py-10 max-[480px]:py-6">
         <Button variant="hero" size="lg" className="text-base px-10 py-6 rounded-full text-lg" asChild>
-          <a href="#register">Купить билеты</a>
+          <a href="https://events.nethouse.ru/buy_tickets/157277" target="_blank" rel="noopener noreferrer">Занять место на вечеринке</a>
         </Button>
       </div>
 
@@ -284,7 +284,7 @@ const Events = () => {
       {/* ════════ CTA ════════ */}
       <div className="text-center py-10 max-[480px]:py-6">
         <Button variant="hero" size="lg" className="text-base px-10 py-6 rounded-full text-lg" asChild>
-          <a href="#register">Хочу на вечеринку!</a>
+          <a href="https://events.nethouse.ru/buy_tickets/157277" target="_blank" rel="noopener noreferrer">Занять место на вечеринке</a>
         </Button>
       </div>
 
@@ -308,9 +308,9 @@ const Events = () => {
           </ScrollReveal>
 
           <ScrollReveal>
-            <div className="bg-card rounded-2xl p-0 sm:p-6 md:p-8 border border-border shadow-warm overflow-x-auto">
-              <MoyKlassIframe />
-            </div>
+            <Button variant="hero" size="lg" className="text-base px-10 py-6 rounded-full text-lg" asChild>
+              <a href="https://events.nethouse.ru/buy_tickets/157277" target="_blank" rel="noopener noreferrer">Занять место на вечеринке</a>
+            </Button>
           </ScrollReveal>
 
           <ScrollReveal>
