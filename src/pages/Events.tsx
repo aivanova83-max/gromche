@@ -302,12 +302,6 @@ const Events = () => {
 
         <div className="container max-w-4xl mx-auto space-y-8 text-center">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Купить билет
-            </h2>
-          </ScrollReveal>
-
-          <ScrollReveal>
             <Button variant="hero" size="lg" className="text-base px-10 py-6 rounded-full text-lg" asChild>
               <a href="https://events.nethouse.ru/buy_tickets/157277" target="_blank" rel="noopener noreferrer">Занять место на вечеринке</a>
             </Button>
