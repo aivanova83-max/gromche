@@ -7,11 +7,8 @@ const WIDGET_SRCDOC = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <style>
       html, body { margin: 0; padding: 0; background: transparent; overflow-x: hidden; width: 100%; }
-      #nh-widget-iframe { width: 100%; max-width: 100%; overflow-x: hidden; }
+      #nh-widget-iframe { width: 100%; max-width: 100%; overflow: auto; -webkit-overflow-scrolling: touch; }
       #nh-widget-iframe iframe { max-width: 100% !important; }
-      @media (max-width: 480px) {
-        body { transform: scale(0.85); transform-origin: top left; width: 117.6%; }
-      }
     </style>
   </head>
   <body>
