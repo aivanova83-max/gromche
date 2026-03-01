@@ -302,8 +302,8 @@ const Events = () => {
 
         <div className="container max-w-4xl mx-auto space-y-8 text-center">
           <ScrollReveal>
-            <Button variant="hero" size="lg" className="text-base px-10 py-6 rounded-full text-lg" asChild>
-              <a href="https://events.nethouse.ru/buy_tickets/157277" target="_blank" rel="noopener noreferrer">Занять место на вечеринке</a>
+            <Button variant="hero" size="lg" className="text-lg md:text-xl px-14 py-7 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300" asChild>
+              <a href="https://events.nethouse.ru/buy_tickets/157277" target="_blank" rel="noopener noreferrer">Купить билет</a>
             </Button>
           </ScrollReveal>
 
