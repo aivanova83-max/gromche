@@ -118,7 +118,7 @@ const Events = () => {
             className="text-base px-10 py-6 rounded-full text-lg"
             asChild>
 
-            <a href="https://events.nethouse.ru/buy_tickets/157277" target="_blank" rel="noopener noreferrer">Занять место на вечеринке</a>
+            <a href="https://events.nethouse.ru/buy_tickets/157277" target="_blank" rel="noopener noreferrer">Купить билет</a>
           </Button>
         </div>
       </section>
