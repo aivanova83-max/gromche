@@ -284,7 +284,7 @@ const Events = () => {
       {/* ════════ CTA ════════ */}
       <div className="text-center py-10 max-[480px]:py-6">
         <Button variant="hero" size="lg" className="text-base px-10 py-6 rounded-full text-lg" asChild>
-          <a href="https://events.nethouse.ru/buy_tickets/157277" target="_blank" rel="noopener noreferrer">Занять место на вечеринке</a>
+          <a href="https://events.nethouse.ru/buy_tickets/157277" target="_blank" rel="noopener noreferrer">Хочу на вечеринку!</a>
         </Button>
       </div>
 
