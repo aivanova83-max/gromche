@@ -1,13 +1,15 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Clock } from "lucide-react";
 
-const schedule = [
+const schedule: { time: string; label?: string; details?: string[] }[] = [
   { time: "19:00", label: "Сбор гостей, настройка на волну" },
   { time: "19:30", label: "Самая милая распевка, которую вы когда-либо слышали" },
-  { time: "20:00", label: "Первый сет" },
-  { time: "21:00", label: "Перерыв: общаемся, делимся историями и пьём игристое" },
-  { time: "21:10", label: "Мастер-класс по многоголосию от профессионального хормейстера" },
-  { time: "21:30", label: "Второй сет" },
+  { time: "20:00", details: [
+    "3 музыкальных сета",
+    "20+ песен в хоровом исполнении",
+    "1 мастер-класс по многоголосию",
+    "2 перерыва для общения и игристого",
+  ]},
   { time: "22:30", label: "Обнимаемся и не хотим уходить" },
 ];
 
@@ -31,7 +33,18 @@ export const EventProgram = () => (
                   <span className="text-primary font-semibold whitespace-nowrap min-w-[3.5rem] md:min-w-[4.5rem] text-sm md:text-base">
                     {item.time}
                   </span>
-                  <span className="text-foreground/80 leading-relaxed text-sm md:text-base">{item.label}</span>
+                  {item.label && (
+                    <span className="text-foreground/80 leading-relaxed text-sm md:text-base">{item.label}</span>
+                  )}
+                  {item.details && (
+                    <ul className="space-y-1">
+                      {item.details.map((d, j) => (
+                        <li key={j} className="text-foreground/80 leading-relaxed text-sm md:text-base">
+                          {d}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </ScrollReveal>
             ))}
