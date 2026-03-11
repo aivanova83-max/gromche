@@ -44,7 +44,7 @@ export const EventVenue = () =>
           {/* How to get there links */}
           <div className="flex flex-wrap gap-4 pt-2 justify-center">
             <a
-            href="https://yandex.ru/maps/-/CPqqaZ3c"
+            href="https://yandex.ru/maps?whatshere%5Bpoint%5D=37.60363050684147%2C55.79937037418484&whatshere%5Bzoom%5D=11.533388&ll=37.606954%2C55.798950000057964&z=11.533388&si=1q1yrg135cmxew4bz11ywrq8qw"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
