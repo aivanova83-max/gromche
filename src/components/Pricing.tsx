@@ -7,52 +7,35 @@ const branchData = {
     schedule: {
       day: "Среда",
       time: "19:30 — 21:00",
-      note: null,
+      note: null
     },
     prices: [
-      { sessions: 4, price: "6 000", days: 43 },
-      { sessions: 6, price: "8 400", days: 57 },
-      { sessions: 8, price: "10 400", days: 78 },
-    ],
+    { sessions: 4, price: "6 000", days: 43 },
+    { sessions: 6, price: "8 400", days: 57 },
+    { sessions: 8, price: "10 400", days: 78 }],
+
     address: {
       text: "г. Люберцы, ул. 8 Марта, 12, корп. 3 (клуб ПроДетство)",
-      mapLink: "https://yandex.ru/maps/-/CLXQ5Klo",
-    },
+      mapLink: "https://yandex.ru/maps/-/CLXQ5Klo"
+    }
   },
   vdnkh: {
     name: "ВДНХ",
     schedule: {
       day: "Четверг",
       time: "19:00 — 20:30",
-      note: null,
+      note: null
     },
     prices: [
-      { sessions: 4, price: "6 800", days: 43 },
-      { sessions: 6, price: "9 600", days: 57 },
-      { sessions: 8, price: "12 000", days: 78 },
-    ],
+    { sessions: 4, price: "6 800", days: 43 },
+    { sessions: 6, price: "9 600", days: 57 },
+    { sessions: 8, price: "12 000", days: 78 }],
+
     address: {
       text: "Проспект Мира, д. 119, стр. 619, Русская школа управления (10 мин. от м. ВДНХ)",
-      mapLink: "https://yandex.ru/maps/-/CDxSAW2q",
-    },
-  },
-  pushkinskaya: {
-    name: "Пушкинская",
-    schedule: {
-      day: "Понедельник",
-      time: "19:30 — 21:30",
-      note: null,
-    },
-    prices: [
-      { sessions: 4, price: "7 600", days: 43 },
-      { sessions: 6, price: "10 800", days: 57 },
-      { sessions: 8, price: "13 600", days: 78 },
-    ],
-    address: {
-      text: "Страстной бульвар, 6с1 (1 мин от м. Пушкинская / Чеховская)",
-      mapLink: "https://yandex.com/maps/-/CPVQMHkL",
-    },
-  },
+      mapLink: "https://yandex.ru/maps/-/CDxSAW2q"
+    }
+  }
 };
 
 type BranchKey = keyof typeof branchData;
@@ -70,24 +53,18 @@ export const Pricing = () => {
 
         <Tabs defaultValue="vdnkh" className="w-full">
           {/* Branch Switcher */}
-          <TabsList className="grid w-full grid-cols-3 mb-8 max-[480px]:mb-6 h-14 max-[480px]:h-12 bg-card/80 backdrop-blur-sm rounded-full p-1.5 shadow-soft">
+          <TabsList className="grid w-full grid-cols-2 mb-8 max-[480px]:mb-6 h-14 max-[480px]:h-12 bg-card/80 backdrop-blur-sm rounded-full p-1.5 shadow-soft">
             <TabsTrigger
               value="lyubertsy"
-              className="rounded-full text-base max-[480px]:text-xs font-medium transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
-            >
+              className="rounded-full text-base max-[480px]:text-sm font-medium transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full">
+              
               📍 Люберцы
             </TabsTrigger>
             <TabsTrigger
               value="vdnkh"
-              className="rounded-full text-base max-[480px]:text-xs font-medium transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
-            >
+              className="rounded-full text-base max-[480px]:text-sm font-medium transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full">
+              
               📍 ВДНХ
-            </TabsTrigger>
-            <TabsTrigger
-              value="pushkinskaya"
-              className="rounded-full text-base max-[480px]:text-xs font-medium transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
-            >
-              📍 Пушкинская
             </TabsTrigger>
           </TabsList>
 
@@ -97,8 +74,8 @@ export const Pricing = () => {
               <TabsContent
                 key={branchKey}
                 value={branchKey}
-                className="mt-0 animate-fade-in focus-visible:outline-none focus-visible:ring-0"
-              >
+                className="mt-0 animate-fade-in focus-visible:outline-none focus-visible:ring-0">
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-[480px]:gap-4 mb-8 max-[480px]:mb-6">
                   {/* Абонементы */}
                   <div className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth">
@@ -110,8 +87,8 @@ export const Pricing = () => {
                     </div>
 
                     <div className="space-y-4 max-[480px]:space-y-3">
-                      {branch.prices.map((item) => (
-                        <div key={item.sessions} className="flex justify-between items-baseline">
+                      {branch.prices.map((item) =>
+                      <div key={item.sessions} className="flex justify-between items-baseline">
                           <div>
                             <span className="text-foreground text-base max-[480px]:text-sm">
                               {item.sessions} занятий
@@ -122,7 +99,7 @@ export const Pricing = () => {
                             {item.price} ₽
                           </span>
                         </div>
-                      ))}
+                      )}
                     </div>
 
                     <div className="mt-5 max-[480px]:mt-4 pt-4 border-t border-border/30">
@@ -171,19 +148,19 @@ export const Pricing = () => {
                       Занятия проходят каждую неделю
                     </p>
 
-                    {branch.schedule.note && (
-                      <div className="mt-4 p-3 max-[480px]:p-2.5 bg-primary/10 rounded-xl border border-primary/20">
+                    {branch.schedule.note &&
+                    <div className="mt-4 p-3 max-[480px]:p-2.5 bg-primary/10 rounded-xl border border-primary/20">
                         <p className="text-primary font-medium text-sm max-[480px]:text-xs text-center">
                           ✨ {branch.schedule.note}
                         </p>
                       </div>
-                    )}
+                    }
                   </div>
 
                   {/* Место проведения */}
                   <div className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth">
                     <div className="flex items-center gap-2 mb-5 max-[480px]:mb-4">
-                      <span className="text-2xl max-[480px]:text-xl">📍</span>
+                      <span className="text-2xl max-[480px]:text-xl">Понедельник, 19:30 — 21:00</span>
                       <h3 className="text-xl max-[480px]:text-lg font-semibold text-foreground">
                         Место проведения
                       </h3>
@@ -197,14 +174,14 @@ export const Pricing = () => {
                       href={branch.address.mapLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-primary hover:text-primary/80 text-sm max-[480px]:text-xs font-medium transition-smooth"
-                    >
+                      className="inline-flex items-center gap-1 text-primary hover:text-primary/80 text-sm max-[480px]:text-xs font-medium transition-smooth">
+                      
                       Построить маршрут →
                     </a>
                   </div>
                 </div>
-              </TabsContent>
-            );
+              </TabsContent>);
+
           })}
         </Tabs>
 
@@ -219,14 +196,14 @@ export const Pricing = () => {
             variant="hero"
             size="lg"
             className="text-base max-[480px]:text-sm px-10 max-[480px]:px-8 py-4 max-[480px]:py-3.5 rounded-full w-full max-w-lg max-[480px]:max-w-full font-semibold"
-            asChild
-          >
+            asChild>
+            
             <a href="https://forms.gle/V3Sv25Gk2MLigaE58" target="_blank" rel="noopener noreferrer">
               Записаться на занятие
             </a>
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
