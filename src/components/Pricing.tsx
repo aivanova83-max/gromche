@@ -49,7 +49,7 @@ const branchData = {
       { sessions: 8, price: "13 600", days: 78 },
     ],
     address: {
-      text: "Страстной бульвар, 6с1 (1 мин от м. Пушкинская / Чеховская)",
+      text: "Страстной бульвар, 6с1\n(1 мин от м. Пушкинская / Чеховская)",
       mapLink: "https://yandex.com/maps/-/CPVQMHkL",
     },
   },
