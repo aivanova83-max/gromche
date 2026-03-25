@@ -18,10 +18,11 @@ export const Hero = ({ className }: { className?: string }) => {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button 
+              type="button"
               variant="hero" 
               size="lg" 
               className="text-base max-[480px]:text-sm px-8 max-[480px]:px-6 py-5 max-[480px]:py-4 rounded-full"
-              onClick={() => window.open("https://app.moyklass.com/s/01K9BrWJck7O6TZEZsOjLHe61iGjhIOYkjgp", "_blank")}
+              onClick={openMoyKlassForm}
             >
               Прийти на первое занятие
             </Button>
