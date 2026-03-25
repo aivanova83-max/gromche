@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { openMoyKlassForm } from "@/hooks/useMoyKlass";
 
 export const Join = () => {
 
@@ -16,7 +15,7 @@ export const Join = () => {
             variant="hero" 
             size="lg" 
             className="text-base max-[480px]:text-sm py-5 max-[480px]:py-4 rounded-full w-full max-w-md max-[480px]:max-w-full"
-            onClick={openMoyKlassForm}
+            onClick={() => window.open("https://app.moyklass.com/s/01K9BrWJck7O6TZEZsOjLHe61iGjhIOYkjgp", "_blank")}
           >
             Записаться на пробное занятие
           </Button>

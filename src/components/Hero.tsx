@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { openMoyKlassForm } from "@/hooks/useMoyKlass";
 
 export const Hero = ({ className }: { className?: string }) => {
   return (
@@ -21,7 +20,7 @@ export const Hero = ({ className }: { className?: string }) => {
               variant="hero" 
               size="lg" 
               className="text-base max-[480px]:text-sm px-8 max-[480px]:px-6 py-5 max-[480px]:py-4 rounded-full"
-              onClick={openMoyKlassForm}
+              onClick={() => window.open("https://app.moyklass.com/s/01K9BrWJck7O6TZEZsOjLHe61iGjhIOYkjgp", "_blank")}
             >
               Прийти на первое занятие
             </Button>
