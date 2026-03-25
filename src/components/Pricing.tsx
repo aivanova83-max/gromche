@@ -221,16 +221,16 @@ export const Pricing = () => {
         </Tabs>
 
         <div className="text-center">
-          <Button
-            variant="hero"
-            size="lg"
-            className="text-base max-[480px]:text-sm px-10 max-[480px]:px-8 py-4 max-[480px]:py-3.5 rounded-full w-full max-w-lg max-[480px]:max-w-full font-semibold"
-            asChild
-          >
-            <a href="https://forms.gle/V3Sv25Gk2MLigaE58" target="_blank" rel="noopener noreferrer">
-              Записаться на занятие
-            </a>
-          </Button>
+           <Button
+              variant="hero"
+              size="lg"
+              className="text-base max-[480px]:text-sm px-10 max-[480px]:px-8 py-4 max-[480px]:py-3.5 rounded-full w-full max-w-lg max-[480px]:max-w-full font-semibold"
+              asChild
+            >
+              <a ref={signupBtnRef} href="#" onClick={(e) => e.preventDefault()}>
+                Записаться на занятие
+              </a>
+            </Button>
           <p className="text-lg max-[480px]:text-base font-medium text-primary mt-4 max-[480px]:mt-3">
             Количество мест ограничено! Успейте записаться!
           </p>
