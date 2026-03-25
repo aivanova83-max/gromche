@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { openMoyKlassForm } from "@/hooks/useMoyKlass";
 
 export const Hero = ({ className }: { className?: string }) => {
   return (
