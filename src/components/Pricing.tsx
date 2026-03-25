@@ -189,7 +189,7 @@ export const Pricing = () => {
                       </h3>
                     </div>
 
-                    <p className="text-foreground font-medium text-base max-[480px]:text-sm mb-3 leading-relaxed">
+                    <p className="text-foreground font-medium text-base max-[480px]:text-sm mb-3 leading-relaxed whitespace-pre-line">
                       {branch.address.text}
                     </p>
 
