@@ -1,6 +1,17 @@
+import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 
 export const Join = () => {
+  const btnRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    if (btnRef.current) {
+      btnRef.current.setAttribute(
+        "onclick",
+        "WdgMoyklass['01K9BrWJck7O6TZEZsOjLHe61iGjhIOYkjgp'].loadLeadFormByModal();"
+      );
+    }
+  }, []);
 
   return (
     <section id="join" className="py-12 max-[480px]:py-8 px-4 bg-gradient-warm">
@@ -17,7 +28,7 @@ export const Join = () => {
             className="text-base max-[480px]:text-sm py-5 max-[480px]:py-4 rounded-full w-full max-w-md max-[480px]:max-w-full"
             asChild
           >
-            <a href="https://forms.gle/cEHkSbchu9h65pUi7" target="_blank" rel="noopener noreferrer">
+            <a ref={btnRef} href="#" onClick={(e) => e.preventDefault()}>
               Записаться на пробное занятие
             </a>
           </Button>
