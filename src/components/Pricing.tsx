@@ -219,7 +219,7 @@ export const Pricing = () => {
             variant="hero"
             size="lg"
             className="text-base max-[480px]:text-sm px-10 max-[480px]:px-8 py-4 max-[480px]:py-3.5 rounded-full w-full max-w-lg max-[480px]:max-w-full font-semibold"
-            onClick={openMoyKlassForm}
+            onClick={() => window.open("https://app.moyklass.com/s/01K9BrWJck7O6TZEZsOjLHe61iGjhIOYkjgp", "_blank")}
           >
             Записаться на занятие
           </Button>
