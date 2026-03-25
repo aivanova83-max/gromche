@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { openMoyKlassForm } from "@/hooks/useMoyKlass";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const branchData = {
