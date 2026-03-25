@@ -38,21 +38,5 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- MoyKlass widget begin -->
-    <script>
-      window.addEventListener('load', function() {
-        try {
-          var s = document.createElement('script');
-          s.src = 'https://app.moyklass.com/api/site/widget/?id=01K9BrWJck7O6TZEZsOjLHe61iGjhIOYkjgp';
-          s.type = 'text/javascript';
-          s.charset = 'UTF-8';
-          s.async = true;
-          s.crossOrigin = 'anonymous';
-          s.onerror = function() { console.warn('MoyKlass widget failed to load'); };
-          document.body.appendChild(s);
-        } catch(e) { console.warn('MoyKlass init error', e); }
-      });
-    </script>
-    <!-- MoyKlass widget end -->
   </body>
 </html>
