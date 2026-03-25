@@ -219,11 +219,9 @@ export const Pricing = () => {
             variant="hero"
             size="lg"
             className="text-base max-[480px]:text-sm px-10 max-[480px]:px-8 py-4 max-[480px]:py-3.5 rounded-full w-full max-w-lg max-[480px]:max-w-full font-semibold"
-            asChild
+            onClick={() => (window as any).WdgMoyklass?.['01K9BrWJck7O6TZEZsOjLHe61iGjhlOYkjgp']?.loadLeadFormByModal()}
           >
-            <a href="https://forms.gle/V3Sv25Gk2MLigaE58" target="_blank" rel="noopener noreferrer">
-              Записаться на занятие
-            </a>
+            Записаться на занятие
           </Button>
         </div>
       </div>

@@ -19,12 +19,10 @@ export const Hero = ({ className }: { className?: string }) => {
             <Button 
               variant="hero" 
               size="lg" 
-              className="text-base max-[480px]:text-sm px-8 max-[480px]:px-6 py-5 max-[480px]:py-4 rounded-full" 
-              asChild
+              className="text-base max-[480px]:text-sm px-8 max-[480px]:px-6 py-5 max-[480px]:py-4 rounded-full"
+              onClick={() => (window as any).WdgMoyklass?.['01K9BrWJck7O6TZEZsOjLHe61iGjhlOYkjgp']?.loadLeadFormByModal()}
             >
-              <a href="https://forms.gle/cEHkSbchu9h65pUi7" target="_blank" rel="noopener noreferrer">
-                Прийти на первое занятие
-              </a>
+              Прийти на первое занятие
             </Button>
             <Button 
               variant="outline" 
