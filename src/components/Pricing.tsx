@@ -36,6 +36,23 @@ const branchData = {
       mapLink: "https://yandex.ru/maps/-/CDxSAW2q",
     },
   },
+  pushkinskaya: {
+    name: "Пушкинская",
+    schedule: {
+      day: "Понедельник",
+      time: "19:30 — 21:30",
+      note: null,
+    },
+    prices: [
+      { sessions: 4, price: "7 600", days: 43 },
+      { sessions: 6, price: "10 800", days: 57 },
+      { sessions: 8, price: "13 600", days: 78 },
+    ],
+    address: {
+      text: "Страстной бульвар, 6с1 (1 мин от м. Пушкинская / Чеховская)",
+      mapLink: "https://yandex.com/maps/-/CPVQMHkL",
+    },
+  },
 };
 
 type BranchKey = keyof typeof branchData;
