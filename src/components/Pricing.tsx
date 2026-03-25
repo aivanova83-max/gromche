@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { openMoyKlassForm } from "@/hooks/useMoyKlass";
 
 const branchData = {
   lyubertsy: {
@@ -217,13 +216,14 @@ export const Pricing = () => {
 
         <div className="text-center">
           <Button
-            type="button"
             variant="hero"
             size="lg"
             className="text-base max-[480px]:text-sm px-10 max-[480px]:px-8 py-4 max-[480px]:py-3.5 rounded-full w-full max-w-lg max-[480px]:max-w-full font-semibold"
-            onClick={openMoyKlassForm}
+            asChild
           >
-            Записаться на занятие
+            <a href="https://forms.gle/V3Sv25Gk2MLigaE58" target="_blank" rel="noopener noreferrer">
+              Записаться на занятие
+            </a>
           </Button>
         </div>
       </div>

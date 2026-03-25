@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { openMoyKlassForm } from "@/hooks/useMoyKlass";
 
 export const Hero = ({ className }: { className?: string }) => {
   return (
@@ -12,19 +11,22 @@ export const Hero = ({ className }: { className?: string }) => {
             Ты можешь громче!
           </p>
           
-          <p className="text-lg md:text-xl max-[480px]:text-base mb-8 max-[480px]:mb-6 max-w-2xl mx-auto text-foreground/80 leading-relaxed whitespace-pre-line">
-            {"Женский хор «Громче» — твоя еженедельная перезагрузка: полтора часа бережного раскрытия голоса и заботы о себе.\nВыключаем рутину, чтобы почувствовать полноту жизни в кругу «своих»"}
+          <p className="text-lg md:text-xl max-[480px]:text-base mb-8 max-[480px]:mb-6 max-w-2xl mx-auto text-foreground/80 leading-relaxed">
+            Женский хор, где поют не ради сцены — ради жизни.
+            <br className="hidden md:block" />
+            Атмосфера радости, поддержки и свободы.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button 
-              type="button"
               variant="hero" 
               size="lg" 
-              className="text-base max-[480px]:text-sm px-8 max-[480px]:px-6 py-5 max-[480px]:py-4 rounded-full"
-              onClick={openMoyKlassForm}
+              className="text-base max-[480px]:text-sm px-8 max-[480px]:px-6 py-5 max-[480px]:py-4 rounded-full" 
+              asChild
             >
-              Прийти на первое занятие
+              <a href="https://forms.gle/cEHkSbchu9h65pUi7" target="_blank" rel="noopener noreferrer">
+                Прийти на первое занятие
+              </a>
             </Button>
             <Button 
               variant="outline" 
