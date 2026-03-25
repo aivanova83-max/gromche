@@ -39,7 +39,17 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <!-- MoyKlass widget begin -->
-    <script src="https://app.moyklass.com/api/site/widget/?id=01K9BrWJck7O6TZEZsOjLHe61iGjhIOYkjgp" type="text/javascript" charset="UTF-8"></script>
+    <script>
+      (function() {
+        var s = document.createElement('script');
+        s.src = 'https://app.moyklass.com/api/site/widget/?id=01K9BrWJck7O6TZEZsOjLHe61iGjhIOYkjgp';
+        s.type = 'text/javascript';
+        s.charset = 'UTF-8';
+        s.async = true;
+        s.onerror = function() { console.warn('MoyKlass widget failed to load'); };
+        document.body.appendChild(s);
+      })();
+    </script>
     <!-- MoyKlass widget end -->
   </body>
 </html>
