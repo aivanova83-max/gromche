@@ -59,6 +59,17 @@ const branchData = {
 type BranchKey = keyof typeof branchData;
 
 export const Pricing = () => {
+  const signupBtnRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    if (signupBtnRef.current) {
+      signupBtnRef.current.setAttribute(
+        "onclick",
+        "WdgMoyklass['01K9BrWJck7O6TZEZsOjLHe61iGjhIOYkjgp'].loadLeadFormByModal();"
+      );
+    }
+  }, []);
+
   return (
     <section id="pricing" className="py-16 max-[480px]:py-10 px-4 bg-gradient-warm">
       <div className="container max-w-5xl mx-auto">
