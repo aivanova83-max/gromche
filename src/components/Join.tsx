@@ -15,7 +15,7 @@ export const Join = () => {
             variant="hero" 
             size="lg" 
             className="text-base max-[480px]:text-sm py-5 max-[480px]:py-4 rounded-full w-full max-w-md max-[480px]:max-w-full"
-            onClick={() => (window as any).WdgMoyklass?.['01K9BrWJck7O6TZEZsOjLHe61iGjhlOYkjgp']?.loadLeadFormByModal()}
+            onClick={() => (window as any).WdgMoyklass?.['01K9BrWJck7O6TZEZsOjLHe61iGjhIOYkjgp']?.loadLeadFormByModal()}
           >
             Записаться на пробное занятие
           </Button>
