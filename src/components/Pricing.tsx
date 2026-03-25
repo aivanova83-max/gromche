@@ -208,12 +208,6 @@ export const Pricing = () => {
           })}
         </Tabs>
 
-        <div className="text-center mb-4 max-[480px]:mb-3">
-          <p className="text-lg max-[480px]:text-base font-medium text-primary">
-            Количество мест ограничено! Успейте записаться!
-          </p>
-        </div>
-
         <div className="text-center">
           <Button
             variant="hero"
@@ -225,6 +219,9 @@ export const Pricing = () => {
               Записаться на занятие
             </a>
           </Button>
+          <p className="text-lg max-[480px]:text-base font-medium text-primary mt-4 max-[480px]:mt-3">
+            Количество мест ограничено! Успейте записаться!
+          </p>
         </div>
       </div>
     </section>
