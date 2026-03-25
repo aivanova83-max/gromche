@@ -36,6 +36,23 @@ const branchData = {
       mapLink: "https://yandex.ru/maps/-/CDxSAW2q",
     },
   },
+  pushkinskaya: {
+    name: "Пушкинская",
+    schedule: {
+      day: "Понедельник",
+      time: "19:30 — 21:30",
+      note: null,
+    },
+    prices: [
+      { sessions: 4, price: "7 600", days: 43 },
+      { sessions: 6, price: "10 800", days: 57 },
+      { sessions: 8, price: "13 600", days: 78 },
+    ],
+    address: {
+      text: "Страстной бульвар, 6с1 (1 мин от м. Пушкинская / Чеховская)",
+      mapLink: "https://yandex.com/maps/-/CPVQMHkL",
+    },
+  },
 };
 
 type BranchKey = keyof typeof branchData;
@@ -53,18 +70,24 @@ export const Pricing = () => {
 
         <Tabs defaultValue="vdnkh" className="w-full">
           {/* Branch Switcher */}
-          <TabsList className="grid w-full grid-cols-2 mb-8 max-[480px]:mb-6 h-14 max-[480px]:h-12 bg-card/80 backdrop-blur-sm rounded-full p-1.5 shadow-soft">
+          <TabsList className="grid w-full grid-cols-3 mb-8 max-[480px]:mb-6 h-14 max-[480px]:h-12 bg-card/80 backdrop-blur-sm rounded-full p-1.5 shadow-soft">
             <TabsTrigger
               value="lyubertsy"
-              className="rounded-full text-base max-[480px]:text-sm font-medium transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
+              className="rounded-full text-base max-[480px]:text-xs font-medium transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
             >
               📍 Люберцы
             </TabsTrigger>
             <TabsTrigger
               value="vdnkh"
-              className="rounded-full text-base max-[480px]:text-sm font-medium transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
+              className="rounded-full text-base max-[480px]:text-xs font-medium transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
             >
               📍 ВДНХ
+            </TabsTrigger>
+            <TabsTrigger
+              value="pushkinskaya"
+              className="rounded-full text-base max-[480px]:text-xs font-medium transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
+            >
+              📍 Пушкинская
             </TabsTrigger>
           </TabsList>
 
