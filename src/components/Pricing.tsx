@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { openMoyKlassForm } from "@/hooks/useMoyKlass";
 
 const branchData = {
   lyubertsy: {
