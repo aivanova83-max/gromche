@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 
-const WIDGET_ID = "SiteWidgetMoyklass131435";
+const WIDGET_ID = "SiteWidgetMoyklass133029";
 const SCRIPT_URL =
-  "https://app.moyklass.com/api/site/widget/?id=01hZGtASapf5mlYpucT2gi8kkUURZAUFn2or";
+  "https://app.moyklass.com/api/site/widget/?id=01K9BrWJck7O6TZEZsOjLHe61iGjhlOYkjgp";
 
 export const MoyKlassWidget = () => {
   useEffect(() => {
