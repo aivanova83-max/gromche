@@ -12,9 +12,7 @@ export const Hero = ({ className }: { className?: string }) => {
           </p>
           
           <p className="text-lg md:text-xl max-[480px]:text-base mb-8 max-[480px]:mb-6 max-w-2xl mx-auto text-foreground/80 leading-relaxed">
-            Женский хор, где поют не ради сцены — ради жизни.
-            <br className="hidden md:block" />
-            Атмосфера радости, поддержки и свободы.
+            Женский хор «Громче» — твоя еженедельная перезагрузка: полтора часа бережного раскрытия голоса и заботы о себе. Выключаем рутину, чтобы почувствовать полноту жизни в кругу «своих»
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
