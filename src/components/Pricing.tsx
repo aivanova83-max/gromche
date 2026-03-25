@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -58,6 +59,17 @@ const branchData = {
 type BranchKey = keyof typeof branchData;
 
 export const Pricing = () => {
+  const signupBtnRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    if (signupBtnRef.current) {
+      signupBtnRef.current.setAttribute(
+        "onclick",
+        "WdgMoyklass['01K9BrWJck7O6TZEZsOjLHe61iGjhIOYkjgp'].loadLeadFormByModal();"
+      );
+    }
+  }, []);
+
   return (
     <section id="pricing" className="py-16 max-[480px]:py-10 px-4 bg-gradient-warm">
       <div className="container max-w-5xl mx-auto">
@@ -209,16 +221,16 @@ export const Pricing = () => {
         </Tabs>
 
         <div className="text-center">
-          <Button
-            variant="hero"
-            size="lg"
-            className="text-base max-[480px]:text-sm px-10 max-[480px]:px-8 py-4 max-[480px]:py-3.5 rounded-full w-full max-w-lg max-[480px]:max-w-full font-semibold"
-            asChild
-          >
-            <a href="https://forms.gle/V3Sv25Gk2MLigaE58" target="_blank" rel="noopener noreferrer">
-              Записаться на занятие
-            </a>
-          </Button>
+           <Button
+              variant="hero"
+              size="lg"
+              className="text-base max-[480px]:text-sm px-10 max-[480px]:px-8 py-4 max-[480px]:py-3.5 rounded-full w-full max-w-lg max-[480px]:max-w-full font-semibold"
+              asChild
+            >
+              <a ref={signupBtnRef} href="#" onClick={(e) => e.preventDefault()}>
+                Записаться на занятие
+              </a>
+            </Button>
           <p className="text-lg max-[480px]:text-base font-medium text-primary mt-4 max-[480px]:mt-3">
             Количество мест ограничено! Успейте записаться!
           </p>
