@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Legal from "./pages/Legal";
 import Events from "./pages/Events";
+import Zapis from "./pages/Zapis";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
