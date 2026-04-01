@@ -1,37 +1,60 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 
-const WIDGET_ID = "SiteWidgetMoyklass131435";
-const SCRIPT_URL =
-  "https://app.moyklass.com/api/site/widget/?id=01hZGtASapf5mlYpucT2gi8kkUURZAUFn2or";
+const WIDGET_KEY = "01K9BrWJck7O6TZEZsOjLHe61iGjhIOYkjgp";
 
 const Zapis = () => {
+  const opened = useRef(false);
+
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = SCRIPT_URL;
-    script.async = true;
-    script.type = "text/javascript";
-    script.charset = "utf-8";
-    document.body.appendChild(script);
-    return () => { script.remove(); };
+    if (opened.current) return;
+    opened.current = true;
+
+    const tryOpen = () => {
+      const w = (window as any).WdgMoyklass;
+      if (w && w[WIDGET_KEY]) {
+        w[WIDGET_KEY].loadLeadFormByModal();
+      } else {
+        setTimeout(tryOpen, 300);
+      }
+    };
+    tryOpen();
   }, []);
 
   return (
-    <div className="min-h-screen bg-background flex flex-col items-center px-4 py-12">
+    <div className="min-h-screen bg-background flex flex-col items-center justify-center px-4 py-12">
       <h1 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-8">
         Записаться на занятия в хоровую студию «Громче»
       </h1>
 
-      <div id={WIDGET_ID} className="w-full max-w-2xl min-h-[600px] mb-10" />
+      <p className="text-muted-foreground text-center mb-8">
+        Форма записи откроется автоматически. Если она не появилась, нажмите кнопку ниже.
+      </p>
 
-      <Link to="/">
-        <Button variant="outline" size="lg" className="gap-2">
-          <ArrowLeft className="w-4 h-4" />
-          Вернуться на сайт
+      <div className="flex flex-col gap-4 items-center">
+        <Button
+          variant="hero"
+          size="lg"
+          className="rounded-full text-base px-8"
+          onClick={() => {
+            const w = (window as any).WdgMoyklass;
+            if (w && w[WIDGET_KEY]) {
+              w[WIDGET_KEY].loadLeadFormByModal();
+            }
+          }}
+        >
+          🎤 Открыть форму записи
         </Button>
-      </Link>
+
+        <Link to="/">
+          <Button variant="outline" size="lg" className="gap-2">
+            <ArrowLeft className="w-4 h-4" />
+            Вернуться на сайт
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };
