@@ -26,7 +26,7 @@ const Zapis = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col items-center justify-center px-4 py-12">
       <h1 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-8">
-        Записаться на занятия в хоровую студию «Громче»
+        Записаться на занятия<br />в хоровую студию «Громче»
       </h1>
 
       <p className="text-muted-foreground text-center mb-8">
