@@ -13,7 +13,7 @@ export const StickyCTA = () => {
         "WdgMoyklass['01K9BrWJck7O6TZEZsOjLHe61iGjhIOYkjgp'].loadLeadFormByModal();"
       );
     }
-  }, []);
+  }, [isMobile]);
 
   if (!isMobile) return null;
 
