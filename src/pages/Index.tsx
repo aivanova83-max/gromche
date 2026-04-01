@@ -7,6 +7,7 @@ import { Pricing } from "@/components/Pricing";
 import { Song } from "@/components/Song";
 import { Join } from "@/components/Join";
 import { Footer } from "@/components/Footer";
+import { StickyCTA } from "@/components/StickyCTA";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <Song />
       <Join />
       <Footer />
+      <StickyCTA />
     </div>
   );
 };
