@@ -35,7 +35,7 @@ export const Hero = ({ className }: { className?: string }) => {
               className="text-base max-[480px]:text-sm px-8 max-[480px]:px-6 py-5 max-[480px]:py-4 rounded-full" 
               asChild
             >
-              <a href="#pricing">
+              <a ref={btnRef} href="#" onClick={(e) => e.preventDefault()}>
                 Прийти на первое занятие
               </a>
             </Button>
