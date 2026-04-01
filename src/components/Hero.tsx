@@ -30,7 +30,7 @@ export const Hero = ({ className }: { className?: string }) => {
             <Button 
               variant="hero" 
               size="lg" 
-              className="text-base max-[480px]:text-sm px-10 max-[480px]:px-7 py-6 max-[480px]:py-5 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 animate-pulse-subtle" 
+              className="text-base max-[480px]:text-sm px-10 max-[480px]:px-7 py-6 max-[480px]:py-5 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300" 
               asChild
             >
               <a ref={btnRef} href="#" onClick={(e) => e.preventDefault()}>
