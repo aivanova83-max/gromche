@@ -35,7 +35,7 @@ const audienceItems = [
   { icon: Flame, text: "Тем, кто хочет сбросить напряжение и хорошенько проораться" },
 ];
 
-const TELEGRAM_LINK = "https://t.me/gromche_choir/135";
+const TELEGRAM_LINK = "http://t.me/gromche_choir";
 const TELEGRAM_CHANNEL = "https://t.me/gromche_choir";
 const INSTAGRAM_LINK = "https://www.instagram.com/gromche_choir?igsh=MWhoczhqc3lxajA5aA==";
 
