@@ -66,7 +66,9 @@ const EventsLanding = () => {
           </h1>
 
           <p className="text-base md:text-lg text-white/80 max-w-xl mx-auto leading-relaxed max-[480px]:text-sm">
-            Хоровые вечеринки «Громче» — формат, где ты не зритель, а&nbsp;голос.
+            Хоровые вечеринки «Громче» — формат,
+            <br />
+            где ты не зритель, а&nbsp;голос.
             <br />
             Живая музыка, любимые песни, сотня человек в&nbsp;унисон.
           </p>
