@@ -32,7 +32,7 @@ const testimonials = [
 const audienceItems = [
   { icon: Mic, text: "Тем, кто любит петь: для себя или в компании" },
   { icon: Heart, text: "Тем, кто не поёт, но очень хочет начать" },
-  { icon: MessageCircle, text: "Тем, кто хочет сбросить напряжение и хорошенечко проораться" },
+  { icon: MessageCircle, text: "Тем, кто хочет сбросить напряжение и хорошенько проораться" },
 ];
 
 const TELEGRAM_LINK = "https://t.me/gromche_choir/135";
