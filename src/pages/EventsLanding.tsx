@@ -118,7 +118,7 @@ const EventsLanding = () => {
       </div>
 
       {/* ════════ 3. HOW IT WORKS ════════ */}
-      <section className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
+      <section className="pt-0 pb-20 max-[480px]:pb-12 px-4 bg-gradient-warm">
         <div className="container max-w-5xl mx-auto space-y-12">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
