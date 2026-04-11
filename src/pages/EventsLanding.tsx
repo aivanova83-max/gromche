@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { Piano, Guitar, Music, Users, Heart, Mic, MessageCircle, Send } from "lucide-react";
+import { Piano, Guitar, Music, Users, Sparkles, Mic, Flame, Send } from "lucide-react";
 
 const featureCards = [
   {
@@ -31,8 +31,8 @@ const testimonials = [
 
 const audienceItems = [
   { icon: Mic, text: "Тем, кто любит петь: для себя или в компании" },
-  { icon: Heart, text: "Тем, кто не поёт, но очень хочет начать" },
-  { icon: MessageCircle, text: "Тем, кто хочет сбросить напряжение и хорошенько проораться" },
+  { icon: Sparkles, text: "Тем, кто не поёт, но очень хочет начать" },
+  { icon: Flame, text: "Тем, кто хочет сбросить напряжение и хорошенько проораться" },
 ];
 
 const TELEGRAM_LINK = "https://t.me/gromche_choir/135";
