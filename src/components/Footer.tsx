@@ -6,7 +6,7 @@ export const Footer = () => {
           Хор «Громче»
         </p>
         <p className="text-base max-[480px]:text-sm text-olive mb-2 max-[480px]:mb-1.5">
-          Здесь женщины, которые звучат
+          Здесь звучат
         </p>
         <a 
           href="mailto:gromche-choir@yandex.ru" 
