@@ -149,15 +149,17 @@ const EventsLanding = () => {
       {/* ════════ 4. VIDEO BLOCK (placeholder) ════════ */}
       <section className="py-20 max-[480px]:py-12 px-4">
         <div className="container max-w-4xl mx-auto space-y-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="max-w-md mx-auto">
             <ScrollReveal>
-              <div className="aspect-[9/16] bg-card rounded-2xl border border-border shadow-warm flex items-center justify-center">
-                <p className="text-foreground/40 text-sm text-center px-4">Видео будет добавлено позже</p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={0.12}>
-              <div className="aspect-[9/16] bg-card rounded-2xl border border-border shadow-warm flex items-center justify-center">
-                <p className="text-foreground/40 text-sm text-center px-4">Видео будет добавлено позже</p>
+              <div className="aspect-[9/16] rounded-2xl border border-border shadow-warm overflow-hidden">
+                <iframe
+                  src="https://vk.com/video_ext.php?oid=-236309424&id=456239018&hd=2"
+                  width="100%"
+                  height="100%"
+                  allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
+                  frameBorder="0"
+                  allowFullScreen
+                />
               </div>
             </ScrollReveal>
           </div>
