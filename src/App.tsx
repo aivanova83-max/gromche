@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Legal from "./pages/Legal";
 import Events from "./pages/Events";
+import EventsLanding from "./pages/EventsLanding";
 import Zapis from "./pages/Zapis";
 import NotFound from "./pages/NotFound";
 
@@ -19,6 +20,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/events" element={<EventsLanding />} />
           <Route path="/events/mother" element={<Events />} />
           <Route path="/zapis" element={<Zapis />} />
           <Route path="/legal" element={<Legal />} />
