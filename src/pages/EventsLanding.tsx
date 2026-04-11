@@ -129,7 +129,7 @@ const EventsLanding = () => {
           <div className="grid md:grid-cols-3 gap-5">
             {featureCards.map((card, i) => (
               <ScrollReveal key={card.title} delay={i * 0.12}>
-                <div className="bg-primary/10 rounded-2xl p-7 shadow-warm border border-primary/20 hover:shadow-soft hover:bg-primary/15 transition-all duration-300 h-full flex flex-col gap-4">
+                <div className="bg-card rounded-2xl p-7 shadow-md border border-primary/25 hover:shadow-lg hover:border-primary/40 transition-all duration-300 h-full flex flex-col gap-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                     <card.icon className="w-6 h-6 text-primary" />
                   </div>
