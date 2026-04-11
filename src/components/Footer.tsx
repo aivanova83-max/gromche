@@ -28,6 +28,9 @@ export const Footer = () => {
             Политика конфиденциальности
           </a>
         </div>
+        <p className="mt-4 text-[10px] text-muted-foreground/60 leading-snug max-w-md mx-auto">
+          Meta и принадлежащий ей Instagram признаны экстремистскими организациями на территории Российской Федерации
+        </p>
       </div>
     </footer>
   );
