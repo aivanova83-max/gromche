@@ -8,7 +8,7 @@ import { Piano, Guitar, Music, Users, Heart, Mic, MessageCircle, Send } from "lu
 const featureCards = [
   {
     icon: Piano,
-    title: "Живой состав",
+    title: "Живая музыка",
     text: <>Пианино, гитара, баян, кахон.<br />Никаких минусовок.</>,
   },
   {
