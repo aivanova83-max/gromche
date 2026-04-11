@@ -62,7 +62,7 @@ const EventsLanding = () => {
 
         <div className="relative z-10 text-center px-4 py-24 max-w-3xl mx-auto space-y-8">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
-            Ты можешь громче.
+            Ты можешь громче!
           </h1>
 
           <p className="text-base md:text-lg text-white/80 max-w-xl mx-auto leading-relaxed max-[480px]:text-sm">
