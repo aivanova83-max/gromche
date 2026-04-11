@@ -37,7 +37,7 @@ const audienceItems = [
 
 const TELEGRAM_LINK = "https://t.me/gromche_choir/135";
 const TELEGRAM_CHANNEL = "https://t.me/gromche_choir";
-const INSTAGRAM_LINK = "https://www.instagram.com/gromche.choir";
+const INSTAGRAM_LINK = "https://www.instagram.com/gromche_choir?igsh=MWhoczhqc3lxajA5aA==";
 
 const EventsLanding = () => {
   useEffect(() => {
