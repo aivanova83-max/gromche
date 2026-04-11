@@ -222,7 +222,7 @@ const EventsLanding = () => {
           <div className="space-y-5">
             {audienceItems.map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="flex items-center gap-5 bg-primary/5 rounded-xl p-5 border border-primary/10">
+                <div className="flex items-center gap-5 bg-card rounded-xl p-5 border border-primary/20 shadow-md">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                     <item.icon className="w-5 h-5 text-primary" />
                   </div>
