@@ -14,6 +14,7 @@ const branchData = {
       { sessions: 4, price: "6 000", days: 43 },
       { sessions: 6, price: "8 400", days: 57 },
       { sessions: 8, price: "10 400", days: 78 },
+      { sessions: 1, price: "2 000", days: null, isSingle: true },
     ],
     address: {
       text: "г. Люберцы, ул. 8 Марта, 12, корп. 3 (клуб ПроДетство)",
@@ -31,6 +32,7 @@ const branchData = {
       { sessions: 4, price: "6 800", days: 43 },
       { sessions: 6, price: "9 600", days: 57 },
       { sessions: 8, price: "12 000", days: 78 },
+      { sessions: 1, price: "2 200", days: null, isSingle: true },
     ],
     address: {
       text: "Проспект Мира, д. 119, стр. 619, Русская школа управления (10 мин. от м. ВДНХ)",
@@ -48,6 +50,7 @@ const branchData = {
       { sessions: 4, price: "7 600", days: 43 },
       { sessions: 6, price: "10 800", days: 57 },
       { sessions: 8, price: "13 600", days: 78 },
+      { sessions: 1, price: "2 500", days: null, isSingle: true },
     ],
     address: {
       text: "Страстной бульвар, 6с1\n(1 мин от м. Пушкинская / Чеховская)",
@@ -146,13 +149,15 @@ export const Pricing = () => {
                     </div>
 
                     <div className="space-y-4 max-[480px]:space-y-3">
-                      {branch.prices.map((item) => (
-                        <div key={item.sessions} className="flex justify-between items-baseline">
+                      {branch.prices.map((item, index) => (
+                        <div key={index} className="flex justify-between items-baseline">
                           <div>
                             <span className="text-foreground text-base max-[480px]:text-sm">
-                              {item.sessions} занятий
+                              {item.isSingle ? "Разовое занятие" : `${item.sessions} занятий`}
                             </span>
-                            <p className="text-foreground/50 text-xs mt-0.5">{item.days} дня</p>
+                            {item.days && (
+                              <p className="text-foreground/50 text-xs mt-0.5">{item.days} дня</p>
+                            )}
                           </div>
                           <span className="font-semibold text-primary text-lg max-[480px]:text-base">
                             {item.price} ₽
