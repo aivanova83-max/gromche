@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -8,7 +8,7 @@ const branchData = {
     schedule: {
       day: "Среда",
       time: "19:30 — 21:00",
-      note: null,
+      note: "Курс набран. Следующий курс — в январе!",
     },
     prices: [
       { sessions: 4, price: "6 000", days: 43 },
@@ -58,8 +58,19 @@ const branchData = {
 
 type BranchKey = keyof typeof branchData;
 
+const getInitialBranch = (): BranchKey => {
+  if (typeof window === "undefined") return "vdnkh";
+  const hash = window.location.hash;
+  const match = hash.match(/#pricing-([a-z]+)/);
+  if (match && match[1] in branchData) {
+    return match[1] as BranchKey;
+  }
+  return "vdnkh";
+};
+
 export const Pricing = () => {
   const signupBtnRef = useRef<HTMLAnchorElement>(null);
+  const [activeBranch, setActiveBranch] = useState<BranchKey>(getInitialBranch);
 
   useEffect(() => {
     if (signupBtnRef.current) {
@@ -69,6 +80,19 @@ export const Pricing = () => {
       );
     }
   }, []);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const newBranch = getInitialBranch();
+      setActiveBranch(newBranch);
+    };
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
+  const handleTabChange = (value: string) => {
+    setActiveBranch(value as BranchKey);
+  };
 
   return (
     <section id="pricing" className="py-16 max-[480px]:py-10 px-4 bg-gradient-warm">
@@ -80,7 +104,7 @@ export const Pricing = () => {
           Выберите филиал
         </p>
 
-        <Tabs defaultValue="vdnkh" className="w-full">
+        <Tabs value={activeBranch} onValueChange={handleTabChange} className="w-full">
           {/* Branch Switcher */}
           <TabsList className="grid w-full grid-cols-3 mb-8 max-[480px]:mb-6 h-14 max-[480px]:h-12 bg-card/80 backdrop-blur-sm rounded-full p-1.5 shadow-soft">
             <TabsTrigger
