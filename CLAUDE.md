@@ -159,8 +159,36 @@ docs: обновить CLAUDE.md, добавить описание маршру
 - Hero / кнопка: `linear-gradient(135deg, #E8A088, #E4C9A8)`
 - Warm фон: тот же градиент с 20% прозрачностью
 
+```
+src/index.css                tailwind.config.ts        JSX-класс
+─────────────                ──────────────────        ─────────
+--primary: hsl(15,70%,73%)   → colors.primary     →   bg-primary / text-primary
+--secondary: hsl(30,65%,80%) → colors.secondary   →   bg-secondary
+--accent: hsl(45,75%,65%)    → colors.accent      →   text-accent
+--muted: hsl(350,60%,85%)    → colors.muted       →   bg-muted
+                                      ↓
+                          hsl(var(--...))  ← значение берётся из index.css
+```
+
 ### Подсказки для работы с проектом
 - **MoyKlass живёт вне React.** Виджет рендерится в `<div id="SiteWidgetMoyklass133029">`, который находится в `<body>` до `<div id="root">`. Управлять им через React-состояние невозможно — это внешний скрипт. Страница `/zapis` просто показывает этот div, не оборачивая его в компоненты.
+
+```
+index.html <body>
+├── <div id="SiteWidgetMoyklass133029">   ← внешний скрипт, не React
+│       └── [виджет записи / iframe]
+└── <div id="root">                       ← React-приложение
+        └── <App>
+                ├── <Header />
+                ├── <Router>
+                │       ├── / → <Index />
+                │       ├── /events → <Events />
+                │       ├── /events/mother → <EventMother />
+                │       ├── /zapis → <Zapis />
+                │       └── /legal → <Legal />
+                └── <Footer />
+```
+
 - **`/events/mother` — статическая страница, не динамический маршрут.** Это не `/events/:slug`, а отдельный файл под конкретное прошедшее мероприятие. При добавлении нового события создавать новый файл по паттерну `EventИмяМероприятия.tsx` и отдельный маршрут, пока не появится CMS или источник данных.
 - **Цвета задавать только через CSS-токены, не через HEX напрямую.** Таблица в разделе «Дизайн-система» — справочник для понимания палитры. В коде использовать исключительно Tailwind-классы (`bg-primary`, `text-muted-foreground`) или CSS-переменные (`hsl(var(--primary))`). Прямой HEX в JSX/CSS — ошибка.
 
@@ -172,6 +200,21 @@ docs: обновить CLAUDE.md, добавить описание маршру
 | `/events/mother` | `pages/EventMother.tsx` | Страница прошедшего мероприятия |
 | `/zapis` | `pages/Zapis.tsx` | Запись на занятие — виджет MoyKlass |
 | `/legal` | `pages/Legal.tsx` | Перечень юридических документов |
+
+```
+Пользователь
+     │
+     ▼
+ [/] Главная ─────────────────────────────────┐
+     │                                        │
+     ├── Афиша → [/events]                    │
+     │       └── Событие → [/events/mother]   │
+     │                                        │
+     ├── Юр. документы → [/legal]             │
+     │                                        ▼
+     └── Записаться ───→ [/zapis] → MoyKlass виджет
+                                          (CTA ★)
+```
 
 > **Замечание:** страница `/events/mother` — пример страницы конкретного мероприятия. По мере появления новых событий паттерн именования: `/events/<slug>`.
 
@@ -194,3 +237,80 @@ docs: обновить CLAUDE.md, добавить описание маршру
 13. **Не создавать собственную форму записи** — запись на занятия только через виджет MoyKlass. Расписание, свободные места и оплата живут на стороне MoyKlass; дублирование этой логики гарантирует рассинхронизацию.
 14. **Не использовать относительные пути в импортах** — только алиас `@/`. Путь вида `../../components/Button` ломается при переносе файла; `@/components/Button` работает всегда.
 15. **Не заменять внешние CDN-ссылки в `og:image` / `twitter:image` на локальные пути** — мета-теги в `index.html` не проходят через Vite-сборку, локальный путь не резолвится, и превью в соцсетях перестаёт работать.
+
+---
+
+## 8. Визуальный спек — ASCII-схемы
+
+### В документации
+
+При создании или обновлении любого .md-файла добавляй ASCII-схемы в разделах, где визуал помогает схватить суть быстрее текста:
+
+- Архитектура → блоки сервисов и стрелки с подписями протоколов
+
+- Структура проекта → дерево папок с пояснениями
+
+- User flow → экраны и переходы со стрелками
+
+- UI-макет → блоки страницы с подписями и примерами данных
+
+- Связи компонентов → блоки и стрелки импортов
+
+Схемы — в ``` блок, текст раздела не переписывай, только дополняй.
+
+### Перед новым функционалом (до кода)
+
+Если задача — добавить новый экран, модуль или интеграцию: сначала нарисуй ASCII-схему (UI-вайрфрейм, архитектура, user flow или связи компонентов). Покажи мне, дождись подтверждения и только потом пиши код.
+
+---
+
+## 9. Infrastructure & Deployment
+
+### Сервер
+- **VPS**: Ubuntu 24.04, IP `159.194.197.40`
+- **Веб-сервер**: nginx — отдаёт статику из `/var/www/gromche`, SPA-роутинг через `try_files $uri $uri/ /index.html`
+- **SSL**: Let's Encrypt (certbot), автообновление через systemd
+- **Deploy-пользователь**: `deploy` (ограниченные права, SSH-ключ от GitHub Actions)
+
+### CI/CD — GitHub Actions
+
+При каждом `push` в `main` автоматически запускается `.github/workflows/deploy.yml`:
+
+```
+push в main
+     │
+     ▼
+GitHub Actions (ubuntu-latest)
+  ├── actions/checkout@v4
+  ├── actions/setup-node@v4  (Node 20, кэш npm)
+  ├── npm ci
+  ├── npm run build  →  dist/
+  └── appleboy/scp-action  →  SSH  →  /var/www/gromche/
+                                              │
+                                              ▼
+                                        nginx (HTTPS :443)
+                                        ├── /           → index.html (SPA)
+                                        ├── /assets/*   → кэш 1 год
+                                        └── /*          → index.html (react-router)
+```
+
+### GitHub Secrets (Settings → Secrets → Actions)
+
+| Секрет | Значение |
+|---|---|
+| `DEPLOY_HOST` | `159.194.197.40` |
+| `DEPLOY_USER` | `deploy` |
+| `DEPLOY_SSH_KEY` | Приватный SSH-ключ `~/.ssh/gromche_deploy` |
+
+### nginx — ключевые правила конфига
+
+```nginx
+root /var/www/gromche;
+location / {
+    try_files $uri $uri/ /index.html;   # SPA: все пути → index.html
+}
+location ~* \.(js|css|png|jpg|svg|woff2)$ {
+    expires 1y;
+    add_header Cache-Control "public, immutable";
+}
+```
