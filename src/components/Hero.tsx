@@ -19,7 +19,7 @@ export const Hero = ({ className }: { className?: string }) => {
           <h1 className="sr-only">Хор «Громче»</h1>
           
           <p className="text-4xl md:text-6xl lg:text-7xl max-[480px]:text-3xl font-bold mb-5 max-[480px]:mb-4 text-primary leading-tight">
-            Ты можешь громче!
+            Ты можешь Громче!
           </p>
           
           <p className="text-lg md:text-xl max-[480px]:text-base mb-8 max-[480px]:mb-6 max-w-2xl mx-auto text-foreground/80 leading-relaxed">
