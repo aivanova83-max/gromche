@@ -25,13 +25,23 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to VPS
+      - name: Copy files to VPS
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_SSH_KEY }}
           source: "dist/"
-          target: "/var/www/gromche"
+          target: "/tmp/gromche_deploy"
           strip_components: 1
-          rm: true
+
+      - name: Deploy to web root
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: |
+            rm -rf /var/www/gromche/*
+            cp -a /tmp/gromche_deploy/. /var/www/gromche/
+            rm -rf /tmp/gromche_deploy
