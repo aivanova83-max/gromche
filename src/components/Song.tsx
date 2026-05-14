@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Music } from "lucide-react";
+import { Music, Play, PauseCircle } from "lucide-react";
 import { useState, useRef } from "react";
 export const Song = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -28,7 +28,7 @@ export const Song = () => {
           <audio ref={audioRef} src="/gromche-song.mpeg" onEnded={() => setIsPlaying(false)} />
           
           <Button variant="hero" size="lg" className="text-base max-[480px]:text-sm px-8 max-[480px]:px-6 py-5 max-[480px]:py-4 rounded-full w-full max-w-md max-[480px]:max-w-full" onClick={togglePlay}>
-            {isPlaying ? "⏸ Пауза" : "▶ Послушать песню"}
+            {isPlaying ? <><PauseCircle className="w-5 h-5 mr-2" />Пауза</> : <><Play className="w-5 h-5 mr-2" />Послушать песню</>}
           </Button>
         </div>
       </div>
