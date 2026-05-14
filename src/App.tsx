@@ -9,6 +9,9 @@ import Events from "./pages/Events";
 import EventsLanding from "./pages/EventsLanding";
 import Zapis from "./pages/Zapis";
 import NotFound from "./pages/NotFound";
+import { useYandexMetrika } from "@/hooks/useYandexMetrika";
+
+const MetrikaTracker = () => { useYandexMetrika(); return null; };
 
 const queryClient = new QueryClient();
 
@@ -18,6 +21,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <MetrikaTracker />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/events" element={<EventsLanding />} />
