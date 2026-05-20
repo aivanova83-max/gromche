@@ -1,4 +1,16 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 const Legal = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) return;
+    const id = hash.slice(1);
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  }, [hash]);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -53,7 +65,7 @@ const Legal = () => {
             <p>2.7. <strong>Коммуникация:</strong> После оплаты или подачи заявки Исполнитель связывается с Заказчиком (через e-mail, телефон, Telegram или иные мессенджеры) и направляет ссылку на общий чат группы. Вступление в чат является обязанностью Заказчика для оперативного получения организационной информации.</p>
             <p>2.8. <strong>Привлечение третьих лиц:</strong> Исполнитель вправе привлекать к оказанию услуг третьих лиц (педагогов, хормейстеров), неся полную ответственность за их действия.</p>
 
-            <h2 className="text-xl font-bold text-foreground">3. ПРАВИЛА ПРОДАЖИ БИЛЕТОВ (СОБЫТИЯ)</h2>
+            <h2 id="vozvrat" className="text-xl font-bold text-foreground">3. ПРАВИЛА ПРОДАЖИ БИЛЕТОВ (СОБЫТИЯ)</h2>
             <p>3.1. Билет дает право на посещение разового мероприятия.</p>
             <p>3.2. <strong>Передача билета:</strong> Заказчик имеет право передать билет третьему лицу (старше 18 лет) без переоформления документов.</p>
             <p>3.3. <strong>Возврат билетов по инициативе Заказчика</strong> (согласно ФЗ №193):</p>
