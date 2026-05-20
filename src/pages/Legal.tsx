@@ -7,8 +7,14 @@ const Legal = () => {
   useEffect(() => {
     if (!hash) return;
     const id = hash.slice(1);
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    const timer = setTimeout(() => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const navHeight = 64;
+      const top = el.getBoundingClientRect().top + window.scrollY - navHeight;
+      window.scrollTo({ top, behavior: "smooth" });
+    }, 100);
+    return () => clearTimeout(timer);
   }, [hash]);
 
   return (
