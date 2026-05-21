@@ -302,7 +302,25 @@ const EventFolk = () => {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-8">
+            {/* Мобильные: горизонтальный свайп */}
+            <div className="flex md:hidden gap-3 mt-8 overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+              {kalinkaPhotos.map((photo) => (
+                <div
+                  key={photo.src}
+                  className="flex-shrink-0 w-[75vw] snap-center rounded-2xl overflow-hidden aspect-[4/3] border border-border shadow-warm"
+                >
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Десктоп: сетка с лайтбоксом */}
+            <div className="hidden md:grid grid-cols-3 gap-3 mt-8">
               {kalinkaPhotos.map((photo, i) => (
                 <div
                   key={photo.src}
