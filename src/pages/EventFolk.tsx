@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Quote } from "lucide-react";
 
 const TICKET_URL = "https://events.nethouse.ru/buy_tickets/164486";
 const MAP_URL = "https://yandex.ru/maps/-/CPsxBU1L";
@@ -266,7 +265,18 @@ const EventFolk = () => {
             {visibleTestimonials.map((text, i) => (
               <ScrollReveal key={i} delay={i * 0.08} className="break-inside-avoid mb-5">
                 <div className="bg-card rounded-2xl p-6 border border-border shadow-warm hover:shadow-soft transition-shadow duration-300">
-                  <Quote className="w-5 h-5 text-primary/40 mb-3 shrink-0" />
+                  <span
+                    aria-hidden="true"
+                    className="block mb-3"
+                    style={{
+                      width: "56px",
+                      height: "56px",
+                      backgroundImage: "url('/flower.png')",
+                      backgroundSize: "216px 144px",
+                      backgroundPosition: "57% 45%",
+                      backgroundRepeat: "no-repeat",
+                    }}
+                  />
                   <p className="text-foreground/80 leading-relaxed text-[15px]">
                     {text}
                   </p>
