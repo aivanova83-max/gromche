@@ -304,10 +304,11 @@ const EventFolk = () => {
           <ScrollReveal delay={0.1}>
             {/* Мобильные: горизонтальный свайп */}
             <div className="flex md:hidden gap-3 mt-8 -mx-4 px-4 overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-              {kalinkaPhotos.map((photo) => (
+              {kalinkaPhotos.map((photo, i) => (
                 <div
                   key={photo.src}
-                  className="flex-shrink-0 w-[65vw] snap-start rounded-2xl overflow-hidden aspect-[4/3] border border-border shadow-warm"
+                  className="flex-shrink-0 w-[65vw] snap-start rounded-2xl overflow-hidden aspect-[4/3] border border-border shadow-warm cursor-pointer"
+                  onClick={() => setLightboxIdx(i)}
                 >
                   <img
                     src={photo.src}
