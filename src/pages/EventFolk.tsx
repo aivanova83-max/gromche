@@ -406,7 +406,7 @@ const EventFolk = () => {
                   <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#a07850" }}>
                     Дата
                   </p>
-                  <p className="text-foreground text-base md:text-lg">
+                  <p className="text-foreground text-[14px] md:text-lg">
                     16 июня, вторник
                   </p>
                 </div>
@@ -414,7 +414,7 @@ const EventFolk = () => {
                   <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#a07850" }}>
                     Время
                   </p>
-                  <p className="text-foreground text-base md:text-lg">
+                  <p className="text-foreground text-[14px] md:text-lg">
                     19:00 — 22:00
                   </p>
                 </div>
@@ -425,7 +425,7 @@ const EventFolk = () => {
                 <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#a07850" }}>
                   Место
                 </p>
-                <p className="text-foreground text-base md:text-lg leading-snug mb-2">
+                <p className="text-foreground text-[14px] md:text-lg leading-snug mb-2">
                   Ресторан «Калинка на Неглинке», Неглинная 8/10 · м. Кузнецкий мост, 3 мин пешком
                 </p>
                 <a
