@@ -434,10 +434,24 @@ const EventFolk = () => {
       </section>
 
       {/* ════════ ФИНАЛЬНЫЙ CTA ════════ */}
-      <section className="py-24 max-[480px]:py-16 px-4 bg-gradient-hero text-center">
-        <div className="container max-w-2xl mx-auto space-y-8">
+      <section className="relative flex items-end justify-center overflow-hidden pb-12" style={{ height: "420px" }}>
+        <img
+          src="/folk-hero.png"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: "bottom center" }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: "rgba(40, 25, 10, 0.7)" }}
+        />
+        <div className="relative z-10 text-center px-4 space-y-6">
           <ScrollReveal>
-            <p className="text-xl md:text-2xl font-semibold text-white/95 leading-relaxed">
+            <p
+              className="text-white"
+              style={{ fontFamily: "Georgia, serif", fontSize: "24px", lineHeight: "1.5", marginBottom: "20px" }}
+            >
               Этот вечер будет особенным.
               <br />
               Разделите его с нами.
@@ -445,12 +459,13 @@ const EventFolk = () => {
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
             <Button
+              variant="hero"
               size="lg"
-              className="bg-white text-foreground hover:bg-white/90 text-base px-12 py-6 rounded-full text-lg font-semibold shadow-soft hover:shadow-warm transition-all duration-300 hover:scale-105"
+              className="text-base px-10 py-6 rounded-full text-lg"
               asChild
             >
               <a href={TICKET_URL} target="_blank" rel="noopener noreferrer">
-                Купить билет
+                Я иду!
               </a>
             </Button>
           </ScrollReveal>
