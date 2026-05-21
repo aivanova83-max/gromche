@@ -46,11 +46,11 @@ const EventFolk = () => {
       <Header />
 
       {/* ════════ HERO ════════ */}
-      <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[500px] md:min-h-[100svh] flex items-center justify-center overflow-hidden">
         <img
           src="/folk-hero.png"
           alt="Хоровые посиделки — Тонкая рябина"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-top md:object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/70" />
 
