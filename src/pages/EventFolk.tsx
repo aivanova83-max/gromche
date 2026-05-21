@@ -363,41 +363,71 @@ const EventFolk = () => {
 
       {/* ════════ ДЕТАЛИ ════════ */}
       <section className="py-20 max-[480px]:py-12 px-4">
-        <div className="container max-w-2xl mx-auto">
+        <div className="container max-w-2xl mx-auto space-y-8">
           <ScrollReveal>
-            <div className="bg-card rounded-3xl border border-border shadow-warm p-8 md:p-10 space-y-5">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-6">
-                Детали
-              </h2>
-              <ul className="space-y-3 text-foreground/80 text-base md:text-lg">
-                <li>📅 16 июня, вторник</li>
-                <li>🕖 19:00 — 22:00</li>
-                <li>
-                  📍 Ресторан «Калинка на Неглинке», Неглинная улица 8/10,{" "}
-                  <br className="hidden sm:inline" />
-                  м. Кузнецкий мост (3 мин пешком)
-                </li>
-              </ul>
-              <div className="flex flex-col sm:flex-row gap-3 pt-4 justify-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
+              Детали
+            </h2>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.08}>
+            {/* Сетка плиток */}
+            <div
+              className="rounded-xl overflow-hidden shadow-warm"
+              style={{ border: "1px solid #e8ddd0" }}
+            >
+              {/* Верхний ряд: две плитки по 50% */}
+              <div className="grid grid-cols-2" style={{ borderBottom: "1px solid #e8ddd0" }}>
+                <div className="bg-white p-5 md:p-6" style={{ borderRight: "1px solid #e8ddd0" }}>
+                  <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#a07850" }}>
+                    Дата
+                  </p>
+                  <p className="text-foreground font-medium text-base md:text-lg">
+                    16 июня, вторник
+                  </p>
+                </div>
+                <div className="bg-white p-5 md:p-6">
+                  <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#a07850" }}>
+                    Время
+                  </p>
+                  <p className="text-foreground font-medium text-base md:text-lg">
+                    19:00 — 22:00
+                  </p>
+                </div>
+              </div>
+
+              {/* Нижняя плитка: полная ширина */}
+              <div className="bg-white p-5 md:p-6">
+                <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#a07850" }}>
+                  Место
+                </p>
+                <p className="text-foreground font-medium text-base md:text-lg leading-snug mb-2">
+                  Ресторан «Калинка на Неглинке», Неглинная 8/10 · м. Кузнецкий мост, 3 мин пешком
+                </p>
                 <a
                   href={MAP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-olive underline underline-offset-4 hover:text-olive/80 transition-colors font-medium text-center"
+                  className="text-sm underline underline-offset-4 hover:opacity-70 transition-opacity"
+                  style={{ color: "#a07850" }}
                 >
                   Построить маршрут
                 </a>
-                <Button
-                  variant="hero"
-                  size="lg"
-                  className="rounded-full px-8"
-                  asChild
-                >
-                  <a href={TICKET_URL} target="_blank" rel="noopener noreferrer">
-                    🎟 Купить билет
-                  </a>
-                </Button>
               </div>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.15}>
+            <div className="text-center">
+              <a
+                href={TICKET_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-12 py-4 text-white font-semibold text-lg hover:opacity-90 transition-opacity"
+                style={{ backgroundColor: "#3a2a1a", borderRadius: "40px" }}
+              >
+                Купить билет
+              </a>
             </div>
           </ScrollReveal>
         </div>
