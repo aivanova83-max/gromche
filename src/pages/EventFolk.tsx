@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 const TICKET_URL = "https://events.nethouse.ru/buy_tickets/164486";
@@ -15,7 +16,15 @@ const features = [
   "Атмосфера настоящих посиделок — не концерт, не урок",
 ];
 
+const kalinkaPhotos = [
+  { src: "/kalinka1.jpg", alt: "Ресторан Калинка на Неглинке — интерьер" },
+  { src: "/kalinka2.jpg", alt: "Ресторан Калинка на Неглинке — зал" },
+  { src: "/kalinka3.jpg", alt: "Ресторан Калинка на Неглинке — атмосфера" },
+];
+
 const EventFolk = () => {
+  const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -256,15 +265,39 @@ const EventFolk = () => {
               </div>
             </div>
           </ScrollReveal>
-        </div>
-      </section>
 
-      {/* ════════ TODO: ФОТОГРАФИИ ════════ */}
-      <section className="py-12 px-4 bg-muted/20 border-y border-dashed border-muted">
-        <div className="container max-w-3xl mx-auto text-center">
-          <p className="text-muted-foreground text-sm font-mono">
-            TODO: фотографии ресторана / вечера — добавить после мероприятия
-          </p>
+          <ScrollReveal delay={0.1}>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-8">
+              {kalinkaPhotos.map((photo, i) => (
+                <div
+                  key={photo.src}
+                  className="rounded-2xl overflow-hidden aspect-[4/3] border border-border shadow-warm cursor-pointer hover:shadow-soft hover:scale-[1.02] transition-all duration-300"
+                  onClick={() => setLightboxIdx(i)}
+                >
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+
+          <Dialog open={lightboxIdx !== null} onOpenChange={() => setLightboxIdx(null)}>
+            <DialogContent className="max-w-[90vw] max-h-[90vh] p-2 bg-black/95 border-none">
+              {lightboxIdx !== null && (
+                <div className="flex items-center justify-center min-h-[50vh]">
+                  <img
+                    src={kalinkaPhotos[lightboxIdx].src}
+                    alt={kalinkaPhotos[lightboxIdx].alt}
+                    className="max-w-full max-h-[85vh] object-contain rounded"
+                  />
+                </div>
+              )}
+            </DialogContent>
+          </Dialog>
         </div>
       </section>
 
