@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { Quote } from "lucide-react";
 
 const TICKET_URL = "https://events.nethouse.ru/buy_tickets/164486";
 const MAP_URL = "https://yandex.ru/maps/-/CPsxBU1L";
@@ -14,6 +15,14 @@ const features = [
   "Поём все вместе — слова на экране",
   "Уметь петь не обязательно — хор подхватит",
   "Атмосфера настоящих посиделок — не концерт, не урок",
+];
+
+const folkTestimonials = [
+  "Это было так душевно! Наполнилась энергией, энергией любви и радости! Спа-си-бо всем, кто был! Точно хочется еще, и еще, и еще!",
+  "Знаете, у меня в голове сидит фраза (не помню, откуда она), что в жизни нужно оставлять место для чуда. Вот вчера — я побывала в пространстве для чуда! Это что-то необыкновенное! Пусть места для чуда в жизни каждой из нас будет как можно больше!",
+  "Вчера было так чудесно! Очень кайфовый формат, легкий, глубокий, веселый",
+  "Спасибо за шикарную атмосферу! Просто отдохнула душой",
+  "Вчера мое свидание с собой — вчера на хоровой вечеринке. Право звучать😇 без требования попадать в ноты. Просто петь, двигаться в такт и расслабляться. Много радости. Домой не ехала — летела на крыльях",
 ];
 
 const kalinkaPhotos = [
@@ -225,12 +234,30 @@ const EventFolk = () => {
         </div>
       </section>
 
-      {/* ════════ TODO: ОТЗЫВЫ ════════ */}
-      <section className="py-12 px-4 bg-muted/20 border-y border-dashed border-muted">
-        <div className="container max-w-3xl mx-auto text-center">
-          <p className="text-muted-foreground text-sm font-mono">
-            TODO: отзывы участниц — добавить после мероприятия
-          </p>
+      {/* ════════ ОТЗЫВЫ ════════ */}
+      <section className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
+        <div className="container max-w-4xl mx-auto space-y-12">
+          <ScrollReveal>
+            <div className="text-center space-y-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                Отзывы участниц
+              </h2>
+              <p className="text-foreground/70">С предыдущих посиделок</p>
+            </div>
+          </ScrollReveal>
+
+          <div className="columns-1 md:columns-2 gap-5 space-y-5">
+            {folkTestimonials.map((text, i) => (
+              <ScrollReveal key={i} delay={i * 0.08}>
+                <div className="break-inside-avoid bg-card rounded-2xl p-6 border border-border shadow-warm hover:shadow-soft transition-shadow duration-300">
+                  <Quote className="w-5 h-5 text-primary/40 mb-3 shrink-0" />
+                  <p className="text-foreground/80 leading-relaxed text-[15px]">
+                    {text}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
 
