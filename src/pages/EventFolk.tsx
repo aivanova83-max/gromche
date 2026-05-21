@@ -315,12 +315,42 @@ const EventFolk = () => {
           <Dialog open={lightboxIdx !== null} onOpenChange={() => setLightboxIdx(null)}>
             <DialogContent className="max-w-[90vw] max-h-[90vh] p-2 bg-black/95 border-none">
               {lightboxIdx !== null && (
-                <div className="flex items-center justify-center min-h-[50vh]">
+                <div className="relative flex items-center justify-center min-h-[50vh]">
+                  {/* Стрелка влево */}
+                  <button
+                    onClick={() => setLightboxIdx((lightboxIdx - 1 + kalinkaPhotos.length) % kalinkaPhotos.length)}
+                    className="absolute left-2 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white/15 hover:bg-white/30 transition-colors text-white text-xl"
+                    aria-label="Предыдущее фото"
+                  >
+                    ‹
+                  </button>
+
                   <img
                     src={kalinkaPhotos[lightboxIdx].src}
                     alt={kalinkaPhotos[lightboxIdx].alt}
                     className="max-w-full max-h-[85vh] object-contain rounded"
                   />
+
+                  {/* Стрелка вправо */}
+                  <button
+                    onClick={() => setLightboxIdx((lightboxIdx + 1) % kalinkaPhotos.length)}
+                    className="absolute right-2 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-white/15 hover:bg-white/30 transition-colors text-white text-xl"
+                    aria-label="Следующее фото"
+                  >
+                    ›
+                  </button>
+
+                  {/* Счётчик */}
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                    {kalinkaPhotos.map((_, i) => (
+                      <button
+                        key={i}
+                        onClick={() => setLightboxIdx(i)}
+                        className={`w-1.5 h-1.5 rounded-full transition-colors ${i === lightboxIdx ? "bg-white" : "bg-white/40"}`}
+                        aria-label={`Фото ${i + 1}`}
+                      />
+                    ))}
+                  </div>
                 </div>
               )}
             </DialogContent>
