@@ -132,13 +132,9 @@ const EventFolk = () => {
         </div>
       </section>
 
-      {/* ════════ DIVIDER ════════ */}
-      <div className="flex items-center justify-center py-5">
-        <div className="flex items-center gap-4">
-          <span className="block w-16 h-px bg-olive/30" />
-          <span className="text-olive/60 text-lg">❧</span>
-          <span className="block w-16 h-px bg-olive/30" />
-        </div>
+      {/* ════════ VIGNETTE DIVIDER ════════ */}
+      <div className="flex justify-center py-6" aria-hidden="true">
+        <div style={{ width: "180px", height: "90px", backgroundImage: "url('/vignette.png')", backgroundSize: "795px 529px", backgroundPosition: "center center", backgroundRepeat: "no-repeat" }} />
       </div>
 
       {/* ════════ КАК ЭТО БУДЕТ ════════ */}
@@ -204,6 +200,9 @@ const EventFolk = () => {
         <div className="container max-w-3xl mx-auto">
           <ScrollReveal>
             <div className="space-y-6">
+              <div className="flex justify-center mb-2" aria-hidden="true">
+                <div style={{ width: "80px", height: "80px", backgroundImage: "url('/flower.png')", backgroundSize: "560px 373px", backgroundPosition: "center 45%", backgroundRepeat: "no-repeat" }} />
+              </div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center" style={{ fontFamily: "Georgia, serif" }}>
                 История
               </h2>
@@ -272,6 +271,9 @@ const EventFolk = () => {
         <div className="container max-w-4xl mx-auto space-y-12">
           <ScrollReveal>
             <div className="text-center space-y-2">
+              <div className="flex justify-center mb-2" aria-hidden="true">
+                <div style={{ width: "180px", height: "90px", backgroundImage: "url('/vignette.png')", backgroundSize: "795px 529px", backgroundPosition: "center center", backgroundRepeat: "no-repeat" }} />
+              </div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: "Georgia, serif" }}>
                 Отзывы участниц
               </h2>
@@ -310,6 +312,9 @@ const EventFolk = () => {
         <div className="container max-w-3xl mx-auto">
           <ScrollReveal>
             <div className="space-y-5">
+              <div className="flex justify-center mb-2" aria-hidden="true">
+                <div style={{ width: "120px", height: "80px", backgroundImage: "url('/bird.png')", backgroundSize: "190px 127px", backgroundPosition: "center center", backgroundRepeat: "no-repeat", transform: "rotate(-45deg)" }} />
+              </div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center" style={{ fontFamily: "Georgia, serif" }}>
                 Место
               </h2>
