@@ -8,11 +8,11 @@ const TICKET_URL = "https://events.nethouse.ru/buy_tickets/164486";
 const MAP_URL = "https://yandex.ru/maps/-/CPsxBU1L";
 
 const features = [
-  { emoji: "🕯", title: "Живой баян, не фонограмма" },
-  { emoji: "🫖", title: "Самовар и накрытый стол" },
-  { emoji: "🎶", title: "Поём все вместе — слова на экране" },
-  { emoji: "🎙️", title: "Уметь петь не обязательно — хор подхватит" },
-  { emoji: "🌿", title: "Атмосфера настоящих посиделок — не концерт, не урок" },
+  "Живой баян, не фонограмма",
+  "Самовар и накрытый стол",
+  "Поём все вместе — слова на экране",
+  "Уметь петь не обязательно — хор подхватит",
+  "Атмосфера настоящих посиделок — не концерт, не урок",
 ];
 
 const EventFolk = () => {
@@ -99,29 +99,40 @@ const EventFolk = () => {
       </div>
 
       {/* ════════ КАК ЭТО БУДЕТ ════════ */}
-      <section className="py-20 max-[480px]:py-12 px-4">
-        <div className="container max-w-4xl mx-auto space-y-12">
+      <section className="py-20 max-[480px]:py-12 px-4 bg-[#faf6f0]">
+        <div className="container max-w-2xl mx-auto space-y-10">
           <ScrollReveal>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
+            <h2
+              className="text-3xl md:text-4xl font-bold text-center"
+              style={{ fontFamily: "Georgia, serif", color: "#3a2a1a" }}
+            >
               Как это будет
             </h2>
           </ScrollReveal>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {features.map((f, i) => (
-              <ScrollReveal key={f.title} delay={i * 0.1}>
-                <div className="flex items-start gap-4 bg-primary/8 rounded-2xl p-6 border border-primary/15 hover:bg-primary/12 transition-colors duration-300 h-full">
-                  <span className="text-2xl flex-shrink-0 mt-0.5">{f.emoji}</span>
-                  <p className="text-foreground/85 leading-relaxed font-medium">
-                    {f.title}
-                  </p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
+          <ScrollReveal>
+            <ul>
+              {features.map((item, i) => (
+                <li key={item}>
+                  <div className="flex items-center gap-4 py-5">
+                    <span
+                      className="w-2.5 h-2.5 rounded-full flex-shrink-0"
+                      style={{ backgroundColor: "#c17f4a" }}
+                    />
+                    <span className="text-base md:text-lg text-[#3a2a1a]/85 leading-relaxed">
+                      {item}
+                    </span>
+                  </div>
+                  {i < features.length - 1 && (
+                    <div className="h-px bg-[#e8ddd0]" />
+                  )}
+                </li>
+              ))}
+            </ul>
+          </ScrollReveal>
 
           <ScrollReveal>
-            <div className="text-center pt-4">
+            <div className="text-center pt-2">
               <Button
                 variant="hero"
                 size="lg"
