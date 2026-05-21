@@ -145,11 +145,11 @@ const EventFolk = () => {
                       aria-hidden="true"
                       className="flex-shrink-0 inline-block"
                       style={{
-                        width: "1em",
-                        height: "1em",
+                        width: "1.3em",
+                        height: "1.3em",
                         backgroundImage: "url('/flower.png')",
-                        backgroundSize: "8.4em 5.6em",
-                        backgroundPosition: "center center",
+                        backgroundSize: "5em 3.3em",
+                        backgroundPosition: "center 45%",
                         backgroundRepeat: "no-repeat",
                       }}
                     />
