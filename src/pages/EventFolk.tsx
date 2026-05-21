@@ -49,7 +49,7 @@ const EventFolk = () => {
           <p className="text-sm md:text-base text-white/65 tracking-wide">
             16 июня · 19:00–22:00
             <br />
-            Ресторан Калинка на Неглинке, Неглинная ул., 8/10
+            Ресторан «Калинка на Неглинке», Неглинная ул., 8/10
           </p>
 
           <Button
@@ -221,7 +221,7 @@ const EventFolk = () => {
                 Место
               </h2>
               <p className="text-xl font-semibold text-foreground text-center">
-                Ресторан Калинка на Неглинке
+                Ресторан «Калинка на Неглинке»
               </p>
               <p className="text-foreground/75 leading-relaxed text-center max-[480px]:text-sm">
                 Интерьер стилизован под купеческий дом — резные деревянные
@@ -267,7 +267,7 @@ const EventFolk = () => {
                 <li>📅 16 июня, вторник</li>
                 <li>🕖 19:00 — 22:00</li>
                 <li>
-                  📍 Ресторан Калинка на Неглинке, Неглинная улица 8/10,{" "}
+                  📍 Ресторан «Калинка на Неглинке», Неглинная улица 8/10,{" "}
                   <br className="hidden sm:inline" />
                   м. Кузнецкий мост (3 мин пешком)
                 </li>
