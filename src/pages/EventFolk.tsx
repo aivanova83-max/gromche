@@ -476,7 +476,7 @@ const EventFolk = () => {
       </section>
 
       {/* ════════ ФИНАЛЬНЫЙ CTA ════════ */}
-      <section className="relative flex items-end justify-center overflow-hidden pb-12" style={{ height: "420px" }}>
+      <section className="relative flex items-center justify-center overflow-hidden pb-24" style={{ height: "420px" }}>
         <img
           src="/folk-hero.png"
           alt=""
