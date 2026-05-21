@@ -59,7 +59,7 @@ const EventFolk = () => {
             Хоровые посиделки
           </p>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight" style={{ fontFamily: "Georgia, serif" }}>
             Тонкая рябина
           </h1>
 
@@ -91,7 +91,7 @@ const EventFolk = () => {
         <div className="container max-w-3xl mx-auto">
           <ScrollReveal>
             <div className="text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: "Georgia, serif" }}>
                 О чём этот вечер
               </h2>
               <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-[480px]:text-base">
@@ -174,7 +174,7 @@ const EventFolk = () => {
         <div className="container max-w-3xl mx-auto">
           <ScrollReveal>
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center" style={{ fontFamily: "Georgia, serif" }}>
                 История
               </h2>
               <p className="text-foreground/80 leading-relaxed max-[480px]:text-sm">
@@ -205,7 +205,7 @@ const EventFolk = () => {
         <div className="container max-w-3xl mx-auto">
           <ScrollReveal>
             <div className="text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: "Georgia, serif" }}>
                 Для кого
               </h2>
               <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-[480px]:text-base">
@@ -242,7 +242,7 @@ const EventFolk = () => {
         <div className="container max-w-4xl mx-auto space-y-12">
           <ScrollReveal>
             <div className="text-center space-y-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: "Georgia, serif" }}>
                 Отзывы участниц
               </h2>
               <p className="text-foreground/70">С предыдущих посиделок</p>
@@ -269,7 +269,7 @@ const EventFolk = () => {
         <div className="container max-w-3xl mx-auto">
           <ScrollReveal>
             <div className="space-y-5">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center" style={{ fontFamily: "Georgia, serif" }}>
                 Место
               </h2>
               <p className="text-xl font-semibold text-foreground text-center">
@@ -365,7 +365,7 @@ const EventFolk = () => {
       <section className="py-20 max-[480px]:py-12 px-4">
         <div className="container max-w-3xl mx-auto space-y-8">
           <ScrollReveal>
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center" style={{ fontFamily: "Georgia, serif" }}>
               Детали
             </h2>
           </ScrollReveal>
