@@ -362,7 +362,7 @@ const EventFolk = () => {
             </div>
 
             {/* Десктоп: сетка с лайтбоксом */}
-            <div className="hidden md:grid grid-cols-3 gap-3 mt-8">
+            <div className="md:grid grid-cols-3 gap-3 mt-8 max-md:hidden">
               {kalinkaPhotos.map((photo, i) => (
                 <div
                   key={photo.src}
