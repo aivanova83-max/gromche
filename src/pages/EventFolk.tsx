@@ -142,8 +142,16 @@ const EventFolk = () => {
                 <li key={item}>
                   <div className="flex items-center gap-4 py-5">
                     <span
-                      className="w-2.5 h-2.5 rounded-full flex-shrink-0"
-                      style={{ backgroundColor: "#c17f4a" }}
+                      aria-hidden="true"
+                      className="flex-shrink-0 inline-block"
+                      style={{
+                        width: "1em",
+                        height: "1em",
+                        backgroundImage: "url('/flower.png')",
+                        backgroundSize: "8.4em 5.6em",
+                        backgroundPosition: "center center",
+                        backgroundRepeat: "no-repeat",
+                      }}
                     />
                     <span className="text-base md:text-lg text-[#3a2a1a]/85 leading-relaxed">
                       {item}
