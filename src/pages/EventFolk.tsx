@@ -201,7 +201,7 @@ const EventFolk = () => {
           <ScrollReveal>
             <div className="space-y-6">
               <div className="flex justify-center mb-2" aria-hidden="true">
-                <div style={{ width: "80px", height: "80px", backgroundImage: "url('/flower.png')", backgroundSize: "560px 373px", backgroundPosition: "center 45%", backgroundRepeat: "no-repeat" }} />
+                <div style={{ width: "64px", height: "64px", backgroundImage: "url('/flower.png')", backgroundSize: "190px 127px", backgroundPosition: "center 45%", backgroundRepeat: "no-repeat" }} />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center" style={{ fontFamily: "Georgia, serif" }}>
                 История
