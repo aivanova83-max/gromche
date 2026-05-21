@@ -90,6 +90,24 @@ const EventFolk = () => {
         </div>
       </section>
 
+      {/* ════════ ПТИЦА-РАЗДЕЛИТЕЛЬ (только мобайл) ════════ */}
+      <div className="md:hidden relative h-0 z-10" aria-hidden="true">
+        <div
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: "0",
+            transform: "translate(-50%, -50%) rotate(-45deg)",
+            width: "120px",
+            height: "80px",
+            backgroundImage: "url('/bird.png')",
+            backgroundSize: "190px 127px",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+      </div>
+
       {/* ════════ О ЧЁМ ЭТОТ ВЕЧЕР ════════ */}
       <section className="py-20 max-[480px]:py-12 px-4 bg-warm-bg">
         <div className="container max-w-3xl mx-auto">
