@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { Quote } from "lucide-react";
 
 const TICKET_URL = "https://events.nethouse.ru/buy_tickets/164486";
@@ -36,6 +37,10 @@ const kalinkaPhotos = [
 
 const EventFolk = () => {
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
+  const isMobile = useIsMobile();
+  const visibleTestimonials = isMobile
+    ? [folkTestimonials[3], folkTestimonials[4], folkTestimonials[5]]
+    : folkTestimonials;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -250,7 +255,7 @@ const EventFolk = () => {
           </ScrollReveal>
 
           <div className="columns-1 md:columns-2 gap-5">
-            {folkTestimonials.map((text, i) => (
+            {visibleTestimonials.map((text, i) => (
               <ScrollReveal key={i} delay={i * 0.08} className="break-inside-avoid mb-5">
                 <div className="bg-card rounded-2xl p-6 border border-border shadow-warm hover:shadow-soft transition-shadow duration-300">
                   <Quote className="w-5 h-5 text-primary/40 mb-3 shrink-0" />
