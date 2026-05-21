@@ -8,7 +8,7 @@ const branchData = {
     schedule: {
       day: "Среда",
       time: "19:30 — 21:00",
-      note: "Курс набран. Следующий курс — в январе!",
+      note: null,
     },
     prices: [
       { sessions: 4, price: "6 000", days: 43 },
