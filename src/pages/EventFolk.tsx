@@ -213,7 +213,7 @@ const EventFolk = () => {
               <p className="text-foreground/80 leading-relaxed max-[480px]:text-sm">
                 Когда запели «Тонкую рябину» — меня пронзило: именно эту песню
                 пела моя бабушка, которой уже нет. Я как будто снова с ней
-                поговорила и ощутила её тепло и ласку.
+                поговорила и ощутила её тепло.
               </p>
               <p className="text-foreground/80 leading-relaxed font-medium max-[480px]:text-sm">
                 Тогда мы поняли: мы должны провести этот вечер. Просто обязаны.
