@@ -133,12 +133,12 @@ const EventFolk = () => {
       </section>
 
       {/* ════════ VIGNETTE DIVIDER ════════ */}
-      <div className="flex justify-center py-6" aria-hidden="true">
+      <div className="flex justify-center pt-6 pb-2" aria-hidden="true">
         <div style={{ width: "180px", height: "90px", backgroundImage: "url('/vignette.png')", backgroundSize: "795px 529px", backgroundPosition: "center center", backgroundRepeat: "no-repeat" }} />
       </div>
 
       {/* ════════ КАК ЭТО БУДЕТ ════════ */}
-      <section className="py-20 max-[480px]:py-12 px-4 bg-[#faf6f0]">
+      <section className="pt-6 pb-20 max-[480px]:py-12 px-4 bg-[#faf6f0]">
         <div className="container max-w-2xl mx-auto space-y-10">
           <ScrollReveal>
             <h2
@@ -201,7 +201,7 @@ const EventFolk = () => {
           <ScrollReveal>
             <div className="space-y-6">
               <div className="flex justify-center mb-2" aria-hidden="true">
-                <div style={{ width: "64px", height: "64px", backgroundImage: "url('/flower.png')", backgroundSize: "190px 127px", backgroundPosition: "center 45%", backgroundRepeat: "no-repeat" }} />
+                <div style={{ width: "128px", height: "128px", backgroundImage: "url('/flower.png')", backgroundSize: "380px 254px", backgroundPosition: "center 45%", backgroundRepeat: "no-repeat" }} />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center" style={{ fontFamily: "Georgia, serif" }}>
                 История
@@ -230,10 +230,13 @@ const EventFolk = () => {
       </section>
 
       {/* ════════ ДЛЯ КОГО ════════ */}
-      <section className="py-20 max-[480px]:py-12 px-4">
+      <section className="pt-6 pb-20 max-[480px]:py-12 px-4">
         <div className="container max-w-3xl mx-auto">
           <ScrollReveal>
             <div className="text-center space-y-6">
+              <div className="flex justify-center" aria-hidden="true">
+                <div style={{ width: "120px", height: "80px", backgroundImage: "url('/bird.png')", backgroundSize: "190px 127px", backgroundPosition: "center center", backgroundRepeat: "no-repeat", transform: "rotate(-45deg)" }} />
+              </div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: "Georgia, serif" }}>
                 Для кого
               </h2>
