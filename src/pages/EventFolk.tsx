@@ -90,29 +90,16 @@ const EventFolk = () => {
         </div>
       </section>
 
-      {/* ════════ ПТИЦА-РАЗДЕЛИТЕЛЬ (только мобайл) ════════ */}
-      <div className="md:hidden relative h-0 z-10" aria-hidden="true">
-        <div
-          style={{
-            position: "absolute",
-            left: "50%",
-            top: "0",
-            transform: "translate(-50%, -50%) rotate(-45deg)",
-            width: "120px",
-            height: "80px",
-            backgroundImage: "url('/bird.png')",
-            backgroundSize: "190px 127px",
-            backgroundPosition: "center center",
-            backgroundRepeat: "no-repeat",
-          }}
-        />
-      </div>
-
       {/* ════════ О ЧЁМ ЭТОТ ВЕЧЕР ════════ */}
       <section className="py-20 max-[480px]:py-12 px-4 bg-warm-bg">
         <div className="container max-w-3xl mx-auto">
           <ScrollReveal>
             <div className="text-center space-y-6">
+              {isMobile && (
+                <div className="flex justify-center" aria-hidden="true">
+                  <div style={{ width: "120px", height: "80px", backgroundImage: "url('/bird.png')", backgroundSize: "190px 127px", backgroundPosition: "center center", backgroundRepeat: "no-repeat", transform: "rotate(-45deg)" }} />
+                </div>
+              )}
               <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: "Georgia, serif" }}>
                 О чём этот вечер
               </h2>
@@ -132,8 +119,8 @@ const EventFolk = () => {
         </div>
       </section>
 
-      {/* ════════ VIGNETTE DIVIDER ════════ */}
-      <div className="flex justify-center pt-6 pb-2" aria-hidden="true">
+      {/* ════════ VIGNETTE DIVIDER (только десктоп) ════════ */}
+      <div className="md:flex justify-center pt-6 pb-2 max-md:hidden" aria-hidden="true">
         <div style={{ width: "180px", height: "90px", backgroundImage: "url('/vignette.png')", backgroundSize: "795px 529px", backgroundPosition: "center center", backgroundRepeat: "no-repeat" }} />
       </div>
 
@@ -141,12 +128,19 @@ const EventFolk = () => {
       <section className="pt-6 pb-20 max-[480px]:py-12 px-4 bg-[#faf6f0]">
         <div className="container max-w-2xl mx-auto space-y-10">
           <ScrollReveal>
-            <h2
-              className="text-3xl md:text-4xl font-bold text-center"
-              style={{ fontFamily: "Georgia, serif", color: "#3a2a1a" }}
-            >
-              Как это будет
-            </h2>
+            <div className="space-y-6">
+              {isMobile && (
+                <div className="flex justify-center" aria-hidden="true">
+                  <div style={{ width: "180px", height: "90px", backgroundImage: "url('/vignette.png')", backgroundSize: "795px 529px", backgroundPosition: "center center", backgroundRepeat: "no-repeat" }} />
+                </div>
+              )}
+              <h2
+                className="text-3xl md:text-4xl font-bold text-center"
+                style={{ fontFamily: "Georgia, serif", color: "#3a2a1a" }}
+              >
+                Как это будет
+              </h2>
+            </div>
           </ScrollReveal>
 
           <ScrollReveal>
