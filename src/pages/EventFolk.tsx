@@ -56,7 +56,7 @@ const EventFolk = () => {
           alt="Хоровые посиделки — Тонкая рябина"
           className="absolute inset-0 w-full h-full object-cover object-top md:object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/40 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/25 to-black/50" />
 
         <div className="relative z-10 text-center px-4 py-24 max-w-3xl mx-auto space-y-6">
           <p className="text-sm md:text-base uppercase tracking-[0.25em] text-white/70 font-medium">
