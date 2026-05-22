@@ -196,11 +196,11 @@ const EventFolk = () => {
       </section>
 
       {/* ════════ ИСТОРИЯ ════════ */}
-      <section className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
+      <section className="pt-6 pb-20 max-[480px]:py-12 px-4 bg-gradient-warm">
         <div className="container max-w-3xl mx-auto">
           <ScrollReveal>
             <div className="space-y-6">
-              <div className="flex justify-center mb-2" aria-hidden="true">
+              <div className="flex justify-center" aria-hidden="true">
                 <div style={{ width: "128px", height: "128px", backgroundImage: "url('/flower.png')", backgroundSize: "380px 254px", backgroundPosition: "center 45%", backgroundRepeat: "no-repeat" }} />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center" style={{ fontFamily: "Georgia, serif" }}>
@@ -270,11 +270,11 @@ const EventFolk = () => {
       </section>
 
       {/* ════════ ОТЗЫВЫ ════════ */}
-      <section className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
+      <section className="pt-6 pb-20 max-[480px]:py-12 px-4 bg-gradient-warm">
         <div className="container max-w-4xl mx-auto space-y-12">
           <ScrollReveal>
-            <div className="text-center space-y-2">
-              <div className="flex justify-center mb-2" aria-hidden="true">
+            <div className="text-center space-y-6">
+              <div className="flex justify-center" aria-hidden="true">
                 <div style={{ width: "180px", height: "90px", backgroundImage: "url('/vignette.png')", backgroundSize: "795px 529px", backgroundPosition: "center center", backgroundRepeat: "no-repeat" }} />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: "Georgia, serif" }}>
@@ -311,11 +311,11 @@ const EventFolk = () => {
       </section>
 
       {/* ════════ МЕСТО ════════ */}
-      <section className="py-20 max-[480px]:py-12 px-4 bg-warm-bg">
+      <section className="pt-6 pb-20 max-[480px]:py-12 px-4 bg-warm-bg">
         <div className="container max-w-3xl mx-auto">
           <ScrollReveal>
-            <div className="space-y-5">
-              <div className="flex justify-center mb-2" aria-hidden="true">
+            <div className="space-y-6">
+              <div className="flex justify-center" aria-hidden="true">
                 <div style={{ width: "120px", height: "80px", backgroundImage: "url('/bird.png')", backgroundSize: "190px 127px", backgroundPosition: "center center", backgroundRepeat: "no-repeat", transform: "rotate(-45deg)" }} />
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center" style={{ fontFamily: "Georgia, serif" }}>
