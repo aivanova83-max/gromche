@@ -274,7 +274,7 @@ const EventFolk = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: "Georgia, serif" }}>
                 Отзывы участниц
               </h2>
-              <p className="text-foreground/70">С предыдущих посиделок</p>
+              <p className="text-foreground/70">С предыдущих мероприятий</p>
             </div>
           </ScrollReveal>
 
