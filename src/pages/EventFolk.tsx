@@ -458,8 +458,8 @@ const EventFolk = () => {
                 </div>
               </div>
 
-              {/* Нижняя плитка: полная ширина */}
-              <div className="bg-white p-5 md:p-6">
+              {/* Место: полная ширина */}
+              <div className="bg-white p-5 md:p-6 border-b border-border">
                 <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#a07850" }}>
                   Место
                 </p>
@@ -475,6 +475,22 @@ const EventFolk = () => {
                 >
                   Построить маршрут
                 </a>
+              </div>
+
+              {/* Стоимость: полная ширина */}
+              <div className="bg-white p-5 md:p-6">
+                <p className="text-xs font-semibold uppercase tracking-widest mb-2 text-[#c17f4a]">
+                  Стоимость
+                </p>
+                <p className="text-foreground text-[14px] md:text-lg leading-snug">
+                  до 9 июня включительно — 6 500 руб.
+                </p>
+                <p className="text-foreground text-[14px] md:text-lg leading-snug">
+                  с 10 июня — 7 500 руб.
+                </p>
+                <p className="text-foreground/60 text-[13px] md:text-sm mt-2">
+                  Еда и безалкогольные напитки входят в стоимость
+                </p>
               </div>
             </div>
           </ScrollReveal>
