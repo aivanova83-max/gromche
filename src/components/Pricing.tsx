@@ -168,7 +168,7 @@ export const Pricing = () => {
 
                     <div className="mt-5 max-[480px]:mt-4 pt-4 border-t border-border/30">
                       <p className="text-sm max-[480px]:text-xs text-foreground/70">
-                        🎁 Пробное занятие — <span className="text-primary font-medium">бесплатно</span>
+                        🎁 Пробное занятие бесплатно при записи до конца мая
                       </p>
                     </div>
                   </div>
