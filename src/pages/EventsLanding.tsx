@@ -3,41 +3,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { Piano, Guitar, Music, Users, Sparkles, Mic, Flame, Send } from "lucide-react";
-
-const featureCards = [
-  {
-    icon: Piano,
-    title: "Живая музыка",
-    text: <>Пианино, гитара, баян, кахон.<br />Никаких минусовок.</>,
-  },
-  {
-    icon: Music,
-    title: "Любимые песни",
-    text: <>От советских хитов до рок-музыки.<br />Тексты на экране.</>,
-  },
-  {
-    icon: Users,
-    title: "Никакой сцены",
-    text: "Все в одном круге. Ведущая-хормейстер просто задаёт направление.",
-  },
-];
-
-const testimonials = [
-  "Вчера мое свидание с собой было на хоровой вечеринке. Право звучать😇 без требования попадать в ноты. Просто петь, двигаться в такт и расслабляться. Много радости. Домой не ехала — летела на крыльях",
-  "Это было так душевно! Наполнилась энергией, энергией любви и радости! Спа-си-бо всем, кто был! Точно хочется еще, и еще, и еще!",
-  "Девочки, не знаю, как вам это удается, в прошлый раз вечеринка была шикарная, но в этот раз это просто огонь!🔥 Столько кайфа, радости, тепла и любви я давно не получала от мероприятий! 4 часа как на одном дыхании!❤️",
-];
-
-const audienceItems = [
-  { icon: Mic, text: "Тем, кто любит петь: для себя или в компании" },
-  { icon: Sparkles, text: "Тем, кто не поёт, но очень хочет начать" },
-  { icon: Flame, text: "Тем, кто хочет сбросить напряжение и хорошенько проораться" },
-];
-
-const TELEGRAM_LINK = "http://t.me/gromche_choir";
-const TELEGRAM_CHANNEL = "https://t.me/gromche_choir";
-const INSTAGRAM_LINK = "https://www.instagram.com/gromche_choir?igsh=MWhoczhqc3lxajA5aA==";
+import { Send } from "lucide-react";
+import { featureCards, testimonials, audienceItems, TELEGRAM_LINK, TELEGRAM_CHANNEL, INSTAGRAM_LINK } from "@/data/eventsLanding";
 
 const EventsLanding = () => {
   useEffect(() => {
@@ -137,7 +104,9 @@ const EventsLanding = () => {
                     {card.title}
                   </h3>
                   <p className="text-foreground/70 leading-relaxed">
-                    {card.text}
+                    {card.lines.map((line, i) => (
+                      <span key={i}>{line}{i < card.lines.length - 1 && <br />}</span>
+                    ))}
                   </p>
                 </div>
               </ScrollReveal>
