@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { TICKET_URL, MAP_URL, features, folkTestimonials, kalinkaPhotos } from "@/data/eventFolk";
+import { TICKET_URL, MAP_URL, features, folkTestimonials, kalinkaPhotos, folkFaq } from "@/data/eventFolk";
 
 const EventFolk = () => {
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
@@ -123,15 +123,7 @@ const EventFolk = () => {
                   <div className="flex items-center gap-4 py-5">
                     <span
                       aria-hidden="true"
-                      className="flex-shrink-0 inline-block"
-                      style={{
-                        width: "44px",
-                        height: "44px",
-                        backgroundImage: "url('/flower.png')",
-                        backgroundSize: "154px 103px",
-                        backgroundPosition: "center 45%",
-                        backgroundRepeat: "no-repeat",
-                      }}
+                      className="flex-shrink-0 w-2 h-2 rounded-full bg-primary"
                     />
                     <span className="text-base md:text-lg text-[#3a2a1a]/85 leading-relaxed">
                       {item}
@@ -255,18 +247,6 @@ const EventFolk = () => {
             {visibleTestimonials.map((text, i) => (
               <ScrollReveal key={i} delay={i * 0.08} className="break-inside-avoid mb-5">
                 <div className="bg-card rounded-2xl p-6 border border-border shadow-warm hover:shadow-soft transition-shadow duration-300">
-                  <span
-                    aria-hidden="true"
-                    className="block mb-3"
-                    style={{
-                      width: "56px",
-                      height: "56px",
-                      backgroundImage: "url('/flower.png')",
-                      backgroundSize: "216px 144px",
-                      backgroundPosition: "57% 45%",
-                      backgroundRepeat: "no-repeat",
-                    }}
-                  />
                   <p className="text-foreground/80 leading-relaxed text-[15px]">
                     {text}
                   </p>
@@ -479,6 +459,52 @@ const EventFolk = () => {
               >
                 Купить билет
               </a>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ════════ FAQ ════════ */}
+      <section className="py-20 max-[480px]:py-12 px-4 bg-warm-bg">
+        <div className="container max-w-2xl mx-auto space-y-8">
+          <ScrollReveal>
+            <div className="text-center space-y-4">
+              <div className="flex justify-center" aria-hidden="true">
+                <div style={{ width: "120px", height: "80px", backgroundImage: "url('/bird.png')", backgroundSize: "190px 127px", backgroundPosition: "center center", backgroundRepeat: "no-repeat", transform: "rotate(-45deg)" }} />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: "Georgia, serif" }}>
+                Вопросы и ответы
+              </h2>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.08}>
+            <div className="divide-y divide-border">
+              {folkFaq.map(({ q, a, link }, i) => (
+                <details key={i} className="group py-5">
+                  <summary className="flex items-center justify-between gap-4 cursor-pointer list-none text-foreground font-semibold text-base md:text-lg select-none">
+                    <span>{q}</span>
+                    <span
+                      aria-hidden="true"
+                      className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm transition-transform duration-300 group-open:rotate-45"
+                      style={{ backgroundColor: "#e8ddd0", color: "#3a2a1a" }}
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <p className="mt-3 text-foreground/75 leading-relaxed text-[15px] md:text-base pr-10">
+                    {link ? (
+                      <>
+                        {a.substring(0, a.indexOf(link.text))}
+                        <a href={link.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:opacity-70 transition-opacity" style={{ color: "#a07850" }}>
+                          {link.text}
+                        </a>
+                        {a.substring(a.indexOf(link.text) + link.text.length)}
+                      </>
+                    ) : a}
+                  </p>
+                </details>
+              ))}
             </div>
           </ScrollReveal>
         </div>
