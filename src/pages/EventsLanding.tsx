@@ -51,6 +51,48 @@ const EventsLanding = () => {
             </a>
           </Button>
         </div>
+
+        {/* Бегущая строка */}
+        <style>{`
+          @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+        `}</style>
+        <a
+          href="/events/folk"
+          className="absolute bottom-0 left-0 right-0 z-20 bg-white/15 backdrop-blur-sm border-y border-white/25 overflow-hidden whitespace-nowrap block"
+        >
+          <div
+            className="inline-block"
+            style={{ animation: "ticker 20s linear infinite" }}
+          >
+            <span className="inline-block px-8 text-sm font-medium text-white">
+              16 июня. Ресторан Калинка
+            </span>
+            <span className="inline-block px-4 text-sm font-medium text-white/50">✦</span>
+            <span className="inline-block px-8 text-sm font-medium text-white">
+              Хоровые посиделки Тонкая Рябина
+            </span>
+            <span className="inline-block px-4 text-sm font-medium text-white/50">✦</span>
+            <span className="inline-block px-8 text-sm font-medium text-white">
+              Билеты уже в продаже. Подробнее
+            </span>
+            <span className="inline-block px-4 text-sm font-medium text-white/50">✦</span>
+            <span className="inline-block px-8 text-sm font-medium text-white">
+              16 июня. Ресторан Калинка
+            </span>
+            <span className="inline-block px-4 text-sm font-medium text-white/50">✦</span>
+            <span className="inline-block px-8 text-sm font-medium text-white">
+              Хоровые посиделки Тонкая Рябина
+            </span>
+            <span className="inline-block px-4 text-sm font-medium text-white/50">✦</span>
+            <span className="inline-block px-8 text-sm font-medium text-white">
+              Билеты уже в продаже. Подробнее
+            </span>
+            <span className="inline-block px-4 text-sm font-medium text-white/50">✦</span>
+          </div>
+        </a>
       </section>
 
       {/* ════════ 2. CONCEPT ════════ */}
@@ -115,7 +157,96 @@ const EventsLanding = () => {
         </div>
       </section>
 
-      {/* ════════ 4. VIDEO BLOCK (placeholder) ════════ */}
+      {/* ════════ 4. EVENTS ════════ */}
+      <section className="py-16 px-4 bg-background">
+        <div className="container max-w-5xl mx-auto space-y-12">
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
+              Мероприятия
+            </h2>
+          </ScrollReveal>
+
+          {/* Ближайшее */}
+          <div className="space-y-4">
+            <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">
+              Ближайшее
+            </p>
+            <ScrollReveal>
+              <a
+                href="/events/folk"
+                className="flex rounded-2xl border border-border hover:shadow-soft transition-shadow duration-300 overflow-hidden"
+              >
+                <div className="w-40 shrink-0 bg-warm-cream flex items-center justify-center overflow-hidden self-stretch">
+                  <img
+                    src="/bird.png"
+                    alt="Тонкая Рябина"
+                    className="w-full h-full object-contain"
+                    style={{ transform: "rotate(-45deg) scale(1.8)" }}
+                  />
+                </div>
+                <div className="flex flex-col justify-center gap-2 p-6">
+                  <span className="inline-block self-start text-xs font-medium bg-primary/15 text-primary rounded-full px-3 py-1">
+                    16 июня
+                  </span>
+                  <h3 className="text-xl font-semibold text-foreground">Тонкая Рябина</h3>
+                  <p className="text-sm text-muted-foreground">Хоровые посиделки · Ресторан Калинка</p>
+                  <span className="text-sm font-medium text-primary mt-1">Подробнее →</span>
+                </div>
+              </a>
+            </ScrollReveal>
+          </div>
+
+          {/* Прошедшие */}
+          <div className="space-y-4">
+            <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">
+              Прошедшие
+            </p>
+            <div className="grid grid-cols-3 gap-4">
+              <ScrollReveal>
+                <a
+                  href="https://gromche-choir.ru/events/mother"
+                  className="flex flex-col rounded-2xl border border-border hover:shadow-soft transition-shadow duration-300 p-5 opacity-75"
+                >
+                  <span className="text-xs text-muted-foreground">Март 2026</span>
+                  <h3 className="text-base font-semibold text-foreground mt-1">Маме снова 17</h3>
+                  <p className="text-xs text-muted-foreground mt-1">Хоровая вечеринка-ностальгия</p>
+                  <span className="text-sm font-medium text-primary mt-3">Смотреть →</span>
+                </a>
+              </ScrollReveal>
+
+              <ScrollReveal delay={0.08}>
+                <a
+                  href="https://gromche-choir.timepad.ru/event/3771882/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col rounded-2xl border border-border hover:shadow-soft transition-shadow duration-300 p-5 opacity-75"
+                >
+                  <span className="text-xs text-muted-foreground">Февраль 2026</span>
+                  <h3 className="text-base font-semibold text-foreground mt-1">Все песни только о любви</h3>
+                  <p className="text-xs text-muted-foreground mt-1">Иммерсивный вечер с вашими историями</p>
+                  <span className="text-sm font-medium text-primary mt-3">Смотреть →</span>
+                </a>
+              </ScrollReveal>
+
+              <ScrollReveal delay={0.16}>
+                <a
+                  href="https://gromche-choir.timepad.ru/event/3709119/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col rounded-2xl border border-border hover:shadow-soft transition-shadow duration-300 p-5 opacity-75"
+                >
+                  <span className="text-xs text-muted-foreground">Декабрь 2025</span>
+                  <h3 className="text-base font-semibold text-foreground mt-1">Ты можешь громче!</h3>
+                  <p className="text-xs text-muted-foreground mt-1">Хоровой девичник</p>
+                  <span className="text-sm font-medium text-primary mt-3">Смотреть →</span>
+                </a>
+              </ScrollReveal>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ════════ 5. VIDEO BLOCK (placeholder) ════════ */}
       <section className="py-20 max-[480px]:py-12 px-4">
         <div className="container max-w-4xl mx-auto space-y-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
