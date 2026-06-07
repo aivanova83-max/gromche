@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -7,8 +7,27 @@ import { Send } from "lucide-react";
 import { featureCards, testimonials, audienceItems, TELEGRAM_LINK, TELEGRAM_CHANNEL, INSTAGRAM_LINK } from "@/data/eventsLanding";
 
 const EventsLanding = () => {
+  const videoMarchRef = useRef<HTMLVideoElement>(null);
+  const videoDecemberRef = useRef<HTMLVideoElement>(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const march = videoMarchRef.current;
+    const december = videoDecemberRef.current;
+    if (!march || !december) return;
+
+    const pauseOther = (playing: HTMLVideoElement, other: HTMLVideoElement) => {
+      const handler = () => { if (!other.paused) other.pause(); };
+      playing.addEventListener("play", handler);
+      return () => playing.removeEventListener("play", handler);
+    };
+
+    const cleanup1 = pauseOther(march, december);
+    const cleanup2 = pauseOther(december, march);
+    return () => { cleanup1(); cleanup2(); };
   }, []);
 
   return (
@@ -253,6 +272,7 @@ const EventsLanding = () => {
             <ScrollReveal>
               <div className="aspect-[9/16] rounded-2xl border border-border shadow-warm overflow-hidden">
                 <video
+                  ref={videoMarchRef}
                   src="/video-march.mp4"
                   className="w-full h-full object-cover"
                   controls
@@ -263,6 +283,7 @@ const EventsLanding = () => {
             <ScrollReveal delay={0.1}>
               <div className="aspect-[9/16] rounded-2xl border border-border shadow-warm overflow-hidden">
                 <video
+                  ref={videoDecemberRef}
                   src="/video-december.mp4"
                   className="w-full h-full object-cover"
                   controls
