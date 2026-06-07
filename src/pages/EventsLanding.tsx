@@ -174,9 +174,9 @@ const EventsLanding = () => {
             <ScrollReveal>
               <a
                 href="/events/folk"
-                className="flex rounded-2xl border border-border hover:shadow-soft transition-shadow duration-300 overflow-hidden"
+                className="flex flex-col sm:flex-row rounded-2xl border border-border hover:shadow-soft transition-shadow duration-300 overflow-hidden"
               >
-                <div className="w-40 shrink-0 bg-warm-cream flex items-center justify-center overflow-hidden self-stretch">
+                <div className="h-48 sm:h-auto sm:w-40 shrink-0 bg-warm-cream flex items-center justify-center overflow-hidden">
                   <img
                     src="/bird.png"
                     alt="Тонкая Рябина"
@@ -201,7 +201,7 @@ const EventsLanding = () => {
             <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">
               Прошедшие
             </p>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <ScrollReveal>
                 <a
                   href="https://gromche-choir.ru/events/mother"
