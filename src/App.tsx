@@ -31,7 +31,7 @@ const App = () => (
           <Route path="/events/folk" element={<EventFolk />} />
           <Route path="/zapis" element={<Zapis />} />
           <Route path="/legal" element={<Legal />} />
-          <Route path="/songs" element={<Songs />} />
+          <Route path="/songs/folk" element={<Songs />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
