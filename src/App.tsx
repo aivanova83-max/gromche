@@ -9,6 +9,7 @@ import Events from "./pages/Events";
 import EventsLanding from "./pages/EventsLanding";
 import EventFolk from "./pages/EventFolk";
 import Zapis from "./pages/Zapis";
+import Songs from "./pages/Songs";
 import NotFound from "./pages/NotFound";
 import { useYandexMetrika } from "@/hooks/useYandexMetrika";
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/events/folk" element={<EventFolk />} />
           <Route path="/zapis" element={<Zapis />} />
           <Route path="/legal" element={<Legal />} />
+          <Route path="/songs" element={<Songs />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
