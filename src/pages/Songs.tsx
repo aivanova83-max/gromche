@@ -4,6 +4,11 @@ import { songs } from "@/data/songs";
 const Songs = () => {
   const [selectedId, setSelectedId] = useState(songs[0].id);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [fontSize, setFontSize] = useState(17);
+
+  const changeFontSize = (delta: number) => {
+    setFontSize((s) => Math.min(32, Math.max(12, s + delta)));
+  };
 
   const selected = songs.find((s) => s.id === selectedId) ?? songs[0];
 
@@ -28,7 +33,19 @@ const Songs = () => {
           </svg>
           Список песен
         </button>
-        <h1 className="text-base font-semibold text-foreground truncate">{selected.title}</h1>
+        <h1 className="text-base font-semibold text-foreground truncate flex-1">{selected.title}</h1>
+        <div className="flex items-center gap-1 shrink-0">
+          <button
+            onClick={() => changeFontSize(-2)}
+            className="w-8 h-8 flex items-center justify-center rounded text-muted-foreground hover:text-foreground hover:bg-muted/30 transition-colors text-lg font-bold"
+            aria-label="Уменьшить шрифт"
+          >A−</button>
+          <button
+            onClick={() => changeFontSize(2)}
+            className="w-8 h-8 flex items-center justify-center rounded text-muted-foreground hover:text-foreground hover:bg-muted/30 transition-colors text-xl font-bold"
+            aria-label="Увеличить шрифт"
+          >A+</button>
+        </div>
       </header>
 
       <div className="flex flex-1 relative">
@@ -81,7 +98,7 @@ const Songs = () => {
         {/* Lyrics */}
         <main className="flex-1 px-5 py-8 md:px-10 md:py-10 overflow-y-auto max-w-2xl mx-auto w-full">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">{selected.title}</h2>
-          <pre className="whitespace-pre-wrap font-sans text-[1.05rem] leading-8 text-foreground/90">
+          <pre className="whitespace-pre-wrap font-sans leading-8 text-foreground/90" style={{ fontSize: `${fontSize}px` }}>
             {selected.lyrics}
           </pre>
         </main>
