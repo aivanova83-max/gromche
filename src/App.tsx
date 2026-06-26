@@ -2,7 +2,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Index from "./pages/Index";
 import Legal from "./pages/Legal";
 import Events from "./pages/Events";
@@ -15,6 +16,16 @@ import { useYandexMetrika } from "@/hooks/useYandexMetrika";
 
 const MetrikaTracker = () => { useYandexMetrika(); return null; };
 
+const ScrollToHash = () => {
+  const { hash } = useLocation();
+  useEffect(() => {
+    if (!hash) return;
+    const el = document.querySelector(hash);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  }, [hash]);
+  return null;
+};
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -24,6 +35,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <MetrikaTracker />
+        <ScrollToHash />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/events" element={<EventsLanding />} />
