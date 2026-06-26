@@ -8,6 +8,9 @@ export const Header = () => {
           
         </a>
         <nav className="flex items-center gap-4">
+          <a href="/#concerts" className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors">
+            Концерты
+          </a>
         </nav>
       </div>
     </header>);
