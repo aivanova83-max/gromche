@@ -1,12 +1,25 @@
+import { useEffect, useRef } from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
 import { faqItems } from "@/data/faq";
 
 export const FAQ = () => {
+  const btnRef = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    if (btnRef.current) {
+      btnRef.current.setAttribute(
+        "onclick",
+        "WdgMoyklass['01K9BrWJck7O6TZEZsOjLHe61iGjhIOYkjgp'].loadLeadFormByModal();"
+      );
+    }
+  }, []);
+
   return (
     <section className="py-16 md:py-24 bg-warm-bg">
       <div className="container mx-auto px-4 max-w-3xl">
@@ -29,6 +42,18 @@ export const FAQ = () => {
             </AccordionItem>
           ))}
         </Accordion>
+        <div className="mt-10 flex justify-center">
+          <Button
+            variant="hero"
+            size="lg"
+            className="text-base py-5 rounded-full px-10"
+            asChild
+          >
+            <a ref={btnRef} href="#" onClick={(e) => e.preventDefault()}>
+              Хочу попробовать
+            </a>
+          </Button>
+        </div>
       </div>
     </section>
   );
