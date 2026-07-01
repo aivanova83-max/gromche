@@ -70,6 +70,11 @@ All colors MUST be HSL.
     --ochre: 27 49% 52%;
     --folk-dark: 30 38% 16%;
     --folk-cream: 36 50% 96%;
+    --header-panel: 35 53% 88%;
+    --logo-chip: 40 69% 97%;
+    --gradient-ribbon: linear-gradient(90deg, #FFD869, #FF8F74, hsl(var(--ochre)), #1BAC6C);
+    --shadow-header: 0 8px 20px hsl(30 38% 16% / 0.06);
+    --shadow-chip: 0 1px 3px hsl(30 38% 16% / 0.08);
   }
 
   .dark {

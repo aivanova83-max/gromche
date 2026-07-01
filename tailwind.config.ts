@@ -68,14 +68,19 @@ export default {
         ochre: "hsl(var(--ochre))",
         'folk-dark': "hsl(var(--folk-dark))",
         'folk-cream': "hsl(var(--folk-cream))",
+        'header-panel': "hsl(var(--header-panel))",
+        'logo-chip': "hsl(var(--logo-chip))",
       },
       backgroundImage: {
         'gradient-warm': 'var(--gradient-warm)',
         'gradient-hero': 'var(--gradient-hero)',
+        'gradient-ribbon': 'var(--gradient-ribbon)',
       },
       boxShadow: {
         'soft': 'var(--shadow-soft)',
         'warm': 'var(--shadow-warm)',
+        'header': 'var(--shadow-header)',
+        'chip': 'var(--shadow-chip)',
       },
       transitionTimingFunction: {
         'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
