@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        serif: ["Georgia", "Times New Roman", "serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -62,6 +65,9 @@ export default {
         'warm-peach': "hsl(var(--warm-peach))",
         'warm-text': "hsl(var(--warm-text))",
         'warm-bg': "hsl(var(--warm-bg))",
+        ochre: "hsl(var(--ochre))",
+        'folk-dark': "hsl(var(--folk-dark))",
+        'folk-cream': "hsl(var(--folk-cream))",
       },
       backgroundImage: {
         'gradient-warm': 'var(--gradient-warm)',
