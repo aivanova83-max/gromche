@@ -75,6 +75,7 @@ All colors MUST be HSL.
     --gradient-ribbon: linear-gradient(90deg, #FFD869, #FF8F74, hsl(var(--ochre)), #1BAC6C);
     --shadow-header: 0 8px 20px hsl(30 38% 16% / 0.06);
     --shadow-chip: 0 1px 3px hsl(30 38% 16% / 0.08);
+    --shadow-page: 0 0 40px hsl(30 38% 16% / 0.06);
   }
 
   .dark {

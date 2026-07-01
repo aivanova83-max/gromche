@@ -29,7 +29,7 @@ const SongsRunit26 = () => {
   };
 
   return (
-    <div className="min-h-screen bg-folk-cream flex flex-col">
+    <div className="min-h-screen bg-folk-cream flex flex-col max-w-[600px] mx-auto shadow-page">
       {/* Header */}
       <header className="sticky top-0 z-20 bg-header-panel px-5 pt-[18px] pb-4 rounded-b-[26px] shadow-header">
         <div className="flex items-center justify-between gap-3">
@@ -77,16 +77,16 @@ const SongsRunit26 = () => {
         {/* Overlay backdrop (mobile) */}
         {sidebarOpen && (
           <div
-            className="fixed inset-0 z-40 bg-folk-dark/30 md:hidden"
+            className="fixed inset-0 z-40 bg-folk-dark/30"
             onClick={() => setSidebarOpen(false)}
           />
         )}
 
         {/* Sidebar */}
         <aside
-          className={`${sidebarOpen ? "fixed z-50" : "hidden"} md:flex md:sticky top-0 left-0 md:z-10 h-screen md:h-[calc(100vh-53px)] w-72 bg-folk-cream border-r border-ochre/20 flex-col`}
+          className={`${sidebarOpen ? "fixed z-50 flex" : "hidden"} top-0 left-0 h-screen w-72 max-w-[80%] bg-folk-cream border-r border-ochre/20 flex-col`}
         >
-          <div className="flex items-center justify-between px-4 py-3 border-b border-ochre/20 md:hidden">
+          <div className="flex items-center justify-between px-4 py-3 border-b border-ochre/20">
             <span className="font-semibold text-folk-dark">Список песен</span>
             <button
               onClick={() => setSidebarOpen(false)}
@@ -126,14 +126,14 @@ const SongsRunit26 = () => {
         </aside>
 
         {/* Lyrics */}
-        <main className="flex-1 px-5 py-8 md:px-10 md:py-10 overflow-y-auto max-w-2xl mx-auto w-full">
+        <main className="flex-1 px-5 py-8 overflow-y-auto w-full">
           <div className="bg-ochre/10 border border-ochre/20 rounded-2xl px-4 py-3 mb-8">
             <p className="text-sm text-folk-dark/80 text-center">
               Пой вместе с нами — здесь все слова, которые нам сегодня понадобятся
             </p>
           </div>
 
-          <h2 className="font-serif text-2xl md:text-3xl font-bold text-folk-dark mb-1">{selected.title}</h2>
+          <h2 className="font-serif text-2xl font-bold text-folk-dark mb-1">{selected.title}</h2>
           {selected.artist && (
             <p className="text-sm text-ochre mb-6">{selected.artist}</p>
           )}
