@@ -31,53 +31,60 @@ const SongsRunit26 = () => {
   return (
     <div className="min-h-screen bg-folk-cream flex flex-col">
       {/* Header */}
-      <header className="sticky top-0 z-30 bg-folk-cream/95 backdrop-blur border-b border-ochre/20">
-        <div className="px-4 py-3 flex items-center justify-between gap-4">
+      <header className="sticky top-0 z-20 bg-header-panel px-5 pt-[18px] pb-4 rounded-b-[26px] shadow-header">
+        <div className="flex items-center justify-between gap-3">
           <button
             onClick={() => setSidebarOpen((v) => !v)}
-            className="flex items-center gap-2 text-sm font-medium text-ochre hover:text-ochre/80 transition-colors shrink-0"
+            className="flex items-center gap-2 text-[15px] font-semibold text-ochre hover:text-ochre/80 transition-colors shrink-0"
             aria-label="Список песен"
           >
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect y="3" width="20" height="2" rx="1" fill="currentColor" />
-              <rect y="9" width="20" height="2" rx="1" fill="currentColor" />
-              <rect y="15" width="20" height="2" rx="1" fill="currentColor" />
+            <svg width="18" height="14" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="20" height="2" rx="1" fill="currentColor" />
+              <rect y="7" width="20" height="2" rx="1" fill="currentColor" />
+              <rect y="14" width="20" height="2" rx="1" fill="currentColor" />
             </svg>
             Список песен
           </button>
 
-          <div className="flex items-center border-2 border-ochre rounded-2xl overflow-hidden shrink-0">
+          <div className="flex items-center border-[1.5px] border-ochre rounded-xl overflow-hidden h-9 shrink-0">
             <button
               onClick={() => changeFontSize(-2)}
-              className="w-10 h-10 flex items-center justify-center text-folk-dark hover:bg-ochre/10 transition-colors text-lg font-bold border-r border-ochre/40"
+              className="w-10 h-9 flex items-center justify-center text-folk-dark hover:bg-ochre/10 transition-colors text-sm font-bold border-r border-ochre/30"
               aria-label="Уменьшить шрифт"
             >A−</button>
             <button
               onClick={() => changeFontSize(2)}
-              className="w-10 h-10 flex items-center justify-center text-folk-dark hover:bg-ochre/10 transition-colors text-xl font-bold"
+              className="w-10 h-9 flex items-center justify-center text-folk-dark hover:bg-ochre/10 transition-colors text-base font-bold"
               aria-label="Увеличить шрифт"
             >A+</button>
           </div>
         </div>
 
-        <div className="px-4 pb-3 flex items-center justify-between gap-4">
-          <img src={logoGromche} alt="Громче" className="h-7 w-auto" />
-          <img src={logoRunit} alt="RunIT" className="h-6 w-auto shrink-0" />
+        <div className="flex items-center justify-between gap-3 mt-[14px] pt-3 border-t border-ochre/[0.18]">
+          <div className="bg-logo-chip rounded-[10px] px-3.5 py-1.5 inline-flex items-center shadow-chip">
+            <img src={logoGromche} alt="Громче" className="h-[30px] w-auto" />
+          </div>
+          <div className="flex flex-col items-end gap-0.5">
+            <span className="text-[9px] font-semibold tracking-[0.08em] uppercase text-folk-dark/45">партнёр</span>
+            <img src={logoRunit} alt="RunIT by AGIMA" className="h-5 w-auto opacity-[0.85]" />
+          </div>
         </div>
+
+        <div className="mt-[14px] h-1 rounded-full bg-gradient-ribbon" />
       </header>
 
       <div className="flex flex-1 relative">
         {/* Overlay backdrop (mobile) */}
         {sidebarOpen && (
           <div
-            className="fixed inset-0 z-20 bg-folk-dark/30 md:hidden"
+            className="fixed inset-0 z-40 bg-folk-dark/30 md:hidden"
             onClick={() => setSidebarOpen(false)}
           />
         )}
 
         {/* Sidebar */}
         <aside
-          className={`${sidebarOpen ? "fixed z-40" : "hidden"} md:flex md:sticky top-0 left-0 md:z-20 h-screen md:h-[calc(100vh-53px)] w-72 bg-folk-cream border-r border-ochre/20 flex-col`}
+          className={`${sidebarOpen ? "fixed z-50" : "hidden"} md:flex md:sticky top-0 left-0 md:z-10 h-screen md:h-[calc(100vh-53px)] w-72 bg-folk-cream border-r border-ochre/20 flex-col`}
         >
           <div className="flex items-center justify-between px-4 py-3 border-b border-ochre/20 md:hidden">
             <span className="font-semibold text-folk-dark">Список песен</span>
