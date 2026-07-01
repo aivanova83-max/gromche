@@ -81,6 +81,7 @@ export default {
         'warm': 'var(--shadow-warm)',
         'header': 'var(--shadow-header)',
         'chip': 'var(--shadow-chip)',
+        'page': 'var(--shadow-page)',
       },
       transitionTimingFunction: {
         'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
