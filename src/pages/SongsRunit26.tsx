@@ -71,14 +71,17 @@ const SongsRunit26 = () => {
         </div>
 
         <div className="flex items-center justify-between gap-3 mt-[14px] pt-3 border-t border-ochre/[0.18]">
-          <a
-            href={TELEGRAM_CHANNEL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-logo-chip rounded-[10px] px-3.5 py-1.5 inline-flex items-center shadow-chip hover:opacity-90 transition-opacity"
-          >
-            <img src={logoGromche} alt="Громче — телеграм-канал" className="h-[30px] w-auto" />
-          </a>
+          <div className="flex flex-col gap-1">
+            <a
+              href={TELEGRAM_CHANNEL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-logo-chip rounded-[10px] px-3.5 py-1.5 inline-flex items-center shadow-chip hover:opacity-90 transition-opacity"
+            >
+              <img src={logoGromche} alt="Громче — телеграм-канал" className="h-[30px] w-auto" />
+            </a>
+            <span className="text-[9px] font-semibold text-folk-dark/45 pl-1">t.me/gromche_choir</span>
+          </div>
           <div className="flex flex-col items-end gap-0.5">
             <span className="text-[9px] font-semibold tracking-[0.08em] uppercase text-folk-dark/45">партнёр</span>
             <img src={logoRunit} alt="RunIT by AGIMA" className="h-5 w-auto opacity-[0.85]" />
