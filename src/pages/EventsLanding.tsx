@@ -237,7 +237,7 @@ const EventsLanding = () => {
       </section>
 
       {/* ════════ 5. VIDEO BLOCK (placeholder) ════════ */}
-      <section className="py-20 max-[480px]:py-12 px-4">
+      <section id="video" className="py-20 max-[480px]:py-12 px-4">
         <div className="container max-w-4xl mx-auto space-y-8">
           <ScrollReveal>
             <div className="text-center space-y-2">
