@@ -26,6 +26,7 @@ const SongsRunit26 = () => {
     setSelectedId(id);
     setSidebarOpen(false);
     trackSongChange(title);
+    window.scrollTo(0, 0);
   };
 
   return (
