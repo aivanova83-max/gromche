@@ -150,7 +150,7 @@ const EventsLanding = () => {
               Ближайшее
             </p>
             <ScrollReveal>
-              <div className="rounded-2xl border border-border p-6 space-y-2">
+              <div className="rounded-2xl border border-primary/30 bg-primary/10 p-6 space-y-2 shadow-warm">
                 <p className="text-base font-semibold text-foreground">Тссс, готовим сюрприз</p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   О новой встрече расскажем первым делом в{" "}
