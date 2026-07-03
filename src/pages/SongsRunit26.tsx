@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mic } from "lucide-react";
+import { ChevronRight, Mic } from "lucide-react";
 import { songsRunit26 } from "@/data/songsRunit26";
 import { TELEGRAM_CHANNEL } from "@/data/eventsLanding";
 import logoGromche from "@/assets/logo-gromche-horizontal.png";
@@ -21,6 +21,8 @@ const SongsRunit26 = () => {
   };
 
   const selected = songsRunit26.find((s) => s.id === selectedId) ?? songsRunit26[0];
+  const selectedIndex = songsRunit26.findIndex((s) => s.id === selectedId);
+  const nextSong = songsRunit26[(selectedIndex + 1) % songsRunit26.length];
 
   const handleSelect = (id: string, title: string) => {
     setSelectedId(id);
@@ -147,7 +149,17 @@ const SongsRunit26 = () => {
             {selected.lyrics}
           </pre>
 
-          <div className="mt-10 bg-folk-dark rounded-2xl p-5 flex items-start gap-3">
+          <button
+            onClick={() => handleSelect(nextSong.id, nextSong.title)}
+            className="mt-10 w-full flex items-center justify-between gap-2 rounded-xl px-3 py-2 text-left hover:bg-ochre/5 transition-colors"
+          >
+            <span className="text-xs text-folk-dark/60">
+              Следующая песня — <span className="font-medium text-ochre">{nextSong.title}</span>
+            </span>
+            <ChevronRight className="w-3.5 h-3.5 text-ochre shrink-0" />
+          </button>
+
+          <div className="mt-3 bg-folk-dark rounded-2xl p-5 flex items-start gap-3">
             <Mic className="w-5 h-5 text-ochre shrink-0 mt-0.5" />
             <p className="text-sm text-folk-cream/90 leading-relaxed">
               Эту песню вы пели с «Громче». Хочешь петь вот так — следи за нашими вечеринками:{" "}
