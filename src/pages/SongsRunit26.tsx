@@ -11,6 +11,12 @@ const trackSongChange = (title: string) => {
   }
 };
 
+// Ручные исключения для порядка «следующая песня» (например, чтобы
+// пропустить транслитерированный дубль оригинала).
+const NEXT_SONG_OVERRIDES: Record<string, string> = {
+  "6": "8", // We will rock you -> Солнышко (пропускает «Уи уил рок ю»)
+};
+
 const SongsRunit26 = () => {
   const [selectedId, setSelectedId] = useState(songsRunit26[0].id);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -22,7 +28,8 @@ const SongsRunit26 = () => {
 
   const selected = songsRunit26.find((s) => s.id === selectedId) ?? songsRunit26[0];
   const selectedIndex = songsRunit26.findIndex((s) => s.id === selectedId);
-  const nextSong = songsRunit26[(selectedIndex + 1) % songsRunit26.length];
+  const defaultNextId = songsRunit26[(selectedIndex + 1) % songsRunit26.length].id;
+  const nextSong = songsRunit26.find((s) => s.id === (NEXT_SONG_OVERRIDES[selectedId] ?? defaultNextId)) ?? songsRunit26[0];
 
   const handleSelect = (id: string, title: string) => {
     setSelectedId(id);
