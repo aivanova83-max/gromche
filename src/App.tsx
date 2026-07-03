@@ -21,8 +21,11 @@ const ScrollToHash = () => {
   const { hash } = useLocation();
   useEffect(() => {
     if (!hash) return;
-    const el = document.querySelector(hash);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    const timer = setTimeout(() => {
+      const el = document.querySelector(hash);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+    return () => clearTimeout(timer);
   }, [hash]);
   return null;
 };
