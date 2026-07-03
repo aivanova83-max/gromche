@@ -150,27 +150,21 @@ const EventsLanding = () => {
               Ближайшее
             </p>
             <ScrollReveal>
-              <a
-                href="/events/folk"
-                className="flex flex-col sm:flex-row rounded-2xl border border-border hover:shadow-soft transition-shadow duration-300 overflow-hidden"
-              >
-                <div className="h-48 sm:h-auto sm:w-40 shrink-0 bg-warm-cream flex items-center justify-center overflow-hidden">
-                  <img
-                    src="/bird.png"
-                    alt="Тонкая Рябина"
-                    className="w-full h-full object-contain"
-                    style={{ transform: "rotate(-45deg) scale(1.8)" }}
-                  />
-                </div>
-                <div className="flex flex-col justify-center gap-2 p-6">
-                  <span className="inline-block self-start text-xs font-medium bg-primary/15 text-primary rounded-full px-3 py-1">
-                    16 июня
-                  </span>
-                  <h3 className="text-xl font-semibold text-foreground">Тонкая Рябина</h3>
-                  <p className="text-sm text-muted-foreground">Хоровые посиделки · Ресторан Калинка</p>
-                  <span className="text-sm font-medium text-primary mt-1">Подробнее →</span>
-                </div>
-              </a>
+              <div className="rounded-2xl border border-border p-6 space-y-2">
+                <p className="text-base font-semibold text-foreground">Тссс, готовим сюрприз</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  О новой встрече расскажем первым делом в{" "}
+                  <a
+                    href="https://t.me/gromche_choir"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underline underline-offset-2"
+                  >
+                    телеграме
+                  </a>
+                  {" "}— подпишитесь, чтобы узнать раньше всех
+                </p>
+              </div>
             </ScrollReveal>
           </div>
 
@@ -179,44 +173,56 @@ const EventsLanding = () => {
             <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">
               Прошедшие
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <ScrollReveal>
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
+              <ScrollReveal className="h-full">
+                <a
+                  href="/events/folk"
+                  className="flex flex-col rounded-2xl border border-border hover:shadow-soft transition-shadow duration-300 p-5 opacity-75 h-full"
+                >
+                  <span className="text-xs text-muted-foreground">Июнь 2026</span>
+                  <h3 className="text-base font-semibold text-foreground mt-1">Тонкая Рябина</h3>
+                  <p className="text-xs text-muted-foreground mt-1">Хоровые посиделки с народным духом</p>
+                  <span className="text-sm font-medium text-primary mt-auto pt-3">Смотреть →</span>
+                </a>
+              </ScrollReveal>
+
+              <ScrollReveal delay={0.06} className="h-full">
                 <a
                   href="https://gromche-choir.ru/events/mother"
-                  className="flex flex-col rounded-2xl border border-border hover:shadow-soft transition-shadow duration-300 p-5 opacity-75"
+                  className="flex flex-col rounded-2xl border border-border hover:shadow-soft transition-shadow duration-300 p-5 opacity-75 h-full"
                 >
                   <span className="text-xs text-muted-foreground">Март 2026</span>
                   <h3 className="text-base font-semibold text-foreground mt-1">Маме снова 17</h3>
                   <p className="text-xs text-muted-foreground mt-1">Хоровая вечеринка-ностальгия</p>
-                  <span className="text-sm font-medium text-primary mt-3">Смотреть →</span>
+                  <span className="text-sm font-medium text-primary mt-auto pt-3">Смотреть →</span>
                 </a>
               </ScrollReveal>
 
-              <ScrollReveal delay={0.08}>
+              <ScrollReveal delay={0.12} className="h-full">
                 <a
                   href="https://gromche-choir.timepad.ru/event/3771882/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col rounded-2xl border border-border hover:shadow-soft transition-shadow duration-300 p-5 opacity-75"
+                  className="flex flex-col rounded-2xl border border-border hover:shadow-soft transition-shadow duration-300 p-5 opacity-75 h-full"
                 >
                   <span className="text-xs text-muted-foreground">Февраль 2026</span>
                   <h3 className="text-base font-semibold text-foreground mt-1">Все песни только о любви</h3>
                   <p className="text-xs text-muted-foreground mt-1">Иммерсивный вечер с вашими историями</p>
-                  <span className="text-sm font-medium text-primary mt-3">Смотреть →</span>
+                  <span className="text-sm font-medium text-primary mt-auto pt-3">Смотреть →</span>
                 </a>
               </ScrollReveal>
 
-              <ScrollReveal delay={0.16}>
+              <ScrollReveal delay={0.18} className="h-full">
                 <a
                   href="https://gromche-choir.timepad.ru/event/3709119/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col rounded-2xl border border-border hover:shadow-soft transition-shadow duration-300 p-5 opacity-75"
+                  className="flex flex-col rounded-2xl border border-border hover:shadow-soft transition-shadow duration-300 p-5 opacity-75 h-full"
                 >
                   <span className="text-xs text-muted-foreground">Декабрь 2025</span>
                   <h3 className="text-base font-semibold text-foreground mt-1">Ты можешь громче!</h3>
                   <p className="text-xs text-muted-foreground mt-1">Хоровой девичник</p>
-                  <span className="text-sm font-medium text-primary mt-3">Смотреть →</span>
+                  <span className="text-sm font-medium text-primary mt-auto pt-3">Смотреть →</span>
                 </a>
               </ScrollReveal>
             </div>
