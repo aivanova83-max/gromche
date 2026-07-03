@@ -71,47 +71,6 @@ const EventsLanding = () => {
           </Button>
         </div>
 
-        {/* Бегущая строка */}
-        <style>{`
-          @keyframes ticker {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-        `}</style>
-        <a
-          href="/events/folk"
-          className="absolute bottom-0 left-0 right-0 z-20 bg-white/15 backdrop-blur-sm border-y border-white/25 overflow-hidden whitespace-nowrap block"
-        >
-          <div
-            className="inline-block"
-            style={{ animation: "ticker 20s linear infinite" }}
-          >
-            <span className="inline-block px-8 text-sm font-medium text-white">
-              16 июня. Ресторан Калинка
-            </span>
-            <span className="inline-block px-4 text-sm font-medium text-white/50">✦</span>
-            <span className="inline-block px-8 text-sm font-medium text-white">
-              Хоровые посиделки Тонкая Рябина
-            </span>
-            <span className="inline-block px-4 text-sm font-medium text-white/50">✦</span>
-            <span className="inline-block px-8 text-sm font-medium text-white">
-              Билеты уже в продаже. Подробнее
-            </span>
-            <span className="inline-block px-4 text-sm font-medium text-white/50">✦</span>
-            <span className="inline-block px-8 text-sm font-medium text-white">
-              16 июня. Ресторан Калинка
-            </span>
-            <span className="inline-block px-4 text-sm font-medium text-white/50">✦</span>
-            <span className="inline-block px-8 text-sm font-medium text-white">
-              Хоровые посиделки Тонкая Рябина
-            </span>
-            <span className="inline-block px-4 text-sm font-medium text-white/50">✦</span>
-            <span className="inline-block px-8 text-sm font-medium text-white">
-              Билеты уже в продаже. Подробнее
-            </span>
-            <span className="inline-block px-4 text-sm font-medium text-white/50">✦</span>
-          </div>
-        </a>
       </section>
 
       {/* ════════ 2. CONCEPT ════════ */}
