@@ -239,6 +239,12 @@ const EventsLanding = () => {
       {/* ════════ 5. VIDEO BLOCK (placeholder) ════════ */}
       <section className="py-20 max-[480px]:py-12 px-4">
         <div className="container max-w-4xl mx-auto space-y-8">
+          <ScrollReveal>
+            <div className="text-center space-y-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">Как это выглядит</h2>
+              <p className="text-foreground/60 text-base">Отрывки с наших вечеринок</p>
+            </div>
+          </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-3xl mx-auto">
             <ScrollReveal>
               <div className="aspect-[9/16] rounded-2xl border border-border shadow-warm overflow-hidden">
@@ -276,9 +282,6 @@ const EventsLanding = () => {
               </div>
             </ScrollReveal>
           </div>
-          <p className="text-center text-foreground/60 text-sm">
-            Как это звучит и выглядит. Отрывки с наших вечеринок.
-          </p>
         </div>
       </section>
 
