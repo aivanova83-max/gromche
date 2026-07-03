@@ -9,6 +9,7 @@ import { featureCards, testimonials, audienceItems, TELEGRAM_LINK, TELEGRAM_CHAN
 const EventsLanding = () => {
   const videoMarchRef = useRef<HTMLVideoElement>(null);
   const videoDecemberRef = useRef<HTMLVideoElement>(null);
+  const videoFolkRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -17,17 +18,20 @@ const EventsLanding = () => {
   useEffect(() => {
     const march = videoMarchRef.current;
     const december = videoDecemberRef.current;
-    if (!march || !december) return;
+    const folk = videoFolkRef.current;
+    if (!march || !december || !folk) return;
 
-    const pauseOther = (playing: HTMLVideoElement, other: HTMLVideoElement) => {
-      const handler = () => { if (!other.paused) other.pause(); };
-      playing.addEventListener("play", handler);
-      return () => playing.removeEventListener("play", handler);
-    };
+    const videos = [march, december, folk];
+    const handlers: Array<() => void> = [];
 
-    const cleanup1 = pauseOther(march, december);
-    const cleanup2 = pauseOther(december, march);
-    return () => { cleanup1(); cleanup2(); };
+    videos.forEach((v) => {
+      const others = videos.filter((o) => o !== v);
+      const handler = () => others.forEach((o) => { if (!o.paused) o.pause(); });
+      v.addEventListener("play", handler);
+      handlers.push(() => v.removeEventListener("play", handler));
+    });
+
+    return () => handlers.forEach((fn) => fn());
   }, []);
 
   return (
@@ -212,19 +216,21 @@ const EventsLanding = () => {
                 </a>
               </ScrollReveal>
 
-              <ScrollReveal delay={0.18} className="h-full">
-                <a
-                  href="https://gromche-choir.timepad.ru/event/3709119/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col rounded-2xl border border-border hover:shadow-soft transition-shadow duration-300 p-5 opacity-75 h-full"
-                >
-                  <span className="text-xs text-muted-foreground">Декабрь 2025</span>
-                  <h3 className="text-base font-semibold text-foreground mt-1">Ты можешь громче!</h3>
-                  <p className="text-xs text-muted-foreground mt-1">Хоровой девичник</p>
-                  <span className="text-sm font-medium text-primary mt-auto pt-3">Смотреть →</span>
-                </a>
-              </ScrollReveal>
+              <div className="max-sm:hidden h-full">
+                <ScrollReveal delay={0.18} className="h-full">
+                  <a
+                    href="https://gromche-choir.timepad.ru/event/3709119/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col rounded-2xl border border-border hover:shadow-soft transition-shadow duration-300 p-5 opacity-75 h-full"
+                  >
+                    <span className="text-xs text-muted-foreground">Декабрь 2025</span>
+                    <h3 className="text-base font-semibold text-foreground mt-1">Ты можешь громче!</h3>
+                    <p className="text-xs text-muted-foreground mt-1">Хоровой девичник</p>
+                    <span className="text-sm font-medium text-primary mt-auto pt-3">Смотреть →</span>
+                  </a>
+                </ScrollReveal>
+              </div>
             </div>
           </div>
         </div>
@@ -233,8 +239,20 @@ const EventsLanding = () => {
       {/* ════════ 5. VIDEO BLOCK (placeholder) ════════ */}
       <section className="py-20 max-[480px]:py-12 px-4">
         <div className="container max-w-4xl mx-auto space-y-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-3xl mx-auto">
             <ScrollReveal>
+              <div className="aspect-[9/16] rounded-2xl border border-border shadow-warm overflow-hidden">
+                <video
+                  ref={videoFolkRef}
+                  src="/video-folk.mp4"
+                  className="w-full h-full object-cover"
+                  controls
+                  playsInline
+                />
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.1}>
               <div className="aspect-[9/16] rounded-2xl border border-border shadow-warm overflow-hidden">
                 <video
                   ref={videoMarchRef}
@@ -245,7 +263,8 @@ const EventsLanding = () => {
                 />
               </div>
             </ScrollReveal>
-            <ScrollReveal delay={0.1}>
+
+            <ScrollReveal delay={0.2}>
               <div className="aspect-[9/16] rounded-2xl border border-border shadow-warm overflow-hidden">
                 <video
                   ref={videoDecemberRef}
