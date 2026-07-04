@@ -12,9 +12,10 @@ const trackSongChange = (title: string) => {
 };
 
 // Ручные исключения для порядка «следующая песня» (например, чтобы
-// пропустить транслитерированный дубль оригинала).
-const NEXT_SONG_OVERRIDES: Record<string, string> = {
-  "6": "8", // We will rock you -> Солнышко (пропускает «Уи уил рок ю»)
+// пропустить транслитерированный дубль оригинала или скрыть ссылку
+// у конкретной песни — значение null).
+const NEXT_SONG_OVERRIDES: Record<string, string | null> = {
+  "6": null, // We will rock you -> ссылки на следующую песню нет
 };
 
 const SongsRunit26 = () => {
@@ -29,7 +30,8 @@ const SongsRunit26 = () => {
   const selected = songsRunit26.find((s) => s.id === selectedId) ?? songsRunit26[0];
   const selectedIndex = songsRunit26.findIndex((s) => s.id === selectedId);
   const defaultNextId = songsRunit26[(selectedIndex + 1) % songsRunit26.length].id;
-  const nextSong = songsRunit26.find((s) => s.id === (NEXT_SONG_OVERRIDES[selectedId] ?? defaultNextId)) ?? songsRunit26[0];
+  const nextId = selectedId in NEXT_SONG_OVERRIDES ? NEXT_SONG_OVERRIDES[selectedId] : defaultNextId;
+  const nextSong = nextId ? songsRunit26.find((s) => s.id === nextId) : undefined;
 
   const handleSelect = (id: string, title: string) => {
     setSelectedId(id);
@@ -159,15 +161,17 @@ const SongsRunit26 = () => {
             {selected.lyrics}
           </pre>
 
-          <button
-            onClick={() => handleSelect(nextSong.id, nextSong.title)}
-            className="mt-10 w-full flex items-center justify-between gap-2 rounded-xl px-3 py-2 text-left hover:bg-ochre/5 transition-colors"
-          >
-            <span className="text-xs text-folk-dark/60">
-              Следующая песня — <span className="font-medium text-ochre">{nextSong.title}</span>
-            </span>
-            <ChevronRight className="w-3.5 h-3.5 text-ochre shrink-0" />
-          </button>
+          {nextSong && (
+            <button
+              onClick={() => handleSelect(nextSong.id, nextSong.title)}
+              className="mt-10 w-full flex items-center justify-between gap-2 rounded-xl px-3 py-2 text-left hover:bg-ochre/5 transition-colors"
+            >
+              <span className="text-xs text-folk-dark/60">
+                Следующая песня — <span className="font-medium text-ochre">{nextSong.title}</span>
+              </span>
+              <ChevronRight className="w-3.5 h-3.5 text-ochre shrink-0" />
+            </button>
+          )}
 
           <div className="mt-3 bg-folk-dark rounded-2xl p-5 flex items-start gap-3">
             <Mic className="w-5 h-5 text-ochre shrink-0 mt-0.5" />
