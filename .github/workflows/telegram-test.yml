@@ -2,6 +2,9 @@ name: Telegram bot test
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - feat/telegram-fail-notify
 
 jobs:
   test:
