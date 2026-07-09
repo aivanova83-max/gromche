@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Check site availability
         run: |
-          STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 https://gromche-choir.ru/ || echo "000")
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 https://gromche-choir-nonexistent-test.ru/ || echo "000")
           echo "HTTP status: $STATUS"
 
           if [ "$STATUS" != "200" ]; then
