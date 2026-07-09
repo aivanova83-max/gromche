@@ -1,0 +1,30 @@
+name: Uptime check
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check site availability
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 10 https://gromche-choir.ru/) || true
+          echo "HTTP status: $STATUS"
+
+          if [ "$STATUS" != "200" ]; then
+            curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+              -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+              -d text="🔴 gromche-choir.ru недоступен (HTTP $STATUS)%0Ahttps://gromche-choir.ru/"
+            exit 1
+          fi
+
+      - name: Daily heartbeat
+        if: github.event.schedule == '0 6 * * *'
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d text="✅ Мониторинг gromche-choir.ru работает"
