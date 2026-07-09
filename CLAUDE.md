@@ -299,6 +299,8 @@ GitHub Actions (ubuntu-latest)
                                         ├── /           → index.html (SPA)
                                         ├── /assets/*   → кэш 1 год
                                         └── /*          → index.html (react-router)
+
+  ✗ любой шаг упал → Notify Telegram on failure → Telegram Bot API → чат админа
 ```
 ## 10. Dogfooding: self-check before "готово"
 
@@ -318,6 +320,8 @@ GitHub Actions (ubuntu-latest)
 | `DEPLOY_HOST` | `159.194.197.40` |
 | `DEPLOY_USER` | `deploy` |
 | `DEPLOY_SSH_KEY` | Приватный SSH-ключ `~/.ssh/gromche_deploy` |
+| `TELEGRAM_BOT_TOKEN` | Токен бота от `@BotFather` (сейчас placeholder — заполнить вручную) |
+| `TELEGRAM_CHAT_ID` | Chat ID получателя уведомлений (сейчас placeholder — заполнить вручную) |
 
 ### nginx — ключевые правила конфига
 

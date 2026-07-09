@@ -45,3 +45,10 @@ jobs:
             rm -rf /var/www/gromche/*
             cp -a /tmp/gromche_deploy/. /var/www/gromche/
             rm -rf /tmp/gromche_deploy
+
+      - name: Notify Telegram on failure
+        if: failure()
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d text="⚠️ Деплой gromche-choir упал: ${{ github.workflow }} (${{ github.sha }})%0Ahttps://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
