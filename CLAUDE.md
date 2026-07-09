@@ -302,6 +302,14 @@ GitHub Actions (ubuntu-latest)
 
   ✗ любой шаг упал → Notify Telegram on failure → Telegram Bot API → чат админа
 ```
+
+### Мониторинг (отдельно от деплоя)
+
+| Workflow | Расписание | Что проверяет | Алерт |
+|---|---|---|---|
+| `uptime-check.yml` | каждые 5 минут | `https://gromche-choir.ru` отвечает 200 | Telegram при не-200/обрыве соединения |
+| `uptime-check.yml` (heartbeat) | раз в день, 06:00 UTC (09:00 МСК) | сам факт, что крон жив | Telegram «✅ работает» после успешной проверки |
+| `widget-check.yml` | каждые 5 минут | форма записи MoyKlass на `/zapis` реально рендерится (ждёт поле `#wdgMoyklass133029Formphone`) | Telegram, если поле не появилось за 15 сек |
 ## 10. Dogfooding: self-check before "готово"
 
 ОБЯЗАТЕЛЬНО после любой UI-правки или правки логики, влияющей на интерфейс, ты (Claude) должен сделать:

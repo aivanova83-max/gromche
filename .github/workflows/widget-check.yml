@@ -1,0 +1,41 @@
+name: Booking widget check
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Playwright
+        run: |
+          mkdir widget-check && cd widget-check
+          npm init -y >/dev/null
+          npm install playwright >/dev/null 2>&1
+          npx playwright install --with-deps chromium >/dev/null 2>&1
+
+      - name: Check MoyKlass booking form
+        working-directory: widget-check
+        run: |
+          node -e "
+          const { chromium } = require('playwright');
+          (async () => {
+            const browser = await chromium.launch();
+            const page = await browser.newPage();
+            try {
+              await page.goto('https://gromche-choir.ru/zapis', { waitUntil: 'domcontentloaded', timeout: 20000 });
+              await page.waitForSelector('#wdgMoyklass133029Formphone', { timeout: 15000 });
+            } finally {
+              await browser.close();
+            }
+          })().catch(e => { console.error(e.message); process.exit(1); });
+          "
+
+      - name: Notify Telegram on failure
+        if: failure()
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d text="🔴 Форма записи (MoyKlass) на /zapis не загрузилась%0Ahttps://gromche-choir.ru/zapis"
