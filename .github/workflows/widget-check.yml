@@ -29,7 +29,7 @@ jobs:
             const page = await browser.newPage();
             try {
               await page.goto('https://gromche-choir.ru/zapis', { waitUntil: 'domcontentloaded', timeout: 20000 });
-              await page.waitForSelector('#wdgMoyklass133029Formphone', { timeout: 15000 });
+              await page.waitForSelector('#this-selector-does-not-exist-test', { timeout: 5000 });
             } finally {
               await browser.close();
             }
