@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Button } from "@/components/ui/button";
+import { CtaButton } from "@/components/CtaButton";
 
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
@@ -58,14 +58,13 @@ const Events = () => {
             Вечер, где стираются границы между поколениями.
           </p>
 
-          <Button
-            variant="hero"
+          <CtaButton
             size="lg"
-            className="text-base px-10 py-6 rounded-full text-lg"
+            className="text-base px-10 py-6 text-lg"
             asChild>
 
             <a href="https://events.nethouse.ru/buy_tickets/157277" target="_blank" rel="noopener noreferrer">Купить билет</a>
-          </Button>
+          </CtaButton>
         </div>
       </section>
 
@@ -164,9 +163,9 @@ const Events = () => {
 
       {/* ════════ CTA ════════ */}
       <div className="text-center py-10 max-[480px]:py-6">
-        <Button variant="hero" size="lg" className="text-base px-10 py-6 rounded-full text-lg" asChild>
+        <CtaButton size="lg" className="text-base px-10 py-6 text-lg" asChild>
           <a href="https://events.nethouse.ru/buy_tickets/157277" target="_blank" rel="noopener noreferrer">Занять место на вечеринке</a>
-        </Button>
+        </CtaButton>
       </div>
 
       {/* ════════ ARCHIVE — video + masonry gallery ════════ */}
@@ -229,9 +228,9 @@ const Events = () => {
 
       {/* ════════ CTA ════════ */}
       <div className="text-center py-10 max-[480px]:py-6">
-        <Button variant="hero" size="lg" className="text-base px-10 py-6 rounded-full text-lg" asChild>
+        <CtaButton size="lg" className="text-base px-10 py-6 text-lg" asChild>
           <a href="https://events.nethouse.ru/buy_tickets/157277" target="_blank" rel="noopener noreferrer">Хочу на вечеринку!</a>
-        </Button>
+        </CtaButton>
       </div>
 
       {/* ════════ VENUE + PROGRAM ════════ */}
@@ -248,9 +247,9 @@ const Events = () => {
 
         <div className="container max-w-4xl mx-auto space-y-8 text-center">
           <ScrollReveal>
-            <Button variant="hero" size="lg" className="text-lg md:text-xl px-14 py-7 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300" asChild>
+            <CtaButton size="lg" className="text-lg md:text-xl px-14 py-7 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300" asChild>
               <a href="https://events.nethouse.ru/buy_tickets/157277" target="_blank" rel="noopener noreferrer">Купить билет</a>
-            </Button>
+            </CtaButton>
           </ScrollReveal>
 
           <ScrollReveal>

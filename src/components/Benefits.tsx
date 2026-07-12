@@ -35,7 +35,7 @@ export const Benefits = () => {
           {benefits.map((benefit, index) => (
             <div 
               key={index}
-              className="bg-card rounded-3xl max-[480px]:rounded-2xl p-6 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth animate-fade-in"
+              className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-warm border border-border/60 hover:shadow-xl transition-smooth animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <benefit.icon className="w-10 h-10 max-[480px]:w-8 max-[480px]:h-8 text-primary mb-3 max-[480px]:mb-2" />

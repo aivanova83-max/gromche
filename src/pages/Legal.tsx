@@ -43,7 +43,7 @@ const Legal = () => {
         </div>
       </nav>
 
-      <main className="container max-w-4xl mx-auto px-4 py-12 space-y-20" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
+      <main className="container max-w-4xl mx-auto px-4 py-12 space-y-20 font-serif">
         {/* Offer Section */}
         <section id="offer">
           <h1 className="text-3xl font-bold text-foreground mb-2 text-center">
