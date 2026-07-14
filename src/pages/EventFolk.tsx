@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Button } from "@/components/ui/button";
+import { CtaButton } from "@/components/CtaButton";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -36,7 +36,7 @@ const EventFolk = () => {
             Хоровые посиделки
           </p>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight" style={{ fontFamily: "Georgia, serif" }}>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight font-serif">
             Тонкая рябина
           </h1>
 
@@ -50,21 +50,20 @@ const EventFolk = () => {
             Ресторан «Калинка на Неглинке», Неглинная ул., 8/10
           </p>
 
-          <Button
-            variant="hero"
+          <CtaButton
             size="lg"
-            className="text-base px-10 py-6 rounded-full text-lg mt-2"
+            className="text-base px-10 py-6 text-lg mt-2"
             asChild
           >
             <a href={TICKET_URL} target="_blank" rel="noopener noreferrer">
               Купить билет
             </a>
-          </Button>
+          </CtaButton>
         </div>
       </section>
 
       {/* ════════ О ЧЁМ ЭТОТ ВЕЧЕР ════════ */}
-      <section className="py-20 max-[480px]:py-12 px-4 bg-warm-bg">
+      <section className="py-20 max-[480px]:py-12 px-4 bg-folk-cream">
         <div className="container max-w-3xl mx-auto">
           <ScrollReveal>
             <div className="text-center space-y-6">
@@ -73,7 +72,7 @@ const EventFolk = () => {
                   <div style={{ width: "120px", height: "80px", backgroundImage: "url('/bird.png')", backgroundSize: "190px 127px", backgroundPosition: "center center", backgroundRepeat: "no-repeat", transform: "rotate(-45deg)" }} />
                 </div>
               )}
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: "Georgia, serif" }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground font-serif">
                 О чём этот вечер
               </h2>
               <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-[480px]:text-base">
@@ -98,7 +97,7 @@ const EventFolk = () => {
       </div>
 
       {/* ════════ КАК ЭТО БУДЕТ ════════ */}
-      <section className="pt-6 pb-20 max-[480px]:py-12 px-4 bg-[#faf6f0]">
+      <section className="pt-6 pb-20 max-[480px]:py-12 px-4 bg-folk-cream">
         <div className="container max-w-2xl mx-auto space-y-10">
           <ScrollReveal>
             <div className="space-y-6">
@@ -107,10 +106,7 @@ const EventFolk = () => {
                   <div style={{ width: "180px", height: "90px", backgroundImage: "url('/vignette.png')", backgroundSize: "795px 529px", backgroundPosition: "center center", backgroundRepeat: "no-repeat" }} />
                 </div>
               )}
-              <h2
-                className="text-3xl md:text-4xl font-bold text-center"
-                style={{ fontFamily: "Georgia, serif", color: "#3a2a1a" }}
-              >
+              <h2 className="text-3xl md:text-4xl font-bold text-center font-serif text-folk-dark">
                 Как это будет
               </h2>
             </div>
@@ -125,12 +121,12 @@ const EventFolk = () => {
                       aria-hidden="true"
                       className="flex-shrink-0 w-2 h-2 rounded-full bg-primary"
                     />
-                    <span className="text-base md:text-lg text-[#3a2a1a]/85 leading-relaxed">
+                    <span className="text-base md:text-lg text-folk-dark/85 leading-relaxed">
                       {item}
                     </span>
                   </div>
                   {i < features.length - 1 && (
-                    <div className="h-px bg-[#e8ddd0]" />
+                    <div className="h-px bg-border" />
                   )}
                 </li>
               ))}
@@ -139,16 +135,15 @@ const EventFolk = () => {
 
           <ScrollReveal>
             <div className="text-center pt-2">
-              <Button
-                variant="hero"
+              <CtaButton
                 size="lg"
-                className="text-base px-10 py-6 rounded-full text-lg"
+                className="text-base px-10 py-6 text-lg"
                 asChild
               >
                 <a href={TICKET_URL} target="_blank" rel="noopener noreferrer">
                   Купить билет
                 </a>
-              </Button>
+              </CtaButton>
             </div>
           </ScrollReveal>
         </div>
@@ -162,7 +157,7 @@ const EventFolk = () => {
               <div className="flex justify-center" aria-hidden="true">
                 <div style={{ width: "128px", height: "128px", backgroundImage: "url('/flower.png')", backgroundSize: "380px 254px", backgroundPosition: "center 45%", backgroundRepeat: "no-repeat" }} />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center" style={{ fontFamily: "Georgia, serif" }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center font-serif">
                 История
               </h2>
               <p className="text-foreground/80 leading-relaxed max-[480px]:text-sm">
@@ -196,7 +191,7 @@ const EventFolk = () => {
               <div className="flex justify-center" aria-hidden="true">
                 <div style={{ width: "120px", height: "80px", backgroundImage: "url('/bird.png')", backgroundSize: "190px 127px", backgroundPosition: "center center", backgroundRepeat: "no-repeat", transform: "rotate(-45deg)" }} />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: "Georgia, serif" }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground font-serif">
                 Для кого
               </h2>
               <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-[480px]:text-base">
@@ -213,16 +208,15 @@ const EventFolk = () => {
 
           <ScrollReveal>
             <div className="text-center mt-10">
-              <Button
-                variant="hero"
+              <CtaButton
                 size="lg"
-                className="text-base px-10 py-6 rounded-full text-lg"
+                className="text-base px-10 py-6 text-lg"
                 asChild
               >
                 <a href={TICKET_URL} target="_blank" rel="noopener noreferrer">
                   Купить билет
                 </a>
-              </Button>
+              </CtaButton>
             </div>
           </ScrollReveal>
         </div>
@@ -236,7 +230,7 @@ const EventFolk = () => {
               <div className="flex justify-center" aria-hidden="true">
                 <div style={{ width: "180px", height: "90px", backgroundImage: "url('/vignette.png')", backgroundSize: "795px 529px", backgroundPosition: "center center", backgroundRepeat: "no-repeat" }} />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: "Georgia, serif" }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground font-serif">
                 Отзывы участниц
               </h2>
               <p className="text-foreground/70">С предыдущих мероприятий</p>
@@ -258,14 +252,14 @@ const EventFolk = () => {
       </section>
 
       {/* ════════ МЕСТО ════════ */}
-      <section className="pt-6 pb-20 max-[480px]:py-12 px-4 bg-warm-bg">
+      <section className="pt-6 pb-20 max-[480px]:py-12 px-4 bg-folk-cream">
         <div className="container max-w-3xl mx-auto">
           <ScrollReveal>
             <div className="space-y-6">
               <div className="flex justify-center" aria-hidden="true">
                 <div style={{ width: "120px", height: "80px", backgroundImage: "url('/bird.png')", backgroundSize: "190px 127px", backgroundPosition: "center center", backgroundRepeat: "no-repeat", transform: "rotate(-45deg)" }} />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center" style={{ fontFamily: "Georgia, serif" }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center font-serif">
                 Место
               </h2>
               <p className="text-xl font-semibold text-foreground text-center">
@@ -284,7 +278,7 @@ const EventFolk = () => {
                   href={MAP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-olive underline underline-offset-4 hover:text-olive/80 transition-colors font-medium"
+                  className="text-ochre underline underline-offset-4 hover:text-ochre/80 transition-colors font-medium"
                 >
                   Построить маршрут
                 </a>
@@ -380,21 +374,18 @@ const EventFolk = () => {
       <section className="py-20 max-[480px]:py-12 px-4">
         <div className="container max-w-3xl mx-auto space-y-8">
           <ScrollReveal>
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center" style={{ fontFamily: "Georgia, serif" }}>
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center font-serif">
               Детали
             </h2>
           </ScrollReveal>
 
           <ScrollReveal delay={0.08}>
             {/* Сетка плиток */}
-            <div
-              className="rounded-xl overflow-hidden shadow-warm"
-              style={{ border: "1px solid #e8ddd0" }}
-            >
+            <div className="rounded-xl overflow-hidden shadow-warm border border-border">
               {/* Верхний ряд: две плитки по 50% */}
-              <div className="grid grid-cols-2" style={{ borderBottom: "1px solid #e8ddd0" }}>
-                <div className="bg-white p-5 md:p-6" style={{ borderRight: "1px solid #e8ddd0" }}>
-                  <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#a07850" }}>
+              <div className="grid grid-cols-2 border-b border-border">
+                <div className="bg-white p-5 md:p-6 border-r border-border">
+                  <p className="text-xs font-semibold uppercase tracking-widest mb-1 text-ochre">
                     Дата
                   </p>
                   <p className="text-foreground text-[14px] md:text-lg">
@@ -402,7 +393,7 @@ const EventFolk = () => {
                   </p>
                 </div>
                 <div className="bg-white p-5 md:p-6">
-                  <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#a07850" }}>
+                  <p className="text-xs font-semibold uppercase tracking-widest mb-1 text-ochre">
                     Время
                   </p>
                   <p className="text-foreground text-[14px] md:text-lg">
@@ -413,7 +404,7 @@ const EventFolk = () => {
 
               {/* Место: полная ширина */}
               <div className="bg-white p-5 md:p-6 border-b border-border">
-                <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#a07850" }}>
+                <p className="text-xs font-semibold uppercase tracking-widest mb-1 text-ochre">
                   Место
                 </p>
                 <p className="text-foreground text-[14px] md:text-lg leading-snug mb-2">
@@ -423,8 +414,7 @@ const EventFolk = () => {
                   href={MAP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm underline underline-offset-4 hover:opacity-70 transition-opacity"
-                  style={{ color: "#a07850" }}
+                  className="text-sm underline underline-offset-4 hover:opacity-70 transition-opacity text-ochre"
                 >
                   Построить маршрут
                 </a>
@@ -432,7 +422,7 @@ const EventFolk = () => {
 
               {/* Стоимость: полная ширина */}
               <div className="bg-white p-5 md:p-6">
-                <p className="text-xs font-semibold uppercase tracking-widest mb-2 text-[#c17f4a]">
+                <p className="text-xs font-semibold uppercase tracking-widest mb-2 text-ochre">
                   Стоимость
                 </p>
                 <p className="text-foreground text-[14px] md:text-lg leading-snug">
@@ -454,8 +444,7 @@ const EventFolk = () => {
                 href={TICKET_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-12 py-4 text-white font-semibold text-lg hover:opacity-90 transition-opacity"
-                style={{ backgroundColor: "#3a2a1a", borderRadius: "40px" }}
+                className="inline-block px-12 py-4 text-white font-semibold text-lg hover:opacity-90 transition-opacity rounded-full bg-folk-dark"
               >
                 Купить билет
               </a>
@@ -465,14 +454,14 @@ const EventFolk = () => {
       </section>
 
       {/* ════════ FAQ ════════ */}
-      <section className="py-20 max-[480px]:py-12 px-4 bg-warm-bg">
+      <section className="py-20 max-[480px]:py-12 px-4 bg-folk-cream">
         <div className="container max-w-2xl mx-auto space-y-8">
           <ScrollReveal>
             <div className="text-center space-y-4">
               <div className="flex justify-center" aria-hidden="true">
                 <div style={{ width: "120px", height: "80px", backgroundImage: "url('/bird.png')", backgroundSize: "190px 127px", backgroundPosition: "center center", backgroundRepeat: "no-repeat", transform: "rotate(-45deg)" }} />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground" style={{ fontFamily: "Georgia, serif" }}>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground font-serif">
                 Вопросы и ответы
               </h2>
             </div>
@@ -486,8 +475,7 @@ const EventFolk = () => {
                     <span>{q}</span>
                     <span
                       aria-hidden="true"
-                      className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm transition-transform duration-300 group-open:rotate-45"
-                      style={{ backgroundColor: "#e8ddd0", color: "#3a2a1a" }}
+                      className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-sm transition-transform duration-300 group-open:rotate-45 bg-border text-folk-dark"
                     >
                       +
                     </span>
@@ -496,7 +484,7 @@ const EventFolk = () => {
                     {link ? (
                       <>
                         {a.substring(0, a.indexOf(link.text))}
-                        <a href={link.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:opacity-70 transition-opacity" style={{ color: "#a07850" }}>
+                        <a href={link.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:opacity-70 transition-opacity text-ochre">
                           {link.text}
                         </a>
                         {a.substring(a.indexOf(link.text) + link.text.length)}
@@ -519,32 +507,25 @@ const EventFolk = () => {
           className="absolute inset-0 w-full h-full object-cover"
           style={{ objectPosition: "bottom center" }}
         />
-        <div
-          className="absolute inset-0"
-          style={{ backgroundColor: "rgba(40, 25, 10, 0.7)" }}
-        />
+        <div className="absolute inset-0 bg-folk-dark/70" />
         <div className="relative z-10 text-center px-4 space-y-6">
           <ScrollReveal>
-            <p
-              className="text-white"
-              style={{ fontFamily: "Georgia, serif", fontSize: "24px", lineHeight: "1.5", marginBottom: "20px" }}
-            >
+            <p className="text-white font-serif text-2xl leading-normal mb-5">
               Этот вечер будет особенным.
               <br />
               Разделите его с нами.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
-            <Button
-              variant="hero"
+            <CtaButton
               size="lg"
-              className="text-base px-10 py-6 rounded-full text-lg"
+              className="text-base px-10 py-6 text-lg"
               asChild
             >
               <a href={TICKET_URL} target="_blank" rel="noopener noreferrer">
                 Я иду!
               </a>
-            </Button>
+            </CtaButton>
           </ScrollReveal>
         </div>
       </section>

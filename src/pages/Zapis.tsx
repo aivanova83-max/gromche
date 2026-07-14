@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { CtaButton } from "@/components/CtaButton";
 import { ArrowLeft } from "lucide-react";
 
 const WIDGET_KEY = "01K9BrWJck7O6TZEZsOjLHe61iGjhIOYkjgp";
@@ -34,10 +35,9 @@ const Zapis = () => {
       </p>
 
       <div className="flex flex-col gap-4 items-center">
-        <Button
-          variant="hero"
+        <CtaButton
           size="lg"
-          className="rounded-full text-base px-8"
+          className="text-base px-8"
           onClick={() => {
             const w = (window as any).WdgMoyklass;
             if (w && w[WIDGET_KEY]) {
@@ -46,7 +46,7 @@ const Zapis = () => {
           }}
         >
           🎤 Открыть форму записи
-        </Button>
+        </CtaButton>
 
         <Link to="/">
           <Button variant="outline" size="lg" className="gap-2">

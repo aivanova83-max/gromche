@@ -30,6 +30,6 @@ export const audienceItems = [
   { icon: Flame, text: "Тем, кто хочет сбросить напряжение и хорошенько проораться" },
 ];
 
-export const TELEGRAM_LINK = "http://t.me/gromche_choir";
-export const TELEGRAM_CHANNEL = "https://t.me/gromche_choir";
+export const TELEGRAM_LINK = "https://telegram.me/gromche_choir";
+export const TELEGRAM_CHANNEL = "https://telegram.me/gromche_choir";
 export const INSTAGRAM_LINK = "https://www.instagram.com/gromche_choir?igsh=MWhoczhqc3lxajA5aA==";

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Button } from "@/components/ui/button";
+import { CtaButton } from "@/components/CtaButton";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Send } from "lucide-react";
 import { featureCards, testimonials, audienceItems, TELEGRAM_LINK, TELEGRAM_CHANNEL, INSTAGRAM_LINK } from "@/data/eventsLanding";
@@ -63,16 +63,15 @@ const EventsLanding = () => {
             Живая музыка, любимые песни, сотня человек в&nbsp;унисон.
           </p>
 
-          <Button
-            variant="hero"
+          <CtaButton
             size="lg"
-            className="text-base px-10 py-6 rounded-full text-lg"
+            className="text-base px-10 py-6 text-lg"
             asChild
           >
             <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
               Следить за анонсами
             </a>
-          </Button>
+          </CtaButton>
         </div>
 
       </section>
@@ -159,7 +158,7 @@ const EventsLanding = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   О новой встрече расскажем первым делом в{" "}
                   <a
-                    href="https://t.me/gromche_choir"
+                    href="https://telegram.me/gromche_choir"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary underline underline-offset-2"
@@ -403,16 +402,15 @@ const EventsLanding = () => {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <Button
-              variant="hero"
+            <CtaButton
               size="lg"
-              className="text-base px-10 py-6 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+              className="text-base px-10 py-6 text-lg font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
               asChild
             >
               <a href={TELEGRAM_CHANNEL} target="_blank" rel="noopener noreferrer">
                 Хочу в хор!
               </a>
-            </Button>
+            </CtaButton>
           </ScrollReveal>
         </div>
       </section>
