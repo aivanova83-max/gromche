@@ -158,7 +158,7 @@ const EventsLanding = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   О новой встрече расскажем первым делом в{" "}
                   <a
-                    href="https://t.me/gromche_choir"
+                    href="https://telegram.me/gromche_choir"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary underline underline-offset-2"

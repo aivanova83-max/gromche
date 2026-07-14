@@ -50,7 +50,7 @@ export const Join = () => {
               className="text-base max-[480px]:text-sm py-5 max-[480px]:py-4 w-full"
               asChild
             >
-              <a href="https://t.me/gromche_choir" target="_blank" rel="noopener noreferrer">
+              <a href="https://telegram.me/gromche_choir" target="_blank" rel="noopener noreferrer">
                 📱 Telegram-канал хора
               </a>
             </CtaButton>

@@ -82,7 +82,7 @@ const SongsRunit26 = () => {
             >
               <img src={logoGromche} alt="Громче — телеграм-канал" className="h-[30px] w-auto" />
             </a>
-            <span className="text-[9px] font-semibold text-folk-dark/45 pl-1">t.me/gromche_choir</span>
+            <span className="text-[9px] font-semibold text-folk-dark/45 pl-1">telegram.me/gromche_choir</span>
           </div>
           <div className="flex flex-col items-end gap-0.5">
             <span className="text-[9px] font-semibold tracking-[0.08em] uppercase text-folk-dark/45">партнёр</span>
@@ -183,7 +183,7 @@ const SongsRunit26 = () => {
                 rel="noopener noreferrer"
                 className="text-ochre underline hover:text-ochre/80 transition-colors"
               >
-                t.me/gromche_choir
+                telegram.me/gromche_choir
               </a>
             </p>
           </div>

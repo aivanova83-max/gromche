@@ -18,7 +18,7 @@ const faqItems: { q: string; a: ReactNode }[] = [
   },
   {
     q: "Я буду знать репертуар заранее?",
-    a: <>Да. Мы выложим плейлист в наш <a href="https://t.me/gromche_choir" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors">телеграм-канал</a> и дополнительно отправим его всем, кто купил билет.</>,
+    a: <>Да. Мы выложим плейлист в наш <a href="https://telegram.me/gromche_choir" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors">телеграм-канал</a> и дополнительно отправим его всем, кто купил билет.</>,
   },
   {
     q: "Я не успею выучить столько слов!",
