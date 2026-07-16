@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu } from "lucide-react";
+import logoGromche from "@/assets/logo-gromche-header.png";
 import { navItems } from "@/data/nav";
 import { Button } from "@/components/ui/button";
 import {
@@ -23,9 +24,9 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/50">
       <div className="container max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-        <a href="/" className="inline-block">
-
-        </a>
+        <Link to="/" className="inline-block shrink-0">
+          <img src={logoGromche} alt="Хор «Громче»" className="h-10 w-auto" />
+        </Link>
 
         <nav className="max-md:hidden flex items-center gap-6">
           {navItems.map((item) =>
