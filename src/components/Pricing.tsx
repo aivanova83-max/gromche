@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Button } from "@/components/ui/button";
+import { CtaButton } from "@/components/CtaButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { branchData, BranchKey, getInitialBranch } from "@/data/pricing";
 
@@ -72,7 +72,7 @@ export const Pricing = () => {
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-[480px]:gap-4 mb-8 max-[480px]:mb-6">
                   {/* Абонементы */}
-                  <div className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth">
+                  <div className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-warm border border-border/60 hover:shadow-xl transition-smooth">
                     <div className="flex items-center gap-2 mb-5 max-[480px]:mb-4">
                       <span className="text-2xl max-[480px]:text-xl">💳</span>
                       <h3 className="text-xl max-[480px]:text-lg font-semibold text-foreground">
@@ -106,7 +106,7 @@ export const Pricing = () => {
                   </div>
 
                   {/* Концерты */}
-                  <div className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth">
+                  <div className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-warm border border-border/60 hover:shadow-xl transition-smooth">
                     <div className="flex items-center gap-2 mb-5 max-[480px]:mb-4">
                       <span className="text-2xl max-[480px]:text-xl">🎉</span>
                       <h3 className="text-xl max-[480px]:text-lg font-semibold text-foreground">
@@ -125,7 +125,7 @@ export const Pricing = () => {
                   </div>
 
                   {/* Расписание */}
-                  <div className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth">
+                  <div className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-warm border border-border/60 hover:shadow-xl transition-smooth">
                     <div className="flex items-center gap-2 mb-5 max-[480px]:mb-4">
                       <span className="text-2xl max-[480px]:text-xl">📅</span>
                       <h3 className="text-xl max-[480px]:text-lg font-semibold text-foreground">
@@ -154,7 +154,7 @@ export const Pricing = () => {
                   </div>
 
                   {/* Место проведения */}
-                  <div className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-soft hover:shadow-xl transition-smooth">
+                  <div className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-warm border border-border/60 hover:shadow-xl transition-smooth">
                     <div className="flex items-center gap-2 mb-5 max-[480px]:mb-4">
                       <span className="text-2xl max-[480px]:text-xl">📍</span>
                       <h3 className="text-xl max-[480px]:text-lg font-semibold text-foreground">
@@ -182,16 +182,15 @@ export const Pricing = () => {
         </Tabs>
 
         <div className="text-center">
-           <Button
-              variant="hero"
+           <CtaButton
               size="lg"
-              className="text-base max-[480px]:text-sm px-10 max-[480px]:px-8 py-4 max-[480px]:py-3.5 rounded-full w-full max-w-lg max-[480px]:max-w-full font-semibold"
+              className="text-base max-[480px]:text-sm px-10 max-[480px]:px-8 py-4 max-[480px]:py-3.5 w-full max-w-lg max-[480px]:max-w-full font-semibold"
               asChild
             >
               <a ref={signupBtnRef} href="#" onClick={(e) => e.preventDefault()}>
                 Записаться на занятие
               </a>
-            </Button>
+            </CtaButton>
           <p className="text-lg max-[480px]:text-base font-medium text-primary mt-4 max-[480px]:mt-3">
             Количество мест ограничено! Успейте записаться!
           </p>
