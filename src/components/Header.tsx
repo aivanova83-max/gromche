@@ -1,9 +1,22 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { ChevronDown, Menu } from "lucide-react";
 import logoGromche from "@/assets/logo-gromche-header.png";
-import { navItems } from "@/data/nav";
+import { navGroups, zapisItem } from "@/data/nav";
+import { CtaButton } from "@/components/CtaButton";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import {
   Sheet,
   SheetContent,
@@ -14,12 +27,11 @@ import {
 export const Header = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     setOpen(false);
   }, [location.pathname, location.hash]);
-
-  const isRouteLink = (href: string) => !href.includes("#");
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/50">
@@ -28,30 +40,28 @@ export const Header = () => {
           <img src={logoGromche} alt="Хор «Громче»" className="h-10 w-auto" />
         </Link>
 
-        <nav className="max-md:hidden flex items-center gap-6">
-          {navItems.map((item) =>
-            isRouteLink(item.href) ? (
-              <NavLink
-                key={item.href}
-                to={item.href}
-                className={({ isActive }) =>
-                  `text-sm font-medium transition-colors hover:text-primary ${
-                    isActive ? "text-primary" : "text-foreground"
-                  }`
-                }
-              >
-                {item.label}
-              </NavLink>
-            ) : (
-              <Link
-                key={item.href}
-                to={item.href}
-                className="text-sm font-medium text-foreground transition-colors hover:text-primary"
-              >
-                {item.label}
-              </Link>
-            )
-          )}
+        <nav className="max-md:hidden flex items-center gap-2">
+          {navGroups.map((group) => (
+            <DropdownMenu key={group.label}>
+              <DropdownMenuTrigger className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-foreground transition-colors hover:text-primary focus:outline-none">
+                {group.label}
+                <ChevronDown className="h-3.5 w-3.5" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                {group.items.map((item) => (
+                  <DropdownMenuItem
+                    key={item.href}
+                    onSelect={() => navigate(item.href)}
+                  >
+                    {item.label}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          ))}
+          <CtaButton size="sm" className="ml-2" asChild>
+            <Link to={zapisItem.href}>{zapisItem.label}</Link>
+          </CtaButton>
         </nav>
 
         <Sheet open={open} onOpenChange={setOpen}>
@@ -62,31 +72,38 @@ export const Header = () => {
           </SheetTrigger>
           <SheetContent side="right">
             <SheetTitle>Меню</SheetTitle>
-            <nav className="mt-6 flex flex-col gap-4">
-              {navItems.map((item) =>
-                isRouteLink(item.href) ? (
-                  <NavLink
-                    key={item.href}
-                    to={item.href}
-                    className={({ isActive }) =>
-                      `text-base font-medium transition-colors hover:text-primary ${
-                        isActive ? "text-primary" : "text-foreground"
-                      }`
-                    }
-                  >
-                    {item.label}
-                  </NavLink>
-                ) : (
-                  <Link
-                    key={item.href}
-                    to={item.href}
-                    className="text-base font-medium text-foreground transition-colors hover:text-primary"
-                  >
-                    {item.label}
-                  </Link>
-                )
-              )}
-            </nav>
+            <Accordion type="multiple" className="mt-6">
+              {navGroups.map((group) => (
+                <AccordionItem key={group.label} value={group.label}>
+                  <AccordionTrigger className="text-base font-medium">
+                    {group.label}
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="flex flex-col gap-4 pl-2">
+                      {group.items.map((item) => (
+                        <NavLink
+                          key={item.href}
+                          to={item.href}
+                          className={({ isActive }) =>
+                            `text-base transition-colors hover:text-primary ${
+                              isActive ? "text-primary" : "text-foreground"
+                            }`
+                          }
+                        >
+                          {item.label}
+                        </NavLink>
+                      ))}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+            <Link
+              to={zapisItem.href}
+              className="block mt-4 text-base font-medium text-foreground transition-colors hover:text-primary"
+            >
+              {zapisItem.label}
+            </Link>
           </SheetContent>
         </Sheet>
       </div>
