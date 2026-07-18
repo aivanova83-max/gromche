@@ -1,15 +1,29 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CtaButton } from "@/components/CtaButton";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { Send } from "lucide-react";
+import { Send, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 import { featureCards, testimonials, audienceItems, TELEGRAM_LINK, TELEGRAM_CHANNEL, INSTAGRAM_LINK } from "@/data/eventsLanding";
 
 const EventsLanding = () => {
   const videoMarchRef = useRef<HTMLVideoElement>(null);
   const videoDecemberRef = useRef<HTMLVideoElement>(null);
   const videoFolkRef = useRef<HTMLVideoElement>(null);
+  const [testimonialApi, setTestimonialApi] = useState<CarouselApi>();
+  const [testimonialIdx, setTestimonialIdx] = useState(0);
+
+  useEffect(() => {
+    if (!testimonialApi) return;
+    setTestimonialIdx(testimonialApi.selectedScrollSnap());
+    testimonialApi.on("select", () => setTestimonialIdx(testimonialApi.selectedScrollSnap()));
+  }, [testimonialApi]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -293,17 +307,55 @@ const EventsLanding = () => {
             </h2>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-5">
-            {testimonials.map((text, i) => (
-              <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="bg-card rounded-2xl p-6 border border-border shadow-warm hover:shadow-soft transition-shadow duration-300 h-full">
-                  <p className="text-foreground/80 leading-relaxed text-[15px] italic">
-                    «{text}»
-                  </p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
+          <ScrollReveal>
+            <Carousel setApi={setTestimonialApi} opts={{ align: "start", loop: true }} className="mx-auto max-w-4xl">
+              <CarouselContent>
+                {testimonials.map((text, i) => (
+                  <CarouselItem key={i} className="md:basis-1/2">
+                    <div className="bg-card rounded-2xl p-6 border border-border shadow-warm hover:shadow-soft transition-shadow duration-300 h-full">
+                      <p className="text-foreground/80 leading-relaxed text-[15px] italic">
+                        «{text}»
+                      </p>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+
+            <div className="flex items-center justify-center gap-4 mt-6">
+              <button
+                type="button"
+                aria-label="Предыдущий отзыв"
+                onClick={() => testimonialApi?.scrollPrev()}
+                className="flex items-center justify-center w-9 h-9 rounded-full bg-card border border-primary/30 text-primary shadow-warm hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+
+              <div className="flex gap-2">
+                {testimonials.map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    aria-label={`Перейти к отзыву ${i + 1}`}
+                    onClick={() => testimonialApi?.scrollTo(i)}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      i === testimonialIdx ? "w-6 bg-primary" : "w-2 bg-primary/30"
+                    }`}
+                  />
+                ))}
+              </div>
+
+              <button
+                type="button"
+                aria-label="Следующий отзыв"
+                onClick={() => testimonialApi?.scrollNext()}
+                className="flex items-center justify-center w-9 h-9 rounded-full bg-card border border-primary/30 text-primary shadow-warm hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+          </ScrollReveal>
 
           <ScrollReveal>
             <p className="text-center text-foreground/70 text-lg max-[480px]:text-base">
