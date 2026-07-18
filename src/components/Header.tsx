@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ChevronDown, Menu } from "lucide-react";
 import logoGromche from "@/assets/logo-gromche-header.png";
 import { navGroups, zapisItem } from "@/data/nav";
@@ -52,6 +52,7 @@ export const Header = () => {
                   <DropdownMenuItem
                     key={item.href}
                     onSelect={() => navigate(item.href)}
+                    className="cursor-pointer text-foreground focus:bg-transparent focus:text-primary"
                   >
                     {item.label}
                   </DropdownMenuItem>
@@ -81,17 +82,13 @@ export const Header = () => {
                   <AccordionContent>
                     <div className="flex flex-col gap-4 pl-2">
                       {group.items.map((item) => (
-                        <NavLink
+                        <Link
                           key={item.href}
                           to={item.href}
-                          className={({ isActive }) =>
-                            `text-base transition-colors hover:text-primary ${
-                              isActive ? "text-primary" : "text-foreground"
-                            }`
-                          }
+                          className="text-base text-foreground transition-colors hover:text-primary"
                         >
                           {item.label}
-                        </NavLink>
+                        </Link>
                       ))}
                     </div>
                   </AccordionContent>
