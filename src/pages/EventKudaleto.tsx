@@ -254,7 +254,12 @@ const EventKudaleto = () => {
                   className="flex-shrink-0 w-[65vw] snap-start rounded-2xl overflow-hidden aspect-[4/3] border border-border shadow-warm cursor-pointer"
                   onClick={() => setLightboxIdx(i)}
                 >
-                  <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover" loading="lazy" />
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className={`w-full h-full object-cover ${photo.thumbnailPosition ?? ""}`}
+                    loading="lazy"
+                  />
                 </div>
               ))}
             </div>
@@ -267,7 +272,12 @@ const EventKudaleto = () => {
                   className="rounded-2xl overflow-hidden aspect-[4/3] border border-border shadow-warm cursor-pointer hover:shadow-soft hover:scale-[1.02] transition-all duration-300"
                   onClick={() => setLightboxIdx(i)}
                 >
-                  <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover" loading="lazy" />
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className={`w-full h-full object-cover ${photo.thumbnailPosition ?? ""}`}
+                    loading="lazy"
+                  />
                 </div>
               ))}
             </div>
