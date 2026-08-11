@@ -74,7 +74,7 @@ const EventKudaleto = () => {
           <ScrollReveal>
             <div className="text-center space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground font-serif">
-                О чём этот вечер
+                Что вас ждёт
               </h2>
               <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-[480px]:text-base">
                 Лето уже сидит на чемоданах, а нам совсем не хочется его
