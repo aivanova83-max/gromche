@@ -37,7 +37,7 @@ const EventKudaleto = () => {
         <img
           src="/images/summer-hero.jpg"
           alt=""
-          className="absolute inset-0 w-full h-full object-cover blur-md scale-110"
+          className="absolute inset-0 w-full h-full object-cover blur-sm scale-105"
         />
         <div className="absolute inset-0 bg-foreground/50" />
 
