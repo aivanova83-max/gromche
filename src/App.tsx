@@ -9,6 +9,7 @@ import Legal from "./pages/Legal";
 import Events from "./pages/Events";
 import EventsLanding from "./pages/EventsLanding";
 import EventFolk from "./pages/EventFolk";
+import EventKudaleto from "./pages/EventKudaleto";
 import Zapis from "./pages/Zapis";
 import Songs from "./pages/Songs";
 import SongsRunit26 from "./pages/SongsRunit26";
@@ -47,6 +48,7 @@ const App = () => (
           <Route path="/events" element={<EventsLanding />} />
           <Route path="/events/mother" element={<Events />} />
           <Route path="/events/folk" element={<EventFolk />} />
+          <Route path="/events/kudaleto" element={<EventKudaleto />} />
           <Route path="/zapis" element={<Zapis />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/songs/folk" element={<Songs />} />
