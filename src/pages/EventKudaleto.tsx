@@ -413,7 +413,7 @@ const EventKudaleto = () => {
             <p className="text-white font-serif text-2xl leading-normal mb-5">
               Лето заканчивается.
               <br />
-              Проведите его с нами.
+              Проводите его вместе с нами.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
