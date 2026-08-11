@@ -379,7 +379,7 @@ const EventKudaleto = () => {
                 <p className="text-foreground text-[14px] md:text-lg leading-snug">
                   с 19 августа — 6 500 руб.
                 </p>
-                <p className="text-foreground/60 text-[13px] md:text-sm mt-2">
+                <p className="text-accent font-semibold text-[15px] md:text-lg mt-2">
                   Еда и безалкогольные напитки входят в стоимость
                 </p>
               </div>
