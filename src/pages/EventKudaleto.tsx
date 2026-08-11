@@ -35,11 +35,11 @@ const EventKudaleto = () => {
       {/* ════════ HERO ════════ */}
       <section className="relative min-h-[500px] md:min-h-[100svh] flex items-center justify-center overflow-hidden">
         <img
-          src="/kudaleto-hero.jpg"
-          alt="Хоровое застолье — Куда уходит лето"
-          className="absolute inset-0 w-full h-full object-cover blur-sm scale-105"
+          src="/images/summer-hero.jpg"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover blur-md scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/50" />
+        <div className="absolute inset-0 bg-foreground/50" />
 
         <div className="relative z-10 text-center px-4 py-24 max-w-3xl mx-auto space-y-6">
           <p className="text-sm md:text-base uppercase tracking-[0.25em] text-white/70 font-medium">
@@ -391,7 +391,7 @@ const EventKudaleto = () => {
       {/* ════════ ФИНАЛЬНЫЙ CTA ════════ */}
       <section className="relative flex items-center justify-center overflow-hidden pb-24" style={{ height: "420px" }}>
         <img
-          src="/kudaleto-hero.jpg"
+          src="/images/summer-hero.jpg"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover"
