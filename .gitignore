@@ -31,3 +31,4 @@ dist-ssr
 *.jpg
 *.jpeg
 !src/assets/**
+!public/**
