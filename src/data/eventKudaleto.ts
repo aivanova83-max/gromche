@@ -18,7 +18,7 @@ export const kudaletoTestimonials = [
 ];
 
 export const terracePhotos = [
-  { src: "/kudaleto-1.jpg", alt: "Веранда ресторана Встреча друзей — фото 1" },
-  { src: "/kudaleto-2.jpg", alt: "Веранда ресторана Встреча друзей — фото 2" },
-  { src: "/kudaleto-3.jpg", alt: "Веранда ресторана Встреча друзей — фото 3" },
+  { src: "/images/friends-1.webp", alt: "Веранда ресторана Встреча друзей — фото 1" },
+  { src: "/images/friends-2.jpg", alt: "Веранда ресторана Встреча друзей — фото 2" },
+  { src: "/images/friends-3.jpg", alt: "Веранда ресторана Встреча друзей — фото 3" },
 ];
