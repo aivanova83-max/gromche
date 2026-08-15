@@ -55,7 +55,7 @@ const EventKudaleto = () => {
           </p>
 
           <p className="text-sm md:text-base text-white/65 tracking-wide">
-            23 августа · 12:00–14:30
+            23 августа · 12:00–15:00
             <br />
             Ресторан «Встреча друзей», ул. Косыгина 17к2
           </p>
@@ -349,7 +349,7 @@ const EventKudaleto = () => {
                   <p className="text-xs font-semibold uppercase tracking-widest mb-1 text-accent">
                     Время
                   </p>
-                  <p className="text-foreground text-[14px] md:text-lg">12:00 — 14:30</p>
+                  <p className="text-foreground text-[14px] md:text-lg">12:00 — 15:00</p>
                 </div>
               </div>
 
