@@ -88,6 +88,35 @@ const EventsLanding = () => {
           </CtaButton>
         </div>
 
+        {/* Бегущая строка */}
+        <style>{`
+          @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+        `}</style>
+        <a
+          href="/events/kudaleto"
+          className="absolute bottom-0 left-0 right-0 z-20 bg-white/15 backdrop-blur-sm border-y border-white/25 overflow-hidden whitespace-nowrap block"
+        >
+          <div
+            className="inline-block"
+            style={{ animation: "ticker 20s linear infinite" }}
+          >
+            <span className="inline-block px-8 text-sm font-medium text-white">
+              23 августа, 12:00 — хоровое застолье «Куда уходит лето»
+            </span>
+            <span className="inline-block px-4 text-sm font-medium text-white/50">✦</span>
+            <span className="inline-block px-8 text-sm font-medium text-white">
+              23 августа, 12:00 — хоровое застолье «Куда уходит лето»
+            </span>
+            <span className="inline-block px-4 text-sm font-medium text-white/50">✦</span>
+            <span className="inline-block px-8 text-sm font-medium text-white">
+              23 августа, 12:00 — хоровое застолье «Куда уходит лето»
+            </span>
+            <span className="inline-block px-4 text-sm font-medium text-white/50">✦</span>
+          </div>
+        </a>
       </section>
 
       {/* ════════ 2. CONCEPT ════════ */}
@@ -167,21 +196,19 @@ const EventsLanding = () => {
               Ближайшее
             </p>
             <ScrollReveal>
-              <div className="rounded-2xl border border-primary/30 bg-primary/10 p-6 space-y-2 shadow-warm">
-                <p className="text-base font-semibold text-foreground">Тссс, готовим сюрприз</p>
+              <a
+                href="/events/kudaleto"
+                className="block rounded-2xl border border-primary/30 bg-primary/10 p-6 space-y-2 shadow-warm hover:shadow-soft transition-shadow duration-300"
+              >
+                <p className="text-base font-semibold text-foreground">Хоровое застолье «Куда уходит лето»</p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  О новой встрече расскажем первым делом в{" "}
-                  <a
-                    href="https://telegram.me/gromche_choir"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary underline underline-offset-2"
-                  >
-                    телеграме
-                  </a>
-                  {" "}— подпишитесь, чтобы узнать раньше всех
+                  Провожаем лето за длинным столом на веранде ресторана и поём песни из старых фильмов
                 </p>
-              </div>
+                <p className="text-sm text-foreground/80">
+                  23 августа, 12:00, ресторан «Встреча друзей», м. Воробьёвы горы
+                </p>
+                <span className="inline-block text-sm font-medium text-primary pt-1">Подробности и билеты →</span>
+              </a>
             </ScrollReveal>
           </div>
 
