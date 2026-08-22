@@ -82,7 +82,7 @@ const SongsFilms26 = () => {
             >
               <img src={logoGromche} alt="Громче — телеграм-канал" className="h-[30px] w-auto" />
             </a>
-            <span className="text-[9px] font-semibold text-folk-dark/45 pl-1">telegram.me/gromche_choir</span>
+            <span className="text-[9px] font-semibold text-folk-dark/45 pl-1">t.me/gromche_choir</span>
           </div>
         </div>
 
@@ -143,6 +143,11 @@ const SongsFilms26 = () => {
 
         {/* Lyrics */}
         <main className="flex-1 px-5 py-8 overflow-y-auto w-full">
+          <div className="text-center mb-6">
+            <h1 className="font-serif text-2xl font-bold text-folk-dark">Куда уходит лето</h1>
+            <p className="text-sm text-ochre mt-1">Хоровое застолье 23 августа</p>
+          </div>
+
           <div className="bg-ochre/10 border border-ochre/20 rounded-2xl px-4 py-3 mb-8">
             <p className="text-sm text-folk-dark/80 text-center">
               Пой вместе с нами — здесь все слова, которые нам сегодня понадобятся
@@ -179,7 +184,7 @@ const SongsFilms26 = () => {
                 rel="noopener noreferrer"
                 className="text-ochre underline hover:text-ochre/80 transition-colors"
               >
-                telegram.me/gromche_choir
+                t.me/gromche_choir
               </a>
             </p>
           </div>
