@@ -72,17 +72,22 @@ const SongsFilms26 = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-between gap-3 mt-[14px] pt-3 border-t border-ochre/[0.18]">
-          <div className="flex flex-col gap-1">
+        <div className="mt-[14px] pt-3 border-t border-ochre/[0.18]">
+          <div className="bg-logo-chip rounded-[14px] px-3.5 py-2.5 shadow-chip inline-flex items-center gap-3">
             <a
               href={TELEGRAM_CHANNEL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-logo-chip rounded-[10px] px-3.5 py-1.5 inline-flex items-center shadow-chip hover:opacity-90 transition-opacity"
+              className="flex flex-col items-start gap-0.5 shrink-0 hover:opacity-90 transition-opacity"
             >
-              <img src={logoGromche} alt="Громче — телеграм-канал" className="h-[30px] w-auto" />
+              <img src={logoGromche} alt="Громче — телеграм-канал" className="h-6 w-auto" />
+              <span className="text-[9px] font-semibold text-folk-dark/45">t.me/gromche_choir</span>
             </a>
-            <span className="text-[9px] font-semibold text-folk-dark/45 pl-1">t.me/gromche_choir</span>
+            <div className="w-px self-stretch bg-ochre/20" />
+            <div className="flex flex-col">
+              <h1 className="font-serif text-base font-bold text-folk-dark leading-tight">Куда уходит лето</h1>
+              <p className="text-xs text-ochre leading-tight mt-0.5">Хоровое застолье 23 августа</p>
+            </div>
           </div>
         </div>
 
@@ -143,11 +148,6 @@ const SongsFilms26 = () => {
 
         {/* Lyrics */}
         <main className="flex-1 px-5 py-8 overflow-y-auto w-full">
-          <div className="text-center mb-6">
-            <h1 className="font-serif text-2xl font-bold text-folk-dark">Куда уходит лето</h1>
-            <p className="text-sm text-ochre mt-1">Хоровое застолье 23 августа</p>
-          </div>
-
           <div className="bg-ochre/10 border border-ochre/20 rounded-2xl px-4 py-3 mb-8">
             <p className="text-sm text-folk-dark/80 text-center">
               Пой вместе с нами — здесь все слова, которые нам сегодня понадобятся
