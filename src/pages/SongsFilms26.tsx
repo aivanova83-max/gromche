@@ -10,6 +10,12 @@ const trackSongChange = (title: string) => {
   }
 };
 
+// Ручные исключения для порядка «следующая песня» (например, чтобы
+// пропустить дубль-версию песни в цепочке «следующая»).
+const NEXT_SONG_OVERRIDES: Record<string, string | null> = {
+  "14": "13", // Can You Feel the Love Tonight -> Мохнатый шмель (минуя «Кэн ю фил»)
+};
+
 const SongsFilms26 = () => {
   const [selectedId, setSelectedId] = useState(songsFilms26[0].id);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -31,7 +37,9 @@ const SongsFilms26 = () => {
 
   const selected = songsFilms26.find((s) => s.id === selectedId) ?? songsFilms26[0];
   const selectedIndex = songsFilms26.findIndex((s) => s.id === selectedId);
-  const nextSong = songsFilms26[(selectedIndex + 1) % songsFilms26.length];
+  const defaultNextId = songsFilms26[(selectedIndex + 1) % songsFilms26.length].id;
+  const nextId = selectedId in NEXT_SONG_OVERRIDES ? NEXT_SONG_OVERRIDES[selectedId] : defaultNextId;
+  const nextSong = nextId ? songsFilms26.find((s) => s.id === nextId) : undefined;
 
   const handleSelect = (id: string, title: string) => {
     setSelectedId(id);
@@ -44,7 +52,26 @@ const SongsFilms26 = () => {
     <div className="min-h-screen bg-folk-cream flex flex-col max-w-[600px] mx-auto shadow-page">
       {/* Header */}
       <header className="sticky top-0 z-20 bg-header-panel px-5 pt-[18px] pb-4 rounded-b-[26px] shadow-header">
-        <div className="flex items-center justify-between gap-3">
+        <div className="flex justify-center">
+          <div className="bg-logo-chip rounded-[14px] px-3.5 py-2.5 shadow-chip inline-flex items-center gap-3">
+            <a
+              href={TELEGRAM_CHANNEL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-start gap-0.5 shrink-0 hover:opacity-90 transition-opacity"
+            >
+              <img src={logoGromche} alt="Громче — телеграм-канал" className="h-6 w-auto" />
+              <span className="text-[9px] font-semibold text-folk-dark/45">t.me/gromche_choir</span>
+            </a>
+            <div className="w-px self-stretch bg-ochre/20" />
+            <div className="flex flex-col">
+              <h1 className="font-serif text-base font-bold text-folk-dark leading-tight">Куда уходит лето</h1>
+              <p className="text-xs text-ochre leading-tight mt-0.5">Хоровое застолье 23 августа</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-between gap-3 mt-[14px] pt-3 border-t border-ochre/[0.18]">
           <button
             onClick={() => setSidebarOpen((v) => !v)}
             className="flex items-center gap-2 text-[15px] font-semibold text-ochre hover:text-ochre/80 transition-colors shrink-0"
@@ -69,25 +96,6 @@ const SongsFilms26 = () => {
               className="w-10 h-9 flex items-center justify-center text-folk-dark hover:bg-ochre/10 transition-colors text-base font-bold"
               aria-label="Увеличить шрифт"
             >A+</button>
-          </div>
-        </div>
-
-        <div className="mt-[14px] pt-3 border-t border-ochre/[0.18]">
-          <div className="bg-logo-chip rounded-[14px] px-3.5 py-2.5 shadow-chip inline-flex items-center gap-3">
-            <a
-              href={TELEGRAM_CHANNEL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-start gap-0.5 shrink-0 hover:opacity-90 transition-opacity"
-            >
-              <img src={logoGromche} alt="Громче — телеграм-канал" className="h-6 w-auto" />
-              <span className="text-[9px] font-semibold text-folk-dark/45">t.me/gromche_choir</span>
-            </a>
-            <div className="w-px self-stretch bg-ochre/20" />
-            <div className="flex flex-col">
-              <h1 className="font-serif text-base font-bold text-folk-dark leading-tight">Куда уходит лето</h1>
-              <p className="text-xs text-ochre leading-tight mt-0.5">Хоровое застолье 23 августа</p>
-            </div>
           </div>
         </div>
 
