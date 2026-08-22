@@ -52,8 +52,7 @@ const SongsFilms26 = () => {
     <div className="min-h-screen bg-folk-cream flex flex-col max-w-[600px] mx-auto shadow-page">
       {/* Header */}
       <header className="sticky top-0 z-20 bg-header-panel px-5 pt-[18px] pb-4 rounded-b-[26px] shadow-header">
-        <div className="flex justify-center">
-          <div className="bg-logo-chip rounded-[14px] px-3.5 py-2.5 shadow-chip inline-flex items-center gap-3">
+        <div className="bg-logo-chip rounded-2xl px-4 py-3 shadow-chip flex items-center justify-center gap-3">
             <a
               href={TELEGRAM_CHANNEL}
               target="_blank"
@@ -68,7 +67,6 @@ const SongsFilms26 = () => {
               <h1 className="font-serif text-base font-bold text-folk-dark leading-tight">Куда уходит лето</h1>
               <p className="text-xs text-ochre leading-tight mt-0.5">Хоровое застолье 23 августа</p>
             </div>
-          </div>
         </div>
 
         <div className="flex items-center justify-between gap-3 mt-[14px] pt-3 border-t border-ochre/[0.18]">
