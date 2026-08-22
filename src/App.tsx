@@ -14,6 +14,7 @@ import Zapis from "./pages/Zapis";
 import Songs from "./pages/Songs";
 import SongsRunit26 from "./pages/SongsRunit26";
 import SongsEvents from "./pages/SongsEvents";
+import SongsFilms26 from "./pages/SongsFilms26";
 import DesignSystem from "./pages/DesignSystem";
 import NotFound from "./pages/NotFound";
 import { useYandexMetrika } from "@/hooks/useYandexMetrika";
@@ -54,6 +55,7 @@ const App = () => (
           <Route path="/songs/folk" element={<Songs />} />
           <Route path="/songs/runit26" element={<SongsRunit26 />} />
           <Route path="/songs/1" element={<SongsEvents />} />
+          <Route path="/songs/films26" element={<SongsFilms26 />} />
           <Route path="/design-system" element={<DesignSystem />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
