@@ -15,6 +15,8 @@ export default {
     extend: {
       fontFamily: {
         serif: ["Georgia", "Times New Roman", "serif"],
+        display: ['"Manrope"', "system-ui", "-apple-system", "sans-serif"],
+        body: ['"Golos Text"', "system-ui", "-apple-system", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

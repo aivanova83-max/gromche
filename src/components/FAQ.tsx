@@ -23,7 +23,7 @@ export const FAQ = () => {
   return (
     <section id="faq" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 max-w-3xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
+        <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-12">
           Часто задаваемые вопросы
         </h2>
         <Accordion type="single" collapsible className="space-y-3">

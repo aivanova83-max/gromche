@@ -18,15 +18,15 @@ export const Hero = ({ className }: { className?: string }) => {
         <div className="animate-fade-in">
           <h1 className="sr-only">Хор «Громче»</h1>
           
-          <p className="text-4xl md:text-6xl lg:text-7xl max-[480px]:text-3xl font-bold mb-5 max-[480px]:mb-4 text-primary leading-tight">
-            Ты можешь Громче!
+          <p className="font-display text-4xl md:text-6xl lg:text-7xl max-[480px]:text-3xl font-bold mb-5 max-[480px]:mb-4 text-foreground leading-tight tracking-tight">
+            Ты можешь <span className="text-ribbon">Громче!</span>
           </p>
-          
+
           <p className="text-lg md:text-xl max-[480px]:text-base mb-8 max-[480px]:mb-6 max-w-2xl mx-auto text-foreground/80 leading-relaxed">
             Женский хор, где поют не ради сцены — ради жизни.<br />Атмосфера радости, поддержки и свободы.
           </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <CtaButton
               size="lg"
               className="text-base max-[480px]:text-sm px-10 max-[480px]:px-7 py-6 max-[480px]:py-5 text-lg font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
@@ -36,16 +36,12 @@ export const Hero = ({ className }: { className?: string }) => {
                 🎤 Прийти на первое занятие
               </a>
             </CtaButton>
-            <CtaButton
-              variant="outline"
-              size="lg"
-              className="text-base max-[480px]:text-sm px-8 max-[480px]:px-6 py-5 max-[480px]:py-4"
-              asChild
+            <a
+              href="/events"
+              className="text-base font-medium text-foreground/70 underline underline-offset-4 decoration-foreground/30 hover:text-foreground hover:decoration-foreground transition-colors"
             >
-              <a href="/events">
-                Наши мероприятия
-              </a>
-            </CtaButton>
+              Наши мероприятия →
+            </a>
           </div>
         </div>
       </div>
