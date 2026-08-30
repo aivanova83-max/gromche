@@ -10,7 +10,7 @@ export const Concerts = () => {
   return (
     <section id="concerts" className="py-16 max-[480px]:py-10 px-4 bg-background">
       <div className="container max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl max-[480px]:text-2xl font-bold mb-6 max-[480px]:mb-4 text-foreground text-center">
+        <h2 className="font-display text-4xl md:text-5xl max-[480px]:text-2xl font-bold mb-6 max-[480px]:mb-4 text-foreground text-center">
           Отчётные концерты
         </h2>
 

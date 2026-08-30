@@ -32,7 +32,7 @@ export const Pricing = () => {
   return (
     <section id="pricing" className="py-16 max-[480px]:py-10 px-4 bg-gradient-warm">
       <div className="container max-w-5xl mx-auto">
-        <h2 className="text-4xl md:text-5xl max-[480px]:text-2xl font-bold mb-2 max-[480px]:mb-1.5 text-center text-foreground">
+        <h2 className="font-display text-4xl md:text-5xl max-[480px]:text-2xl font-bold mb-2 max-[480px]:mb-1.5 text-center text-foreground">
           Как это работает
         </h2>
         <p className="text-center text-foreground/60 text-lg max-[480px]:text-base mb-8 max-[480px]:mb-6">
@@ -75,7 +75,7 @@ export const Pricing = () => {
                   <div className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-warm border border-border/60 hover:shadow-xl transition-smooth">
                     <div className="flex items-center gap-2 mb-5 max-[480px]:mb-4">
                       <span className="text-2xl max-[480px]:text-xl">💳</span>
-                      <h3 className="text-xl max-[480px]:text-lg font-semibold text-foreground">
+                      <h3 className="font-display text-xl max-[480px]:text-lg font-semibold text-foreground">
                         Абонементы
                       </h3>
                     </div>
@@ -109,7 +109,7 @@ export const Pricing = () => {
                   <div className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-warm border border-border/60 hover:shadow-xl transition-smooth">
                     <div className="flex items-center gap-2 mb-5 max-[480px]:mb-4">
                       <span className="text-2xl max-[480px]:text-xl">🎉</span>
-                      <h3 className="text-xl max-[480px]:text-lg font-semibold text-foreground">
+                      <h3 className="font-display text-xl max-[480px]:text-lg font-semibold text-foreground">
                         Концерты
                       </h3>
                     </div>
@@ -128,7 +128,7 @@ export const Pricing = () => {
                   <div className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-warm border border-border/60 hover:shadow-xl transition-smooth">
                     <div className="flex items-center gap-2 mb-5 max-[480px]:mb-4">
                       <span className="text-2xl max-[480px]:text-xl">📅</span>
-                      <h3 className="text-xl max-[480px]:text-lg font-semibold text-foreground">
+                      <h3 className="font-display text-xl max-[480px]:text-lg font-semibold text-foreground">
                         Расписание
                       </h3>
                     </div>
@@ -157,7 +157,7 @@ export const Pricing = () => {
                   <div className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-warm border border-border/60 hover:shadow-xl transition-smooth">
                     <div className="flex items-center gap-2 mb-5 max-[480px]:mb-4">
                       <span className="text-2xl max-[480px]:text-xl">📍</span>
-                      <h3 className="text-xl max-[480px]:text-lg font-semibold text-foreground">
+                      <h3 className="font-display text-xl max-[480px]:text-lg font-semibold text-foreground">
                         Место проведения
                       </h3>
                     </div>

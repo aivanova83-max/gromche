@@ -13,7 +13,7 @@ import { StickyCTA } from "@/components/StickyCTA";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen font-body">
       <Header />
       <Hero />
       <About />

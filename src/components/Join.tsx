@@ -16,7 +16,7 @@ export const Join = () => {
   return (
     <section id="join" className="py-12 max-[480px]:py-8 px-4 bg-gradient-warm">
       <div className="container max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl max-[480px]:text-2xl font-bold mb-6 max-[480px]:mb-5 text-foreground">
+        <h2 className="font-display text-4xl md:text-5xl max-[480px]:text-2xl font-bold mb-6 max-[480px]:mb-5 text-foreground">
           Присоединяйтесь к нам
         </h2>
         

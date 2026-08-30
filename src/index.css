@@ -120,6 +120,19 @@ All colors MUST be HSL.
   }
 }
 
+@layer components {
+  /* Единственный акцент героя: слово «Громче» заливается фирменной
+     звуковой волной из логотипа. Больше нигде.
+     Оттенки волны, но затемнённые: без бледно-жёлтого края, чтобы
+     крупный текст держал контраст на светлом фоне (≥3:1). */
+  .text-ribbon {
+    background-image: linear-gradient(95deg, #C2562F 0%, #B0642C 45%, #3F6B34 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
 /* Marquee animation */
 @keyframes marquee-scroll {
   0% {

@@ -27,7 +27,7 @@ export const Benefits = () => {
   return (
     <section id="benefits" className="py-12 max-[480px]:py-8 px-4 bg-gradient-warm">
       <div className="container max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl max-[480px]:text-2xl font-bold mb-8 max-[480px]:mb-6 text-center text-foreground">
+        <h2 className="font-display text-4xl md:text-5xl max-[480px]:text-2xl font-bold mb-8 max-[480px]:mb-6 text-center text-foreground">
           Почему вам понравится
         </h2>
         
@@ -39,7 +39,7 @@ export const Benefits = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <benefit.icon className="w-10 h-10 max-[480px]:w-8 max-[480px]:h-8 text-primary mb-3 max-[480px]:mb-2" />
-              <h3 className="text-xl max-[480px]:text-lg font-semibold mb-2 text-foreground">
+              <h3 className="font-display text-xl max-[480px]:text-lg font-semibold mb-2 text-foreground">
                 {benefit.title}
               </h3>
               <p className="text-base max-[480px]:text-sm text-foreground/70">
