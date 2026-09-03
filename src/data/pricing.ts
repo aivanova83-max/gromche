@@ -17,11 +17,11 @@ export const branchData = {
       mapLink: "https://yandex.ru/maps/-/CLXQ5Klo",
     },
   },
-  vdnkh: {
-    name: "ВДНХ",
+  botsad: {
+    name: "Ботанический сад",
     schedule: {
       day: "Четверг",
-      time: "19:15 — 20:45",
+      time: "19:30 — 21:00",
       note: null,
     },
     prices: [
@@ -31,8 +31,8 @@ export const branchData = {
       { sessions: 1, price: "2 200", days: null, isSingle: true },
     ],
     address: {
-      text: "Проспект Мира, д. 119, стр. 619, Русская школа управления (10 мин. от м. ВДНХ)",
-      mapLink: "https://yandex.ru/maps/-/CDxSAW2q",
+      text: "ул. Седова, д. 3, библиотека №53\n(7 мин пешком от м. Ботанический сад или Свиблово)",
+      mapLink: "https://yandex.ru/maps/org/okts_svao_biblioteka_53/1129649257?si=1q1yrg135cmxew4bz11ywrq8qw",
     },
   },
   pushkinskaya: {
@@ -58,11 +58,11 @@ export const branchData = {
 export type BranchKey = keyof typeof branchData;
 
 export const getInitialBranch = (): BranchKey => {
-  if (typeof window === "undefined") return "vdnkh";
+  if (typeof window === "undefined") return "botsad";
   const hash = window.location.hash;
   const match = hash.match(/#pricing-([a-z]+)/);
   if (match && match[1] in branchData) {
     return match[1] as BranchKey;
   }
-  return "vdnkh";
+  return "botsad";
 };

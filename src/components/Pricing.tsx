@@ -49,10 +49,10 @@ export const Pricing = () => {
               📍 Люберцы
             </TabsTrigger>
             <TabsTrigger
-              value="vdnkh"
+              value="botsad"
               className="rounded-full text-base max-[480px]:text-xs font-medium transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
             >
-              📍 ВДНХ
+              📍 Ботанический сад
             </TabsTrigger>
             <TabsTrigger
               value="pushkinskaya"
