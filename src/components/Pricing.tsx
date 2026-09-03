@@ -41,24 +41,24 @@ export const Pricing = () => {
 
         <Tabs value={activeBranch} onValueChange={handleTabChange} className="w-full">
           {/* Branch Switcher */}
-          <TabsList className="grid w-full grid-cols-3 mb-8 max-[480px]:mb-6 h-14 max-[480px]:h-12 bg-card/80 backdrop-blur-sm rounded-full p-1.5 shadow-soft">
+          <TabsList className="grid w-full grid-cols-3 mb-8 max-[480px]:mb-6 h-14 max-[480px]:h-auto max-[480px]:min-h-12 bg-card/80 backdrop-blur-sm rounded-full p-1.5 shadow-soft">
             <TabsTrigger
               value="lyubertsy"
-              className="rounded-full text-base max-[480px]:text-xs font-medium transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
+              className="rounded-full text-base max-[480px]:text-xs font-medium text-center transition-all duration-300 max-[480px]:whitespace-normal max-[480px]:leading-tight max-[480px]:px-0.5 max-[480px]:tracking-tight max-[380px]:text-[11px] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
             >
-              📍 Люберцы
+              <span className="max-[480px]:hidden">📍 </span>Люберцы
             </TabsTrigger>
             <TabsTrigger
               value="botsad"
-              className="rounded-full text-base max-[480px]:text-xs font-medium transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
+              className="rounded-full text-base max-[480px]:text-xs font-medium text-center transition-all duration-300 max-[480px]:whitespace-normal max-[480px]:leading-tight max-[480px]:px-0.5 max-[480px]:tracking-tight max-[380px]:text-[11px] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
             >
-              📍 Ботанический сад
+              <span className="max-[480px]:hidden">📍 </span>Ботанический сад
             </TabsTrigger>
             <TabsTrigger
               value="pushkinskaya"
-              className="rounded-full text-base max-[480px]:text-xs font-medium transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
+              className="rounded-full text-base max-[480px]:text-xs font-medium text-center transition-all duration-300 max-[480px]:whitespace-normal max-[480px]:leading-tight max-[480px]:px-0.5 max-[480px]:tracking-tight max-[380px]:text-[11px] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
             >
-              📍 Пушкинская
+              <span className="max-[480px]:hidden">📍 </span>Пушкинская
             </TabsTrigger>
           </TabsList>
 
