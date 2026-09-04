@@ -39,7 +39,7 @@ export const branchData = {
     name: "Пушкинская",
     schedule: {
       day: "Понедельник",
-      time: "19:00 — 20:30",
+      time: "19:15 — 20:45",
       note: null,
     },
     prices: [
