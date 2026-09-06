@@ -16,6 +16,7 @@ const EventsLanding = () => {
   const videoMarchRef = useRef<HTMLVideoElement>(null);
   const videoDecemberRef = useRef<HTMLVideoElement>(null);
   const videoFolkRef = useRef<HTMLVideoElement>(null);
+  const videoKudaletoRef = useRef<HTMLVideoElement>(null);
   const [testimonialApi, setTestimonialApi] = useState<CarouselApi>();
   const [testimonialIdx, setTestimonialIdx] = useState(0);
 
@@ -33,9 +34,10 @@ const EventsLanding = () => {
     const march = videoMarchRef.current;
     const december = videoDecemberRef.current;
     const folk = videoFolkRef.current;
-    if (!march || !december || !folk) return;
+    const kudaleto = videoKudaletoRef.current;
+    if (!march || !december || !folk || !kudaleto) return;
 
-    const videos = [march, december, folk];
+    const videos = [march, december, folk, kudaleto];
     const handlers: Array<() => void> = [];
 
     videos.forEach((v) => {
@@ -87,36 +89,6 @@ const EventsLanding = () => {
             </a>
           </CtaButton>
         </div>
-
-        {/* Бегущая строка */}
-        <style>{`
-          @keyframes ticker {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-        `}</style>
-        <a
-          href="/events/kudaleto"
-          className="absolute bottom-0 left-0 right-0 z-20 bg-white/15 backdrop-blur-sm border-y border-white/25 overflow-hidden whitespace-nowrap block"
-        >
-          <div
-            className="inline-block"
-            style={{ animation: "ticker 20s linear infinite" }}
-          >
-            <span className="inline-block px-8 text-sm font-medium text-white">
-              23 августа, 12:00 — хоровое застолье «Куда уходит лето»
-            </span>
-            <span className="inline-block px-4 text-sm font-medium text-white/50">✦</span>
-            <span className="inline-block px-8 text-sm font-medium text-white">
-              23 августа, 12:00 — хоровое застолье «Куда уходит лето»
-            </span>
-            <span className="inline-block px-4 text-sm font-medium text-white/50">✦</span>
-            <span className="inline-block px-8 text-sm font-medium text-white">
-              23 августа, 12:00 — хоровое застолье «Куда уходит лето»
-            </span>
-            <span className="inline-block px-4 text-sm font-medium text-white/50">✦</span>
-          </div>
-        </a>
       </section>
 
       {/* ════════ 2. CONCEPT ════════ */}
@@ -196,19 +168,21 @@ const EventsLanding = () => {
               Ближайшее
             </p>
             <ScrollReveal>
-              <a
-                href="/events/kudaleto"
-                className="block rounded-2xl border border-primary/30 bg-primary/10 p-6 space-y-2 shadow-warm hover:shadow-soft transition-shadow duration-300"
-              >
-                <p className="text-base font-semibold text-foreground">Хоровое застолье «Куда уходит лето»</p>
+              <div className="rounded-2xl border border-primary/30 bg-primary/10 p-6 space-y-2 shadow-warm">
+                <p className="text-base font-semibold text-foreground">Тссс, готовим сюрприз</p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Провожаем лето за длинным столом на веранде ресторана и поём песни из старых фильмов
+                  О новой встрече расскажем первым делом в{" "}
+                  <a
+                    href="https://telegram.me/gromche_choir"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary underline underline-offset-2"
+                  >
+                    телеграме
+                  </a>
+                  {" "}— подпишитесь, чтобы узнать раньше всех
                 </p>
-                <p className="text-sm text-foreground/80">
-                  23 августа, 12:00, ресторан «Встреча друзей», м. Воробьёвы горы
-                </p>
-                <span className="inline-block text-sm font-medium text-primary pt-1">Подробности и билеты →</span>
-              </a>
+              </div>
             </ScrollReveal>
           </div>
 
@@ -217,8 +191,20 @@ const EventsLanding = () => {
             <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">
               Прошедшие
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-4">
               <ScrollReveal className="h-full">
+                <a
+                  href="/events/kudaleto"
+                  className="flex flex-col rounded-2xl border border-border hover:shadow-soft transition-shadow duration-300 p-5 opacity-75 h-full"
+                >
+                  <span className="text-xs text-muted-foreground">Август 2026</span>
+                  <h3 className="text-base font-semibold text-foreground mt-1">Куда уходит лето</h3>
+                  <p className="text-xs text-muted-foreground mt-1">Провожали лето хоровым застольем под открытым небом</p>
+                  <span className="text-sm font-medium text-primary mt-auto pt-3">Смотреть →</span>
+                </a>
+              </ScrollReveal>
+
+              <ScrollReveal delay={0.06} className="h-full">
                 <a
                   href="/events/folk"
                   className="flex flex-col rounded-2xl border border-border hover:shadow-soft transition-shadow duration-300 p-5 opacity-75 h-full"
@@ -230,7 +216,7 @@ const EventsLanding = () => {
                 </a>
               </ScrollReveal>
 
-              <ScrollReveal delay={0.06} className="h-full">
+              <ScrollReveal delay={0.12} className="h-full">
                 <a
                   href="https://gromche-choir.ru/events/mother"
                   className="flex flex-col rounded-2xl border border-border hover:shadow-soft transition-shadow duration-300 p-5 opacity-75 h-full"
@@ -242,7 +228,7 @@ const EventsLanding = () => {
                 </a>
               </ScrollReveal>
 
-              <ScrollReveal delay={0.12} className="h-full">
+              <ScrollReveal delay={0.18} className="h-full">
                 <a
                   href="https://gromche-choir.timepad.ru/event/3771882/"
                   target="_blank"
@@ -257,7 +243,7 @@ const EventsLanding = () => {
               </ScrollReveal>
 
               <div className="max-sm:hidden h-full">
-                <ScrollReveal delay={0.18} className="h-full">
+                <ScrollReveal delay={0.24} className="h-full">
                   <a
                     href="https://gromche-choir.timepad.ru/event/3709119/"
                     target="_blank"
@@ -285,8 +271,20 @@ const EventsLanding = () => {
               <p className="text-foreground/60 text-base">Отрывки с наших вечеринок</p>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
             <ScrollReveal>
+              <div className="aspect-[9/16] rounded-2xl border border-border shadow-warm overflow-hidden">
+                <video
+                  ref={videoKudaletoRef}
+                  src="/kudaleto.mp4"
+                  className="w-full h-full object-cover"
+                  controls
+                  playsInline
+                />
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.1}>
               <div className="aspect-[9/16] rounded-2xl border border-border shadow-warm overflow-hidden">
                 <video
                   ref={videoFolkRef}
@@ -298,7 +296,7 @@ const EventsLanding = () => {
               </div>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.1}>
+            <ScrollReveal delay={0.2}>
               <div className="aspect-[9/16] rounded-2xl border border-border shadow-warm overflow-hidden">
                 <video
                   ref={videoMarchRef}
@@ -310,17 +308,19 @@ const EventsLanding = () => {
               </div>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.2}>
-              <div className="aspect-[9/16] rounded-2xl border border-border shadow-warm overflow-hidden">
-                <video
-                  ref={videoDecemberRef}
-                  src="/video-december.mp4"
-                  className="w-full h-full object-cover"
-                  controls
-                  playsInline
-                />
-              </div>
-            </ScrollReveal>
+            <div className="max-sm:hidden">
+              <ScrollReveal delay={0.3}>
+                <div className="aspect-[9/16] rounded-2xl border border-border shadow-warm overflow-hidden">
+                  <video
+                    ref={videoDecemberRef}
+                    src="/video-december.mp4"
+                    className="w-full h-full object-cover"
+                    controls
+                    playsInline
+                  />
+                </div>
+              </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>
