@@ -12,6 +12,7 @@ export const branchData = {
       { sessions: 8, price: "10 400", days: 78 },
       { sessions: 1, price: "2 000", days: null, isSingle: true },
     ],
+    trialNote: "Пробное занятие бесплатно при оплате абонемента в тот же день",
     address: {
       text: "г. Люберцы, ул. 8 Марта, 12, корп. 3 (клуб ПроДетство)",
       mapLink: "https://yandex.ru/maps/-/CLXQ5Klo",
@@ -30,6 +31,7 @@ export const branchData = {
       { sessions: 8, price: "12 000", days: 78 },
       { sessions: 1, price: "2 200", days: null, isSingle: true },
     ],
+    trialNote: "Пробное занятие бесплатно",
     address: {
       text: "ул. Седова, д. 3, библиотека №53\n(7 мин пешком от м. Ботанический сад или Свиблово)",
       mapLink: "https://yandex.ru/maps/org/okts_svao_biblioteka_53/1129649257?si=1q1yrg135cmxew4bz11ywrq8qw",
@@ -48,6 +50,7 @@ export const branchData = {
       { sessions: 8, price: "13 600", days: 78 },
       { sessions: 1, price: "2 500", days: null, isSingle: true },
     ],
+    trialNote: "Пробное занятие бесплатно при оплате абонемента в тот же день",
     address: {
       text: "Страстной бульвар, 6с1\n(1 мин от м. Пушкинская / Чеховская)",
       mapLink: "https://yandex.com/maps/-/CPVQMHkL",
