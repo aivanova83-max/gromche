@@ -3,6 +3,14 @@ import { CtaButton } from "@/components/CtaButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { branchData, BranchKey, getInitialBranch } from "@/data/pricing";
 
+const getDaysLabel = (days: number) => {
+  const mod10 = days % 10;
+  const mod100 = days % 100;
+  if (mod10 === 1 && mod100 !== 11) return "день";
+  if ([2, 3, 4].includes(mod10) && ![12, 13, 14].includes(mod100)) return "дня";
+  return "дней";
+};
+
 export const Pricing = () => {
   const signupBtnRef = useRef<HTMLAnchorElement>(null);
   const [activeBranch, setActiveBranch] = useState<BranchKey>(getInitialBranch);
@@ -88,7 +96,9 @@ export const Pricing = () => {
                               {item.isSingle ? "Разовое занятие" : `${item.sessions} занятий`}
                             </span>
                             {item.days && (
-                              <p className="text-foreground/50 text-xs mt-0.5">{item.days} дня</p>
+                              <p className="text-foreground/50 text-xs mt-0.5">
+                                {item.days} {getDaysLabel(item.days)}
+                              </p>
                             )}
                           </div>
                           <span className="font-semibold text-primary text-lg max-[480px]:text-base">
