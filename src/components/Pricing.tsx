@@ -13,6 +13,7 @@ const getDaysLabel = (days: number) => {
 
 export const Pricing = () => {
   const signupBtnRef = useRef<HTMLAnchorElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
   const [activeBranch, setActiveBranch] = useState<BranchKey>(getInitialBranch);
 
   useEffect(() => {
@@ -25,9 +26,18 @@ export const Pricing = () => {
   }, []);
 
   useEffect(() => {
+    if (/^#pricing-/.test(window.location.hash)) {
+      sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
+  useEffect(() => {
     const handleHashChange = () => {
       const newBranch = getInitialBranch();
       setActiveBranch(newBranch);
+      if (/^#pricing-/.test(window.location.hash)) {
+        sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+      }
     };
     window.addEventListener("hashchange", handleHashChange);
     return () => window.removeEventListener("hashchange", handleHashChange);
@@ -38,7 +48,7 @@ export const Pricing = () => {
   };
 
   return (
-    <section id="pricing" className="py-16 max-[480px]:py-10 px-4 bg-gradient-warm">
+    <section ref={sectionRef} id="pricing" className="py-16 max-[480px]:py-10 px-4 bg-gradient-warm">
       <div className="container max-w-5xl mx-auto">
         <h2 className="font-display text-4xl md:text-5xl max-[480px]:text-2xl font-bold mb-2 max-[480px]:mb-1.5 text-center text-foreground">
           Как это работает
