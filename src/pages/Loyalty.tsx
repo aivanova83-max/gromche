@@ -28,7 +28,7 @@ const Loyalty = () => {
           </h1>
           <p className="text-muted-foreground leading-relaxed">
             Поёшь, приходишь, приводишь подруг — копишь баллы. Баллами можно оплатить часть
-            следующего абонемента, концерта или мероприятия.
+            следующего абонемента или концерта.
           </p>
         </div>
 
@@ -76,6 +76,9 @@ const Loyalty = () => {
 
         <p className="text-center text-xs text-muted-foreground">
           Полные условия — у администратора студии.
+        </p>
+        <p className="text-center text-xs text-muted-foreground/70 mt-2">
+          Старт программы лояльности — 16.09.2026
         </p>
       </div>
     </div>
