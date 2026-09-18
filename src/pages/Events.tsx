@@ -243,7 +243,7 @@ const Events = () => {
       {/* ════════ REGISTRATION + GIFT ════════ */}
       <section
         id="register"
-        className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
+        className="scroll-mt-20 py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
 
         <div className="container max-w-4xl mx-auto space-y-8 text-center">
           <ScrollReveal>

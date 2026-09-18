@@ -92,7 +92,7 @@ const EventsLanding = () => {
       </section>
 
       {/* ════════ 2. CONCEPT ════════ */}
-      <section id="format" className="py-20 max-[480px]:py-12 px-4">
+      <section id="format" className="scroll-mt-20 py-20 max-[480px]:py-12 px-4">
         <div className="container max-w-3xl mx-auto">
           <ScrollReveal>
             <div className="text-center space-y-6">
@@ -154,7 +154,7 @@ const EventsLanding = () => {
       </section>
 
       {/* ════════ 4. EVENTS ════════ */}
-      <section id="announcements" className="py-16 px-4 bg-background">
+      <section id="announcements" className="scroll-mt-20 py-16 px-4 bg-background">
         <div className="container max-w-5xl mx-auto space-y-12">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
@@ -263,7 +263,7 @@ const EventsLanding = () => {
       </section>
 
       {/* ════════ 5. VIDEO BLOCK (placeholder) ════════ */}
-      <section id="video" className="py-20 max-[480px]:py-12 px-4">
+      <section id="video" className="scroll-mt-20 py-20 max-[480px]:py-12 px-4">
         <div className="container max-w-4xl mx-auto space-y-8">
           <ScrollReveal>
             <div className="text-center space-y-2">
@@ -326,7 +326,7 @@ const EventsLanding = () => {
       </section>
 
       {/* ════════ 5. TESTIMONIALS ════════ */}
-      <section id="testimonials" className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
+      <section id="testimonials" className="scroll-mt-20 py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
         <div className="container max-w-5xl mx-auto space-y-12">
           <ScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">

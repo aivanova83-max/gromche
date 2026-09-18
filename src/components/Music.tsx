@@ -1,6 +1,6 @@
 export const Music = () => {
   const genres = ["поп", "рок", "фолк", "ретро"];
-  return <section id="music" className="py-12 max-[480px]:py-8 px-4 bg-card">
+  return <section id="music" className="scroll-mt-20 py-12 max-[480px]:py-8 px-4 bg-card">
       <div className="container max-w-4xl mx-auto text-center">
         <h2 className="font-display text-4xl md:text-5xl max-[480px]:text-2xl font-bold mb-6 max-[480px]:mb-4 text-foreground">
           Наша музыка
