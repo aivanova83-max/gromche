@@ -48,7 +48,7 @@ export const Pricing = () => {
   };
 
   return (
-    <section ref={sectionRef} id="pricing" className="py-16 max-[480px]:py-10 px-4 bg-gradient-warm">
+    <section ref={sectionRef} id="pricing" className="scroll-mt-20 py-16 max-[480px]:py-10 px-4 bg-gradient-warm">
       <div className="container max-w-5xl mx-auto">
         <h2 className="font-display text-4xl md:text-5xl max-[480px]:text-2xl font-bold mb-2 max-[480px]:mb-1.5 text-center text-foreground">
           Как это работает
