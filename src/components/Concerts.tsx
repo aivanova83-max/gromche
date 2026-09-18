@@ -8,7 +8,7 @@ const PHOTOS = [photo1, photo2, photo3, photo4];
 
 export const Concerts = () => {
   return (
-    <section id="concerts" className="py-16 max-[480px]:py-10 px-4 bg-background">
+    <section id="concerts" className="scroll-mt-20 py-16 max-[480px]:py-10 px-4 bg-background">
       <div className="container max-w-4xl mx-auto">
         <h2 className="font-display text-4xl md:text-5xl max-[480px]:text-2xl font-bold mb-6 max-[480px]:mb-4 text-foreground text-center">
           Отчётные концерты
