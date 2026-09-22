@@ -1,7 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { CtaButton } from "@/components/CtaButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { branchData, BranchKey, getInitialBranch } from "@/data/pricing";
+import {
+  branchData,
+  comingSoonBranches,
+  BranchKey,
+  AnyBranchKey,
+  ComingSoonBranchKey,
+  getInitialBranch,
+} from "@/data/pricing";
 
 const getDaysLabel = (days: number) => {
   const mod10 = days % 10;
@@ -14,7 +21,7 @@ const getDaysLabel = (days: number) => {
 export const Pricing = () => {
   const signupBtnRef = useRef<HTMLAnchorElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
-  const [activeBranch, setActiveBranch] = useState<BranchKey>(getInitialBranch);
+  const [activeBranch, setActiveBranch] = useState<AnyBranchKey>(getInitialBranch);
 
   useEffect(() => {
     if (signupBtnRef.current) {
@@ -44,7 +51,12 @@ export const Pricing = () => {
   }, []);
 
   const handleTabChange = (value: string) => {
-    setActiveBranch(value as BranchKey);
+    setActiveBranch(value as AnyBranchKey);
+  };
+
+  const handleSignupClick = () => {
+    const w = (window as any).WdgMoyklass;
+    w?.["01K9BrWJck7O6TZEZsOjLHe61iGjhIOYkjgp"].loadLeadFormByModal();
   };
 
   return (
@@ -59,24 +71,30 @@ export const Pricing = () => {
 
         <Tabs value={activeBranch} onValueChange={handleTabChange} className="w-full">
           {/* Branch Switcher */}
-          <TabsList className="grid w-full grid-cols-3 mb-8 max-[480px]:mb-6 h-14 max-[480px]:h-auto max-[480px]:min-h-12 bg-card/80 backdrop-blur-sm rounded-full p-1.5 shadow-soft">
+          <TabsList className="grid w-full grid-cols-4 mb-8 max-[480px]:mb-6 h-14 max-[480px]:h-auto max-[480px]:min-h-12 bg-card/80 backdrop-blur-sm rounded-full p-1.5 shadow-soft">
             <TabsTrigger
               value="lyubertsy"
-              className="rounded-full text-base max-[480px]:text-xs font-medium text-center transition-all duration-300 max-[480px]:whitespace-normal max-[480px]:leading-tight max-[480px]:px-0.5 max-[480px]:tracking-tight max-[380px]:text-[11px] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
+              className="rounded-full text-base max-[480px]:text-xs font-medium text-center transition-all duration-300 max-[480px]:whitespace-normal max-[480px]:leading-tight max-[480px]:px-0.5 max-[480px]:tracking-tight max-[380px]:text-[10px] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
             >
               <span className="max-[480px]:hidden">📍 </span>Люберцы
             </TabsTrigger>
             <TabsTrigger
               value="botsad"
-              className="rounded-full text-base max-[480px]:text-xs font-medium text-center transition-all duration-300 max-[480px]:whitespace-normal max-[480px]:leading-tight max-[480px]:px-0.5 max-[480px]:tracking-tight max-[380px]:text-[11px] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
+              className="rounded-full text-base max-[480px]:text-xs font-medium text-center transition-all duration-300 max-[480px]:whitespace-normal max-[480px]:leading-tight max-[480px]:px-0.5 max-[480px]:tracking-tight max-[380px]:text-[10px] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
             >
               <span className="max-[480px]:hidden">📍 </span>Ботанический сад
             </TabsTrigger>
             <TabsTrigger
               value="pushkinskaya"
-              className="rounded-full text-base max-[480px]:text-xs font-medium text-center transition-all duration-300 max-[480px]:whitespace-normal max-[480px]:leading-tight max-[480px]:px-0.5 max-[480px]:tracking-tight max-[380px]:text-[11px] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
+              className="rounded-full text-base max-[480px]:text-xs font-medium text-center transition-all duration-300 max-[480px]:whitespace-normal max-[480px]:leading-tight max-[480px]:px-0.5 max-[480px]:tracking-tight max-[380px]:text-[10px] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
             >
               <span className="max-[480px]:hidden">📍 </span>Пушкинская
+            </TabsTrigger>
+            <TabsTrigger
+              value="ramenki"
+              className="rounded-full text-base max-[480px]:text-xs font-medium text-center transition-all duration-300 max-[480px]:whitespace-normal max-[480px]:leading-tight max-[480px]:px-0.5 max-[480px]:tracking-tight max-[380px]:text-[10px] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
+            >
+              <span className="max-[480px]:hidden">📍 </span>Раменки
             </TabsTrigger>
           </TabsList>
 
@@ -195,6 +213,43 @@ export const Pricing = () => {
                       Построить маршрут →
                     </a>
                   </div>
+                </div>
+              </TabsContent>
+            );
+          })}
+
+          {(Object.keys(comingSoonBranches) as ComingSoonBranchKey[]).map((branchKey) => {
+            const branch = comingSoonBranches[branchKey];
+            return (
+              <TabsContent
+                key={branchKey}
+                value={branchKey}
+                className="mt-0 animate-fade-in focus-visible:outline-none focus-visible:ring-0"
+              >
+                <div className="bg-card rounded-2xl p-10 max-[480px]:p-6 shadow-warm border border-border/60 mb-8 max-[480px]:mb-6 text-center">
+                  <div className="text-3xl max-[480px]:text-2xl mb-2">🎉</div>
+                  <h3 className="font-display text-3xl max-[480px]:text-2xl font-bold text-primary mb-5 max-[480px]:mb-4">
+                    {branch.announcement.title}
+                  </h3>
+
+                  <p className="text-foreground font-medium text-lg max-[480px]:text-base mb-1">
+                    {branch.announcement.date}
+                  </p>
+                  <p className="text-foreground text-base max-[480px]:text-sm mb-5 max-[480px]:mb-4">
+                    {branch.announcement.description}
+                  </p>
+
+                  <p className="text-foreground/70 text-sm max-[480px]:text-xs whitespace-pre-line mb-6 max-[480px]:mb-5">
+                    📍 {branch.announcement.address.text}
+                  </p>
+
+                  <CtaButton
+                    size="lg"
+                    className="text-base max-[480px]:text-sm px-10 max-[480px]:px-8 py-4 max-[480px]:py-3.5 font-semibold"
+                    onClick={handleSignupClick}
+                  >
+                    Записаться
+                  </CtaButton>
                 </div>
               </TabsContent>
             );
