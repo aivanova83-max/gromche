@@ -7,10 +7,10 @@ export const branchData = {
       note: null,
     },
     prices: [
-      { sessions: 4, price: "6 000", days: 43 },
-      { sessions: 6, price: "8 400", days: 57 },
-      { sessions: 8, price: "10 400", days: 78 },
-      { sessions: 1, price: "2 000", days: null, isSingle: true },
+      { sessions: 4, price: "6 000", weeks: 6 },
+      { sessions: 6, price: "8 400", weeks: 8 },
+      { sessions: 8, price: "10 400", weeks: 11 },
+      { sessions: 1, price: "2 000", weeks: null, isSingle: true },
     ],
     trialNote: "Пробное занятие бесплатно при оплате абонемента в тот же день",
     address: {
@@ -26,10 +26,10 @@ export const branchData = {
       note: null,
     },
     prices: [
-      { sessions: 4, price: "6 800", days: 43 },
-      { sessions: 6, price: "9 600", days: 57 },
-      { sessions: 8, price: "12 000", days: 78 },
-      { sessions: 1, price: "2 200", days: null, isSingle: true },
+      { sessions: 4, price: "6 800", weeks: 6 },
+      { sessions: 6, price: "9 600", weeks: 8 },
+      { sessions: 8, price: "12 000", weeks: 11 },
+      { sessions: 1, price: "2 200", weeks: null, isSingle: true },
     ],
     trialNote: "Пробное занятие бесплатно",
     address: {
@@ -45,10 +45,10 @@ export const branchData = {
       note: null,
     },
     prices: [
-      { sessions: 4, price: "7 600", days: 43 },
-      { sessions: 6, price: "10 800", days: 57 },
-      { sessions: 8, price: "13 600", days: 78 },
-      { sessions: 1, price: "2 500", days: null, isSingle: true },
+      { sessions: 4, price: "7 600", weeks: 6 },
+      { sessions: 6, price: "10 800", weeks: 8 },
+      { sessions: 8, price: "13 600", weeks: 11 },
+      { sessions: 1, price: "2 500", weeks: null, isSingle: true },
     ],
     trialNote: "Пробное занятие бесплатно при оплате абонемента в тот же день",
     address: {

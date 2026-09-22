@@ -10,12 +10,12 @@ import {
   getInitialBranch,
 } from "@/data/pricing";
 
-const getDaysLabel = (days: number) => {
-  const mod10 = days % 10;
-  const mod100 = days % 100;
-  if (mod10 === 1 && mod100 !== 11) return "день";
-  if ([2, 3, 4].includes(mod10) && ![12, 13, 14].includes(mod100)) return "дня";
-  return "дней";
+const getWeeksLabel = (weeks: number) => {
+  const mod10 = weeks % 10;
+  const mod100 = weeks % 100;
+  if (mod10 === 1 && mod100 !== 11) return "неделя";
+  if ([2, 3, 4].includes(mod10) && ![12, 13, 14].includes(mod100)) return "недели";
+  return "недель";
 };
 
 export const Pricing = () => {
@@ -123,9 +123,9 @@ export const Pricing = () => {
                             <span className="text-foreground text-base max-[480px]:text-sm">
                               {item.isSingle ? "Разовое занятие" : `${item.sessions} занятий`}
                             </span>
-                            {item.days && (
+                            {item.weeks && (
                               <p className="text-foreground/50 text-xs mt-0.5">
-                                {item.days} {getDaysLabel(item.days)}
+                                {item.weeks} {getWeeksLabel(item.weeks)}
                               </p>
                             )}
                           </div>
