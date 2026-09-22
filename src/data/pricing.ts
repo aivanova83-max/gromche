@@ -34,7 +34,7 @@ export const branchData = {
     trialNote: "Пробное занятие бесплатно",
     address: {
       text: "ул. Седова, д. 3, библиотека №53\n(7 мин пешком от м. Ботанический сад или Свиблово)",
-      mapLink: "https://yandex.ru/maps/org/okts_svao_biblioteka_53/1129649257?si=1q1yrg135cmxew4bz11ywrq8qw",
+      mapLink: "https://yandex.ru/maps/-/CTx1rXLt",
     },
   },
   pushkinskaya: {
@@ -58,14 +58,30 @@ export const branchData = {
   },
 };
 
-export type BranchKey = keyof typeof branchData;
+export const comingSoonBranches = {
+  ramenki: {
+    name: "Раменки",
+    announcement: {
+      title: "Скоро открытие!",
+      date: "14 октября, 19:30 — 21:00",
+      description: "Открытая репетиция в новой студии Громче в Раменках",
+      address: {
+        text: "Винницкая д. 4\n(5 мин пешком от м. Раменки)",
+      },
+    },
+  },
+};
 
-export const getInitialBranch = (): BranchKey => {
-  if (typeof window === "undefined") return "botsad";
+export type BranchKey = keyof typeof branchData;
+export type ComingSoonBranchKey = keyof typeof comingSoonBranches;
+export type AnyBranchKey = BranchKey | ComingSoonBranchKey;
+
+export const getInitialBranch = (): AnyBranchKey => {
+  if (typeof window === "undefined") return "pushkinskaya";
   const hash = window.location.hash;
   const match = hash.match(/#pricing-([a-z]+)/);
-  if (match && match[1] in branchData) {
-    return match[1] as BranchKey;
+  if (match && (match[1] in branchData || match[1] in comingSoonBranches)) {
+    return match[1] as AnyBranchKey;
   }
-  return "botsad";
+  return "pushkinskaya";
 };
