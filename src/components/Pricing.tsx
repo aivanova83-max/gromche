@@ -239,6 +239,10 @@ export const Pricing = () => {
                     {branch.announcement.description}
                   </p>
 
+                  <p className="text-foreground font-medium text-base max-[480px]:text-sm mb-6 max-[480px]:mb-5">
+                    💳 {branch.announcement.price}
+                  </p>
+
                   <p className="text-foreground/70 text-sm max-[480px]:text-xs whitespace-pre-line mb-6 max-[480px]:mb-5">
                     📍 {branch.announcement.address.text}
                   </p>
