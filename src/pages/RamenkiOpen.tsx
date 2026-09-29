@@ -345,6 +345,25 @@ const RamenkiOpen = () => {
         </div>
       </section>
 
+      {/* ════════ ФИНАЛЬНЫЙ CTA ════════ */}
+      <section className="py-20 max-[480px]:py-12 px-4 text-center">
+        <ScrollReveal>
+          <h2 className="text-xl md:text-3xl font-bold text-foreground mb-3 max-w-2xl mx-auto">
+            «Громче» — хоровая студия специально для женщин
+          </h2>
+          <p className="text-sm md:text-base text-foreground/70 mb-8 max-w-2xl mx-auto leading-relaxed">
+            Работаем с конца 2025 года. Открываем новые студии в спальных
+            районах, чтобы дорога на хор не становилась лишней нагрузкой на
+            и так загруженных женщин.
+            <br />
+            Ботанический сад, Люберцы, Пушкинская и теперь — Раменки!
+          </p>
+          <CtaButton size="lg" className="text-sm md:text-lg px-8 md:px-10 py-5 md:py-6 whitespace-normal h-auto" asChild>
+            <a href={SIGNUP_URL}>Записаться на мастер-класс</a>
+          </CtaButton>
+        </ScrollReveal>
+      </section>
+
       {/* ════════ СВЯЗАТЬСЯ С НАМИ ════════ */}
       <section className="py-20 max-[480px]:py-12 px-4">
         <div className="container max-w-2xl mx-auto text-center space-y-6">
@@ -389,25 +408,6 @@ const RamenkiOpen = () => {
             </div>
           </ScrollReveal>
         </div>
-      </section>
-
-      {/* ════════ ФИНАЛЬНЫЙ CTA ════════ */}
-      <section className="py-20 max-[480px]:py-12 px-4 text-center">
-        <ScrollReveal>
-          <h2 className="text-xl md:text-3xl font-bold text-foreground mb-3 max-w-2xl mx-auto">
-            «Громче» — хоровая студия специально для женщин
-          </h2>
-          <p className="text-sm md:text-base text-foreground/70 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Работаем с конца 2025 года. Открываем новые студии в спальных
-            районах, чтобы дорога на хор не становилась лишней нагрузкой на
-            и так загруженных женщин.
-            <br />
-            Ботанический сад, Люберцы, Пушкинская и теперь — Раменки!
-          </p>
-          <CtaButton size="lg" className="text-sm md:text-lg px-8 md:px-10 py-5 md:py-6 whitespace-normal h-auto" asChild>
-            <a href={SIGNUP_URL}>Записаться на мастер-класс</a>
-          </CtaButton>
-        </ScrollReveal>
       </section>
 
       {/* ════════ МЫ В СОЦСЕТЯХ ════════ */}
