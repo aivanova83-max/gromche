@@ -86,13 +86,13 @@ const RamenkiOpen = () => {
           </ScrollReveal>
 
           <ScrollReveal delay={0.1} className="text-center md:text-left md:col-start-2 md:row-start-2">
-            <p className="text-base md:text-lg font-semibold text-foreground leading-relaxed max-w-[46ch] mx-auto md:mx-0 mb-3">
-              Неважно, умеете ли вы петь — важно, что хочется звучать.
-            </p>
-            <p className="text-base md:text-lg text-foreground/80 leading-relaxed max-w-[46ch] mx-auto md:mx-0 mb-7">
+            <p className="text-base md:text-lg text-foreground/80 leading-relaxed max-w-[46ch] mx-auto md:mx-0 mb-3">
               Место, где после рабочего дня можно выдохнуть, спеть от души
               и почувствовать себя собой — в кругу женщин, которым это тоже
               нужно.
+            </p>
+            <p className="text-base md:text-lg font-semibold text-foreground leading-relaxed max-w-[46ch] mx-auto md:mx-0 mb-7">
+              Неважно, умеете ли вы петь — важно, что хочется звучать.
             </p>
             <CtaButton size="lg" className="text-sm md:text-lg px-8 md:px-10 py-5 md:py-6 whitespace-normal h-auto" asChild>
               <a href={SIGNUP_URL}>Записаться на мастер-класс по вокалу</a>
