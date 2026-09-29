@@ -9,9 +9,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Quote, Music, Sparkles } from "lucide-react";
+import { Quote, Music, Sparkles, Smile, TrendingUp } from "lucide-react";
 
-const FEATURE_ICONS: Record<string, typeof Music> = { Music, Sparkles };
+const FEATURE_ICONS: Record<string, typeof Music> = { Music, Sparkles, Smile, TrendingUp };
 import {
   SIGNUP_URL,
   MAP_URL,
