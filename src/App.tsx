@@ -10,6 +10,7 @@ import Events from "./pages/Events";
 import EventsLanding from "./pages/EventsLanding";
 import EventFolk from "./pages/EventFolk";
 import EventKudaleto from "./pages/EventKudaleto";
+import RamenkiOpen from "./pages/RamenkiOpen";
 import Zapis from "./pages/Zapis";
 import Loyalty from "./pages/Loyalty";
 import Songs from "./pages/Songs";
@@ -51,6 +52,7 @@ const App = () => (
           <Route path="/events/mother" element={<Events />} />
           <Route path="/events/folk" element={<EventFolk />} />
           <Route path="/events/kudaleto" element={<EventKudaleto />} />
+          <Route path="/ramenkiopen" element={<RamenkiOpen />} />
           <Route path="/zapis" element={<Zapis />} />
           <Route path="/loyalty" element={<Loyalty />} />
           <Route path="/legal" element={<Legal />} />
