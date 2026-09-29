@@ -12,6 +12,13 @@ export const EVENT_TIME = "19:30 — 21:00";
 export const EVENT_DATE_TIME_FULL = "14 октября, 19:30 — 21:00";
 export const PRICE_NOTE = "Бесплатно, если оформите абонемент в этот же день. В остальных случаях — 1000 ₽.";
 
+export const INSTAGRAM_LINK = "https://www.instagram.com/gromche_choir?stkn=MWhoczhqc3lxajA5aA==";
+export const TELEGRAM_CHANNEL = "https://t.me/gromche_choir";
+
+export const CONTACT_TELEGRAM = "https://t.me/helloooann";
+export const CONTACT_WHATSAPP = "https://wa.me/79165000242";
+export const CONTACT_MAX = "https://max.ru/u/f9LHodD0cOIPCDJihDEspG4M-EkbRlFwutIwlmBfLd6-jrpYYCnq2czmGDU";
+
 export const TEACHER_VIDEO_SRC = "/ramenki-teacher-video.mp4";
 export const TEACHER_PHOTO_SRC = "/ramenki-teacher.JPG";
 

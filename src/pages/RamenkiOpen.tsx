@@ -15,7 +15,7 @@ import {
   CarouselItem,
   type CarouselApi,
 } from "@/components/ui/carousel";
-import { Quote, Music, Sparkles, Smile, TrendingUp, ChevronLeft, ChevronRight } from "lucide-react";
+import { Quote, Music, Sparkles, Smile, TrendingUp, ChevronLeft, ChevronRight, Send, MessageCircle, MessagesSquare } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import {
   SIGNUP_URL,
@@ -33,6 +33,11 @@ import {
   teacherBio,
   testimonials,
   faqItems,
+  INSTAGRAM_LINK,
+  TELEGRAM_CHANNEL,
+  CONTACT_TELEGRAM,
+  CONTACT_WHATSAPP,
+  CONTACT_MAX,
 } from "@/data/ramenkiOpen";
 
 const FEATURE_ICONS: Record<string, typeof Music> = { Music, Sparkles, Smile, TrendingUp };
@@ -95,7 +100,7 @@ const RamenkiOpen = () => {
               Неважно, умеете ли вы петь — важно, что хочется звучать.
             </p>
             <CtaButton size="lg" className="text-sm md:text-lg px-8 md:px-10 py-5 md:py-6 whitespace-normal h-auto" asChild>
-              <a href={SIGNUP_URL}>Записаться на мастер-класс по вокалу</a>
+              <a href={SIGNUP_URL}>Записаться на мастер-класс</a>
             </CtaButton>
             <div className="flex flex-wrap justify-center md:justify-start gap-x-5 gap-y-2 text-xs md:text-sm text-muted-foreground mt-5">
               <span className="font-semibold text-foreground">{EVENT_DATE_FULL}</span>
@@ -340,6 +345,52 @@ const RamenkiOpen = () => {
         </div>
       </section>
 
+      {/* ════════ СВЯЗАТЬСЯ С НАМИ ════════ */}
+      <section className="py-20 max-[480px]:py-12 px-4">
+        <div className="container max-w-2xl mx-auto text-center space-y-6">
+          <ScrollReveal>
+            <h2 className="text-xl md:text-3xl font-bold text-foreground">
+              Остались вопросы?
+            </h2>
+            <p className="text-sm md:text-base text-foreground/70 mt-3">
+              Напишите нам напрямую — ответим в удобном для вас мессенджере
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.1}>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <a
+                href={CONTACT_TELEGRAM}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-card rounded-xl px-5 py-3 border border-border shadow-warm hover:shadow-soft hover:bg-primary/5 transition-all duration-300 text-sm font-medium text-foreground"
+              >
+                <Send className="w-5 h-5 text-primary" />
+                Telegram
+              </a>
+              <a
+                href={CONTACT_WHATSAPP}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-card rounded-xl px-5 py-3 border border-border shadow-warm hover:shadow-soft hover:bg-primary/5 transition-all duration-300 text-sm font-medium text-foreground"
+              >
+                <MessageCircle className="w-5 h-5 text-primary" />
+                WhatsApp
+              </a>
+              <a
+                href={CONTACT_MAX}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-card rounded-xl px-5 py-3 border border-border shadow-warm hover:shadow-soft hover:bg-primary/5 transition-all duration-300 text-sm font-medium text-foreground"
+              >
+                <MessagesSquare className="w-5 h-5 text-primary" />
+                MAX
+              </a>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* ════════ ФИНАЛЬНЫЙ CTA ════════ */}
       <section className="py-20 max-[480px]:py-12 px-4 text-center">
         <ScrollReveal>
@@ -357,6 +408,51 @@ const RamenkiOpen = () => {
             <a href={SIGNUP_URL}>Записаться на мастер-класс</a>
           </CtaButton>
         </ScrollReveal>
+      </section>
+
+      {/* ════════ МЫ В СОЦСЕТЯХ ════════ */}
+      <section className="py-20 max-[480px]:py-12 px-4 bg-gradient-warm">
+        <div className="container max-w-2xl mx-auto text-center space-y-6">
+          <ScrollReveal>
+            <h2 className="text-xl md:text-3xl font-bold text-foreground">
+              Мы в соцсетях
+            </h2>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.1}>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+              <a
+                href={INSTAGRAM_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 bg-card rounded-xl px-6 py-4 border border-border shadow-warm hover:shadow-soft hover:bg-primary/5 transition-all duration-300"
+              >
+                <svg className="w-6 h-6 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+                <div className="text-left">
+                  <p className="font-semibold text-foreground">@gromche_choir</p>
+                  <p className="text-xs text-foreground/50">Короткие видео, эмоции</p>
+                </div>
+              </a>
+
+              <a
+                href={TELEGRAM_CHANNEL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 bg-card rounded-xl px-6 py-4 border border-border shadow-warm hover:shadow-soft hover:bg-primary/5 transition-all duration-300"
+              >
+                <Send className="w-6 h-6 text-primary shrink-0" />
+                <div className="text-left">
+                  <p className="font-semibold text-foreground">Канал «Громче»</p>
+                  <p className="text-xs text-foreground/50">Анонсы, билеты, бэкстейдж</p>
+                </div>
+              </a>
+            </div>
+          </ScrollReveal>
+        </div>
       </section>
 
       <Footer />
