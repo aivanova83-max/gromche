@@ -31,7 +31,7 @@ export const branchData = {
       { sessions: 8, price: "12 000", weeks: 11 },
       { sessions: 1, price: "2 200", weeks: null, isSingle: true },
     ],
-    trialNote: "Пробное занятие бесплатно",
+    trialNote: "Пробное занятие бесплатно при оплате абонемента в тот же день",
     address: {
       text: "ул. Седова, д. 3, библиотека №53\n(7 мин пешком от м. Ботанический сад или Свиблово)",
       mapLink: "https://yandex.ru/maps/-/CTx1rXLt",
