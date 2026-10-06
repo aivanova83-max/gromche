@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { CtaButton } from "@/components/CtaButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import {
   branchData,
   comingSoonBranches,
@@ -9,6 +10,10 @@ import {
   ComingSoonBranchKey,
   getInitialBranch,
 } from "@/data/pricing";
+
+const branchOptions = [...Object.entries(branchData), ...Object.entries(comingSoonBranches)].map(
+  ([key, branch]) => ({ key: key as AnyBranchKey, name: branch.name }),
+);
 
 const getWeeksLabel = (weeks: number) => {
   const mod10 = weeks % 10;
@@ -70,31 +75,54 @@ export const Pricing = () => {
         </p>
 
         <Tabs value={activeBranch} onValueChange={handleTabChange} className="w-full">
-          {/* Branch Switcher */}
-          <TabsList className="grid w-full grid-cols-4 mb-8 max-[480px]:mb-6 h-14 max-[480px]:h-auto max-[480px]:min-h-12 bg-card/80 backdrop-blur-sm rounded-full p-1.5 shadow-soft">
+          {/* Branch Switcher: выпадающий список на мобиле и планшете, вкладки на десктопе */}
+          <Select value={activeBranch} onValueChange={handleTabChange}>
+            <SelectTrigger
+              aria-label="Филиал"
+              className="md:hidden mb-8 max-[480px]:mb-6 h-14 px-6 max-[380px]:px-4 rounded-full border-border/60 bg-card text-base font-medium text-foreground shadow-soft focus:ring-0 focus:ring-offset-0 focus-visible:ring-2 focus-visible:ring-primary/40 [&>svg]:h-5 [&>svg]:w-5 [&>svg]:opacity-70"
+            >
+              <span>
+                <span aria-hidden="true" className="mr-2">📍</span>
+                <SelectValue />
+              </span>
+            </SelectTrigger>
+            <SelectContent className="rounded-2xl border-border/60 bg-card shadow-warm">
+              {branchOptions.map(({ key, name }) => (
+                <SelectItem
+                  key={key}
+                  value={key}
+                  className="py-3 text-base rounded-xl focus:bg-secondary/40 data-[state=checked]:font-semibold data-[state=checked]:text-primary"
+                >
+                  {name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+
+          <TabsList className="grid max-md:hidden w-full grid-cols-4 mb-8 h-14 bg-card/80 backdrop-blur-sm rounded-full p-1.5 shadow-soft">
             <TabsTrigger
               value="lyubertsy"
-              className="rounded-full text-base max-[480px]:text-xs font-medium text-center transition-all duration-300 max-[480px]:whitespace-normal max-[480px]:leading-tight max-[480px]:px-0.5 max-[480px]:tracking-tight max-[380px]:text-[10px] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
+              className="rounded-full text-base font-medium text-center transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
             >
-              <span className="max-[480px]:hidden">📍 </span>Люберцы
+              📍 Люберцы
             </TabsTrigger>
             <TabsTrigger
               value="botsad"
-              className="rounded-full text-base max-[480px]:text-xs font-medium text-center transition-all duration-300 max-[480px]:whitespace-normal max-[480px]:leading-tight max-[480px]:px-0.5 max-[480px]:tracking-tight max-[380px]:text-[10px] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
+              className="rounded-full text-base font-medium text-center transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
             >
-              <span className="max-[480px]:hidden">📍 </span>Ботанический сад
+              📍 Ботанический сад
             </TabsTrigger>
             <TabsTrigger
               value="pushkinskaya"
-              className="rounded-full text-base max-[480px]:text-xs font-medium text-center transition-all duration-300 max-[480px]:whitespace-normal max-[480px]:leading-tight max-[480px]:px-0.5 max-[480px]:tracking-tight max-[380px]:text-[10px] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
+              className="rounded-full text-base font-medium text-center transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
             >
-              <span className="max-[480px]:hidden">📍 </span>Пушкинская
+              📍 Пушкинская
             </TabsTrigger>
             <TabsTrigger
               value="ramenki"
-              className="rounded-full text-base max-[480px]:text-xs font-medium text-center transition-all duration-300 max-[480px]:whitespace-normal max-[480px]:leading-tight max-[480px]:px-0.5 max-[480px]:tracking-tight max-[380px]:text-[10px] data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
+              className="rounded-full text-base font-medium text-center transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md h-full"
             >
-              <span className="max-[480px]:hidden">📍 </span>Раменки
+              📍 Раменки
             </TabsTrigger>
           </TabsList>
 
