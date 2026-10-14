@@ -1,6 +1,7 @@
 export const branchData = {
   lyubertsy: {
     name: "Люберцы",
+    teacher: "Наталья Мишина",
     schedule: {
       day: "Среда",
       time: "19:30 — 21:00",
@@ -20,6 +21,7 @@ export const branchData = {
   },
   botsad: {
     name: "Ботанический сад",
+    teacher: "Наталья Мишина",
     schedule: {
       day: "Четверг",
       time: "19:30 — 21:00",
@@ -39,6 +41,7 @@ export const branchData = {
   },
   pushkinskaya: {
     name: "Пушкинская",
+    teacher: "Наталья Мишина",
     schedule: {
       day: "Понедельник",
       time: "19:15 — 20:45",
@@ -56,33 +59,36 @@ export const branchData = {
       mapLink: "https://yandex.com/maps/-/CPVQMHkL",
     },
   },
-};
-
-export const comingSoonBranches = {
   ramenki: {
     name: "Раменки",
-    announcement: {
-      title: "Скоро открытие!",
-      date: "14 октября, 19:30 — 21:00",
-      description: "Мастер-класс по хоровому пению в новой студии Громче в Раменках",
-      price: "1 000 ₽ (можно зачесть в стоимость абонемента при оформлении в тот же день)",
-      address: {
-        text: "Винницкая д. 4\n(5 мин пешком от м. Раменки)",
-      },
+    teacher: "Оксана Воеводина",
+    schedule: {
+      day: "Среда",
+      time: "19:30 — 21:00",
+      note: null,
+    },
+    prices: [
+      { sessions: 4, price: "7 600", weeks: 6 },
+      { sessions: 6, price: "10 800", weeks: 8 },
+      { sessions: 8, price: "13 600", weeks: 11 },
+      { sessions: 1, price: "2 500", weeks: null, isSingle: true },
+    ],
+    trialNote: "Пробное занятие бесплатно при оплате абонемента в тот же день",
+    address: {
+      text: "Винницкая д. 4\n(5 мин пешком от м. Раменки)",
+      mapLink: "https://yandex.ru/maps/-/CXURJX~V",
     },
   },
 };
 
 export type BranchKey = keyof typeof branchData;
-export type ComingSoonBranchKey = keyof typeof comingSoonBranches;
-export type AnyBranchKey = BranchKey | ComingSoonBranchKey;
 
-export const getInitialBranch = (): AnyBranchKey => {
+export const getInitialBranch = (): BranchKey => {
   if (typeof window === "undefined") return "pushkinskaya";
   const hash = window.location.hash;
   const match = hash.match(/#pricing-([a-z]+)/);
-  if (match && (match[1] in branchData || match[1] in comingSoonBranches)) {
-    return match[1] as AnyBranchKey;
+  if (match && match[1] in branchData) {
+    return match[1] as BranchKey;
   }
   return "pushkinskaya";
 };

@@ -2,18 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import { CtaButton } from "@/components/CtaButton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import {
-  branchData,
-  comingSoonBranches,
-  BranchKey,
-  AnyBranchKey,
-  ComingSoonBranchKey,
-  getInitialBranch,
-} from "@/data/pricing";
+import { branchData, BranchKey, getInitialBranch } from "@/data/pricing";
 
-const branchOptions = [...Object.entries(branchData), ...Object.entries(comingSoonBranches)].map(
-  ([key, branch]) => ({ key: key as AnyBranchKey, name: branch.name }),
-);
+const branchOptions = Object.entries(branchData).map(([key, branch]) => ({
+  key: key as BranchKey,
+  name: branch.name,
+}));
 
 const getWeeksLabel = (weeks: number) => {
   const mod10 = weeks % 10;
@@ -26,7 +20,7 @@ const getWeeksLabel = (weeks: number) => {
 export const Pricing = () => {
   const signupBtnRef = useRef<HTMLAnchorElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
-  const [activeBranch, setActiveBranch] = useState<AnyBranchKey>(getInitialBranch);
+  const [activeBranch, setActiveBranch] = useState<BranchKey>(getInitialBranch);
 
   useEffect(() => {
     if (signupBtnRef.current) {
@@ -56,12 +50,7 @@ export const Pricing = () => {
   }, []);
 
   const handleTabChange = (value: string) => {
-    setActiveBranch(value as AnyBranchKey);
-  };
-
-  const handleSignupClick = () => {
-    const w = (window as any).WdgMoyklass;
-    w?.["01K9BrWJck7O6TZEZsOjLHe61iGjhIOYkjgp"].loadLeadFormByModal();
+    setActiveBranch(value as BranchKey);
   };
 
   return (
@@ -241,47 +230,20 @@ export const Pricing = () => {
                       Построить маршрут →
                     </a>
                   </div>
-                </div>
-              </TabsContent>
-            );
-          })}
 
-          {(Object.keys(comingSoonBranches) as ComingSoonBranchKey[]).map((branchKey) => {
-            const branch = comingSoonBranches[branchKey];
-            return (
-              <TabsContent
-                key={branchKey}
-                value={branchKey}
-                className="mt-0 animate-fade-in focus-visible:outline-none focus-visible:ring-0"
-              >
-                <div className="bg-card rounded-2xl p-10 max-[480px]:p-6 shadow-warm border border-border/60 mb-8 max-[480px]:mb-6 text-center">
-                  <div className="text-3xl max-[480px]:text-2xl mb-2">🎉</div>
-                  <h3 className="font-display text-3xl max-[480px]:text-2xl font-bold text-primary mb-5 max-[480px]:mb-4">
-                    {branch.announcement.title}
-                  </h3>
+                  {/* Педагог */}
+                  <div className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-warm border border-border/60 hover:shadow-xl transition-smooth">
+                    <div className="flex items-center gap-2 mb-5 max-[480px]:mb-4">
+                      <span className="text-2xl max-[480px]:text-xl">👩‍🏫</span>
+                      <h3 className="font-display text-xl max-[480px]:text-lg font-semibold text-foreground">
+                        Педагог
+                      </h3>
+                    </div>
 
-                  <p className="text-foreground font-medium text-lg max-[480px]:text-base mb-1">
-                    {branch.announcement.date}
-                  </p>
-                  <p className="text-foreground text-base max-[480px]:text-sm mb-5 max-[480px]:mb-4">
-                    {branch.announcement.description}
-                  </p>
-
-                  <p className="text-foreground font-medium text-base max-[480px]:text-sm mb-6 max-[480px]:mb-5">
-                    💳 {branch.announcement.price}
-                  </p>
-
-                  <p className="text-foreground/70 text-sm max-[480px]:text-xs whitespace-pre-line mb-6 max-[480px]:mb-5">
-                    📍 {branch.announcement.address.text}
-                  </p>
-
-                  <CtaButton
-                    size="lg"
-                    className="text-base max-[480px]:text-sm px-10 max-[480px]:px-8 py-4 max-[480px]:py-3.5 font-semibold"
-                    onClick={handleSignupClick}
-                  >
-                    Записаться
-                  </CtaButton>
+                    <p className="text-foreground font-medium text-base max-[480px]:text-sm">
+                      {branch.teacher}
+                    </p>
+                  </div>
                 </div>
               </TabsContent>
             );
