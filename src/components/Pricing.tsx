@@ -240,9 +240,18 @@ export const Pricing = () => {
                       </h3>
                     </div>
 
-                    <p className="text-foreground font-medium text-base max-[480px]:text-sm">
-                      {branch.teacher}
-                    </p>
+                    <div className="flex items-center gap-4">
+                      <div className="w-14 h-14 rounded-full overflow-hidden bg-secondary shrink-0">
+                        <img
+                          src={branch.teacherPhoto}
+                          alt={branch.teacher}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <p className="text-foreground font-medium text-base max-[480px]:text-sm">
+                        {branch.teacher}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </TabsContent>
