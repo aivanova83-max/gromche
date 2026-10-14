@@ -13,6 +13,7 @@ import EventKudaleto from "./pages/EventKudaleto";
 import RamenkiOpen from "./pages/RamenkiOpen";
 import Zapis from "./pages/Zapis";
 import Loyalty from "./pages/Loyalty";
+import Faq from "./pages/Faq";
 import Songs from "./pages/Songs";
 import SongsRunit26 from "./pages/SongsRunit26";
 import SongsEvents from "./pages/SongsEvents";
@@ -55,6 +56,7 @@ const App = () => (
           <Route path="/ramenkiopen" element={<RamenkiOpen />} />
           <Route path="/zapis" element={<Zapis />} />
           <Route path="/loyalty" element={<Loyalty />} />
+          <Route path="/faq" element={<Faq />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/songs/folk" element={<Songs />} />
           <Route path="/songs/runit26" element={<SongsRunit26 />} />
