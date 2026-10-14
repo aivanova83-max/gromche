@@ -242,7 +242,7 @@ export const Pricing = () => {
                         />
                       </div>
                       <p className="text-foreground font-medium text-base max-[480px]:text-sm">
-                        Ведёт занятия {branch.teacher}
+                        Занятия ведёт {branch.teacher}
                       </p>
                     </div>
                   </div>
