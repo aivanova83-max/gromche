@@ -2,6 +2,7 @@ export const branchData = {
   lyubertsy: {
     name: "Люберцы",
     teacher: "Наталья Мишина",
+    teacherPhoto: "/natalia-mishina-teacher.jpg",
     schedule: {
       day: "Среда",
       time: "19:30 — 21:00",
@@ -22,6 +23,7 @@ export const branchData = {
   botsad: {
     name: "Ботанический сад",
     teacher: "Наталья Мишина",
+    teacherPhoto: "/natalia-mishina-teacher.jpg",
     schedule: {
       day: "Четверг",
       time: "19:30 — 21:00",
@@ -42,6 +44,7 @@ export const branchData = {
   pushkinskaya: {
     name: "Пушкинская",
     teacher: "Наталья Мишина",
+    teacherPhoto: "/natalia-mishina-teacher.jpg",
     schedule: {
       day: "Понедельник",
       time: "19:15 — 20:45",
@@ -62,6 +65,7 @@ export const branchData = {
   ramenki: {
     name: "Раменки",
     teacher: "Оксана Воеводина",
+    teacherPhoto: "/ramenki-teacher.JPG",
     schedule: {
       day: "Среда",
       time: "19:30 — 21:00",
