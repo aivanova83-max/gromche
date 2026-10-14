@@ -233,13 +233,6 @@ export const Pricing = () => {
 
                   {/* Педагог */}
                   <div className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-warm border border-border/60 hover:shadow-xl transition-smooth">
-                    <div className="flex items-center gap-2 mb-5 max-[480px]:mb-4">
-                      <span className="text-2xl max-[480px]:text-xl">👩‍🏫</span>
-                      <h3 className="font-display text-xl max-[480px]:text-lg font-semibold text-foreground">
-                        Педагог
-                      </h3>
-                    </div>
-
                     <div className="flex items-center gap-4">
                       <div className="w-14 h-14 rounded-full overflow-hidden bg-secondary shrink-0">
                         <img
@@ -249,7 +242,7 @@ export const Pricing = () => {
                         />
                       </div>
                       <p className="text-foreground font-medium text-base max-[480px]:text-sm">
-                        {branch.teacher}
+                        Ведёт занятия {branch.teacher}
                       </p>
                     </div>
                   </div>
