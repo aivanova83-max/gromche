@@ -63,7 +63,10 @@ const FaqAnswer = ({ item }: { item: FaqChoirItem }) => (
 
     {item.moreLink && (
       <p className="text-sm">
-        {item.moreLink.label}: {renderLink(item.moreLink)}
+        {item.moreLink.label}:{" "}
+        <Link to={item.moreLink.href} className="text-primary hover:text-primary/80 transition-colors font-medium">
+          Подробнее →
+        </Link>
       </p>
     )}
   </div>
