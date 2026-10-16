@@ -13,7 +13,9 @@ const trackSongChange = (title: string) => {
 // Ручные исключения для порядка «следующая песня» (например, чтобы
 // пропустить дубль-версию песни в цепочке «следующая»). По умолчанию пусто —
 // заполняй только если Аня попросила пропустить конкретную песню в цепочке.
-const NEXT_SONG_OVERRIDES: Record<string, string | null> = {};
+const NEXT_SONG_OVERRIDES: Record<string, string | null> = {
+  "3": "5", // What a Wonderful World → Прованс (минуя русскую транскрипцию)
+};
 
 const Songs75days = () => {
   const [selectedId, setSelectedId] = useState(songs75days[0].id);
