@@ -66,6 +66,7 @@ const Songs75days = () => {
             <div className="w-px self-stretch bg-ochre/20" />
             <div className="flex flex-col">
               <h1 className="font-serif text-base font-bold text-folk-dark leading-tight">75 дней до Нового года</h1>
+              <p className="text-xs text-ochre leading-tight mt-0.5">Поем песни, пишем в дневниках</p>
             </div>
         </div>
 
