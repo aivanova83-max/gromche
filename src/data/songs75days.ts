@@ -4,19 +4,19 @@ export const songs75days: Song[] = [
   {
     id: "1",
     title: "Боже, какой пустяк",
-    artist: "",
+    artist: "Александр Иванов",
     lyrics: `[текст добавить]`,
   },
   {
     id: "2",
     title: "Ветер перемен",
-    artist: "",
+    artist: "из к/ф «Мэри Поппинс»",
     lyrics: `[текст добавить]`,
   },
   {
     id: "3",
     title: "What a Wonderful World",
-    artist: "",
+    artist: "Луи Армстронг",
     lyrics: `[текст добавить]`,
   },
   {
@@ -76,13 +76,13 @@ export const songs75days: Song[] = [
   {
     id: "13",
     title: "Ничего не бойся, я с тобой",
-    artist: "",
+    artist: "Секрет",
     lyrics: `[текст добавить]`,
   },
   {
     id: "14",
     title: "Замыкая круг",
-    artist: "",
+    artist: "Крис Кельми",
     lyrics: `[текст добавить]`,
   },
 ];
