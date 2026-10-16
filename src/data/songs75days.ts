@@ -97,7 +97,7 @@ Hа круги своя.
   {
     id: "3",
     title: "What a Wonderful World",
-    artist: "Луи Армстронг",
+    artist: "Louis Armstrong",
     lyrics: `I see trees of green
 Red roses too
 I see them bloom
