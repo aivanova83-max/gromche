@@ -123,7 +123,7 @@ export const Pricing = () => {
                 value={branchKey}
                 className="mt-0 animate-fade-in focus-visible:outline-none focus-visible:ring-0"
               >
-                <div className="grid grid-cols-1 md:grid-cols-2 md:items-start gap-5 max-[480px]:gap-4 mb-8 max-[480px]:mb-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-[480px]:gap-4 mb-8 max-[480px]:mb-6">
                   {/* Абонементы */}
                   <div className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-warm border border-border/60 hover:shadow-xl transition-smooth">
                     <div className="flex items-center gap-2 mb-5 max-[480px]:mb-4">
