@@ -123,7 +123,7 @@ export const Pricing = () => {
                 value={branchKey}
                 className="mt-0 animate-fade-in focus-visible:outline-none focus-visible:ring-0"
               >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-[480px]:gap-4 mb-8 max-[480px]:mb-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 md:items-start gap-5 max-[480px]:gap-4 mb-8 max-[480px]:mb-6">
                   {/* Абонементы */}
                   <div className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-warm border border-border/60 hover:shadow-xl transition-smooth">
                     <div className="flex items-center gap-2 mb-5 max-[480px]:mb-4">
@@ -232,8 +232,8 @@ export const Pricing = () => {
                   </div>
 
                   {/* Педагог */}
-                  <div className="bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-warm border border-border/60 hover:shadow-xl transition-smooth">
-                    <div className="flex items-center gap-4">
+                  <div className="md:col-span-2 bg-card rounded-2xl p-6 max-[480px]:p-5 shadow-warm border border-border/60 hover:shadow-xl transition-smooth">
+                    <div className="flex items-center gap-4 md:justify-center">
                       <div className="w-14 h-14 rounded-full overflow-hidden bg-secondary shrink-0">
                         <img
                           src={branch.teacherPhoto}
