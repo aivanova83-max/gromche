@@ -14,7 +14,7 @@ export const branchData = {
       { sessions: 8, price: "10 400", weeks: 11 },
       { sessions: 1, price: "2 000", weeks: null, isSingle: true },
     ],
-    trialNote: "Пробное занятие бесплатно при оплате абонемента в тот же день",
+    trialNote: "Пробное занятие бесплатно при оплате абонемента в тот же день или на следующий. В иных случаях — 1000 руб.",
     address: {
       text: "г. Люберцы, ул. 8 Марта, 12, корп. 3 (клуб ПроДетство)",
       mapLink: "https://yandex.ru/maps/-/CLXQ5Klo",
@@ -35,7 +35,7 @@ export const branchData = {
       { sessions: 8, price: "12 000", weeks: 11 },
       { sessions: 1, price: "2 200", weeks: null, isSingle: true },
     ],
-    trialNote: "Пробное занятие бесплатно при оплате абонемента в тот же день",
+    trialNote: "Пробное занятие бесплатно при оплате абонемента в тот же день или на следующий. В иных случаях — 1000 руб.",
     address: {
       text: "ул. Седова, д. 3, библиотека №53\n(7 мин пешком от м. Ботанический сад или Свиблово)",
       mapLink: "https://yandex.ru/maps/-/CTx1rXLt",
@@ -56,7 +56,7 @@ export const branchData = {
       { sessions: 8, price: "13 600", weeks: 11 },
       { sessions: 1, price: "2 500", weeks: null, isSingle: true },
     ],
-    trialNote: "Пробное занятие бесплатно при оплате абонемента в тот же день",
+    trialNote: "Пробное занятие бесплатно при оплате абонемента в тот же день или на следующий. В иных случаях — 1000 руб.",
     address: {
       text: "Страстной бульвар, 6с1\n(1 мин от м. Пушкинская / Чеховская)",
       mapLink: "https://yandex.com/maps/-/CPVQMHkL",
@@ -77,7 +77,7 @@ export const branchData = {
       { sessions: 8, price: "13 600", weeks: 11 },
       { sessions: 1, price: "2 500", weeks: null, isSingle: true },
     ],
-    trialNote: "Пробное занятие бесплатно при оплате абонемента в тот же день",
+    trialNote: "Пробное занятие бесплатно при оплате абонемента в тот же день или на следующий. В иных случаях — 1000 руб.",
     address: {
       text: "Винницкая д. 4\n(5 мин пешком от м. Раменки)",
       mapLink: "https://yandex.ru/maps/-/CXURJX~V",
