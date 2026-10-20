@@ -63,7 +63,11 @@ const SongsAuthors = () => {
             </a>
             <div className="w-px self-stretch bg-ochre/20" />
             <div className="flex flex-col">
-              <h1 className="font-serif text-base font-bold text-folk-dark leading-tight">Хоровой мастер-класс для Авторов Жизни</h1>
+              <h1 className="font-serif text-base font-bold text-folk-dark leading-tight">
+                Хоровой <br className="sm:hidden" />
+                <span className="whitespace-nowrap">мастер-класс</span> <br className="sm:hidden" />
+                для Авторов Жизни
+              </h1>
             </div>
         </div>
 
