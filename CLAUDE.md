@@ -279,6 +279,13 @@ index.html <body>
 - **SSL**: Let's Encrypt (certbot), автообновление через systemd
 - **Deploy-пользователь**: `deploy` (ограниченные права, SSH-ключ от GitHub Actions)
 
+### Доступ Claude к серверу («прод»)
+- Сервер одним словом — **«прод»** (VPS Beget «Improved Cressida»)
+- Вход: `ssh -i ~/.ssh/gromche_claude claude@159.194.197.40` — по ключу, без пароля
+- `claude` может только читать логи (группы `adm`, `systemd-journal`) и через sudo: `sudo nginx -t`, `sudo systemctl reload nginx`, `sudo systemctl restart nginx`
+- На сервере запущен только nginx (статика сайта) — перезапуск: `sudo nginx -t && sudo systemctl reload nginx`
+- Вход под root тем же ключом — **только после явного «да» Ани** на конкретное действие. Всё, что меняет сервер или удаляет данные, — сначала спросить
+
 ### CI/CD — GitHub Actions
 
 При каждом `push` в `main` автоматически запускается `.github/workflows/deploy.yml`:
