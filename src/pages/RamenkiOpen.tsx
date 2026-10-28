@@ -33,12 +33,21 @@ import {
   teacherBio,
   testimonials,
   faqItems,
+  subscriptionPrices,
   INSTAGRAM_LINK,
   TELEGRAM_CHANNEL,
   CONTACT_TELEGRAM,
   CONTACT_WHATSAPP,
   CONTACT_MAX,
 } from "@/data/ramenkiOpen";
+
+const getWeeksLabel = (weeks: number) => {
+  const mod10 = weeks % 10;
+  const mod100 = weeks % 100;
+  if (mod10 === 1 && mod100 !== 11) return "неделя";
+  if ([2, 3, 4].includes(mod10) && ![12, 13, 14].includes(mod100)) return "недели";
+  return "недель";
+};
 
 const FEATURE_ICONS: Record<string, typeof Music> = { Music, Sparkles, Smile, TrendingUp };
 
@@ -336,6 +345,52 @@ const RamenkiOpen = () => {
                   </AccordionItem>
                 ))}
               </Accordion>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ════════ АБОНЕМЕНТЫ ════════ */}
+      <section className="py-20 max-[480px]:py-12 px-4">
+        <div className="container max-w-md mx-auto">
+          <ScrollReveal>
+            <h2 className="text-2xl md:text-4xl font-bold text-foreground text-center mb-10">
+              Если решите продолжить
+            </h2>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.08}>
+            <div className="bg-card rounded-2xl p-6 md:p-8 shadow-warm border border-border/60">
+              <div className="flex items-center gap-2 mb-5">
+                <span className="text-2xl">💳</span>
+                <h3 className="font-bold text-lg md:text-xl text-foreground">Абонементы</h3>
+              </div>
+
+              <div className="space-y-4">
+                {subscriptionPrices.map((item, i) => (
+                  <div key={i} className="flex justify-between items-baseline">
+                    <div>
+                      <span className="text-foreground text-sm md:text-base">
+                        {item.isSingle ? "Разовое занятие" : `${item.sessions} занятий`}
+                      </span>
+                      {item.weeks && (
+                        <p className="text-foreground/50 text-xs mt-0.5">
+                          {item.weeks} {getWeeksLabel(item.weeks)}
+                        </p>
+                      )}
+                    </div>
+                    <span className="font-semibold text-primary text-base md:text-lg">
+                      {item.price} ₽
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 pt-4 border-t border-border/30 text-center">
+                <CtaButton size="lg" className="w-full text-sm md:text-base" asChild>
+                  <a href={SIGNUP_URL}>Записаться</a>
+                </CtaButton>
+              </div>
             </div>
           </ScrollReveal>
         </div>
