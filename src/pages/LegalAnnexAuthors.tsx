@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const linkClass = "text-primary hover:text-primary/80 transition-colors";
@@ -7,6 +8,10 @@ const Email = () => (
 );
 
 const LegalAnnexAuthors = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}

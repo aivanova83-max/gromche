@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import Index from "./pages/Index";
 import Legal from "./pages/Legal";
 import LegalAnnexAuthors from "./pages/LegalAnnexAuthors";
+import LegalArchiveOffer20260227 from "./pages/LegalArchiveOffer20260227";
 import Events from "./pages/Events";
 import EventsLanding from "./pages/EventsLanding";
 import EventFolk from "./pages/EventFolk";
@@ -62,6 +63,7 @@ const App = () => (
           <Route path="/faq" element={<Faq />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/legal/annex_authors" element={<LegalAnnexAuthors />} />
+          <Route path="/legal/archive/offer-2026-02-27" element={<LegalArchiveOffer20260227 />} />
           <Route path="/songs/folk" element={<Songs />} />
           <Route path="/songs/runit26" element={<SongsRunit26 />} />
           <Route path="/songs/1" element={<SongsEvents />} />
