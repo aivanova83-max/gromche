@@ -100,7 +100,7 @@ const RamenkiOpen = () => {
               Неважно, умеете ли вы петь — важно, что хочется звучать.
             </p>
             <CtaButton size="lg" className="text-sm md:text-lg px-8 md:px-10 py-5 md:py-6 whitespace-normal h-auto" asChild>
-              <a href={SIGNUP_URL}>Записаться на мастер-класс</a>
+              <a href={SIGNUP_URL}>Записаться на пробное занятие</a>
             </CtaButton>
             <div className="flex flex-wrap justify-center md:justify-start gap-x-5 gap-y-2 text-xs md:text-sm text-muted-foreground mt-5">
               <span className="font-semibold text-foreground">{EVENT_DATE_FULL}</span>
@@ -263,11 +263,10 @@ const RamenkiOpen = () => {
           <ScrollReveal>
             <div className="text-center space-y-3 mb-10">
               <h2 className="text-2xl md:text-4xl font-bold text-foreground">
-                Начните с мастер-класса
+                Начните с пробного занятия
               </h2>
               <p className="text-sm md:text-base text-foreground/70 max-w-[60ch] mx-auto">
-                Первое занятие на новой локации — чтобы вы услышали, как
-                звучит студия, и познакомились с Оксаной вживую.
+                Вы услышите, как звучит студия, и познакомитесь с Оксаной вживую.
               </p>
             </div>
           </ScrollReveal>
@@ -275,9 +274,6 @@ const RamenkiOpen = () => {
           <ScrollReveal delay={0.1}>
             <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-6 rounded-2xl border-2 border-accent bg-card p-8 shadow-warm">
               <div>
-                <p className="font-bold text-lg md:text-xl text-foreground mb-4">
-                  Мастер-класс в {DISTRICT_LOCATIVE}
-                </p>
                 <div className="space-y-3 text-sm md:text-[15px]">
                   <div className="flex gap-3">
                     <span className="flex-none w-24 text-xs uppercase tracking-wide text-muted-foreground pt-0.5">Когда</span>
@@ -359,7 +355,7 @@ const RamenkiOpen = () => {
             Ботанический сад, Люберцы, Пушкинская и теперь — Раменки!
           </p>
           <CtaButton size="lg" className="text-sm md:text-lg px-8 md:px-10 py-5 md:py-6 whitespace-normal h-auto" asChild>
-            <a href={SIGNUP_URL}>Записаться на мастер-класс</a>
+            <a href={SIGNUP_URL}>Записаться на пробное занятие</a>
           </CtaButton>
         </ScrollReveal>
       </section>
@@ -460,7 +456,7 @@ const RamenkiOpen = () => {
       {/* ════════ ЗАКРЕПЛЁННАЯ КНОПКА (МОБИЛЬНЫЕ) ════════ */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 p-3 bg-background/95 backdrop-blur-sm border-t border-border/50">
         <CtaButton size="lg" className="w-full text-sm py-5 font-semibold shadow-lg" asChild>
-          <a href={SIGNUP_URL}>Записаться на мастер-класс</a>
+          <a href={SIGNUP_URL}>Записаться на пробное занятие</a>
         </CtaButton>
       </div>
     </div>
