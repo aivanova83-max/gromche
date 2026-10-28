@@ -19,7 +19,7 @@ export const Footer = () => {
             Договор-оферта
           </a>
           <a
-            href="/legal"
+            href="/legal#policy"
             className="text-xs text-muted-foreground hover:text-primary transition-colors"
           >
             Политика конфиденциальности
