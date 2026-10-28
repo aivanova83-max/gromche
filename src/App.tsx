@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Index from "./pages/Index";
 import Legal from "./pages/Legal";
+import LegalAnnexAuthors from "./pages/LegalAnnexAuthors";
 import Events from "./pages/Events";
 import EventsLanding from "./pages/EventsLanding";
 import EventFolk from "./pages/EventFolk";
@@ -60,6 +61,7 @@ const App = () => (
           <Route path="/loyalty" element={<Loyalty />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/legal" element={<Legal />} />
+          <Route path="/legal/annex_authors" element={<LegalAnnexAuthors />} />
           <Route path="/songs/folk" element={<Songs />} />
           <Route path="/songs/runit26" element={<SongsRunit26 />} />
           <Route path="/songs/1" element={<SongsEvents />} />
