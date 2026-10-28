@@ -24,8 +24,9 @@ import {
   ADDRESS,
   METRO_WALK,
   METRO_WALK_FULL,
-  EVENT_DATE_FULL,
-  EVENT_DATE_TIME_FULL,
+  EVENT_DATE_SHORT,
+  EVENT_DAY_OFFER,
+  EVENT_TIME,
   PRICE_NOTE,
   TEACHER_VIDEO_SRC,
   TEACHER_PHOTO_SRC,
@@ -112,7 +113,9 @@ const RamenkiOpen = () => {
               <a href={SIGNUP_URL}>Записаться на пробное занятие</a>
             </CtaButton>
             <div className="flex flex-wrap justify-center md:justify-start gap-x-5 gap-y-2 text-xs md:text-sm text-muted-foreground mt-5">
-              <span className="font-semibold text-foreground">{EVENT_DATE_FULL}</span>
+              <span className="font-semibold text-foreground">
+                {EVENT_DATE_SHORT}, <span className="whitespace-nowrap">{EVENT_TIME}</span>
+              </span>
               <span>·</span>
               <span>{ADDRESS}</span>
               <span>·</span>
@@ -286,7 +289,9 @@ const RamenkiOpen = () => {
                 <div className="space-y-3 text-sm md:text-[15px]">
                   <div className="flex gap-3">
                     <span className="flex-none w-24 text-xs uppercase tracking-wide text-muted-foreground pt-0.5">Когда</span>
-                    <span className="font-medium text-foreground">{EVENT_DATE_TIME_FULL}</span>
+                    <span className="font-medium text-foreground">
+                      {EVENT_DAY_OFFER}, <span className="whitespace-nowrap">{EVENT_TIME}</span>
+                    </span>
                   </div>
                   <div className="flex gap-3">
                     <span className="flex-none w-24 text-xs uppercase tracking-wide text-muted-foreground pt-0.5">Где</span>

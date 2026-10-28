@@ -7,10 +7,9 @@ export const ADDRESS = "Винницкая, д. 4";
 export const METRO_WALK = "5 мин пешком от м. Раменки";
 export const METRO_WALK_FULL = "5 минут пешком от м. Раменки";
 export const EVENT_DATE_SHORT = "По четвергам";
-export const EVENT_DATE_FULL = "По четвергам, 19:30 — 21:00";
+export const EVENT_DAY_OFFER = "Каждый четверг";
 export const EVENT_TIME = "19:30 — 21:00";
-export const EVENT_DATE_TIME_FULL = "Каждый четверг, 19:30 — 21:00";
-export const PRICE_NOTE = "Пробное занятие — 1000 ₽. Эта сумма войдёт в стоимость абонемента, если оформите его в день пробного или на следующий. Тогда пробное занятие будет для вас полностью бесплатным.";
+export const PRICE_NOTE = "Пробное занятие бесплатно при оплате абонемента в тот же день или на следующий. В иных случаях — 1000 руб.";
 
 export const INSTAGRAM_LINK = "https://www.instagram.com/gromche_choir?stkn=MWhoczhqc3lxajA5aA==";
 export const TELEGRAM_CHANNEL = "https://t.me/gromche_choir";
