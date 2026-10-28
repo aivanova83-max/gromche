@@ -6,8 +6,8 @@ export const DISTRICT_LOCATIVE = "Раменках";
 export const ADDRESS = "Винницкая, д. 4";
 export const METRO_WALK = "5 мин пешком от м. Раменки";
 export const METRO_WALK_FULL = "5 минут пешком от м. Раменки";
-export const EVENT_DATE_SHORT = "По четвергам";
-export const EVENT_DAY_OFFER = "Каждый четверг";
+export const EVENT_DATE_SHORT = "По средам";
+export const EVENT_DAY_OFFER = "Каждую среду";
 export const EVENT_TIME = "19:30 — 21:00";
 export const PRICE_NOTE = "Пробное занятие бесплатно при оплате абонемента в тот же день или на следующий. В иных случаях — 1000 руб.";
 
