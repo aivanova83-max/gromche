@@ -121,6 +121,11 @@ const Legal = () => {
             <p>ОГРНИП 316502700078262</p>
             <p>Email: <a href="mailto:gromche-choir@yandex.ru" className="text-primary hover:text-primary/80 transition-colors">gromche-choir@yandex.ru</a></p>
 
+            <h2 className="text-xl font-bold text-foreground">ПРИЛОЖЕНИЯ</h2>
+            <ul className="list-disc pl-6 space-y-1">
+              <li><Link to="/legal/annex_authors" className="text-primary hover:text-primary/80 transition-colors">Приложение №1. Специальная программа «Хоровой опыт для резидентов «Авторов жизни»»</Link></li>
+            </ul>
+
             <h2 className="text-xl font-bold text-foreground">ПРЕДЫДУЩИЕ РЕДАКЦИИ</h2>
             <ul className="list-disc pl-6 space-y-1">
               <li><Link to="/legal/archive/offer-2026-02-27" className="text-primary hover:text-primary/80 transition-colors">Редакция от 27.02.2026 (действовала по 27.10.2026)</Link></li>
