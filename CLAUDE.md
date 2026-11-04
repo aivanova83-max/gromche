@@ -274,14 +274,14 @@ index.html <body>
 ## 9. Infrastructure & Deployment
 
 ### Сервер
-- **VPS**: Ubuntu 24.04, IP `159.194.197.40`
+- **VPS**: Timeweb Cloud, Новосибирск, Ubuntu 24.04, IP `177.203.49.215`
 - **Веб-сервер**: nginx — отдаёт статику из `/var/www/gromche`, SPA-роутинг через `try_files $uri $uri/ /index.html`
 - **SSL**: Let's Encrypt (certbot), автообновление через systemd
 - **Deploy-пользователь**: `deploy` (ограниченные права, SSH-ключ от GitHub Actions)
 
 ### Доступ Claude к серверу («прод»)
-- Сервер одним словом — **«прод»** (VPS Beget «Improved Cressida»)
-- Вход: `ssh -i ~/.ssh/gromche_claude claude@159.194.197.40` — по ключу, без пароля
+- Сервер одним словом — **«прод»** (VPS Timeweb Cloud, с 04.11.2026; старый VPS Beget утрачен при атаке на Beget)
+- Вход: `ssh -i ~/.ssh/gromche_claude claude@177.203.49.215` — по ключу, без пароля
 - `claude` может только читать логи (группы `adm`, `systemd-journal`) и через sudo: `sudo nginx -t`, `sudo systemctl reload nginx`, `sudo systemctl restart nginx`
 - На сервере запущен только nginx (статика сайта) — перезапуск: `sudo nginx -t && sudo systemctl reload nginx`
 - Вход под root тем же ключом — **только после явного «да» Ани** на конкретное действие. Всё, что меняет сервер или удаляет данные, — сначала спросить
@@ -299,7 +299,7 @@ GitHub Actions (ubuntu-latest)
   ├── actions/setup-node@v4  (Node 20, кэш npm)
   ├── npm ci
   ├── npm run build  →  dist/
-  └── appleboy/scp-action  →  SSH  →  /var/www/gromche/
+  └── rsync по SSH (только изменённые файлы)  →  /var/www/gromche/
                                               │
                                               ▼
                                         nginx (HTTPS :443)
@@ -332,7 +332,7 @@ GitHub Actions (ubuntu-latest)
 
 | Секрет | Значение |
 |---|---|
-| `DEPLOY_HOST` | `159.194.197.40` |
+| `DEPLOY_HOST` | `177.203.49.215` |
 | `DEPLOY_USER` | `deploy` |
 | `DEPLOY_SSH_KEY` | Приватный SSH-ключ `~/.ssh/gromche_deploy` |
 | `TELEGRAM_BOT_TOKEN` | Токен бота от `@BotFather` (сейчас placeholder — заполнить вручную) |

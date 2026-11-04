@@ -25,26 +25,26 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Copy files to VPS
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.DEPLOY_HOST }}
-          username: ${{ secrets.DEPLOY_USER }}
-          key: ${{ secrets.DEPLOY_SSH_KEY }}
-          source: "dist/"
-          target: "/tmp/gromche_deploy"
-          strip_components: 1
+      - name: Setup SSH
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts
 
-      - name: Deploy to web root
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.DEPLOY_HOST }}
-          username: ${{ secrets.DEPLOY_USER }}
-          key: ${{ secrets.DEPLOY_SSH_KEY }}
-          script: |
-            rm -rf /var/www/gromche/*
-            cp -a /tmp/gromche_deploy/. /var/www/gromche/
-            rm -rf /tmp/gromche_deploy
+      # --checksum: сверяем файлы по содержимому, а не по дате, иначе свежий
+      # checkout заново отправлял бы все 300 МБ видео и картинок
+      - name: Sync files to VPS
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+        run: |
+          rsync -rlc --compress --delete-after --delay-updates --chmod=D755,F644 \
+            -e "ssh -i ~/.ssh/deploy_key" \
+            dist/ "$DEPLOY_USER@$DEPLOY_HOST:/var/www/gromche/"
 
       - name: Notify Telegram on failure
         if: failure()
