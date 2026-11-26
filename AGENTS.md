@@ -338,8 +338,8 @@ GitHub Actions (ubuntu-latest)
 | `DEPLOY_HOST` | `177.203.49.215` |
 | `DEPLOY_USER` | `deploy` |
 | `DEPLOY_SSH_KEY` | Приватный SSH-ключ `~/.ssh/gromche_deploy` |
-| `TELEGRAM_BOT_TOKEN` | Токен бота от `@BotFather` (сейчас placeholder — заполнить вручную) |
-| `TELEGRAM_CHAT_ID` | Chat ID получателя уведомлений (сейчас placeholder — заполнить вручную) |
+| `TELEGRAM_BOT_TOKEN` | Токен бота от `@BotFather` (заполнен 09.07.2026, уведомления приходят) |
+| `TELEGRAM_CHAT_ID` | Chat ID получателя уведомлений (заполнен 09.07.2026, уведомления приходят) |
 
 ### nginx — ключевые правила конфига
 
