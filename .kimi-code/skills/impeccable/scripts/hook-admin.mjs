@@ -71,7 +71,7 @@ function stopManifestEntry(command) {
 const HOOK_MANIFEST_TARGETS = [
   {
     provider: '.claude',
-    skillRel: '.claude/skills/impeccable',
+    skillRel: '.kimi-code/skills/impeccable',
     destRel: '.claude/settings.local.json',
     sharedDestRel: '.claude/settings.json',
     manifest: () => ({
@@ -83,14 +83,14 @@ const HOOK_MANIFEST_TARGETS = [
             hooks: [
               {
                 type: 'command',
-                command: 'node "${CLAUDE_PROJECT_DIR}/.claude/skills/impeccable/scripts/hook.mjs"',
+                command: 'node "${CLAUDE_PROJECT_DIR}/.kimi-code/skills/impeccable/scripts/hook.mjs"',
                 timeout: TIMEOUT_SECONDS,
                 statusMessage: STATUS_MESSAGE,
               },
             ],
           },
         ],
-        Stop: [stopManifestEntry('node "${CLAUDE_PROJECT_DIR}/.claude/skills/impeccable/scripts/hook.mjs"')],
+        Stop: [stopManifestEntry('node "${CLAUDE_PROJECT_DIR}/.kimi-code/skills/impeccable/scripts/hook.mjs"')],
       },
     }),
   },

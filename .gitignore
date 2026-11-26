@@ -32,3 +32,6 @@ dist-ssr
 *.jpeg
 !src/assets/**
 !public/**
+
+# Impeccable (Kimi Code skill) рабочая папка
+.impeccable/
