@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ChevronRight, Mic } from "lucide-react";
+import { ChevronRight, ListMusic, Mic } from "lucide-react";
 import { songsTarusa } from "@/data/songsTarusa";
 import { TELEGRAM_CHANNEL } from "@/data/eventsLanding";
 import logoGromche from "@/assets/logo-gromche-horizontal.png";
@@ -9,6 +9,8 @@ const trackSongChange = (title: string) => {
     window.ym(109163310, "reachGoal", "song_change", { title });
   }
 };
+
+const YANDEX_PLAYLIST_URL = "https://music.yandex.ru/playlists/bf7cdb57-3fe1-7d43-8a8c-5a17c4b5de06";
 
 // Ручные исключения для порядка «следующая песня» (например, чтобы
 // пропустить дубль-версию песни в цепочке «следующая»). По умолчанию пусто —
@@ -82,17 +84,28 @@ const SongsTarusa = () => {
             Список песен
           </button>
 
-          <div className="flex items-center border-[1.5px] border-ochre rounded-xl overflow-hidden h-9 shrink-0">
-            <button
-              onClick={() => changeFontSize(-2)}
-              className="w-10 h-9 flex items-center justify-center text-folk-dark hover:bg-ochre/10 transition-colors text-sm font-bold border-r border-ochre/30"
-              aria-label="Уменьшить шрифт"
-            >A−</button>
-            <button
-              onClick={() => changeFontSize(2)}
-              className="w-10 h-9 flex items-center justify-center text-folk-dark hover:bg-ochre/10 transition-colors text-base font-bold"
-              aria-label="Увеличить шрифт"
-            >A+</button>
+          <div className="flex items-center gap-2 shrink-0">
+            <a
+              href={YANDEX_PLAYLIST_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-9 flex items-center justify-center border-[1.5px] border-ochre rounded-xl text-folk-dark hover:bg-ochre/10 transition-colors"
+              aria-label="Слушать плейлист в Яндекс Музыке"
+            >
+              <ListMusic className="w-4 h-4" />
+            </a>
+            <div className="flex items-center border-[1.5px] border-ochre rounded-xl overflow-hidden h-9">
+              <button
+                onClick={() => changeFontSize(-2)}
+                className="w-10 h-9 flex items-center justify-center text-folk-dark hover:bg-ochre/10 transition-colors text-sm font-bold border-r border-ochre/30"
+                aria-label="Уменьшить шрифт"
+              >A−</button>
+              <button
+                onClick={() => changeFontSize(2)}
+                className="w-10 h-9 flex items-center justify-center text-folk-dark hover:bg-ochre/10 transition-colors text-base font-bold"
+                aria-label="Увеличить шрифт"
+              >A+</button>
+            </div>
           </div>
         </div>
 
